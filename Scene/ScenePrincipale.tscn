@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://kxcut6a2ewks"]
+
+[ext_resource type="PackedScene" uid="uid://n4arh46goj77" path="res://Scene/joueur.tscn" id="1_wg3re"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_uv6h7"]
+size = Vector2(10, 10)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_uv6h7"]
+
+[node name="Map" type="Node3D" unique_id=337228639]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=886342053]
+light_color = Color(0.9882353, 1, 0.59607846, 1)
+shadow_enabled = true
+
+[node name="Joueur" parent="." unique_id=1292424602 instance=ExtResource("1_wg3re")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 4.552)
+
+[node name="Sol" type="MeshInstance3D" parent="." unique_id=1057862754]
+mesh = SubResource("PlaneMesh_uv6h7")
+
+[node name="Forêt" type="Node3D" parent="." unique_id=1731113598]
+
+[node name="Arbre" type="MeshInstance3D" parent="Forêt" unique_id=1013523057]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.0301437, 0.8451717, 0)
+mesh = SubResource("CapsuleMesh_uv6h7")
