@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://n4arh46goj77" path="res://Scene/joueur.tscn" id="1_wg3re"]
 [ext_resource type="Script" uid="uid://dhm10sw285ehi" path="res://Script/herbe.gd" id="2_rmibi"]
 [ext_resource type="PackedScene" uid="uid://cg7bha5t87b70" path="res://Scene/pokemon.tscn" id="3_5vwud"]
+[ext_resource type="Script" uid="uid://brojl8fd7vanx" path="res://Script/parametreDesPokemon.gd" id="4_dgiq7"]
+[ext_resource type="Script" uid="uid://d6vieo400icv" path="res://Script/natureStat.gd" id="5_vfha3"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_uv6h7"]
 
@@ -12,6 +14,48 @@ size = Vector2(10, 10)
 [sub_resource type="QuadMesh" id="QuadMesh_wg3re"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wg3re"]
+
+[sub_resource type="Resource" id="Resource_vfha3"]
+script = ExtResource("5_vfha3")
+stat1 = "attaque"
+modificateur1 = "+10%"
+stat2 = "defense"
+modificateur2 = "-10%"
+
+[sub_resource type="Resource" id="Resource_aipmw"]
+script = ExtResource("5_vfha3")
+stat1 = "defense"
+modificateur1 = "+10%"
+stat2 = "attaque"
+modificateur2 = "-10%"
+
+[sub_resource type="Resource" id="Resource_ko6ux"]
+script = ExtResource("5_vfha3")
+stat1 = "attaqueSpe"
+modificateur1 = "+10%"
+stat2 = "defenseSpe"
+modificateur2 = "-10%"
+
+[sub_resource type="Resource" id="Resource_qm7m7"]
+script = ExtResource("5_vfha3")
+stat1 = "defenseSpe"
+modificateur1 = "+10%"
+stat2 = "attaqueSpe"
+modificateur2 = "-10%"
+
+[sub_resource type="Resource" id="Resource_8wwat"]
+script = ExtResource("5_vfha3")
+stat1 = "vitesse"
+modificateur1 = "+10%"
+stat2 = "pv"
+modificateur2 = "-10%"
+
+[sub_resource type="Resource" id="Resource_x6yq0"]
+script = ExtResource("5_vfha3")
+stat1 = "pv"
+modificateur1 = "+10%"
+stat2 = "vitesse"
+modificateur2 = "-10%"
 
 [node name="Map" type="Node3D" unique_id=337228639]
 
@@ -214,6 +258,11 @@ script = ExtResource("2_rmibi")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Forêt/HauteHerbe/Herbe16/Area3D" unique_id=2007351967]
 shape = SubResource("BoxShape3D_wg3re")
+
+[node name="Paramètre" type="Node3D" parent="." unique_id=256808770]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.128716, 0.85703945, 3.5622892)
+script = ExtResource("4_dgiq7")
+listeDesNatures = Array[ExtResource("5_vfha3")]([SubResource("Resource_vfha3"), SubResource("Resource_aipmw"), SubResource("Resource_ko6ux"), SubResource("Resource_qm7m7"), SubResource("Resource_8wwat"), SubResource("Resource_x6yq0")])
 
 [connection signal="body_entered" from="Forêt/HauteHerbe/Herbe/Area3D" to="Forêt/HauteHerbe/Herbe/Area3D" method="_onCollision"]
 [connection signal="body_entered" from="Forêt/HauteHerbe/Herbe2/Area3D" to="Forêt/HauteHerbe/Herbe2/Area3D" method="_onCollision"]

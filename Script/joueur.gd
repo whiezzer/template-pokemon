@@ -5,7 +5,7 @@ extends CharacterBody3D
 # Modifier la valeur pour changer la vitesse du joueur (4.0 celle de base)
 @export var vitesse = 4.0
 
-# Modifier la valeur pour changer la position de départ du joueur ((0, 1, 0) celle de base(
+# Modifier la valeur pour changer la position de départ du joueur ((0, 1, 0) celle de base)
 @export var position_initial = Vector3(0, 1, 0)
 
 # Paramètre à ne pas toucher

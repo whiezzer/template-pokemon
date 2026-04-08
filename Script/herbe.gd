@@ -17,7 +17,7 @@ func _onCollision(body) -> void:
 	if aleatoir <= probabiliteDeRencontre:
 		print("Lancement d'un combat")
 
-# Fonction qui permet de ne pas dépasser le pourcentage de probabilité de rencontre
+# Fonction qui permet de ne pas dépasser le pourcentage max de probabilité de rencontre
 func _maxPourcentage() -> void:
 	if probabiliteDeRencontre > 100.0:
 		probabiliteDeRencontre = 100.0
