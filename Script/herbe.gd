@@ -3,7 +3,7 @@ extends Area3D
 @export_category("Paramètre des Hautes herbes")
 
 # Probabilité de rencontrer un pokémon dans les hautes herbes en pourcentage
-@export var probabiliteDeRencontre = 12.5
+@export var probabiliteDeRencontre: float = 12.5
 
 # Fonction appellé au lancement du jeu
 func _ready() -> void:

@@ -6,6 +6,14 @@
 
 [node name="Pokemon" type="CharacterBody3D" unique_id=965007536]
 script = ExtResource("1_t2fpj")
+type = null
+nom = null
+pv = null
+attaque = null
+attaqueSpe = null
+defense = null
+defenseSpe = null
+vitesse = null
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=984015915]
 shape = SubResource("CapsuleShape3D_rmibi")

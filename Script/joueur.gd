@@ -3,16 +3,16 @@ extends CharacterBody3D
 @export_category("Paramètre du joueur")
 
 # Modifier la valeur pour changer la vitesse du joueur (4.0 celle de base)
-@export var vitesse = 4.0
+@export var vitesse: float = 4.0
 
 # Modifier la valeur pour changer la position de départ du joueur ((0, 1, 0) celle de base)
-@export var position_initial = Vector3(0, 1, 0)
+@export var position_initial: Vector3 = Vector3(0, 1, 0)
 
 # Paramètre à ne pas toucher
-var tailleDeLaTuile = 1
-var pourcentageDeMouvementJusquALaProchaineTuile = 0.0
-var direction = Vector3.ZERO
-var estEnMouvement = false
+var tailleDeLaTuile: int = 1
+var pourcentageDeMouvementJusquALaProchaineTuile: float = 0.0
+var direction: Vector3 = Vector3.ZERO
+var estEnMouvement: bool = false
 
 # Fonction appellé au lancement du jeu
 func _ready() -> void:

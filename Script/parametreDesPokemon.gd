@@ -2,7 +2,7 @@
 extends Node3D
 
 # Liste de base de 6 natures avec leurs valeurs par défaut
-var listeNatureDeBase = [
+var listeNatureDeBase : Array[NatureStat] = [
 	NatureStat.new("attaque", "+10%", "defense", "-10%"),
 	NatureStat.new("defense", "+10%", "attaque", "-10%"),
 	NatureStat.new("attaqueSpe", "+10%", "defenseSpe", "-10%"),
@@ -19,7 +19,7 @@ var listeNatureDeBase = [
 		_verifierNatures()
 
 # Vérifie la liste et s'assure qu'elle contient toujours 6 natures
-func _verifierNatures():
+func _verifierNatures() -> void:
 	if 5 == listeDesNatures.size():
 		listeDesNatures.append(NatureStat.new())
 	elif  5 > listeDesNatures.size():
@@ -32,5 +32,5 @@ func _verifierNatures():
 				listeDesNatures[i] = NatureStat.new()
 
 # Appel automatique au démarrage pour s'assurer de la taille correcte
-func _ready():
+func _ready() -> void:
 	_verifierNatures()
