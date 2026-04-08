@@ -11,41 +11,54 @@ extends CharacterBody3D
 # Paramètre à ne pas toucher
 var tailleDeLaTuile: int = 1
 var pourcentageDeMouvementJusquALaProchaineTuile: float = 0.0
-var direction: Vector3 = Vector3.ZERO
+var direction: Vector2 = Vector2.ZERO
 var estEnMouvement: bool = false
+var animArbre 
+var animEtat
 
 # Fonction appellé au lancement du jeu
 func _ready() -> void:
 	position = position_initial
+	animArbre = $AnimationTree
+	animEtat = animArbre.get("parameters/playback")
+	animArbre.active = true
 
 # Fonction appellé à chaque frame
 func _physics_process(delta: float) -> void:
 	if !estEnMouvement:
 		_enAttenteDeCommande()
-	else:
+	elif direction != Vector2.ZERO:
+		animEtat.travel("Walk")
 		_movement(delta)
+	else:
+		animEtat.travel("Idle")
 
 # Fonction qui gère si le joueur doit se déplacer ou pas,
 # en fonction de si oui ou non des commandes de déplacement ont été pressé.
 func _enAttenteDeCommande() -> void:
-	if direction.z == 0:
+	if direction.y == 0:
 		direction.x = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
 
 	if direction.x == 0:
-		direction.z = int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up"))
+		direction.y = int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up"))
 
-	if direction != Vector3.ZERO:
+	if direction != Vector2.ZERO:
+		animArbre.set("parameters/Idle/blend_position", direction)
+		animArbre.set("parameters/Walk/blend_position", direction)
 		position_initial = position
 		estEnMouvement = true
+	else:
+		animEtat.travel("Idle")
 
 # Fonction qui permet de déplacer le joueur
 func _movement(delta: float) -> void:
+	
 	pourcentageDeMouvementJusquALaProchaineTuile += vitesse * delta
 
 	if pourcentageDeMouvementJusquALaProchaineTuile >= 1.0:
 		pourcentageDeMouvementJusquALaProchaineTuile = 0.0
-		position = position_initial + (direction * tailleDeLaTuile)
-		direction = Vector3.ZERO
+		position = position_initial + (Vector3(direction.x, 0.0, direction.y) * tailleDeLaTuile)
+		direction = Vector2.ZERO
 		estEnMouvement = false
 	else:
-		position = position_initial + (direction * tailleDeLaTuile * pourcentageDeMouvementJusquALaProchaineTuile)
+		position = position_initial + (Vector3(direction.x, 0.0, direction.y) * tailleDeLaTuile * pourcentageDeMouvementJusquALaProchaineTuile)
