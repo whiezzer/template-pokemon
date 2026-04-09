@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ds4gjbbjisa65" path="res://Assets/Arbre/arbre.tscn" id="6_x6yq0"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_uv6h7"]
-size = Vector2(15, 15)
+size = Vector2(18, 18)
 
 [sub_resource type="Resource" id="Resource_vfha3"]
 script = ExtResource("5_vfha3")
@@ -57,6 +57,7 @@ modificateur2 = "-10%"
 [node name="Map" type="Node3D" unique_id=337228639]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=886342053]
+transform = Transform3D(1, 0, 0, 0, 0.48913896, 0.87220585, 0, -0.87220585, 0.48913896, 0, 0, 0)
 light_color = Color(0.9882353, 1, 0.59607846, 1)
 shadow_enabled = true
 

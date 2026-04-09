@@ -5,3 +5,4 @@
 [resource]
 transparency = 1
 albedo_texture = ExtResource("1_3c21n")
+texture_filter = 0

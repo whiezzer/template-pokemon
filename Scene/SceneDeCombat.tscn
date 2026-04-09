@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://o31auolc4myx" path="res://Assets/sol/sol.tscn" id="1_rqkxw"]
 [ext_resource type="PackedScene" uid="uid://cg7bha5t87b70" path="res://Assets/Pokemon/pokemon.tscn" id="2_1jl81"]
+[ext_resource type="Script" uid="uid://bit2nj7vgv60n" path="res://Script/Combat/combat.gd" id="3_1jl81"]
 
 [node name="SceneDeCombat" type="Node3D" unique_id=384346761]
 
@@ -16,3 +17,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, -0.9062202)
 
 [node name="PokemonEnnemi" parent="." unique_id=2002172973 instance=ExtResource("2_1jl81")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.53519964, 0.25, -2.415)
+
+[node name="Paramètre" type="Node3D" parent="." unique_id=1132893853]
+script = ExtResource("3_1jl81")

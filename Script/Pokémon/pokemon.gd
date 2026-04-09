@@ -15,12 +15,7 @@ func _ready() -> void:
 		var indexNature = randi() % dataDuJeu.listeDesNatures.size()
 		data.nature = dataDuJeu.listeDesNatures[indexNature]
 	
-	print(data.nom)
-	print(data.pv)
-	print(data.nature.modificateur1)
-	print(data.nature.stat1)
-	print(data.nature.modificateur2)
-	print(data.nature.stat2)
+	data._selectionAttaque()
 
 # Fonction appellé à chaque frame
 func _physics_process(delta: float) -> void:
