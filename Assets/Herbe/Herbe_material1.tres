@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cljjxbfsvn7rx"]
+
+[ext_resource type="Texture2D" uid="uid://chin6r6rrfefc" path="res://Assets/Herbe/Haute Herbe1.png" id="1_jjgef"]
+
+[resource]
+transparency = 1
+albedo_texture = ExtResource("1_jjgef")
+texture_filter = 0

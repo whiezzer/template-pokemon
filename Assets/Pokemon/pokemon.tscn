@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cg7bha5t87b70"]
 
 [ext_resource type="Script" uid="uid://b1ywj4hkif2up" path="res://Script/pokemon.gd" id="1_t2fpj"]
-[ext_resource type="Texture2D" uid="uid://w8ggyy1fj20y" path="res://Assets/Pokemons/Bomjeton.png" id="2_a5xw2"]
+[ext_resource type="Texture2D" uid="uid://w8ggyy1fj20y" path="res://Assets/Pokemon/Bomjeton.png" id="2_a5xw2"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rmibi"]
 radius = 0.30133057
@@ -9,14 +9,6 @@ height = 0.60266113
 
 [node name="Pokemon" type="CharacterBody3D" unique_id=965007536]
 script = ExtResource("1_t2fpj")
-type = null
-nom = null
-pv = null
-attaque = null
-attaqueSpe = null
-defense = null
-defenseSpe = null
-vitesse = null
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=984015915]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.042175293, 0)

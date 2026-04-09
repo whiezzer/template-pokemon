@@ -33,16 +33,19 @@ var nature: NatureStat
 var xp: int = 0
 var xpObjectif: int = 1000
 
+# Fonction appellé au lancement du jeu
 func _ready() -> void:
 	randomize()
 	var indexNature = randi() % get_node("/root/Map/Paramètre").listeDesNatures.size()
 	nature = get_node("/root/Map/Paramètre").listeDesNatures[indexNature]
 
+# Fonction appellé à chaque frame
 func _physics_process(delta: float) -> void:
 	xp += 1
 	if xpObjectif <= xp:
 		_niveauSuperieur()
 
+# Fonction pour faire passer un pokémon au niveau suivant
 func _niveauSuperieur() -> void:
 	xp = xp - xpObjectif
 	xpObjectif += 100

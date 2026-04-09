@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://o31auolc4myx"]
+
+[ext_resource type="Material" uid="uid://dmgcme55m5nt3" path="res://Assets/sol/Sol_material.tres" id="1_ro6g8"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_uv6h7"]
+size = Vector2(15, 15)
+
+[node name="Sol" type="MeshInstance3D" unique_id=417281805]
+transform = Transform3D(0.99999475, 0.0025606882, -0.001999428, -0.0025685509, 0.9999889, -0.003946633, 0.0019893171, 0.0039517395, 0.9999902, 0, 0, 0)
+material_override = ExtResource("1_ro6g8")
+mesh = SubResource("PlaneMesh_uv6h7")

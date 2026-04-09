@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ds4gjbbjisa65"]
+
+[ext_resource type="Material" uid="uid://fmq1k4fwbcay" path="res://Assets/Arbre/Arbre_material.tres" id="1_jeejy"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_uv6h7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qm7m7"]
+size = Vector3(1, 3, 1)
+
+[node name="Arbre1" type="StaticBody3D" unique_id=819529336]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=320315520]
+transform = Transform3D(1, 0, 0, 0, 0.508026, 0, 0, 0, 1, 0, -0.5112201, 0)
+material_override = ExtResource("1_jeejy")
+mesh = SubResource("CapsuleMesh_uv6h7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2082565026]
+shape = SubResource("BoxShape3D_qm7m7")

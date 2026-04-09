@@ -1,19 +1,16 @@
 [gd_scene format=3 uid="uid://kxcut6a2ewks"]
 
-[ext_resource type="PackedScene" uid="uid://n4arh46goj77" path="res://Scene/joueur.tscn" id="1_wg3re"]
-[ext_resource type="Script" uid="uid://dhm10sw285ehi" path="res://Script/herbe.gd" id="2_rmibi"]
-[ext_resource type="PackedScene" uid="uid://cg7bha5t87b70" path="res://Scene/pokemon.tscn" id="3_5vwud"]
+[ext_resource type="PackedScene" uid="uid://n4arh46goj77" path="res://Assets/Character/joueur.tscn" id="1_wg3re"]
+[ext_resource type="PackedScene" uid="uid://cg7bha5t87b70" path="res://Assets/Pokemon/pokemon.tscn" id="3_5vwud"]
+[ext_resource type="Material" uid="uid://dmgcme55m5nt3" path="res://Assets/sol/Sol_material.tres" id="3_aipmw"]
 [ext_resource type="Script" uid="uid://brojl8fd7vanx" path="res://Script/parametreDesPokemon.gd" id="4_dgiq7"]
+[ext_resource type="PackedScene" uid="uid://0i1ijd73pnlf" path="res://Assets/Herbe/herbe1.tscn" id="4_qm7m7"]
+[ext_resource type="PackedScene" uid="uid://dgw0qieifultw" path="res://Assets/Herbe/herbe2.tscn" id="5_8wwat"]
 [ext_resource type="Script" uid="uid://d6vieo400icv" path="res://Script/natureStat.gd" id="5_vfha3"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_uv6h7"]
+[ext_resource type="PackedScene" uid="uid://ds4gjbbjisa65" path="res://Assets/Arbre/arbre.tscn" id="6_x6yq0"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_uv6h7"]
-size = Vector2(10, 10)
-
-[sub_resource type="QuadMesh" id="QuadMesh_wg3re"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_wg3re"]
+size = Vector2(15, 15)
 
 [sub_resource type="Resource" id="Resource_vfha3"]
 script = ExtResource("5_vfha3")
@@ -70,221 +67,445 @@ position_initial = Vector3(0, 1, 1)
 
 [node name="Pokemon" parent="." unique_id=965007536 instance=ExtResource("3_5vwud")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.25, 3)
-type = "Feu"
-nom = "Pikachu"
-pv = 10
-attaque = 10
-attaqueSpe = 10
-defense = 10
-defenseSpe = 10
-vitesse = 10
 
 [node name="Forêt" type="Node3D" parent="." unique_id=1731113598]
 
-[node name="Arbre" type="MeshInstance3D" parent="Forêt" unique_id=1013523057]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.0301437, 0.8451717, 0)
-mesh = SubResource("CapsuleMesh_uv6h7")
-
 [node name="Sol" type="MeshInstance3D" parent="Forêt" unique_id=1057862754]
 transform = Transform3D(0.99999475, 0.0025606882, -0.001999428, -0.0025685509, 0.9999889, -0.003946633, 0.0019893171, 0.0039517395, 0.9999902, 0.008533955, 0.006989479, 0.00033521652)
+material_override = ExtResource("3_aipmw")
 mesh = SubResource("PlaneMesh_uv6h7")
 
 [node name="HauteHerbe" type="Node3D" parent="Forêt" unique_id=348635075]
 
-[node name="Herbe" type="MeshInstance3D" parent="Forêt/HauteHerbe" unique_id=1799576289]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.5, 0)
-mesh = SubResource("QuadMesh_wg3re")
-
-[node name="Area3D" type="Area3D" parent="Forêt/HauteHerbe/Herbe" unique_id=1383557635]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
-script = ExtResource("2_rmibi")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Forêt/HauteHerbe/Herbe/Area3D" unique_id=2095859947]
-shape = SubResource("BoxShape3D_wg3re")
-
-[node name="Herbe2" type="MeshInstance3D" parent="Forêt/HauteHerbe" unique_id=401669676]
+[node name="herbe1" parent="Forêt/HauteHerbe" unique_id=1297478967 instance=ExtResource("4_qm7m7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.5, 0)
-mesh = SubResource("QuadMesh_wg3re")
 
-[node name="Area3D" type="Area3D" parent="Forêt/HauteHerbe/Herbe2" unique_id=453377546]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
-script = ExtResource("2_rmibi")
+[node name="herbe2" parent="Forêt/HauteHerbe" unique_id=881962672 instance=ExtResource("5_8wwat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.5, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Forêt/HauteHerbe/Herbe2/Area3D" unique_id=1523222670]
-shape = SubResource("BoxShape3D_wg3re")
-
-[node name="Herbe3" type="MeshInstance3D" parent="Forêt/HauteHerbe" unique_id=786596126]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.5, -1)
-mesh = SubResource("QuadMesh_wg3re")
-
-[node name="Area3D" type="Area3D" parent="Forêt/HauteHerbe/Herbe3" unique_id=1990621466]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
-script = ExtResource("2_rmibi")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Forêt/HauteHerbe/Herbe3/Area3D" unique_id=1842334371]
-shape = SubResource("BoxShape3D_wg3re")
-
-[node name="Herbe4" type="MeshInstance3D" parent="Forêt/HauteHerbe" unique_id=407388354]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.5, -1)
-mesh = SubResource("QuadMesh_wg3re")
-
-[node name="Area3D" type="Area3D" parent="Forêt/HauteHerbe/Herbe4" unique_id=1857385459]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
-script = ExtResource("2_rmibi")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Forêt/HauteHerbe/Herbe4/Area3D" unique_id=172575653]
-shape = SubResource("BoxShape3D_wg3re")
-
-[node name="Herbe5" type="MeshInstance3D" parent="Forêt/HauteHerbe" unique_id=116719303]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-mesh = SubResource("QuadMesh_wg3re")
-
-[node name="Area3D" type="Area3D" parent="Forêt/HauteHerbe/Herbe5" unique_id=1400039572]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
-script = ExtResource("2_rmibi")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Forêt/HauteHerbe/Herbe5/Area3D" unique_id=1702101771]
-shape = SubResource("BoxShape3D_wg3re")
-
-[node name="Herbe6" type="MeshInstance3D" parent="Forêt/HauteHerbe" unique_id=1765261580]
+[node name="herbe3" parent="Forêt/HauteHerbe" unique_id=323408525 instance=ExtResource("4_qm7m7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.5, 0)
-mesh = SubResource("QuadMesh_wg3re")
 
-[node name="Area3D" type="Area3D" parent="Forêt/HauteHerbe/Herbe6" unique_id=2143968505]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
-script = ExtResource("2_rmibi")
+[node name="herbe4" parent="Forêt/HauteHerbe" unique_id=1464692417 instance=ExtResource("5_8wwat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Forêt/HauteHerbe/Herbe6/Area3D" unique_id=1660792761]
-shape = SubResource("BoxShape3D_wg3re")
+[node name="herbe5" parent="Forêt/HauteHerbe" unique_id=1547088251 instance=ExtResource("4_qm7m7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.5, -1)
 
-[node name="Herbe7" type="MeshInstance3D" parent="Forêt/HauteHerbe" unique_id=665366449]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -1)
-mesh = SubResource("QuadMesh_wg3re")
+[node name="herbe6" parent="Forêt/HauteHerbe" unique_id=1765014134 instance=ExtResource("5_8wwat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.5, -1)
 
-[node name="Area3D" type="Area3D" parent="Forêt/HauteHerbe/Herbe7" unique_id=1918441049]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
-script = ExtResource("2_rmibi")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Forêt/HauteHerbe/Herbe7/Area3D" unique_id=857471151]
-shape = SubResource("BoxShape3D_wg3re")
-
-[node name="Herbe8" type="MeshInstance3D" parent="Forêt/HauteHerbe" unique_id=841741076]
+[node name="herbe7" parent="Forêt/HauteHerbe" unique_id=1512918144 instance=ExtResource("4_qm7m7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.5, -1)
-mesh = SubResource("QuadMesh_wg3re")
 
-[node name="Area3D" type="Area3D" parent="Forêt/HauteHerbe/Herbe8" unique_id=671503470]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
-script = ExtResource("2_rmibi")
+[node name="herbe8" parent="Forêt/HauteHerbe" unique_id=1987830856 instance=ExtResource("5_8wwat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -1)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Forêt/HauteHerbe/Herbe8/Area3D" unique_id=1649212715]
-shape = SubResource("BoxShape3D_wg3re")
-
-[node name="Herbe9" type="MeshInstance3D" parent="Forêt/HauteHerbe" unique_id=1797132336]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.5, -2)
-mesh = SubResource("QuadMesh_wg3re")
-
-[node name="Area3D" type="Area3D" parent="Forêt/HauteHerbe/Herbe9" unique_id=1940287513]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
-script = ExtResource("2_rmibi")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Forêt/HauteHerbe/Herbe9/Area3D" unique_id=1865803241]
-shape = SubResource("BoxShape3D_wg3re")
-
-[node name="Herbe10" type="MeshInstance3D" parent="Forêt/HauteHerbe" unique_id=572267524]
+[node name="herbe9" parent="Forêt/HauteHerbe" unique_id=373462076 instance=ExtResource("4_qm7m7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.5, -2)
-mesh = SubResource("QuadMesh_wg3re")
 
-[node name="Area3D" type="Area3D" parent="Forêt/HauteHerbe/Herbe10" unique_id=1536720302]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
-script = ExtResource("2_rmibi")
+[node name="herbe10" parent="Forêt/HauteHerbe" unique_id=1317480340 instance=ExtResource("5_8wwat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.5, -2)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Forêt/HauteHerbe/Herbe10/Area3D" unique_id=370610685]
-shape = SubResource("BoxShape3D_wg3re")
-
-[node name="Herbe11" type="MeshInstance3D" parent="Forêt/HauteHerbe" unique_id=853934260]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.5, -3)
-mesh = SubResource("QuadMesh_wg3re")
-
-[node name="Area3D" type="Area3D" parent="Forêt/HauteHerbe/Herbe11" unique_id=564834048]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
-script = ExtResource("2_rmibi")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Forêt/HauteHerbe/Herbe11/Area3D" unique_id=850318557]
-shape = SubResource("BoxShape3D_wg3re")
-
-[node name="Herbe12" type="MeshInstance3D" parent="Forêt/HauteHerbe" unique_id=1486990322]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.5, -3)
-mesh = SubResource("QuadMesh_wg3re")
-
-[node name="Area3D" type="Area3D" parent="Forêt/HauteHerbe/Herbe12" unique_id=1216861725]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
-script = ExtResource("2_rmibi")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Forêt/HauteHerbe/Herbe12/Area3D" unique_id=1603335843]
-shape = SubResource("BoxShape3D_wg3re")
-
-[node name="Herbe13" type="MeshInstance3D" parent="Forêt/HauteHerbe" unique_id=1819551981]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -2)
-mesh = SubResource("QuadMesh_wg3re")
-
-[node name="Area3D" type="Area3D" parent="Forêt/HauteHerbe/Herbe13" unique_id=1422344147]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
-script = ExtResource("2_rmibi")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Forêt/HauteHerbe/Herbe13/Area3D" unique_id=62850652]
-shape = SubResource("BoxShape3D_wg3re")
-
-[node name="Herbe14" type="MeshInstance3D" parent="Forêt/HauteHerbe" unique_id=554136512]
+[node name="herbe11" parent="Forêt/HauteHerbe" unique_id=1694558245 instance=ExtResource("4_qm7m7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.5, -2)
-mesh = SubResource("QuadMesh_wg3re")
 
-[node name="Area3D" type="Area3D" parent="Forêt/HauteHerbe/Herbe14" unique_id=17448728]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
-script = ExtResource("2_rmibi")
+[node name="herbe12" parent="Forêt/HauteHerbe" unique_id=637679835 instance=ExtResource("5_8wwat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -2)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Forêt/HauteHerbe/Herbe14/Area3D" unique_id=181501010]
-shape = SubResource("BoxShape3D_wg3re")
+[node name="herbe13" parent="Forêt/HauteHerbe" unique_id=48679224 instance=ExtResource("4_qm7m7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.5, -3)
 
-[node name="Herbe15" type="MeshInstance3D" parent="Forêt/HauteHerbe" unique_id=1158055324]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -3)
-mesh = SubResource("QuadMesh_wg3re")
+[node name="herbe14" parent="Forêt/HauteHerbe" unique_id=388855004 instance=ExtResource("5_8wwat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.5, -3)
 
-[node name="Area3D" type="Area3D" parent="Forêt/HauteHerbe/Herbe15" unique_id=710820640]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
-script = ExtResource("2_rmibi")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Forêt/HauteHerbe/Herbe15/Area3D" unique_id=1818990279]
-shape = SubResource("BoxShape3D_wg3re")
-
-[node name="Herbe16" type="MeshInstance3D" parent="Forêt/HauteHerbe" unique_id=1651612415]
+[node name="herbe15" parent="Forêt/HauteHerbe" unique_id=1807899170 instance=ExtResource("4_qm7m7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.5, -3)
-mesh = SubResource("QuadMesh_wg3re")
 
-[node name="Area3D" type="Area3D" parent="Forêt/HauteHerbe/Herbe16" unique_id=1155248879]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
-script = ExtResource("2_rmibi")
+[node name="herbe16" parent="Forêt/HauteHerbe" unique_id=1101859551 instance=ExtResource("5_8wwat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -3)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Forêt/HauteHerbe/Herbe16/Area3D" unique_id=2007351967]
-shape = SubResource("BoxShape3D_wg3re")
+[node name="Arbres" type="Node3D" parent="Forêt" unique_id=464374848]
+
+[node name="Arbre1" parent="Forêt/Arbres" unique_id=819529336 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -5)
+
+[node name="Arbre2" parent="Forêt/Arbres" unique_id=236677505 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, -5)
+
+[node name="Arbre3" parent="Forêt/Arbres" unique_id=983009557 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, -5)
+
+[node name="Arbre4" parent="Forêt/Arbres" unique_id=1238033244 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -5)
+
+[node name="Arbre5" parent="Forêt/Arbres" unique_id=1147011252 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, -5)
+
+[node name="Arbre6" parent="Forêt/Arbres" unique_id=1758758185 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -5)
+
+[node name="Arbre7" parent="Forêt/Arbres" unique_id=2097265945 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -5)
+
+[node name="Arbre8" parent="Forêt/Arbres" unique_id=532540432 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -5)
+
+[node name="Arbre9" parent="Forêt/Arbres" unique_id=91375230 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, -5)
+
+[node name="Arbre10" parent="Forêt/Arbres" unique_id=682972518 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, -5)
+
+[node name="Arbre11" parent="Forêt/Arbres" unique_id=438833107 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, -5)
+
+[node name="Arbre41" parent="Forêt/Arbres" unique_id=1845960281 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -6)
+
+[node name="Arbre42" parent="Forêt/Arbres" unique_id=861830926 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, -6)
+
+[node name="Arbre43" parent="Forêt/Arbres" unique_id=141846536 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, -6)
+
+[node name="Arbre44" parent="Forêt/Arbres" unique_id=1778168191 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -6)
+
+[node name="Arbre45" parent="Forêt/Arbres" unique_id=811945984 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, -6)
+
+[node name="Arbre46" parent="Forêt/Arbres" unique_id=1012461800 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -6)
+
+[node name="Arbre47" parent="Forêt/Arbres" unique_id=1912786048 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -6)
+
+[node name="Arbre48" parent="Forêt/Arbres" unique_id=1930315928 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -6)
+
+[node name="Arbre49" parent="Forêt/Arbres" unique_id=823260320 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, -6)
+
+[node name="Arbre50" parent="Forêt/Arbres" unique_id=682391870 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, -6)
+
+[node name="Arbre51" parent="Forêt/Arbres" unique_id=2033112142 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, -6)
+
+[node name="Arbre52" parent="Forêt/Arbres" unique_id=1476471594 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 6)
+
+[node name="Arbre53" parent="Forêt/Arbres" unique_id=717256189 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 6)
+
+[node name="Arbre54" parent="Forêt/Arbres" unique_id=2061888784 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 6)
+
+[node name="Arbre55" parent="Forêt/Arbres" unique_id=412803934 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 6)
+
+[node name="Arbre56" parent="Forêt/Arbres" unique_id=626663072 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 6)
+
+[node name="Arbre57" parent="Forêt/Arbres" unique_id=1493337556 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 6)
+
+[node name="Arbre58" parent="Forêt/Arbres" unique_id=7729009 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 6)
+
+[node name="Arbre59" parent="Forêt/Arbres" unique_id=1147847510 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 6)
+
+[node name="Arbre60" parent="Forêt/Arbres" unique_id=1153856694 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 6)
+
+[node name="Arbre61" parent="Forêt/Arbres" unique_id=1424496103 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 6)
+
+[node name="Arbre62" parent="Forêt/Arbres" unique_id=1925727525 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, 6)
+
+[node name="Arbre12" parent="Forêt/Arbres" unique_id=1809216957 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 5)
+
+[node name="Arbre13" parent="Forêt/Arbres" unique_id=1587887544 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 5)
+
+[node name="Arbre14" parent="Forêt/Arbres" unique_id=1470947594 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 5)
+
+[node name="Arbre15" parent="Forêt/Arbres" unique_id=1320226153 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 5)
+
+[node name="Arbre16" parent="Forêt/Arbres" unique_id=526461418 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 5)
+
+[node name="Arbre17" parent="Forêt/Arbres" unique_id=2070740730 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 5)
+
+[node name="Arbre18" parent="Forêt/Arbres" unique_id=461871585 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 5)
+
+[node name="Arbre19" parent="Forêt/Arbres" unique_id=1327832861 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 5)
+
+[node name="Arbre20" parent="Forêt/Arbres" unique_id=1225071477 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 5)
+
+[node name="Arbre21" parent="Forêt/Arbres" unique_id=525587767 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 5)
+
+[node name="Arbre22" parent="Forêt/Arbres" unique_id=91199501 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, 5)
+
+[node name="Arbre23" parent="Forêt/Arbres" unique_id=1491409323 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, 4)
+
+[node name="Arbre24" parent="Forêt/Arbres" unique_id=902859826 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, 3)
+
+[node name="Arbre25" parent="Forêt/Arbres" unique_id=743207494 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, 2)
+
+[node name="Arbre26" parent="Forêt/Arbres" unique_id=507438597 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, 1)
+
+[node name="Arbre27" parent="Forêt/Arbres" unique_id=1267125756 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, 0)
+
+[node name="Arbre28" parent="Forêt/Arbres" unique_id=572048282 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, -1)
+
+[node name="Arbre29" parent="Forêt/Arbres" unique_id=796671792 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, -2)
+
+[node name="Arbre30" parent="Forêt/Arbres" unique_id=1382138777 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, -3)
+
+[node name="Arbre31" parent="Forêt/Arbres" unique_id=998990310 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, -4)
+
+[node name="Arbre32" parent="Forêt/Arbres" unique_id=1312862821 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 4)
+
+[node name="Arbre33" parent="Forêt/Arbres" unique_id=798747040 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 3)
+
+[node name="Arbre34" parent="Forêt/Arbres" unique_id=662272995 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 2)
+
+[node name="Arbre35" parent="Forêt/Arbres" unique_id=962453906 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 1)
+
+[node name="Arbre36" parent="Forêt/Arbres" unique_id=506464288 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 0)
+
+[node name="Arbre37" parent="Forêt/Arbres" unique_id=1821496656 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -1)
+
+[node name="Arbre38" parent="Forêt/Arbres" unique_id=876670396 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -2)
+
+[node name="Arbre39" parent="Forêt/Arbres" unique_id=4554464 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -3)
+
+[node name="Arbre40" parent="Forêt/Arbres" unique_id=1601826152 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -4)
+
+[node name="Arbre63" parent="Forêt/Arbres" unique_id=672443886 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -5)
+
+[node name="Arbre64" parent="Forêt/Arbres" unique_id=1554760319 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -6)
+
+[node name="Arbre65" parent="Forêt/Arbres" unique_id=1629633429 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 6)
+
+[node name="Arbre66" parent="Forêt/Arbres" unique_id=1904110941 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 4)
+
+[node name="Arbre67" parent="Forêt/Arbres" unique_id=1372565395 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 3)
+
+[node name="Arbre68" parent="Forêt/Arbres" unique_id=1109960528 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 2)
+
+[node name="Arbre69" parent="Forêt/Arbres" unique_id=1867609492 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 1)
+
+[node name="Arbre70" parent="Forêt/Arbres" unique_id=720830429 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 0)
+
+[node name="Arbre71" parent="Forêt/Arbres" unique_id=330543464 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -1)
+
+[node name="Arbre72" parent="Forêt/Arbres" unique_id=2006093248 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -2)
+
+[node name="Arbre73" parent="Forêt/Arbres" unique_id=452713953 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -3)
+
+[node name="Arbre74" parent="Forêt/Arbres" unique_id=1088320433 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -4)
+
+[node name="Arbre75" parent="Forêt/Arbres" unique_id=1989116632 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 5)
+
+[node name="Arbre76" parent="Forêt/Arbres" unique_id=1407754620 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, -5)
+
+[node name="Arbre77" parent="Forêt/Arbres" unique_id=1709967122 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, -6)
+
+[node name="Arbre78" parent="Forêt/Arbres" unique_id=1607856039 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 6)
+
+[node name="Arbre79" parent="Forêt/Arbres" unique_id=1643016839 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 4)
+
+[node name="Arbre80" parent="Forêt/Arbres" unique_id=914506022 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 3)
+
+[node name="Arbre81" parent="Forêt/Arbres" unique_id=405364340 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 2)
+
+[node name="Arbre82" parent="Forêt/Arbres" unique_id=274473635 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 1)
+
+[node name="Arbre83" parent="Forêt/Arbres" unique_id=385403302 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 0)
+
+[node name="Arbre84" parent="Forêt/Arbres" unique_id=629568805 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, -1)
+
+[node name="Arbre85" parent="Forêt/Arbres" unique_id=289468810 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, -2)
+
+[node name="Arbre86" parent="Forêt/Arbres" unique_id=15176017 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, -3)
+
+[node name="Arbre87" parent="Forêt/Arbres" unique_id=2037104298 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, -4)
+
+[node name="Arbre101" parent="Forêt/Arbres" unique_id=372801612 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, 5)
+
+[node name="Arbre102" parent="Forêt/Arbres" unique_id=1637011322 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, -5)
+
+[node name="Arbre103" parent="Forêt/Arbres" unique_id=1989232360 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, -6)
+
+[node name="Arbre104" parent="Forêt/Arbres" unique_id=733392190 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, 6)
+
+[node name="Arbre105" parent="Forêt/Arbres" unique_id=1826278163 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, 4)
+
+[node name="Arbre106" parent="Forêt/Arbres" unique_id=2049553906 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, 3)
+
+[node name="Arbre107" parent="Forêt/Arbres" unique_id=13199126 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, 2)
+
+[node name="Arbre108" parent="Forêt/Arbres" unique_id=1573232391 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, 1)
+
+[node name="Arbre109" parent="Forêt/Arbres" unique_id=1364385703 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, 0)
+
+[node name="Arbre110" parent="Forêt/Arbres" unique_id=515925257 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, -1)
+
+[node name="Arbre111" parent="Forêt/Arbres" unique_id=75095941 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, -2)
+
+[node name="Arbre112" parent="Forêt/Arbres" unique_id=720537893 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, -3)
+
+[node name="Arbre113" parent="Forêt/Arbres" unique_id=1650600836 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, -4)
+
+[node name="Arbre114" parent="Forêt/Arbres" unique_id=2106079000 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, 5)
+
+[node name="Arbre115" parent="Forêt/Arbres" unique_id=429380361 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, -5)
+
+[node name="Arbre116" parent="Forêt/Arbres" unique_id=1701011766 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, -6)
+
+[node name="Arbre117" parent="Forêt/Arbres" unique_id=1055502158 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, 6)
+
+[node name="Arbre118" parent="Forêt/Arbres" unique_id=271305578 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, 4)
+
+[node name="Arbre119" parent="Forêt/Arbres" unique_id=866641339 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, 3)
+
+[node name="Arbre120" parent="Forêt/Arbres" unique_id=488420812 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, 2)
+
+[node name="Arbre121" parent="Forêt/Arbres" unique_id=740885524 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, 1)
+
+[node name="Arbre122" parent="Forêt/Arbres" unique_id=1410264689 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, 0)
+
+[node name="Arbre123" parent="Forêt/Arbres" unique_id=2036286883 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, -1)
+
+[node name="Arbre124" parent="Forêt/Arbres" unique_id=269486016 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, -2)
+
+[node name="Arbre125" parent="Forêt/Arbres" unique_id=777697084 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, -3)
+
+[node name="Arbre126" parent="Forêt/Arbres" unique_id=1720191088 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, -4)
+
+[node name="Arbre88" parent="Forêt/Arbres" unique_id=1824543116 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 5)
+
+[node name="Arbre89" parent="Forêt/Arbres" unique_id=1784022367 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -5)
+
+[node name="Arbre90" parent="Forêt/Arbres" unique_id=322599150 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -6)
+
+[node name="Arbre91" parent="Forêt/Arbres" unique_id=1352449994 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 6)
+
+[node name="Arbre92" parent="Forêt/Arbres" unique_id=843337946 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 4)
+
+[node name="Arbre93" parent="Forêt/Arbres" unique_id=791737993 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 3)
+
+[node name="Arbre94" parent="Forêt/Arbres" unique_id=1435082113 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 2)
+
+[node name="Arbre95" parent="Forêt/Arbres" unique_id=2060119436 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 1)
+
+[node name="Arbre96" parent="Forêt/Arbres" unique_id=1209757229 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 0)
+
+[node name="Arbre97" parent="Forêt/Arbres" unique_id=651643798 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -1)
+
+[node name="Arbre98" parent="Forêt/Arbres" unique_id=473213673 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -2)
+
+[node name="Arbre99" parent="Forêt/Arbres" unique_id=1282867508 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -3)
+
+[node name="Arbre100" parent="Forêt/Arbres" unique_id=1300610324 instance=ExtResource("6_x6yq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -4)
 
 [node name="Paramètre" type="Node3D" parent="." unique_id=256808770]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.128716, 0.85703945, 3.5622892)
 script = ExtResource("4_dgiq7")
 listeDesNatures = Array[ExtResource("5_vfha3")]([SubResource("Resource_vfha3"), SubResource("Resource_aipmw"), SubResource("Resource_ko6ux"), SubResource("Resource_qm7m7"), SubResource("Resource_8wwat"), SubResource("Resource_x6yq0")])
-
-[connection signal="body_entered" from="Forêt/HauteHerbe/Herbe/Area3D" to="Forêt/HauteHerbe/Herbe/Area3D" method="_onCollision"]
-[connection signal="body_entered" from="Forêt/HauteHerbe/Herbe2/Area3D" to="Forêt/HauteHerbe/Herbe2/Area3D" method="_onCollision"]
-[connection signal="body_entered" from="Forêt/HauteHerbe/Herbe3/Area3D" to="Forêt/HauteHerbe/Herbe3/Area3D" method="_onCollision"]
-[connection signal="body_entered" from="Forêt/HauteHerbe/Herbe4/Area3D" to="Forêt/HauteHerbe/Herbe4/Area3D" method="_onCollision"]
-[connection signal="body_entered" from="Forêt/HauteHerbe/Herbe5/Area3D" to="Forêt/HauteHerbe/Herbe5/Area3D" method="_onCollision"]
-[connection signal="body_entered" from="Forêt/HauteHerbe/Herbe6/Area3D" to="Forêt/HauteHerbe/Herbe6/Area3D" method="_onCollision"]
-[connection signal="body_entered" from="Forêt/HauteHerbe/Herbe7/Area3D" to="Forêt/HauteHerbe/Herbe7/Area3D" method="_onCollision"]
-[connection signal="body_entered" from="Forêt/HauteHerbe/Herbe8/Area3D" to="Forêt/HauteHerbe/Herbe8/Area3D" method="_onCollision"]
-[connection signal="body_entered" from="Forêt/HauteHerbe/Herbe9/Area3D" to="Forêt/HauteHerbe/Herbe9/Area3D" method="_onCollision"]
-[connection signal="body_entered" from="Forêt/HauteHerbe/Herbe10/Area3D" to="Forêt/HauteHerbe/Herbe10/Area3D" method="_onCollision"]
-[connection signal="body_entered" from="Forêt/HauteHerbe/Herbe11/Area3D" to="Forêt/HauteHerbe/Herbe11/Area3D" method="_onCollision"]
-[connection signal="body_entered" from="Forêt/HauteHerbe/Herbe12/Area3D" to="Forêt/HauteHerbe/Herbe12/Area3D" method="_onCollision"]
-[connection signal="body_entered" from="Forêt/HauteHerbe/Herbe13/Area3D" to="Forêt/HauteHerbe/Herbe13/Area3D" method="_onCollision"]
-[connection signal="body_entered" from="Forêt/HauteHerbe/Herbe14/Area3D" to="Forêt/HauteHerbe/Herbe14/Area3D" method="_onCollision"]
-[connection signal="body_entered" from="Forêt/HauteHerbe/Herbe15/Area3D" to="Forêt/HauteHerbe/Herbe15/Area3D" method="_onCollision"]
-[connection signal="body_entered" from="Forêt/HauteHerbe/Herbe16/Area3D" to="Forêt/HauteHerbe/Herbe16/Area3D" method="_onCollision"]

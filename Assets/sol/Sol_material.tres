@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dmgcme55m5nt3"]
+
+[ext_resource type="Texture2D" uid="uid://cvioqude8vnqt" path="res://Assets/sol/Grass-sol.png" id="1_npkh3"]
+
+[resource]
+albedo_texture = ExtResource("1_npkh3")
+uv1_scale = Vector3(10, 10, 10)
+texture_filter = 0

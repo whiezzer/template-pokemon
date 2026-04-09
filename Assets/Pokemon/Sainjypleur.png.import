@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp2ghoxx6gmvg"
-path="res://.godot/imported/Greupô.png-d4ebf0bf96f220c7919e5f094967faee.ctex"
+uid="uid://canq81mixxba5"
+path="res://.godot/imported/Sainjypleur.png-3942952eac357fa694e277d67fe4c1ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pokemons/Greupô.png"
-dest_files=["res://.godot/imported/Greupô.png-d4ebf0bf96f220c7919e5f094967faee.ctex"]
+source_file="res://Assets/Pokemon/Sainjypleur.png"
+dest_files=["res://.godot/imported/Sainjypleur.png-3942952eac357fa694e277d67fe4c1ae.ctex"]
 
 [params]
 

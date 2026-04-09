@@ -52,13 +52,22 @@ func _enAttenteDeCommande() -> void:
 
 # Fonction qui permet de déplacer le joueur
 func _movement(delta: float) -> void:
-	
 	pourcentageDeMouvementJusquALaProchaineTuile += vitesse * delta
+
+	var cible = position_initial + (Vector3(direction.x, 0.0, direction.y) * tailleDeLaTuile)
+	var nouvelle_position = position_initial + (cible - position_initial) * pourcentageDeMouvementJusquALaProchaineTuile
+
+	var mouvement = nouvelle_position - position
+	var collision = move_and_collide(mouvement)
+
+	if collision:
+		direction = Vector2.ZERO
+		estEnMouvement = false
+		pourcentageDeMouvementJusquALaProchaineTuile = 0.0
+		return
 
 	if pourcentageDeMouvementJusquALaProchaineTuile >= 1.0:
 		pourcentageDeMouvementJusquALaProchaineTuile = 0.0
-		position = position_initial + (Vector3(direction.x, 0.0, direction.y) * tailleDeLaTuile)
+		position = cible
 		direction = Vector2.ZERO
 		estEnMouvement = false
-	else:
-		position = position_initial + (Vector3(direction.x, 0.0, direction.y) * tailleDeLaTuile * pourcentageDeMouvementJusquALaProchaineTuile)
