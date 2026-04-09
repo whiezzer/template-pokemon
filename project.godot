@@ -15,9 +15,19 @@ run/main_scene="res://Scene/ScenePrincipale.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+dataDuJeu="*uid://brojl8fd7vanx"
+
+[layer_names]
+
+3d_render/layer_1="décor"
+3d_render/layer_2="Joueur"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
+jolt_physics_3d/autoload_on_startup=false
 
 [rendering]
 

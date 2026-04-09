@@ -1,3 +1,18 @@
 [gd_scene format=3 uid="uid://b5m747p0kpud8"]
 
+[ext_resource type="PackedScene" uid="uid://o31auolc4myx" path="res://Assets/sol/sol.tscn" id="1_rqkxw"]
+[ext_resource type="PackedScene" uid="uid://cg7bha5t87b70" path="res://Assets/Pokemon/pokemon.tscn" id="2_1jl81"]
+
 [node name="SceneDeCombat" type="Node3D" unique_id=384346761]
+
+[node name="Sol" parent="." unique_id=417281805 instance=ExtResource("1_rqkxw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="VueDeLaScene" type="Camera3D" parent="." unique_id=442836576]
+transform = Transform3D(0.9633475, -0.10209889, 0.24806759, 0.0062360163, 0.93301266, 0.35978952, -0.2681843, -0.34505534, 0.8994521, 0.5071883, 0.6809552, -0.4569716)
+
+[node name="PokemonJoueur" parent="." unique_id=965007536 instance=ExtResource("2_1jl81")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, -0.9062202)
+
+[node name="PokemonEnnemi" parent="." unique_id=2002172973 instance=ExtResource("2_1jl81")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.53519964, 0.25, -2.415)

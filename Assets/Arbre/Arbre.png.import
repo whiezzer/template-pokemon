@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp2ghoxx6gmvg"
-path.s3tc="res://.godot/imported/Greupô.png-68d47a3d9e2d77b533a72eaee1b0b321.s3tc.ctex"
+uid="uid://cqh51a2qnnlfy"
+path.s3tc="res://.godot/imported/Arbre.png-502ffcc355fb99dbc5f96bbbc4991b45.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Pokemon/Greupô.png"
-dest_files=["res://.godot/imported/Greupô.png-68d47a3d9e2d77b533a72eaee1b0b321.s3tc.ctex"]
+source_file="res://Assets/Arbre/Arbre.png"
+dest_files=["res://.godot/imported/Arbre.png-502ffcc355fb99dbc5f96bbbc4991b45.s3tc.ctex"]
 
 [params]
 

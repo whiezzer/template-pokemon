@@ -528,13 +528,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -3)
 [node name="Arbre100" parent="Forêt/Arbres" unique_id=1300610324 instance=ExtResource("6_x6yq0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -4)
 
+[node name="Paramètre" type="Node3D" parent="." unique_id=256808770]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.128716, 0.85703945, 3.5622892)
+script = ExtResource("4_dgiq7")
+listeDesNatures = Array[ExtResource("5_vfha3")]([SubResource("Resource_vfha3"), SubResource("Resource_aipmw"), SubResource("Resource_ko6ux"), SubResource("Resource_qm7m7"), SubResource("Resource_8wwat"), SubResource("Resource_x6yq0")])
+pokemonJoueurStats = Object(CharacterBody3D,"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"disable_mode":0,"collision_layer":1,"collision_mask":1,"collision_priority":1.0,"input_ray_pickable":true,"input_capture_on_drag":false,"axis_lock_linear_x":false,"axis_lock_linear_y":false,"axis_lock_linear_z":false,"axis_lock_angular_x":false,"axis_lock_angular_y":false,"axis_lock_angular_z":false,"motion_mode":0,"up_direction":Vector3(0, 1, 0),"slide_on_ceiling":true,"velocity":Vector3(0, 0, 0),"max_slides":6,"wall_min_slide_angle":0.2617994,"floor_stop_on_slope":true,"floor_constant_speed":false,"floor_block_on_wall":true,"floor_max_angle":0.7853982,"floor_snap_length":0.1,"platform_on_leave":0,"platform_floor_layers":4294967295,"platform_wall_layers":0,"safe_margin":0.001,"script":Resource("res://Script/Pokémon/pokemon.gd"),"type":"Feu","nom":"BomJeton","pv":10,"attaque":10,"attaqueSpe":10,"defense":10,"defenseSpe":10,"vitesse":10,"lvl":1,"nature":null,"xp":0,"xpObjectif":1000,"data":null)
+
+pokemonEnnemiStats = Object(CharacterBody3D,"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"disable_mode":0,"collision_layer":1,"collision_mask":1,"collision_priority":1.0,"input_ray_pickable":true,"input_capture_on_drag":false,"axis_lock_linear_x":false,"axis_lock_linear_y":false,"axis_lock_linear_z":false,"axis_lock_angular_x":false,"axis_lock_angular_y":false,"axis_lock_angular_z":false,"motion_mode":0,"up_direction":Vector3(0, 1, 0),"slide_on_ceiling":true,"velocity":Vector3(0, 0, 0),"max_slides":6,"wall_min_slide_angle":0.2617994,"floor_stop_on_slope":true,"floor_constant_speed":false,"floor_block_on_wall":true,"floor_max_angle":0.7853982,"floor_snap_length":0.1,"platform_on_leave":0,"platform_floor_layers":4294967295,"platform_wall_layers":0,"safe_margin":0.001,"script":Resource("res://Script/Pokémon/pokemon.gd"),"type":"Plante","nom":"Greupô","pv":10,"attaque":10,"attaqueSpe":10,"defense":10,"defenseSpe":10,"vitesse":10,"lvl":1,"nature":null,"xp":0,"xpObjectif":1000,"data":null)
+
+
 [node name="PokemonJoueur" parent="." unique_id=965007536 instance=ExtResource("2_qm7m7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 11)
 
 [node name="PokemonEnnemi" parent="." unique_id=429251499 instance=ExtResource("2_qm7m7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 11.585)
-
-[node name="Paramètre" type="Node3D" parent="." unique_id=256808770]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.128716, 0.85703945, 3.5622892)
-script = ExtResource("4_dgiq7")
-listeDesNatures = Array[ExtResource("5_vfha3")]([SubResource("Resource_vfha3"), SubResource("Resource_aipmw"), SubResource("Resource_ko6ux"), SubResource("Resource_qm7m7"), SubResource("Resource_8wwat"), SubResource("Resource_x6yq0")])

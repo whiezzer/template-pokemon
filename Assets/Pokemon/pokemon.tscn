@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cg7bha5t87b70"]
 
-[ext_resource type="Script" uid="uid://b1ywj4hkif2up" path="res://Script/pokemon.gd" id="1_t2fpj"]
-[ext_resource type="Texture2D" uid="uid://w8ggyy1fj20y" path="res://Assets/Pokemon/Bomjeton.png" id="2_a5xw2"]
+[ext_resource type="Script" uid="uid://b1ywj4hkif2up" path="res://Script/Pokémon/pokemon.gd" id="1_t2fpj"]
+[ext_resource type="Texture2D" uid="uid://cp2ghoxx6gmvg" path="res://Assets/Pokemon/Greupô.png" id="2_3syjj"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rmibi"]
 radius = 0.30133057
@@ -15,4 +15,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.042175293, 0)
 shape = SubResource("CapsuleShape3D_rmibi")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=687235734]
-texture = ExtResource("2_a5xw2")
+texture_filter = 0
+texture = ExtResource("2_3syjj")

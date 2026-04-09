@@ -11,7 +11,7 @@ var listeNatureDeBase : Array[NatureStat] = [
 	NatureStat.new("pv", "+10%", "vitesse", "-10%")
 ]
 
-@export_category("Paramètres généraux de tous les Pokémon")
+@export_category("Paramètres des natures des pokémons")
 # Liste de toutes les natures possible svisible et modifiable dans l’inspecteur
 @export var listeDesNatures : Array[NatureStat] = []:
 	set(value):
@@ -31,6 +31,12 @@ func _verifierNatures() -> void:
 			if listeDesNatures[i] == null:
 				listeDesNatures[i] = NatureStat.new()
 
+var pokemonJoueurStats: PokemonData
+
+var pokemonEnnemiStats: PokemonData
+
 # Appel automatique au démarrage pour s'assurer de la taille correcte
 func _ready() -> void:
 	_verifierNatures()
+	pokemonJoueurStats = PokemonData.new("BomJeton", "Feu", 10, 10, 10, 10, 10, 10)
+	pokemonEnnemiStats = PokemonData.new("Greupô", "Plante", 10, 10, 10, 10, 10, 10)

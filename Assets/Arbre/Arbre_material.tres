@@ -1,4 +1,7 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://fmq1k4fwbcay"]
 
+[ext_resource type="Texture2D" uid="uid://cqh51a2qnnlfy" path="res://Assets/Arbre/Arbre.png" id="1_3c21n"]
+
 [resource]
-albedo_color = Color(0.1802277, 0.31283507, 0.05552654, 1)
+transparency = 1
+albedo_texture = ExtResource("1_3c21n")

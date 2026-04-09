@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://n4arh46goj77"]
 
-[ext_resource type="Script" uid="uid://cp0v1x0jwjrsp" path="res://Script/joueur.gd" id="1_gvkvn"]
+[ext_resource type="Script" uid="uid://cp0v1x0jwjrsp" path="res://Script/character/joueur.gd" id="1_gvkvn"]
 [ext_resource type="Texture2D" uid="uid://dvm3ac5q68t22" path="res://Assets/Character/Character_Sprite_Sheet.png" id="2_vl7wj"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cqx2k"]
@@ -222,6 +222,8 @@ states/Walk/position = Vector2(442.40002, 87.11549)
 graph_offset = Vector2(-18, -20)
 
 [node name="Joueur" type="CharacterBody3D" unique_id=1292424602]
+collision_layer = 2
+collision_mask = 3
 axis_lock_linear_y = true
 axis_lock_angular_x = true
 axis_lock_angular_y = true

@@ -15,7 +15,7 @@ func _ready() -> void:
 func _onCollision(body) -> void:
 	var aleatoir = randf() * 100
 	if aleatoir <= probabiliteDeRencontre:
-		print("Lancement d'un combat")
+		get_tree().change_scene_to_file("res://Scene/SceneDeCombat.tscn")
 
 # Fonction qui permet de ne pas dépasser le pourcentage max de probabilité de rencontre
 func _maxPourcentage() -> void:

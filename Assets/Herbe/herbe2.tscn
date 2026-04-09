@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dgw0qieifultw"]
 
 [ext_resource type="Material" uid="uid://c2wahx2js7tly" path="res://Assets/Herbe/Herbe_material2.tres" id="1_7xjoh"]
-[ext_resource type="Script" uid="uid://dhm10sw285ehi" path="res://Script/herbe.gd" id="2_7d8hv"]
+[ext_resource type="Script" uid="uid://dhm10sw285ehi" path="res://Script/Herbe/herbe.gd" id="2_7d8hv"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_wg3re"]
 
@@ -13,6 +13,7 @@ mesh = SubResource("QuadMesh_wg3re")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=442946957]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+collision_mask = 2
 script = ExtResource("2_7d8hv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1327852685]
