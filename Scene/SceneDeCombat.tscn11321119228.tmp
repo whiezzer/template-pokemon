@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://o31auolc4myx" path="res://Assets/sol/sol.tscn" id="1_rqkxw"]
 [ext_resource type="PackedScene" uid="uid://cg7bha5t87b70" path="res://Assets/Pokemon/pokemon.tscn" id="2_1jl81"]
 [ext_resource type="Script" uid="uid://bit2nj7vgv60n" path="res://Script/Combat/combat.gd" id="3_1jl81"]
-[ext_resource type="Script" uid="uid://o62n2swlrafo" path="res://Script/Combat/boutonAttaque.gd" id="4_4oj6k"]
 
 [node name="SceneDeCombat" type="Node3D" unique_id=384346761]
 script = ExtResource("3_1jl81")
@@ -51,7 +50,7 @@ offset_right = -83.0
 offset_bottom = 90.0
 grow_horizontal = 0
 grow_vertical = 2
-script = ExtResource("4_4oj6k")
+script = ExtResource("3_1jl81")
 
 [node name="Bouton-Attaque2" type="Button" parent="InterfaceCombat/MenuAttaque" unique_id=42716771]
 layout_mode = 1
@@ -66,7 +65,7 @@ offset_right = -83.0
 offset_bottom = -60.0
 grow_horizontal = 0
 grow_vertical = 2
-script = ExtResource("4_4oj6k")
+script = ExtResource("3_1jl81")
 
 [node name="Bouton-Attaque3" type="Button" parent="InterfaceCombat/MenuAttaque" unique_id=1150980132]
 layout_mode = 1
@@ -81,7 +80,7 @@ offset_right = -82.99805
 offset_bottom = -210.0
 grow_horizontal = 0
 grow_vertical = 2
-script = ExtResource("4_4oj6k")
+script = ExtResource("3_1jl81")
 
 [node name="Bouton-Attaque4" type="Button" parent="InterfaceCombat/MenuAttaque" unique_id=1817069574]
 layout_mode = 1
@@ -96,7 +95,7 @@ offset_right = -83.0
 offset_bottom = 240.0
 grow_horizontal = 0
 grow_vertical = 2
-script = ExtResource("4_4oj6k")
+script = ExtResource("3_1jl81")
 
 [node name="Bouton_MenuSacADos" type="MenuButton" parent="InterfaceCombat" unique_id=2080833461]
 layout_mode = 1
@@ -118,17 +117,14 @@ offset_right = 99.0
 offset_bottom = 82.0
 text = "pokemon"
 
-[node name="ZoneDeTexte2" type="Label" parent="InterfaceCombat" unique_id=1153691324]
+[node name="ZoneDeTexte" type="TextEdit" parent="InterfaceCombat" unique_id=386777442]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 33.0
-offset_top = -94.0
-offset_right = 659.0
-offset_bottom = -26.0
+offset_top = -80.0
+offset_right = 660.0
 grow_vertical = 0
-vertical_alignment = 1
 
 [node name="InterfaceInfoPokemon1" type="Panel" parent="InterfaceCombat" unique_id=382766776]
 layout_mode = 1
@@ -231,8 +227,3 @@ offset_right = -7.0
 offset_bottom = -4.0
 grow_horizontal = 0
 grow_vertical = 0
-
-[connection signal="pressed" from="InterfaceCombat/MenuAttaque/Bouton-Attaque1" to="InterfaceCombat/MenuAttaque/Bouton-Attaque1" method="_on_button_pressed"]
-[connection signal="pressed" from="InterfaceCombat/MenuAttaque/Bouton-Attaque2" to="InterfaceCombat/MenuAttaque/Bouton-Attaque2" method="_on_button_pressed"]
-[connection signal="pressed" from="InterfaceCombat/MenuAttaque/Bouton-Attaque3" to="InterfaceCombat/MenuAttaque/Bouton-Attaque3" method="_on_button_pressed"]
-[connection signal="pressed" from="InterfaceCombat/MenuAttaque/Bouton-Attaque4" to="InterfaceCombat/MenuAttaque/Bouton-Attaque4" method="_on_button_pressed"]
