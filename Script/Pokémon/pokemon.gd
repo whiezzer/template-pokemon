@@ -9,13 +9,6 @@ func _ready() -> void:
 		data = dataDuJeu.pokemonJoueurStats
 	else:
 		data = dataDuJeu.pokemonEnnemiStats
-	
-	randomize()
-	if data.nature == null:
-		var indexNature = randi() % dataDuJeu.listeDesNatures.size()
-		data.nature = dataDuJeu.listeDesNatures[indexNature]
-	
-	data._selectionAttaque()
 
 # Fonction appellé à chaque frame
 func _physics_process(delta: float) -> void:

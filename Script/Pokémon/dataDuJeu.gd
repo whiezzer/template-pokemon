@@ -38,5 +38,5 @@ var pokemonEnnemiStats: PokemonData
 # Appel automatique au démarrage pour s'assurer de la taille correcte
 func _ready() -> void:
 	_verifierNatures()
-	pokemonJoueurStats = PokemonData.new("BomJeton", "Feu", 10, 10, 10, 10, 10, 10)
-	pokemonEnnemiStats = PokemonData.new("Greupô", "Plante", 10, 10, 10, 10, 10, 10)
+	pokemonJoueurStats = PokemonData.new("BomJeton", "Feu", 10, 3, 3, 3, 3, 3)
+	pokemonEnnemiStats = PokemonData.new("Greupô", "Plante", 10, 3, 3, 3, 3, 3)

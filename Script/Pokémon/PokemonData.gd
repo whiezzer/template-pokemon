@@ -11,7 +11,7 @@ var defense : int
 var defenseSpe : int
 var vitesse : int
 
-var listeAttaque : Array[String]
+var listeAttaque : Array[Attaque]
 
 var lvl : int = 1
 var xp : int = 0
@@ -34,14 +34,29 @@ func _niveauSuperieur() -> void:
 func _selectionAttaque() -> void:
 	match type:
 		"Feu":
-			listeAttaque = ["Flamme", "Flamme", "Flamme", "Flamme"]
+			listeAttaque = [
+				Attaque.new("Flamme", "Feu", 3, 20),
+				Attaque.new("Flamme", "Feu", 3, 20),
+				Attaque.new("Flamme", "Feu", 3, 20), 
+				Attaque.new("Flamme", "Feu", 3, 20)
+			]
 		"Plante":
-			listeAttaque = ["Feuille Slash", "Feuille Slash", "Feuille Slash", "Feuille Slash"]
+			listeAttaque = [
+				Attaque.new("Feuille Slash", "Plante", 3, 20),
+				Attaque.new("Feuille Slash", "Plante", 3, 20),
+				Attaque.new("Feuille Slash", "Plante", 3, 20),
+				Attaque.new("Feuille Slash", "Plante", 3, 20)
+			]
 		"Eau":
-			listeAttaque = ["Grosse Goutte", "Grosse Goutte", "Grosse Goutte", "Grosse Goutte"]
+			listeAttaque = [
+				Attaque.new("Grosse Goutte", "Eau", 3, 35),
+				Attaque.new("Grosse Goutte", "Eau", 3, 35),
+				Attaque.new("Grosse Goutte", "Eau", 3, 35),
+				Attaque.new("Grosse Goutte", "Eau", 3, 35)
+			]
 
 # Constructeur pour initialiser les valeurs directement
-func _init(_nom = "PasDeNom", _type = "Feu", _pv = 10, _attaque = 10, _attaqueSpe = 10, _def = 10, _defSpe = 10, _vitesse = 10):
+func _init(_nom = "PasDeNom", _type = "Feu", _pv = 10, _attaque = 3, _attaqueSpe = 3, _def = 3, _defSpe = 3, _vitesse = 3):
 	nom = _nom
 	type = _type
 	pv = _pv
@@ -51,3 +66,10 @@ func _init(_nom = "PasDeNom", _type = "Feu", _pv = 10, _attaque = 10, _attaqueSp
 	defense = _def
 	defenseSpe = _defSpe
 	vitesse = _vitesse
+	
+	_selectionAttaque()
+	
+	randomize()
+	if nature == null:
+		var indexNature = randi() % dataDuJeu.listeDesNatures.size()
+		nature = dataDuJeu.listeDesNatures[indexNature]
