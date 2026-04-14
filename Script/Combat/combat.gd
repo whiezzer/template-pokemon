@@ -12,12 +12,20 @@ var enCoursDeTour : bool = false
 
 var finCombat : bool = false
 
-# Fonction appellé au lancement du combat
-func  _ready() -> void:
+# Fonction qui se lance avant toutes les autres
+func _enter_tree() -> void:
+	
+	randomize()
+	
+	var types = ["Feu", "Plante", "Eau"]
 	
 	pokemonJoueur = dataDuJeu.pokemonJoueurStats
-	pokemonEnnemi = dataDuJeu.pokemonEnnemiStats
+	pokemonEnnemi = PokemonData.new(types[randi() % types.size()], 10, 3, 3, 3)
+	dataDuJeu.pokemonEnnemiStats = pokemonEnnemi 
 	message = $InterfaceCombat/ZoneDeTexte2
+
+# Fonction appellé au lancement du combat
+func  _ready() -> void:
 	
 	message.text = "  Début du combat"
 	
@@ -25,6 +33,7 @@ func  _ready() -> void:
 		tourDuJoueur = true
 	else :
 		tourDuJoueur = false
+		_tourAdverse()
 	
 	_misAJourInterface()
 
@@ -53,6 +62,8 @@ func _tourAdverse() -> void:
 	var degatsInflige = int(ceil(attaqueUtilse.puissance * pokemonEnnemi.attaque / pokemonJoueur.defense))
 	
 	attaqueUtilse.PP -= 1
+	
+	await get_tree().create_timer(2.0).timeout
 	
 	_misAJourInterface()
 	
@@ -165,3 +176,7 @@ func _misAJourInterface():
 	$"InterfaceCombat/MenuAttaque/Bouton-Attaque3".text = pokemonJoueur.listeAttaque[2].nom + "\n" + "\n PP : " + str(pokemonJoueur.listeAttaque[2].PP) + "/" + str(pokemonJoueur.listeAttaque[2].PP_max)
 	$"InterfaceCombat/MenuAttaque/Bouton-Attaque4".text = pokemonJoueur.listeAttaque[3].nom + "\n" + "\n PP : " + str(pokemonJoueur.listeAttaque[3].PP) + "/" + str(pokemonJoueur.listeAttaque[3].PP_max)
 	
+	$"InterfaceCombat/MenuAttaque/Bouton-Attaque1/TextureRect".texture = load("res://Assets/Interface/Type/" + pokemonJoueur.listeAttaque[0].type + ".png")
+	$"InterfaceCombat/MenuAttaque/Bouton-Attaque2/TextureRect".texture = load("res://Assets/Interface/Type/" + pokemonJoueur.listeAttaque[1].type + ".png")
+	$"InterfaceCombat/MenuAttaque/Bouton-Attaque3/TextureRect".texture = load("res://Assets/Interface/Type/" + pokemonJoueur.listeAttaque[2].type + ".png")
+	$"InterfaceCombat/MenuAttaque/Bouton-Attaque4/TextureRect".texture = load("res://Assets/Interface/Type/" + pokemonJoueur.listeAttaque[3].type + ".png")

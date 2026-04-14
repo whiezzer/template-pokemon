@@ -232,6 +232,11 @@ script = ExtResource("1_gvkvn")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=728831358]
 transform = Transform3D(2.3000002, 0, 0, 0, 2.3000002, 0, 0, 0, 1, 0, -0.6814942, 0)
+cast_shadow = 2
+billboard = 1
+shaded = true
+double_sided = false
+alpha_cut = 3
 texture_filter = 0
 texture = ExtResource("2_vl7wj")
 hframes = 12

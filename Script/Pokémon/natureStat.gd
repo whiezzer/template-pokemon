@@ -1,16 +1,16 @@
 extends Resource
 class_name NatureStat
 
-@export_enum("pv", "attaque", "attaqueSpe", "defense", "defenseSpe", "vitesse")
+@export_enum("pv", "attaque", "defense", "vitesse")
 var stat1 : String
 
-@export_enum("+10%", "-10%", "0%")
+@export_enum("+10%", "0%")
 var modificateur1 : String
 
-@export_enum("pv", "attaque", "attaqueSpe", "defense", "defenseSpe", "vitesse")
+@export_enum("pv", "attaque", "defense", "vitesse")
 var stat2 : String
 
-@export_enum("+10%", "-10%", "0%")
+@export_enum("-10%", "0%")
 var modificateur2 : String
 
 # Constructeur pour initialiser les valeurs directement

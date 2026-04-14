@@ -5,8 +5,8 @@ extends Node3D
 var listeNatureDeBase : Array[NatureStat] = [
 	NatureStat.new("attaque", "+10%", "defense", "-10%"),
 	NatureStat.new("defense", "+10%", "attaque", "-10%"),
-	NatureStat.new("attaqueSpe", "+10%", "defenseSpe", "-10%"),
-	NatureStat.new("defenseSpe", "+10%", "attaqueSpe", "-10%"),
+	NatureStat.new("pv", "+10%", "attaque", "-10%"),
+	NatureStat.new("attaque", "+10%", "pv", "-10%"),
 	NatureStat.new("vitesse", "+10%", "pv", "-10%"),
 	NatureStat.new("pv", "+10%", "vitesse", "-10%")
 ]
@@ -32,11 +32,9 @@ func _verifierNatures() -> void:
 				listeDesNatures[i] = NatureStat.new()
 
 var pokemonJoueurStats: PokemonData
-
 var pokemonEnnemiStats: PokemonData
 
 # Appel automatique au démarrage pour s'assurer de la taille correcte
 func _ready() -> void:
 	_verifierNatures()
-	pokemonJoueurStats = PokemonData.new("BomJeton", "Feu", 10, 3, 3, 3, 3, 3)
-	pokemonEnnemiStats = PokemonData.new("Greupô", "Plante", 10, 3, 3, 3, 3, 3)
+	pokemonJoueurStats = PokemonData.new("Feu", 10, 3, 3, 3)

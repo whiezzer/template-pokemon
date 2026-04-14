@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://cqh51a2qnnlfy" path="res://Assets/Arbre/Arbre.png" id="1_3c21n"]
 
 [resource]
-transparency = 1
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("1_3c21n")
 texture_filter = 0
