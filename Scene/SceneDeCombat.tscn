@@ -5,6 +5,9 @@
 [ext_resource type="Script" uid="uid://bit2nj7vgv60n" path="res://Script/Combat/combat.gd" id="3_1jl81"]
 [ext_resource type="Script" uid="uid://o62n2swlrafo" path="res://Script/Combat/boutonAttaque.gd" id="4_4oj6k"]
 [ext_resource type="PackedScene" uid="uid://ds4gjbbjisa65" path="res://Assets/Arbre/arbre.tscn" id="4_poke7"]
+[ext_resource type="FontFile" uid="uid://cex3sks87jmk6" path="res://Assets/Text/pixel_operator/PixelOperator.ttf" id="5_qqaya"]
+[ext_resource type="FontFile" uid="uid://datl1ctwq7utc" path="res://Assets/Text/pixel_operator/PixelOperator-Bold.ttf" id="7_8xilq"]
+[ext_resource type="FontFile" uid="uid://dc50vx3jow8oc" path="res://Assets/Text/pixel_operator/PixelOperatorMono.ttf" id="8_giger"]
 
 [sub_resource type="Environment" id="Environment_poke7"]
 background_mode = 2
@@ -359,6 +362,8 @@ offset_right = -83.0
 offset_bottom = 90.0
 grow_horizontal = 0
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_qqaya")
+theme_override_font_sizes/font_size = 20
 script = ExtResource("4_4oj6k")
 
 [node name="TextureRect" type="TextureRect" parent="InterfaceCombat/MenuAttaque/Bouton-Attaque1" unique_id=1071563425]
@@ -385,6 +390,8 @@ offset_right = -83.0
 offset_bottom = -60.0
 grow_horizontal = 0
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_qqaya")
+theme_override_font_sizes/font_size = 20
 script = ExtResource("4_4oj6k")
 
 [node name="TextureRect" type="TextureRect" parent="InterfaceCombat/MenuAttaque/Bouton-Attaque2" unique_id=1638788394]
@@ -411,6 +418,8 @@ offset_right = -82.99805
 offset_bottom = -210.0
 grow_horizontal = 0
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_qqaya")
+theme_override_font_sizes/font_size = 20
 script = ExtResource("4_4oj6k")
 
 [node name="TextureRect" type="TextureRect" parent="InterfaceCombat/MenuAttaque/Bouton-Attaque3" unique_id=1098256880]
@@ -437,6 +446,8 @@ offset_right = -83.0
 offset_bottom = 240.0
 grow_horizontal = 0
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_qqaya")
+theme_override_font_sizes/font_size = 20
 script = ExtResource("4_4oj6k")
 
 [node name="TextureRect" type="TextureRect" parent="InterfaceCombat/MenuAttaque/Bouton-Attaque4" unique_id=1065724482]
@@ -462,24 +473,35 @@ offset_top = -82.0
 offset_right = -359.0
 grow_horizontal = 0
 grow_vertical = 0
+theme_override_fonts/font = ExtResource("5_qqaya")
+theme_override_font_sizes/font_size = 25
 text = "sac"
 
 [node name="Bouton_MenuPokemon" type="MenuButton" parent="InterfaceCombat" unique_id=1695074022]
 layout_mode = 0
 offset_right = 99.0
 offset_bottom = 82.0
+theme_override_fonts/font = ExtResource("5_qqaya")
+theme_override_font_sizes/font_size = 25
 text = "pokemon"
 
-[node name="ZoneDeTexte2" type="Label" parent="InterfaceCombat" unique_id=1153691324]
+[node name="ZoneDeTexte" type="RichTextLabel" parent="InterfaceCombat" unique_id=1064932386]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 33.0
-offset_top = -94.0
-offset_right = 659.0
-offset_bottom = -26.0
+offset_left = 23.0
+offset_top = -98.0
+offset_right = 681.0
+offset_bottom = -12.0
 grow_vertical = 0
+theme_override_fonts/normal_font = ExtResource("5_qqaya")
+theme_override_fonts/bold_font = ExtResource("7_8xilq")
+theme_override_fonts/mono_font = ExtResource("8_giger")
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 25
+theme_override_font_sizes/mono_font_size = 25
+bbcode_enabled = true
 
 [node name="InterfaceInfoPokemon1" type="Panel" parent="InterfaceCombat" unique_id=382766776]
 layout_mode = 1
@@ -501,6 +523,8 @@ offset_left = 10.0
 offset_top = 3.0
 offset_right = 148.0
 offset_bottom = 28.0
+theme_override_fonts/font = ExtResource("5_qqaya")
+theme_override_font_sizes/font_size = 20
 
 [node name="Texte_Level" type="Label" parent="InterfaceCombat/InterfaceInfoPokemon1" unique_id=367414833]
 layout_mode = 0
@@ -508,6 +532,8 @@ offset_left = 164.0
 offset_top = 3.0
 offset_right = 229.0
 offset_bottom = 28.0
+theme_override_fonts/font = ExtResource("5_qqaya")
+theme_override_font_sizes/font_size = 20
 text = "nv : "
 
 [node name="Texte_PV" type="Label" parent="InterfaceCombat/InterfaceInfoPokemon1" unique_id=496551862]
@@ -516,6 +542,8 @@ offset_left = 10.0
 offset_top = 31.0
 offset_right = 42.0
 offset_bottom = 56.0
+theme_override_fonts/font = ExtResource("5_qqaya")
+theme_override_font_sizes/font_size = 20
 text = "PV :"
 
 [node name="PV" type="ProgressBar" parent="InterfaceCombat/InterfaceInfoPokemon1" unique_id=680881101]
@@ -554,6 +582,7 @@ offset_right = 113.5
 offset_bottom = -14.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_qqaya")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -577,6 +606,8 @@ offset_left = 10.0
 offset_top = 3.0
 offset_right = 148.0
 offset_bottom = 28.0
+theme_override_fonts/font = ExtResource("5_qqaya")
+theme_override_font_sizes/font_size = 20
 
 [node name="Texte_Level" type="Label" parent="InterfaceCombat/InterfaceInfoPokemon2" unique_id=285721218]
 layout_mode = 0
@@ -584,6 +615,8 @@ offset_left = 164.0
 offset_top = 3.0
 offset_right = 229.0
 offset_bottom = 28.0
+theme_override_fonts/font = ExtResource("5_qqaya")
+theme_override_font_sizes/font_size = 20
 text = "nv : "
 
 [node name="Texte_PV" type="Label" parent="InterfaceCombat/InterfaceInfoPokemon2" unique_id=919036692]
@@ -592,6 +625,8 @@ offset_left = 10.0
 offset_top = 31.0
 offset_right = 42.0
 offset_bottom = 56.0
+theme_override_fonts/font = ExtResource("5_qqaya")
+theme_override_font_sizes/font_size = 20
 text = "PV :"
 
 [node name="PV" type="ProgressBar" parent="InterfaceCombat/InterfaceInfoPokemon2" unique_id=1819369178]

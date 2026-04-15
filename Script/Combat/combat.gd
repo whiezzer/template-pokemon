@@ -12,7 +12,7 @@ var pvVitesse : float = 2
 
 var tourDuJoueur : bool
 
-var message : Label
+var message : RichTextLabel
 
 var enCoursDeTour : bool = false
 
@@ -26,7 +26,7 @@ func _enter_tree() -> void:
 	pokemonJoueur = dataDuJeu.pokemonJoueurStats
 	pokemonEnnemi = PokemonData.new(types[randi() % types.size()], 7, 5, 3, 3)
 	dataDuJeu.pokemonEnnemiStats = pokemonEnnemi 
-	message = $InterfaceCombat/ZoneDeTexte2
+	message = $InterfaceCombat/ZoneDeTexte
 	
 	if pokemonJoueur.lvl > 1:
 		for lvl in range (2, pokemonJoueur.lvl + 1 + randi_range(-1, 1)):
@@ -90,10 +90,10 @@ func _tourAdverse() -> void:
 	
 	if attaqueUtilse.type == pokemonJoueur.faiblesse:
 		degatsInflige = int(ceil(degatsInflige * 1.5))
-		efficaciteAttaque = "c'est SUPER efficace"
+		efficaciteAttaque = "c'est [color=yellow]SUPER[/color] efficace"
 	if attaqueUtilse.type == pokemonJoueur.resistance:
 		degatsInflige = int(floor(degatsInflige * 0.5))
-		efficaciteAttaque = "c'est pas très efficace"
+		efficaciteAttaque = "c'est [color=gray]pas très efficace[/color]"
 	
 	attaqueUtilse.PP -= 1
 	
@@ -149,10 +149,10 @@ func _tourJoueur(attaque : Attaque) -> void:
 	
 	if attaque.type == pokemonEnnemi.faiblesse:
 		degatsInflige = int(ceil(degatsInflige * 1.5))
-		efficaciteAttaque = "c'est SUPER efficace !"
+		efficaciteAttaque = "c'est [color=yellow]SUPER[/color] efficace !"
 	if attaque.type == pokemonEnnemi.resistance:
 		degatsInflige = int(floor(degatsInflige * 0.5))
-		efficaciteAttaque = "c'est pas très efficace.."
+		efficaciteAttaque = "c'est [color=gray]pas très efficace..[/color]"
 	
 	attaque.PP -= 1
 	
@@ -189,7 +189,7 @@ func _finDeTour() -> void :
 	if pokemonEnnemi.pv_Actuels <= 0:
 		
 		finCombat = true
-		ecrire_texte(message, "Victoire")
+		ecrire_texte(message, "[color=blue]Victoire ![/color]")
 		
 		while not Input.is_action_just_pressed("ui_accept"):
 			await get_tree().process_frame
@@ -199,7 +199,7 @@ func _finDeTour() -> void :
 		
 		pokemonJoueur.xp += 250 * pokemonEnnemi.lvl
 		
-		ecrire_texte(message, pokemonJoueur.nom + " gagne " + str(250 * pokemonEnnemi.lvl) + " points de niveaux")
+		ecrire_texte(message, pokemonJoueur.nom + " gagne " + "[color=blue]" + str(250 * pokemonEnnemi.lvl) + "[/color]" + " points de niveaux")
 		
 		_misAJourInterface()
 		
@@ -211,7 +211,7 @@ func _finDeTour() -> void :
 	elif pokemonJoueur.pv_Actuels <= 0:
 		
 		finCombat = true
-		ecrire_texte(message, "Défaite")
+		ecrire_texte(message, "[color=red]Défaite[/color]")
 		
 		while not Input.is_action_just_pressed("ui_accept"):
 			await get_tree().process_frame
@@ -248,7 +248,7 @@ func _misAJourInterface():
 	$"InterfaceCombat/MenuAttaque/Bouton-Attaque4/TextureRect".texture = load("res://Assets/Interface/Type/" + pokemonJoueur.listeAttaque[3].type + ".png")
 
 # Fonction qui un text petit à petit
-func ecrire_texte(label: Label, texte: String, vitesse := 0.03):
+func ecrire_texte(label: RichTextLabel, texte: String, vitesse := 0.03):
 	label.text = texte
 	label.visible_characters = 0
 	
