@@ -16,45 +16,45 @@ size = Vector2(18, 18)
 
 [sub_resource type="Resource" id="Resource_qm7m7"]
 script = ExtResource("5_vfha3")
-stat1 = "attaque"
-modificateur1 = "+10%"
-stat2 = "defense"
-modificateur2 = "-10%"
+stat1 = "pv"
+modificateur1 = "0%"
+stat2 = "attaque"
+modificateur2 = "0%"
 
 [sub_resource type="Resource" id="Resource_8wwat"]
 script = ExtResource("5_vfha3")
-stat1 = "defense"
-modificateur1 = "+10%"
+stat1 = "pv"
+modificateur1 = "0%"
 stat2 = "attaque"
-modificateur2 = "-10%"
+modificateur2 = "0%"
 
 [sub_resource type="Resource" id="Resource_x6yq0"]
 script = ExtResource("5_vfha3")
 stat1 = "pv"
-modificateur1 = "+10%"
+modificateur1 = "0%"
 stat2 = "attaque"
-modificateur2 = "-10%"
+modificateur2 = "0%"
 
 [sub_resource type="Resource" id="Resource_ob2kw"]
 script = ExtResource("5_vfha3")
-stat1 = "attaque"
-modificateur1 = "+10%"
-stat2 = "pv"
-modificateur2 = "-10%"
+stat1 = "pv"
+modificateur1 = "0%"
+stat2 = "attaque"
+modificateur2 = "0%"
 
 [sub_resource type="Resource" id="Resource_tjr8v"]
 script = ExtResource("5_vfha3")
-stat1 = "vitesse"
-modificateur1 = "+10%"
-stat2 = "pv"
-modificateur2 = "-10%"
+stat1 = "pv"
+modificateur1 = "0%"
+stat2 = "attaque"
+modificateur2 = "0%"
 
 [sub_resource type="Resource" id="Resource_voxsg"]
 script = ExtResource("5_vfha3")
 stat1 = "pv"
-modificateur1 = "+10%"
-stat2 = "vitesse"
-modificateur2 = "-10%"
+modificateur1 = "0%"
+stat2 = "attaque"
+modificateur2 = "0%"
 
 [node name="Map" type="Node3D" unique_id=337228639]
 

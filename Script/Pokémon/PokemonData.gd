@@ -3,6 +3,8 @@ extends Resource
 
 var nom : String
 var type : String
+var faiblesse : String
+var resistance : String
 var pv : int
 var pv_Actuels : int 
 var attaque : int
@@ -19,12 +21,14 @@ var nature : NatureStat
 # Fonction pour faire passer un pokémon au niveau suivant
 func _niveauSuperieur() -> void:
 	xp = xp - xpObjectif
-	xpObjectif += 100
+	xpObjectif += xpObjectif / 2
 	lvl += 1
-	pv += randi() % 10
-	attaque += randi() % 5
-	defense += randi() % 5
-	vitesse += randi() % 5
+	pv += randi_range(1, 5) 
+	attaque += randi_range(1, 2) 
+	defense += randi_range(1, 2) 
+	vitesse += randi_range(1, 2) 
+	
+	_attribueStatsNature()
 
 # Fonction qui attribue des attaques au pokémon selon son type
 func _selectionAttaque() -> void:
@@ -39,6 +43,10 @@ func _selectionAttaque() -> void:
 			
 			nom = "Bomjeton"
 			
+			
+			faiblesse = "Eau"
+			resistance = "Plante"
+			
 		"Plante":
 			listeAttaque = [
 				Attaque.new("Feuille Slash", "Plante", 3, 20),
@@ -49,6 +57,9 @@ func _selectionAttaque() -> void:
 			
 			nom = "Greupô"
 			
+			faiblesse = "Feu"
+			resistance = "Eau"
+			
 		"Eau":
 			listeAttaque = [
 				Attaque.new("Grosse Goutte", "Eau", 3, 35),
@@ -58,6 +69,10 @@ func _selectionAttaque() -> void:
 			]
 			
 			nom = "Sainjypleur"
+			
+			faiblesse = "Plante"
+			resistance = "Feu"
+			
 
 # Fonction qui attribue des stats aux pokemons selon leur nature
 func _attribueStatsNature() -> void:
