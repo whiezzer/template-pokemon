@@ -99,6 +99,8 @@ func _tourAdverse() -> void:
 	
 	ecrire_texte(message, "Le" + pokemonEnnemi.nom + " adverse utilise : " + attaqueUtilse.nom)
 	
+	$PokemonJoueur/AnimatedSpriteAttaque.play(attaqueUtilse.nom)
+	
 	if randf() <= attaqueUtilse.precision:
 		pokemonJoueur.pv_Actuels -= degatsInflige
 		
@@ -155,6 +157,8 @@ func _tourJoueur(attaque : Attaque) -> void:
 	attaque.PP -= 1
 	
 	ecrire_texte(message, pokemonJoueur.nom + " utilise : " + attaque.nom)
+	
+	$PokemonEnnemi/AnimatedSpriteAttaque.play(attaque.nom)
 	
 	if randf() <= attaque.precision:
 		pokemonEnnemi.pv_Actuels -= degatsInflige

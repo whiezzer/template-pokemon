@@ -2,10 +2,197 @@
 
 [ext_resource type="Script" uid="uid://b1ywj4hkif2up" path="res://Script/Pokémon/pokemon.gd" id="1_t2fpj"]
 [ext_resource type="Texture2D" uid="uid://cp2ghoxx6gmvg" path="res://Assets/Pokemon/Greupô.png" id="2_3syjj"]
+[ext_resource type="Texture2D" uid="uid://b4tl6u303ihve" path="res://Assets/Attaque/Tranche herbe/herbe tranche1.png" id="3_b8jjb"]
+[ext_resource type="Texture2D" uid="uid://dqfausn6fde2f" path="res://Assets/Attaque/Tranche herbe/herbe tranche2.png" id="4_e76do"]
+[ext_resource type="Texture2D" uid="uid://dtnq3rekn8uf5" path="res://Assets/Attaque/Tranche herbe/herbe tranche3.png" id="5_jqld0"]
+[ext_resource type="Texture2D" uid="uid://bqwi02vi50qw3" path="res://Assets/Attaque/Tranche herbe/herbe tranche4.png" id="6_vfnp0"]
+[ext_resource type="Texture2D" uid="uid://cjwfq504tdch4" path="res://Assets/Attaque/Tranche herbe/herbe tranche5.png" id="7_l8h4x"]
+[ext_resource type="Texture2D" uid="uid://b18fteiuefsfj" path="res://Assets/Attaque/Tranche herbe/herbe tranche6.png" id="8_d3p1a"]
+[ext_resource type="Texture2D" uid="uid://c4cegfi1ps26b" path="res://Assets/Attaque/Tranche herbe/herbe tranche7.png" id="9_jrhoj"]
+[ext_resource type="Texture2D" uid="uid://bfmurs415nvgw" path="res://Assets/Attaque/Tranche herbe/herbe tranche8.png" id="10_hinfr"]
+[ext_resource type="Texture2D" uid="uid://bx77f538o0a0n" path="res://Assets/Attaque/Tranche herbe/herbe tranche9.png" id="11_ml7v5"]
+[ext_resource type="Texture2D" uid="uid://d1558bh4ppxu1" path="res://Assets/Attaque/Tranche herbe/herbe tranche10.png" id="12_frehu"]
+[ext_resource type="Texture2D" uid="uid://enhpbwbn8y3a" path="res://Assets/Attaque/Tranche herbe/herbe tranche11.png" id="13_4hrb5"]
+[ext_resource type="Texture2D" uid="uid://rumta0458sd4" path="res://Assets/Attaque/Tranche herbe/herbe tranche12.png" id="14_usepa"]
+[ext_resource type="Texture2D" uid="uid://b45b854ykwx31" path="res://Assets/Attaque/Tranche herbe/herbe tranche13.png" id="15_mj8mx"]
+[ext_resource type="Texture2D" uid="uid://br3u74ntrflwm" path="res://Assets/Attaque/Tranche herbe/herbe tranche14.png" id="16_rsmh2"]
+[ext_resource type="Texture2D" uid="uid://dag1ustv8b3v2" path="res://Assets/Attaque/Tranche herbe/herbe tranche15.png" id="17_kts4q"]
+[ext_resource type="Texture2D" uid="uid://p2xgb15qv6fs" path="res://Assets/Attaque/Flamme/Flamme1.png" id="18_xwpov"]
+[ext_resource type="Texture2D" uid="uid://j8fkykhwpl61" path="res://Assets/Attaque/Flamme/Flamme2.png" id="19_mnx64"]
+[ext_resource type="Texture2D" uid="uid://dtocindcpgrvi" path="res://Assets/Attaque/Flamme/Flamme3.png" id="20_ng33e"]
+[ext_resource type="Texture2D" uid="uid://bvs2iv0x860og" path="res://Assets/Attaque/Flamme/Flamme4.png" id="21_e38ua"]
+[ext_resource type="Texture2D" uid="uid://vg8nxbv3iafv" path="res://Assets/Attaque/Flamme/Flamme5.png" id="22_kucs6"]
+[ext_resource type="Texture2D" uid="uid://bano2bgflmc5t" path="res://Assets/Attaque/Flamme/Flamme6.png" id="23_s5u73"]
+[ext_resource type="Texture2D" uid="uid://b708fxrqvr5bj" path="res://Assets/Attaque/Flamme/Flamme7.png" id="24_h7vs6"]
+[ext_resource type="Texture2D" uid="uid://bqmwhuiaiinvt" path="res://Assets/Attaque/Flamme/Flamme8.png" id="25_cu00f"]
+[ext_resource type="Texture2D" uid="uid://bar3521bsjnml" path="res://Assets/Attaque/Flamme/Flamme9.png" id="26_efk4p"]
+[ext_resource type="Texture2D" uid="uid://dhr14g8phc7vg" path="res://Assets/Attaque/Flamme/Flamme10.png" id="27_x8mn1"]
+[ext_resource type="Texture2D" uid="uid://3c2vqut4p2p4" path="res://Assets/Attaque/Flamme/Flamme11.png" id="28_n6kow"]
+[ext_resource type="Texture2D" uid="uid://c677y2fpeht50" path="res://Assets/Attaque/Flamme/Flamme12.png" id="29_o3vxt"]
+[ext_resource type="Texture2D" uid="uid://33emfgyd42rm" path="res://Assets/Attaque/Flamme/Flamme13.png" id="30_586sk"]
+[ext_resource type="Texture2D" uid="uid://cqn4ebwsi3i86" path="res://Assets/Attaque/Goutte/Goutte1.png" id="31_evyug"]
+[ext_resource type="Texture2D" uid="uid://d3sduwxakux3t" path="res://Assets/Attaque/Goutte/Goutte2.png" id="32_j5svi"]
+[ext_resource type="Texture2D" uid="uid://bi0qgd7fji11h" path="res://Assets/Attaque/Goutte/Goutte3.png" id="33_ofqwx"]
+[ext_resource type="Texture2D" uid="uid://b1wc2iss5yjsx" path="res://Assets/Attaque/Goutte/Goutte4.png" id="34_4eth5"]
+[ext_resource type="Texture2D" uid="uid://dd56ua36wesuh" path="res://Assets/Attaque/Goutte/Goutte5.png" id="35_5tebs"]
+[ext_resource type="Texture2D" uid="uid://bv0k83whoyfhv" path="res://Assets/Attaque/Goutte/Goutte6.png" id="36_jtwcc"]
+[ext_resource type="Texture2D" uid="uid://08un6kb4vjth" path="res://Assets/Attaque/Goutte/Goutte7.png" id="37_p5y2r"]
+[ext_resource type="Texture2D" uid="uid://bb6sv5mntiwts" path="res://Assets/Attaque/Goutte/Goutte8.png" id="38_ck5d2"]
+[ext_resource type="Texture2D" uid="uid://1gcxthyvn54x" path="res://Assets/Attaque/Goutte/Goutte9.png" id="39_wl844"]
+[ext_resource type="Texture2D" uid="uid://bqrchlk05l0sl" path="res://Assets/Attaque/Goutte/Goutte10.png" id="40_47wuq"]
+[ext_resource type="Texture2D" uid="uid://dtnwe6uuou6xb" path="res://Assets/Attaque/Goutte/Goutte11.png" id="41_effqi"]
+[ext_resource type="Texture2D" uid="uid://iapffcdntsj5" path="res://Assets/Attaque/Goutte/Goutte12.png" id="42_w4nk4"]
+[ext_resource type="Texture2D" uid="uid://dtu3pd4ujb740" path="res://Assets/Attaque/Goutte/Goutte13.png" id="43_5ui7w"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rmibi"]
 radius = 0.30133057
 height = 0.60266113
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xodrg"]
+animations = [{
+"frames": [],
+"loop": false,
+"name": &"Default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_b8jjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_e76do")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jqld0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vfnp0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_l8h4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_d3p1a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jrhoj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hinfr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ml7v5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_frehu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_4hrb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_usepa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_mj8mx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_rsmh2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_kts4q")
+}],
+"loop": false,
+"name": &"Feuille Slash",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_xwpov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_mnx64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ng33e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_e38ua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_kucs6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_s5u73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_h7vs6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_cu00f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_efk4p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_x8mn1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_n6kow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_o3vxt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_586sk")
+}],
+"loop": false,
+"name": &"Flamme",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_evyug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_j5svi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_ofqwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_4eth5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_5tebs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_jtwcc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_p5y2r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_ck5d2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_wl844")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_47wuq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_effqi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_w4nk4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_5ui7w")
+}],
+"loop": false,
+"name": &"Grosse Goutte",
+"speed": 10.0
+}]
 
 [node name="Pokemon" type="CharacterBody3D" unique_id=965007536]
 script = ExtResource("1_t2fpj")
@@ -22,3 +209,10 @@ double_sided = false
 alpha_cut = 3
 texture_filter = 0
 texture = ExtResource("2_3syjj")
+
+[node name="AnimatedSpriteAttaque" type="AnimatedSprite3D" parent="." unique_id=275567102]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.037840247, 0, 0.048479676)
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_xodrg")
+animation = &"Default"
