@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ds4gjbbjisa65" path="res://Assets/Arbre/arbre.tscn" id="4_poke7"]
 [ext_resource type="FontFile" uid="uid://cex3sks87jmk6" path="res://Assets/Text/pixel_operator/PixelOperator.ttf" id="5_qqaya"]
 [ext_resource type="FontFile" uid="uid://datl1ctwq7utc" path="res://Assets/Text/pixel_operator/PixelOperator-Bold.ttf" id="7_8xilq"]
+[ext_resource type="Script" uid="uid://6xmc8leg1cp0" path="res://Script/Combat/boutonMenu.gd" id="7_giger"]
 [ext_resource type="FontFile" uid="uid://dc50vx3jow8oc" path="res://Assets/Text/pixel_operator/PixelOperatorMono.ttf" id="8_giger"]
 
 [sub_resource type="Environment" id="Environment_poke7"]
@@ -461,6 +462,17 @@ offset_right = -7.0
 offset_bottom = 29.0
 grow_horizontal = 0
 
+[node name="MenuObjet" type="Panel" parent="InterfaceCombat" unique_id=872184245]
+visible = false
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -359.0
+grow_horizontal = 0
+grow_vertical = 2
+
 [node name="Bouton_MenuSacADos" type="MenuButton" parent="InterfaceCombat" unique_id=2080833461]
 layout_mode = 1
 anchors_preset = 3
@@ -476,6 +488,7 @@ grow_vertical = 0
 theme_override_fonts/font = ExtResource("5_qqaya")
 theme_override_font_sizes/font_size = 25
 text = "sac"
+script = ExtResource("7_giger")
 
 [node name="Bouton_MenuPokemon" type="MenuButton" parent="InterfaceCombat" unique_id=1695074022]
 layout_mode = 0
@@ -651,3 +664,4 @@ environment = SubResource("Environment_poke7")
 [connection signal="pressed" from="InterfaceCombat/MenuAttaque/Bouton-Attaque2" to="InterfaceCombat/MenuAttaque/Bouton-Attaque2" method="_on_button_pressed"]
 [connection signal="pressed" from="InterfaceCombat/MenuAttaque/Bouton-Attaque3" to="InterfaceCombat/MenuAttaque/Bouton-Attaque3" method="_on_button_pressed"]
 [connection signal="pressed" from="InterfaceCombat/MenuAttaque/Bouton-Attaque4" to="InterfaceCombat/MenuAttaque/Bouton-Attaque4" method="_on_button_pressed"]
+[connection signal="pressed" from="InterfaceCombat/Bouton_MenuSacADos" to="InterfaceCombat/Bouton_MenuSacADos" method="_on_button_pressed"]

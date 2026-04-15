@@ -1,4 +1,4 @@
-extends Node
+extends Button
 
 var attaque: Attaque
 
@@ -13,7 +13,7 @@ func _ready() -> void:
 		"Bouton-Attaque4":
 			attaque = dataDuJeu.pokemonJoueurStats.listeAttaque[3]
 
-func _on_button_pressed():
+func _on_button_pressed() -> void:
 	var combat = get_node("/root/SceneDeCombat")
 	if combat.tourDuJoueur == true:
 		combat._tourJoueur(attaque)

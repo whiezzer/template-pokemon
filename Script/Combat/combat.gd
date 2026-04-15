@@ -37,6 +37,8 @@ func _enter_tree() -> void:
 # Fonction appellé au lancement du combat
 func  _ready() -> void:
 	
+	_créerBoutonsMenuObjet()
+	
 	ecrire_texte(message, "Début du combat")
 	
 	if pokemonJoueur.vitesse >= pokemonEnnemi.vitesse:
@@ -255,3 +257,23 @@ func ecrire_texte(label: RichTextLabel, texte: String, vitesse := 0.03):
 	while label.visible_characters < texte.length():
 		label.visible_characters += 1
 		await get_tree().create_timer(vitesse).timeout
+
+# Fonction qui crée des boutons d'objets dans le menu objets par rapport au nombre d'objets dans la ListeDesObjets
+func _créerBoutonsMenuObjet() -> void:
+	var positionBoutonObjets = Vector2(77.0, 50.0)
+	
+	for objet in dataDuJeu.listeDesObjets:
+		
+		var bouton = Button.new()
+		bouton.set_script(preload("res://Script/Combat/boutonObjet.gd"))
+		
+		$InterfaceCombat/MenuObjet.add_child(bouton)
+		
+		bouton.objet = objet
+		bouton.position = positionBoutonObjets
+		bouton.size = Vector2(199.0, 25.0)
+		bouton.add_theme_font_override("font", preload("res://Assets/Text/pixel_operator/PixelOperator.ttf"))
+		bouton.add_theme_font_size_override("font_size", 20)
+		bouton.pressed.connect(bouton._on_button_pressed)
+		
+		positionBoutonObjets.y += 50.0
