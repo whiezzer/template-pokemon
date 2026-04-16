@@ -235,8 +235,8 @@ func _misAJourInterface():
 	$InterfaceCombat/InterfaceInfoPokemon2/Texte_Nom.text = pokemonEnnemi.nom
 	$InterfaceCombat/InterfaceInfoPokemon1/Texte_Nom.text = pokemonJoueur.nom
 	
-	$InterfaceCombat/InterfaceInfoPokemon2/Texte_Level.text = "nv : " + str(pokemonEnnemi.lvl)
-	$InterfaceCombat/InterfaceInfoPokemon1/Texte_Level.text = "nv : " + str(pokemonJoueur.lvl)
+	$InterfaceCombat/InterfaceInfoPokemon2/Texte_Level.text = str(pokemonEnnemi.lvl)
+	$InterfaceCombat/InterfaceInfoPokemon1/Texte_Level.text = str(pokemonJoueur.lvl)
 	
 	$"InterfaceCombat/MenuAttaque/Bouton-Attaque1".text = pokemonJoueur.listeAttaque[0].nom + "\n" + "\n            PP : " + str(pokemonJoueur.listeAttaque[0].PP) + "/" + str(pokemonJoueur.listeAttaque[0].PP_max)
 	$"InterfaceCombat/MenuAttaque/Bouton-Attaque2".text = pokemonJoueur.listeAttaque[1].nom + "\n" + "\n            PP : " + str(pokemonJoueur.listeAttaque[1].PP) + "/" + str(pokemonJoueur.listeAttaque[1].PP_max)

@@ -4,10 +4,12 @@ class_name Objet
 @export var nom : String:
 	set(value):
 		nom = value if value != "" else "Pas de nom"
+		nom = value if value.length() < 15 else value.substr(0, 15)
 
 @export var description : String:
 	set(value):
 		description = value if value != "" else "Pas de description"
+		description = value if value.length() < 500 else value.substr(0, 500)
 
 @export var capture : bool
 

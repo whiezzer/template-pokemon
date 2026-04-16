@@ -28,7 +28,7 @@ func _physics_process(delta: float) -> void:
 		data.pv_Actuels = 0
 	
 	if data.xpObjectif <= data.xp:
-		data._niveauSuperieur()
+		_niveauSuperieur()
 
 # Fonction qui attribue un sprite au pokémon selon son type
 func _selectionSprite() -> void:

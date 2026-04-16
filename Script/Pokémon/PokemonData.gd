@@ -1,7 +1,9 @@
 class_name PokemonData
 extends Resource
 
-@export var nom : String
+@export var nom : String:
+	set(value):
+		nom = value if value.length() < 10 else value.substr(0, 10)
 
 # Référence locale à la liste des types (non exportée, injectée par le tool)
 var _listeDesTypes : Array[Type] = []
