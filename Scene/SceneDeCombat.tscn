@@ -365,6 +365,7 @@ grow_horizontal = 0
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("5_qqaya")
 theme_override_font_sizes/font_size = 20
+alignment = 0
 script = ExtResource("4_4oj6k")
 
 [node name="TextureRect" type="TextureRect" parent="InterfaceCombat/MenuAttaque/Bouton-Attaque1" unique_id=1071563425]
@@ -393,6 +394,7 @@ grow_horizontal = 0
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("5_qqaya")
 theme_override_font_sizes/font_size = 20
+alignment = 0
 script = ExtResource("4_4oj6k")
 
 [node name="TextureRect" type="TextureRect" parent="InterfaceCombat/MenuAttaque/Bouton-Attaque2" unique_id=1638788394]
@@ -421,6 +423,7 @@ grow_horizontal = 0
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("5_qqaya")
 theme_override_font_sizes/font_size = 20
+alignment = 0
 script = ExtResource("4_4oj6k")
 
 [node name="TextureRect" type="TextureRect" parent="InterfaceCombat/MenuAttaque/Bouton-Attaque3" unique_id=1098256880]
@@ -449,6 +452,7 @@ grow_horizontal = 0
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("5_qqaya")
 theme_override_font_sizes/font_size = 20
+alignment = 0
 script = ExtResource("4_4oj6k")
 
 [node name="TextureRect" type="TextureRect" parent="InterfaceCombat/MenuAttaque/Bouton-Attaque4" unique_id=1065724482]

@@ -21,10 +21,8 @@ var finCombat : bool = false
 # Fonction qui se lance avant toutes les autres
 func _enter_tree() -> void:
 	
-	var types = ["Feu", "Plante", "Eau"]
-	
 	pokemonJoueur = dataDuJeu.pokemonJoueurStats
-	pokemonEnnemi = PokemonData.new(types[randi() % types.size()], 7, 5, 3, 3)
+	pokemonEnnemi = PokemonData.new(randi() % dataDuJeu.listeDesTypes.size(), 7, 5, 3, 3)
 	dataDuJeu.pokemonEnnemiStats = pokemonEnnemi 
 	message = $InterfaceCombat/ZoneDeTexte
 	
@@ -42,7 +40,7 @@ func  _ready() -> void:
 	ecrire_texte(message, "Début du combat")
 	
 	if pokemonJoueur.vitesse >= pokemonEnnemi.vitesse:
-		await get_tree().create_timer(0.5).timeout
+		await get_tree().create_timer(2.0).timeout
 		ecrire_texte(message, "Choisissez une action")
 		tourDuJoueur = true
 	else :
@@ -50,6 +48,7 @@ func  _ready() -> void:
 		await get_tree().create_timer(2.0).timeout
 		_tourAdverse()
 
+# Fonction appellé à chaque frame
 func _physics_process(delta: float) -> void:
 	
 	if pvJoueurInterface > pokemonJoueur.pv_Actuels:
@@ -90,10 +89,10 @@ func _tourAdverse() -> void:
 	
 	var efficaciteAttaque = ""
 	
-	if attaqueUtilse.type == pokemonJoueur.faiblesse:
+	if attaqueUtilse.type == pokemonJoueur.type.faiblesse:
 		degatsInflige = int(ceil(degatsInflige * 1.5))
 		efficaciteAttaque = "c'est [color=yellow]SUPER[/color] efficace"
-	if attaqueUtilse.type == pokemonJoueur.resistance:
+	if attaqueUtilse.type == pokemonJoueur.type.resistance:
 		degatsInflige = int(floor(degatsInflige * 0.5))
 		efficaciteAttaque = "c'est [color=gray]pas très efficace[/color]"
 	
@@ -149,10 +148,10 @@ func _tourJoueur(attaque : Attaque) -> void:
 	
 	var efficaciteAttaque = ""
 	
-	if attaque.type == pokemonEnnemi.faiblesse:
+	if attaque.type == pokemonEnnemi.type.faiblesse:
 		degatsInflige = int(ceil(degatsInflige * 1.5))
 		efficaciteAttaque = "c'est [color=yellow]SUPER[/color] efficace !"
-	if attaque.type == pokemonEnnemi.resistance:
+	if attaque.type == pokemonEnnemi.type.resistance:
 		degatsInflige = int(floor(degatsInflige * 0.5))
 		efficaciteAttaque = "c'est [color=gray]pas très efficace..[/color]"
 	
@@ -239,10 +238,10 @@ func _misAJourInterface():
 	$InterfaceCombat/InterfaceInfoPokemon2/Texte_Level.text = "nv : " + str(pokemonEnnemi.lvl)
 	$InterfaceCombat/InterfaceInfoPokemon1/Texte_Level.text = "nv : " + str(pokemonJoueur.lvl)
 	
-	$"InterfaceCombat/MenuAttaque/Bouton-Attaque1".text = pokemonJoueur.listeAttaque[0].nom + "\n" + "\n PP : " + str(pokemonJoueur.listeAttaque[0].PP) + "/" + str(pokemonJoueur.listeAttaque[0].PP_max)
-	$"InterfaceCombat/MenuAttaque/Bouton-Attaque2".text = pokemonJoueur.listeAttaque[1].nom + "\n" + "\n PP : " + str(pokemonJoueur.listeAttaque[1].PP) + "/" + str(pokemonJoueur.listeAttaque[1].PP_max)
-	$"InterfaceCombat/MenuAttaque/Bouton-Attaque3".text = pokemonJoueur.listeAttaque[2].nom + "\n" + "\n PP : " + str(pokemonJoueur.listeAttaque[2].PP) + "/" + str(pokemonJoueur.listeAttaque[2].PP_max)
-	$"InterfaceCombat/MenuAttaque/Bouton-Attaque4".text = pokemonJoueur.listeAttaque[3].nom + "\n" + "\n PP : " + str(pokemonJoueur.listeAttaque[3].PP) + "/" + str(pokemonJoueur.listeAttaque[3].PP_max)
+	$"InterfaceCombat/MenuAttaque/Bouton-Attaque1".text = pokemonJoueur.listeAttaque[0].nom + "\n" + "\n            PP : " + str(pokemonJoueur.listeAttaque[0].PP) + "/" + str(pokemonJoueur.listeAttaque[0].PP_max)
+	$"InterfaceCombat/MenuAttaque/Bouton-Attaque2".text = pokemonJoueur.listeAttaque[1].nom + "\n" + "\n            PP : " + str(pokemonJoueur.listeAttaque[1].PP) + "/" + str(pokemonJoueur.listeAttaque[1].PP_max)
+	$"InterfaceCombat/MenuAttaque/Bouton-Attaque3".text = pokemonJoueur.listeAttaque[2].nom + "\n" + "\n            PP : " + str(pokemonJoueur.listeAttaque[2].PP) + "/" + str(pokemonJoueur.listeAttaque[2].PP_max)
+	$"InterfaceCombat/MenuAttaque/Bouton-Attaque4".text = pokemonJoueur.listeAttaque[3].nom + "\n" + "\n            PP : " + str(pokemonJoueur.listeAttaque[3].PP) + "/" + str(pokemonJoueur.listeAttaque[3].PP_max)
 	
 	$"InterfaceCombat/MenuAttaque/Bouton-Attaque1/TextureRect".texture = load("res://Assets/Interface/Type/" + pokemonJoueur.listeAttaque[0].type + ".png")
 	$"InterfaceCombat/MenuAttaque/Bouton-Attaque2/TextureRect".texture = load("res://Assets/Interface/Type/" + pokemonJoueur.listeAttaque[1].type + ".png")

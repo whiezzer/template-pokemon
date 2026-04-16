@@ -1,9 +1,13 @@
 extends Resource
 class_name Objet
 
-@export var nom : String
+@export var nom : String:
+	set(value):
+		nom = value if value != "" else "Pas de nom"
 
-@export var description : String
+@export var description : String:
+	set(value):
+		description = value if value != "" else "Pas de description"
 
 @export var capture : bool
 
@@ -12,7 +16,9 @@ class_name Objet
 @export var soigne : bool
 
 @export_enum("0%", "25%", "50%", "75%", "100%")
-var nbPvSoigne : String
+var nbPvSoigne : String:
+	set(value):
+		nbPvSoigne = value if value != "" else "0%"
 
 # Constructeur pour initialiser les valeurs directement
 func _init(_nom = "Pas de nom", _description = "Pas de description", _capture = false, _reanime = false, _soigne = false, _nbPvSoigne = "0%"):

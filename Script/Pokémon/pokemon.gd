@@ -24,13 +24,16 @@ func _ready() -> void:
 # Fonction appellé à chaque frame
 func _physics_process(delta: float) -> void:
 	
+	if data.pv_Actuels < 0:
+		data.pv_Actuels = 0
+	
 	if data.xpObjectif <= data.xp:
 		data._niveauSuperieur()
 
 # Fonction qui attribue un sprite au pokémon selon son type
 func _selectionSprite() -> void:
 	
-	match data.type:
+	match data.type.nom:
 		"Feu":
 			$Sprite3D.texture = load("res://Assets/Pokemon/Bomjeton.png")
 		"Plante":
@@ -64,7 +67,7 @@ func _attribueStatsNature() -> void:
 
 # Fonction qui attribue des attaques au pokémon selon son type
 func _selectionAttaque() -> void:
-	match data.type:
+	match data.type.nom:
 		"Feu":
 			data.listeAttaque = [
 				Attaque.new("Flamme", "Feu", 3, 20),
@@ -73,11 +76,8 @@ func _selectionAttaque() -> void:
 				Attaque.new("Flamme", "Feu", 3, 20)
 			]
 			
-			data.nom = "Bomjeton"
-			
-			
-			data.faiblesse = "Eau"
-			data.resistance = "Plante"
+			if data.nom == "":
+				data.nom = "Bomjeton"
 			
 		"Plante":
 			data.listeAttaque = [
@@ -87,10 +87,8 @@ func _selectionAttaque() -> void:
 				Attaque.new("Feuille Slash", "Plante", 3, 20)
 			]
 			
-			data.nom = "Greupô"
-			
-			data.faiblesse = "Feu"
-			data.resistance = "Eau"
+			if data.nom == "":
+				data.nom = "Greupô"
 			
 		"Eau":
 			data.listeAttaque = [
@@ -100,10 +98,8 @@ func _selectionAttaque() -> void:
 				Attaque.new("Grosse Goutte", "Eau", 3, 35)
 			]
 			
-			data.nom = "Sainjypleur"
-			
-			data.faiblesse = "Plante"
-			data.resistance = "Feu"
+			if data.nom == "":
+				data.nom = "Sainjypleur"
 
 # Fonction pour faire passer un pokémon au niveau suivant
 func _niveauSuperieur() -> void:
