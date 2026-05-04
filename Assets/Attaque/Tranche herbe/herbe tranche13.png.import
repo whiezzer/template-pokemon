@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b45b854ykwx31"
-path.s3tc="res://.godot/imported/herbe tranche13.png-f5c33a0ccfe1f6e0d11c51139e111dcc.s3tc.ctex"
+path="res://.godot/imported/herbe tranche13.png-f5c33a0ccfe1f6e0d11c51139e111dcc.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Assets/Attaque/Tranche herbe/herbe tranche13.png"
-dest_files=["res://.godot/imported/herbe tranche13.png-f5c33a0ccfe1f6e0d11c51139e111dcc.s3tc.ctex"]
+dest_files=["res://.godot/imported/herbe tranche13.png-f5c33a0ccfe1f6e0d11c51139e111dcc.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
