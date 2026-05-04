@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bqmwhuiaiinvt"
-path.s3tc="res://.godot/imported/Flamme8.png-9b43fd2622b26994df5ea5806d37bfec.s3tc.ctex"
+path="res://.godot/imported/Flamme8.png-9b43fd2622b26994df5ea5806d37bfec.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Assets/Attaque/Flamme/Flamme8.png"
-dest_files=["res://.godot/imported/Flamme8.png-9b43fd2622b26994df5ea5806d37bfec.s3tc.ctex"]
+dest_files=["res://.godot/imported/Flamme8.png-9b43fd2622b26994df5ea5806d37bfec.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

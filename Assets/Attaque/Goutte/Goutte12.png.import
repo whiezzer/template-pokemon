@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://iapffcdntsj5"
-path.s3tc="res://.godot/imported/Goutte12.png-0345d6fe0f050fd471e7c79c6164e247.s3tc.ctex"
+path="res://.godot/imported/Goutte12.png-0345d6fe0f050fd471e7c79c6164e247.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Assets/Attaque/Goutte/Goutte12.png"
-dest_files=["res://.godot/imported/Goutte12.png-0345d6fe0f050fd471e7c79c6164e247.s3tc.ctex"]
+dest_files=["res://.godot/imported/Goutte12.png-0345d6fe0f050fd471e7c79c6164e247.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

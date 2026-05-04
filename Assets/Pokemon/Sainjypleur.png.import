@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://canq81mixxba5"
-path.s3tc="res://.godot/imported/Sainjypleur.png-3942952eac357fa694e277d67fe4c1ae.s3tc.ctex"
+path="res://.godot/imported/Sainjypleur.png-3942952eac357fa694e277d67fe4c1ae.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Assets/Pokemon/Sainjypleur.png"
-dest_files=["res://.godot/imported/Sainjypleur.png-3942952eac357fa694e277d67fe4c1ae.s3tc.ctex"]
+dest_files=["res://.godot/imported/Sainjypleur.png-3942952eac357fa694e277d67fe4c1ae.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
