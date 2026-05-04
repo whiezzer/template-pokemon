@@ -82,7 +82,7 @@ func _selectionAttaque() -> void:
 			listeAttaqueDuMemeType.append(attaque)
 	
 	for i in range(4):
-		data.listeAttaque.append(listeAttaqueDuMemeType.pick_random())
+		data.listeAttaque.append(listeAttaqueDuMemeType.pick_random().duplicate(true))
 
 # Fonction pour faire passer un pokémon au niveau suivant
 func _niveauSuperieur() -> void:

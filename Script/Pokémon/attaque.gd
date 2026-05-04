@@ -4,8 +4,8 @@ class_name Attaque
 @export var nom : String:
 	set(value):
 		nom = value if value != "" else "Pas de nom"
-		if nom.length() > 15:
-			nom = nom.substr(0, 15)
+		if nom.length() > 20:
+			nom = nom.substr(0, 20)
 		emit_changed()
 
 var _listeDesTypes : Array[Type] = []

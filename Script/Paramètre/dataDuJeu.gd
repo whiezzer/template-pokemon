@@ -34,7 +34,7 @@ func _creer_liste_types_base() -> Array[Type]:
 func _creer_liste_attaques_base() -> Array[Attaque]:
 	var listeDeBase = []
 	for type in listeDesTypes:
-		listeDeBase.append(Attaque.new("Pas de nom", type.nom))
+		listeDeBase.append(Attaque.new("Attaque" + type.nom, type.nom))
 	return listeDeBase
 
 @export_category("Paramètres des natures des pokémons")
@@ -88,6 +88,7 @@ func _verifierObjets() -> void:
 func _verifierPokemonsJoueur() -> void:
 	if 1 > listePokemonsJoueur.size():
 		listePokemonsJoueur = [PokemonData.new()]
+		listePokemonsJoueur[0].nom = "Bomjeton"
 	else:
 		for i in range(listePokemonsJoueur.size()):
 			if listePokemonsJoueur[i] == null:
@@ -141,9 +142,6 @@ func _verifierTypes() -> void:
 
 # Vérifie la liste et s'assure qu'elle contient toujours au moins 1 attaque pour chaques types
 func _verifierAttaques() -> void:
-	for attaque in listeDesAttaques:
-		if attaque._listeDesTypes.is_empty():
-			return
 	for i in range(listeDesAttaques.size()):
 		if listeDesAttaques[i] == null:
 			listeDesAttaques[i] = Attaque.new()
@@ -153,7 +151,7 @@ func _verifierAttaques() -> void:
 			typesDejaCouvert.append(attaque.type)
 	for type in listeDesTypes:
 		if type.nom not in typesDejaCouvert:
-			var nouvelleAttaque = Attaque.new("Pas de nom")
+			var nouvelleAttaque = Attaque.new("Attaque"+type.nom)
 			nouvelleAttaque._listeDesTypes = listeDesTypes
 			nouvelleAttaque.type = type.nom  
 			listeDesAttaques.append(nouvelleAttaque)

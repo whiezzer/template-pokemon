@@ -94,7 +94,7 @@ func _tourAdverse() -> void:
 	
 	attaqueUtilse.PP -= 1
 	
-	ecrire_texte(message, "Le" + pokemonEnnemi.nom + " adverse utilise : " + attaqueUtilse.nom)
+	ecrire_texte(message, "Le " + pokemonEnnemi.nom + " adverse utilise : " + attaqueUtilse.nom)
 	
 	$PokemonJoueur/AnimatedSpriteAttaque.play(attaqueUtilse.nom)
 	
