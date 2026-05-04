@@ -26,10 +26,6 @@ func _enter_tree() -> void:
 	dataDuJeu.pokemonEnnemiStats = pokemonEnnemi 
 	message = $InterfaceCombat/ZoneDeTexte
 	
-	if pokemonJoueur.lvl > 1:
-		for lvl in range (2, pokemonJoueur.lvl + 1 + randi_range(-1, 1)):
-			pokemonEnnemi._niveauSuperieur()
-	
 	_misAJourInterface()
 
 # Fonction appellé au lancement du combat
@@ -243,10 +239,8 @@ func _misAJourInterface():
 	$"InterfaceCombat/MenuAttaque/Bouton-Attaque3".text = pokemonJoueur.listeAttaque[2].nom + "\n" + "\n            PP : " + str(pokemonJoueur.listeAttaque[2].PP) + "/" + str(pokemonJoueur.listeAttaque[2].PP_max)
 	$"InterfaceCombat/MenuAttaque/Bouton-Attaque4".text = pokemonJoueur.listeAttaque[3].nom + "\n" + "\n            PP : " + str(pokemonJoueur.listeAttaque[3].PP) + "/" + str(pokemonJoueur.listeAttaque[3].PP_max)
 	
-	$"InterfaceCombat/MenuAttaque/Bouton-Attaque1/TextureRect".texture = load("res://Assets/Interface/Type/" + pokemonJoueur.listeAttaque[0].type + ".png")
-	$"InterfaceCombat/MenuAttaque/Bouton-Attaque2/TextureRect".texture = load("res://Assets/Interface/Type/" + pokemonJoueur.listeAttaque[1].type + ".png")
-	$"InterfaceCombat/MenuAttaque/Bouton-Attaque3/TextureRect".texture = load("res://Assets/Interface/Type/" + pokemonJoueur.listeAttaque[2].type + ".png")
-	$"InterfaceCombat/MenuAttaque/Bouton-Attaque4/TextureRect".texture = load("res://Assets/Interface/Type/" + pokemonJoueur.listeAttaque[3].type + ".png")
+	for i in range(1, pokemonJoueur.listeAttaque.size()+1):
+		get_node("InterfaceCombat/MenuAttaque/Bouton-Attaque" + str(i) + "/TextureRect").texture = load("res://Assets/Interface/Type/" + pokemonJoueur.listeAttaque[i-1].type + ".png")
 
 # Fonction qui un text petit à petit
 func ecrire_texte(label: RichTextLabel, texte: String, vitesse := 0.03):

@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://j4id13h0sn60" path="res://Assets/Interface/Combat/boite de dialogue.png" id="13_l7pxt"]
 [ext_resource type="Texture2D" uid="uid://3l80a5fhati6" path="res://Assets/Interface/Combat/Interface Pokemon.png" id="14_gfmo1"]
 [ext_resource type="Texture2D" uid="uid://cloxtjb15vdmj" path="res://Assets/Interface/Combat/BARRE DE VIE DESSOUS FOND.png" id="15_a7dcr"]
-[ext_resource type="Texture2D" uid="uid://d38oi7buwqitg" path="res://Assets/Interface/Combat/Barre de vie VERT.png" id="16_5i64c"]
+[ext_resource type="Texture2D" uid="uid://c4v5w8xv6pc5r" path="res://Assets/Interface/Combat/Barre de vie VERT ENNEMIE.png" id="15_l7pxt"]
 [ext_resource type="Texture2D" uid="uid://1mwb6idkhw5k" path="res://Assets/Interface/Combat/BARRE DE VIE DESSUS CONTOUR.png" id="17_yscag"]
 [ext_resource type="Texture2D" uid="uid://gdngmhho4wm4" path="res://Assets/Interface/Combat/BARRE DE VIE DESSOUS REMPLIS.png" id="18_l7pxt"]
 
@@ -375,9 +375,9 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = -282.0
-offset_top = 39.0
+offset_top = -249.0
 offset_right = -83.0
-offset_bottom = 103.0
+offset_bottom = -185.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("5_qqaya")
@@ -433,9 +433,9 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = -282.0
-offset_top = -249.0
+offset_top = 39.0
 offset_right = -82.99805
-offset_bottom = -185.0
+offset_bottom = 103.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("5_qqaya")
@@ -601,11 +601,14 @@ horizontal_alignment = 1
 [node name="PV" type="TextureProgressBar" parent="InterfaceCombat/InterfaceInfoPokemon1" unique_id=711400166]
 texture_filter = 1
 layout_mode = 0
-offset_right = 308.0
-offset_bottom = 103.0
+offset_left = 99.0
+offset_top = 49.0
+offset_right = 291.0
+offset_bottom = 58.0
 step = 0.0
+value = 100.0
 nine_patch_stretch = true
-texture_progress = ExtResource("16_5i64c")
+texture_progress = ExtResource("15_l7pxt")
 
 [node name="LVL" type="TextureProgressBar" parent="InterfaceCombat/InterfaceInfoPokemon1" unique_id=478299421]
 texture_filter = 1
@@ -614,6 +617,7 @@ offset_left = 8.0
 offset_top = 106.0
 offset_right = 315.0
 offset_bottom = 150.0
+step = 0.0
 nine_patch_stretch = true
 texture_under = ExtResource("15_a7dcr")
 texture_over = ExtResource("17_yscag")
@@ -679,11 +683,14 @@ horizontal_alignment = 1
 [node name="PV" type="TextureProgressBar" parent="InterfaceCombat/InterfaceInfoPokemon2" unique_id=677890120]
 texture_filter = 1
 layout_mode = 0
-offset_right = 308.0
-offset_bottom = 103.0
+offset_left = 99.0
+offset_top = 49.0
+offset_right = 291.0
+offset_bottom = 58.0
 step = 0.0
+value = 10.0
 nine_patch_stretch = true
-texture_progress = ExtResource("16_5i64c")
+texture_progress = ExtResource("15_l7pxt")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=441496462]
 environment = SubResource("Environment_poke7")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d38oi7buwqitg"
-path="res://.godot/imported/Barre de vie VERT.png-dac13c18b8047cc91317acdbf2b7d1f9.ctex"
+uid="uid://ddceydpclxhui"
+path="res://.godot/imported/Normal.png-02459d638087a67add68953c5eeaac02.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Interface/Combat/Barre de vie VERT.png"
-dest_files=["res://.godot/imported/Barre de vie VERT.png-dac13c18b8047cc91317acdbf2b7d1f9.ctex"]
+source_file="res://Assets/Interface/Type/Normal.png"
+dest_files=["res://.godot/imported/Normal.png-02459d638087a67add68953c5eeaac02.ctex"]
 
 [params]
 

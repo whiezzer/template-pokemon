@@ -3,17 +3,21 @@ extends Resource
 
 @export var nom : String:
 	set(value):
-		nom = value if value.length() < 10 else value.substr(0, 10)
+		if value.length() > 10 :
+			nom = value.substr(0, 10)
+		elif value == "" :
+			nom = "Pas de nom"
+		else :
+			nom = value
 
-# Référence locale à la liste des types (non exportée, injectée par le tool)
 var _listeDesTypes : Array[Type] = []
 
-var _type_index : int = 0
+var _type_index
 
 var type : Type:
 	get:
 		if _type_index < 0 or _type_index >= _listeDesTypes.size():
-			return null
+			return
 		return _listeDesTypes[_type_index]
 	set(value):
 		if value == null:
@@ -24,14 +28,14 @@ var type : Type:
 			_type_index = 0
 
 func _get_property_list():
-	if _listeDesTypes.is_empty():
-		return []
 	var noms := _listeDesTypes.map(func(t): return t.nom)
+	
 	return [{
 		"name": "_type_index",
 		"type": TYPE_INT,
-		"hint": PROPERTY_HINT_ENUM,
-		"hint_string": ",".join(noms)
+		"hint": PROPERTY_HINT_ENUM if not _listeDesTypes.is_empty() else PROPERTY_HINT_NONE,
+		"hint_string": ",".join(noms),
+		"usage": PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_STORAGE  # ← toujours sauvegardé
 	}]
 
 @export var pv : int:
@@ -59,9 +63,9 @@ var xpObjectif : int = 1000
 var nature : NatureStat
 
 # Constructeur pour initialiser les valeurs directement
-func _init(index = 0, _pv = 10, _attaque = 3, _def = 3, _vitesse = 3):
+func _init(index = 0, _pv = 10, _attaque = 5, _def = 5, _vitesse = 3):
+	nom = "Pas de nom"
 	_type_index = index
-	_listeDesTypes = dataDuJeu.listeDesTypes
 	pv = _pv
 	pv_Actuels = _pv
 	attaque = _attaque

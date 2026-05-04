@@ -15,11 +15,17 @@ func _ready() -> void:
 		var indexNature = randi() % dataDuJeu.listeDesNatures.size()
 		data.nature = dataDuJeu.listeDesNatures[indexNature]
 	
-	_attribueStatsNature()
+	if self.name == "PokemonEnnemi":
+		if dataDuJeu.pokemonJoueurStats.lvl > 1:
+			for lvl in range (2, dataDuJeu.pokemonJoueurStats.lvl + 1 + randi_range(-1, 1)):
+				_niveauSuperieur()
 	
-	_selectionAttaque()
-	
-	_selectionSprite()
+	if data.listeAttaque.size() == 0:
+		_attribueStatsNature()
+		
+		_selectionAttaque()
+		
+		_selectionSprite()
 
 # Fonction appellé à chaque frame
 func _physics_process(delta: float) -> void:
@@ -67,39 +73,16 @@ func _attribueStatsNature() -> void:
 
 # Fonction qui attribue des attaques au pokémon selon son type
 func _selectionAttaque() -> void:
-	match data.type.nom:
-		"Feu":
-			data.listeAttaque = [
-				Attaque.new("Flamme", "Feu", 3, 20),
-				Attaque.new("Flamme", "Feu", 3, 20),
-				Attaque.new("Flamme", "Feu", 3, 20), 
-				Attaque.new("Flamme", "Feu", 3, 20)
-			]
-			
-			if data.nom == "":
-				data.nom = "Bomjeton"
-			
-		"Plante":
-			data.listeAttaque = [
-				Attaque.new("Feuille Slash", "Plante", 3, 20),
-				Attaque.new("Feuille Slash", "Plante", 3, 20),
-				Attaque.new("Feuille Slash", "Plante", 3, 20),
-				Attaque.new("Feuille Slash", "Plante", 3, 20)
-			]
-			
-			if data.nom == "":
-				data.nom = "Greupô"
-			
-		"Eau":
-			data.listeAttaque = [
-				Attaque.new("Grosse Goutte", "Eau", 3, 35),
-				Attaque.new("Grosse Goutte", "Eau", 3, 35),
-				Attaque.new("Grosse Goutte", "Eau", 3, 35),
-				Attaque.new("Grosse Goutte", "Eau", 3, 35)
-			]
-			
-			if data.nom == "":
-				data.nom = "Sainjypleur"
+	data._listeDesTypes = dataDuJeu.listeDesTypes
+	
+	var listeAttaqueDuMemeType = []
+	
+	for attaque in dataDuJeu.listeDesAttaques:
+		if attaque.type == data.type.nom or attaque.type == "Normal":
+			listeAttaqueDuMemeType.append(attaque)
+	
+	for i in range(4):
+		data.listeAttaque.append(listeAttaqueDuMemeType.pick_random())
 
 # Fonction pour faire passer un pokémon au niveau suivant
 func _niveauSuperieur() -> void:
