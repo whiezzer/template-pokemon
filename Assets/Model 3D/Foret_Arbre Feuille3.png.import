@@ -2,16 +2,19 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chin6r6rrfefc"
-path="res://.godot/imported/Haute Herbe1.png-5cab62266521fdc72af1df211e474ed3.ctex"
+uid="uid://b461xo4s41m14"
+path="res://.godot/imported/Foret_Arbre Feuille3.png-5c219a68f92bd21274b6d94df7d0d651.ctex"
 metadata={
 "vram_texture": false
+}
+generator_parameters={
+"md5": "6db2b05d1a483d15efc1162a1d3785c5"
 }
 
 [deps]
 
-source_file="res://Assets/Herbe/Haute Herbe1.png"
-dest_files=["res://.godot/imported/Haute Herbe1.png-5cab62266521fdc72af1df211e474ed3.ctex"]
+source_file="res://Assets/Model 3D/Foret_Arbre Feuille3.png"
+dest_files=["res://.godot/imported/Foret_Arbre Feuille3.png-5c219a68f92bd21274b6d94df7d0d651.ctex"]
 
 [params]
 

@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dgw0qieifultw" path="res://Assets/Herbe/herbe2.tscn" id="5_8wwat"]
 [ext_resource type="Script" uid="uid://d6vieo400icv" path="res://Script/Pokémon/natureStat.gd" id="5_vfha3"]
 [ext_resource type="PackedScene" uid="uid://ds4gjbbjisa65" path="res://Assets/Arbre/arbre.tscn" id="6_x6yq0"]
+[ext_resource type="PackedScene" uid="uid://cm5i1n6drauql" path="res://Assets/Model 3D/Herbe3Dmodel.glb" id="7_vpkbl"]
 [ext_resource type="Script" uid="uid://cf2qsij05s0s1" path="res://Script/Objet/objet.gd" id="9_8wwat"]
 [ext_resource type="Script" uid="uid://de8lxlc0xl4cr" path="res://Script/Objet/objetInventaire.gd" id="9_x6yq0"]
 [ext_resource type="Script" uid="uid://drg55xxdqqtc4" path="res://Script/Pokémon/PokemonData.gd" id="11_voxsg"]
@@ -109,7 +110,6 @@ attaque = 5
 defense = 5
 vitesse = 3
 sprite = ExtResource("12_4wxh0")
-_type_index = 1
 
 [sub_resource type="Resource" id="Resource_jwxpu"]
 script = ExtResource("11_voxsg")
@@ -119,7 +119,6 @@ attaque = 5
 defense = 5
 vitesse = 3
 sprite = ExtResource("13_vpkbl")
-_type_index = 3
 
 [sub_resource type="Resource" id="Resource_eqwqj"]
 script = ExtResource("11_voxsg")
@@ -129,7 +128,6 @@ attaque = 5
 defense = 5
 vitesse = 3
 sprite = ExtResource("14_vaoup")
-_type_index = 2
 
 [sub_resource type="Resource" id="Resource_7l60e"]
 script = ExtResource("11_voxsg")
@@ -138,7 +136,6 @@ pv = 10
 attaque = 5
 defense = 5
 vitesse = 3
-_type_index = 4
 
 [sub_resource type="Resource" id="Resource_20jwu"]
 script = ExtResource("11_voxsg")
@@ -147,7 +144,6 @@ pv = 10
 attaque = 5
 defense = 5
 vitesse = 3
-_type_index = 5
 
 [sub_resource type="Resource" id="Resource_byug1"]
 script = ExtResource("12_tjr8v")
@@ -197,7 +193,6 @@ nom = "AttaqueNormal"
 puissance = 3
 PP_max = 20
 precision = 1.0
-_type_index = 0
 
 [sub_resource type="Resource" id="Resource_g565v"]
 script = ExtResource("13_voxsg")
@@ -205,7 +200,6 @@ nom = "AttaqueFeu"
 puissance = 3
 PP_max = 20
 precision = 1.0
-_type_index = 1
 
 [sub_resource type="Resource" id="Resource_loqtx"]
 script = ExtResource("13_voxsg")
@@ -213,7 +207,6 @@ nom = "AttaqueEau"
 puissance = 3
 PP_max = 20
 precision = 1.0
-_type_index = 2
 
 [sub_resource type="Resource" id="Resource_owyk3"]
 script = ExtResource("13_voxsg")
@@ -221,7 +214,6 @@ nom = "AttaquePlante"
 puissance = 3
 PP_max = 20
 precision = 1.0
-_type_index = 3
 
 [sub_resource type="Resource" id="Resource_tag3l"]
 script = ExtResource("13_voxsg")
@@ -229,7 +221,6 @@ nom = "AttaqueTenebre"
 puissance = 3
 PP_max = 20
 precision = 1.0
-_type_index = 4
 
 [sub_resource type="Resource" id="Resource_ibrmr"]
 script = ExtResource("13_voxsg")
@@ -237,7 +228,6 @@ nom = "AttaqueElectrique"
 puissance = 3
 PP_max = 20
 precision = 1.0
-_type_index = 5
 
 [node name="Map" type="Node3D" unique_id=337228639]
 
@@ -716,6 +706,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -3)
 
 [node name="Arbre100" parent="décore/Arbres" unique_id=1300610324 instance=ExtResource("6_x6yq0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -4)
+
+[node name="Herbe3Dmodel2" parent="décore" unique_id=295031663 instance=ExtResource("7_vpkbl")]
+transform = Transform3D(-0.4, 0, -6.039832e-08, 0, 0.4, 0, 6.039832e-08, 0, -0.4, 0.747077, 0.18050748, 0.46691203)
 
 [node name="Paramètre" type="Node3D" parent="." unique_id=256808770]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.128716, 0.85703945, 3.5622892)

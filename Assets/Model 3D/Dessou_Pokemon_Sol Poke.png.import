@@ -2,16 +2,19 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chin6r6rrfefc"
-path="res://.godot/imported/Haute Herbe1.png-5cab62266521fdc72af1df211e474ed3.ctex"
+uid="uid://ctdpjcmcbs7ta"
+path="res://.godot/imported/Dessou_Pokemon_Sol Poke.png-c6b6fbab05451a15b3b88946496b9260.ctex"
 metadata={
 "vram_texture": false
+}
+generator_parameters={
+"md5": "964fabbe1cf94539b373244205802b8d"
 }
 
 [deps]
 
-source_file="res://Assets/Herbe/Haute Herbe1.png"
-dest_files=["res://.godot/imported/Haute Herbe1.png-5cab62266521fdc72af1df211e474ed3.ctex"]
+source_file="res://Assets/Model 3D/Dessou_Pokemon_Sol Poke.png"
+dest_files=["res://.godot/imported/Dessou_Pokemon_Sol Poke.png-c6b6fbab05451a15b3b88946496b9260.ctex"]
 
 [params]
 
