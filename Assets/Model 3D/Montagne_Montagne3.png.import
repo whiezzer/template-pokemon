@@ -2,16 +2,19 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chin6r6rrfefc"
-path="res://.godot/imported/Haute Herbe1.png-5cab62266521fdc72af1df211e474ed3.ctex"
+uid="uid://bxydnsx0ma7ex"
+path="res://.godot/imported/Montagne_Montagne3.png-7c671a2aea68652847927f950bba3936.ctex"
 metadata={
 "vram_texture": false
+}
+generator_parameters={
+"md5": "43a16d89e2c137effae2c45b489025e3"
 }
 
 [deps]
 
-source_file="res://Assets/Herbe/Haute Herbe1.png"
-dest_files=["res://.godot/imported/Haute Herbe1.png-5cab62266521fdc72af1df211e474ed3.ctex"]
+source_file="res://Assets/Model 3D/Montagne_Montagne3.png"
+dest_files=["res://.godot/imported/Montagne_Montagne3.png-7c671a2aea68652847927f950bba3936.ctex"]
 
 [params]
 

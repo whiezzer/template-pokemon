@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://cg7bha5t87b70" path="res://Assets/Pokemon/pokemon.tscn" id="2_1jl81"]
 [ext_resource type="Script" uid="uid://bit2nj7vgv60n" path="res://Script/Combat/combat.gd" id="3_1jl81"]
 [ext_resource type="Script" uid="uid://o62n2swlrafo" path="res://Script/Combat/boutonAttaque.gd" id="4_4oj6k"]
-[ext_resource type="PackedScene" uid="uid://ds4gjbbjisa65" path="res://Assets/Arbre/arbre.tscn" id="4_poke7"]
 [ext_resource type="Texture2D" uid="uid://c3swl7fcs2cr5" path="res://Assets/Interface/Combat/Emplacement attaque pokemon.png" id="5_1fio0"]
 [ext_resource type="FontFile" uid="uid://cex3sks87jmk6" path="res://Assets/Text/pixel_operator/PixelOperator.ttf" id="5_qqaya"]
 [ext_resource type="FontFile" uid="uid://datl1ctwq7utc" path="res://Assets/Text/pixel_operator/PixelOperator-Bold.ttf" id="7_8xilq"]
@@ -17,7 +16,11 @@
 [ext_resource type="Texture2D" uid="uid://cloxtjb15vdmj" path="res://Assets/Interface/Combat/BARRE DE VIE DESSOUS FOND.png" id="15_a7dcr"]
 [ext_resource type="Texture2D" uid="uid://c4v5w8xv6pc5r" path="res://Assets/Interface/Combat/Barre de vie VERT ENNEMIE.png" id="15_l7pxt"]
 [ext_resource type="Texture2D" uid="uid://1mwb6idkhw5k" path="res://Assets/Interface/Combat/BARRE DE VIE DESSUS CONTOUR.png" id="17_yscag"]
+[ext_resource type="PackedScene" uid="uid://n4ylffjxxqsr" path="res://Assets/Model 3D/Dessou_Pokemon.glb" id="18_a7dcr"]
 [ext_resource type="Texture2D" uid="uid://gdngmhho4wm4" path="res://Assets/Interface/Combat/BARRE DE VIE DESSOUS REMPLIS.png" id="18_l7pxt"]
+[ext_resource type="PackedScene" uid="uid://vmf5a4fm2h14" path="res://Assets/Model 3D/Foret.glb" id="19_5i64c"]
+[ext_resource type="PackedScene" uid="uid://dsqrlgbhculpi" path="res://Assets/Model 3D/Foret_Fond_Montagne.glb" id="20_3mx84"]
+[ext_resource type="PackedScene" uid="uid://dwnc68cgc8td2" path="res://Assets/Model 3D/Montagne.glb" id="21_2gylr"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3mx84"]
 texture = ExtResource("5_1fio0")
@@ -47,305 +50,17 @@ light_color = Color(0.9882353, 1, 0.59607846, 1)
 shadow_enabled = true
 
 [node name="PokemonJoueur" parent="." unique_id=965007536 instance=ExtResource("2_1jl81")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.31235844, 0.25, -0.9062202)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39005142, 0.25, -0.86780083)
 
 [node name="PokemonEnnemi" parent="." unique_id=2002172973 instance=ExtResource("2_1jl81")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24998891, 0.25, -1.9956579)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.050530195, 0.25, -3.0587158)
 
 [node name="décore" type="Node3D" parent="." unique_id=591067996]
 
 [node name="Sol" parent="décore" unique_id=417281805 instance=ExtResource("1_rqkxw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7593145, 0, -4.7959604)
+transform = Transform3D(1.265, 0, 0, 0, 1.265, 0, 0, 0, 1.265, -3.5344288, 0, -5.786859)
 
 [node name="Arbres" type="Node3D" parent="décore" unique_id=645713320]
-
-[node name="Arbre1" parent="décore/Arbres" unique_id=819529336 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -4.286886)
-
-[node name="Arbre2" parent="décore/Arbres" unique_id=2028148604 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, -4.287)
-
-[node name="Arbre3" parent="décore/Arbres" unique_id=1981936703 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -4.286886)
-
-[node name="Arbre4" parent="décore/Arbres" unique_id=2117536025 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -4.287)
-
-[node name="Arbre5" parent="décore/Arbres" unique_id=1342119872 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -5.286886)
-
-[node name="Arbre6" parent="décore/Arbres" unique_id=1464794223 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, -5.287)
-
-[node name="Arbre7" parent="décore/Arbres" unique_id=1434276830 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -5.286886)
-
-[node name="Arbre8" parent="décore/Arbres" unique_id=988286847 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -5.287)
-
-[node name="Arbre9" parent="décore/Arbres" unique_id=63058026 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -6.286886)
-
-[node name="Arbre10" parent="décore/Arbres" unique_id=2110822822 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, -6.287)
-
-[node name="Arbre11" parent="décore/Arbres" unique_id=1353797871 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -6.286886)
-
-[node name="Arbre12" parent="décore/Arbres" unique_id=1866290878 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -6.287)
-
-[node name="Arbre13" parent="décore/Arbres" unique_id=383642962 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -7.286886)
-
-[node name="Arbre14" parent="décore/Arbres" unique_id=1107474773 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, -7.287)
-
-[node name="Arbre15" parent="décore/Arbres" unique_id=539711596 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -7.286886)
-
-[node name="Arbre16" parent="décore/Arbres" unique_id=2099816033 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -7.287)
-
-[node name="Arbre17" parent="décore/Arbres" unique_id=1948887368 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, -4.286886)
-
-[node name="Arbre18" parent="décore/Arbres" unique_id=1400674952 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -4.287)
-
-[node name="Arbre19" parent="décore/Arbres" unique_id=1040538694 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -4.286886)
-
-[node name="Arbre20" parent="décore/Arbres" unique_id=111992859 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, -4.287)
-
-[node name="Arbre21" parent="décore/Arbres" unique_id=2022747019 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, -5.286886)
-
-[node name="Arbre22" parent="décore/Arbres" unique_id=243419915 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -5.287)
-
-[node name="Arbre23" parent="décore/Arbres" unique_id=235567906 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -5.286886)
-
-[node name="Arbre24" parent="décore/Arbres" unique_id=536959809 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, -5.287)
-
-[node name="Arbre25" parent="décore/Arbres" unique_id=127792674 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, -6.286886)
-
-[node name="Arbre26" parent="décore/Arbres" unique_id=366429605 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -6.287)
-
-[node name="Arbre27" parent="décore/Arbres" unique_id=1672981031 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -6.286886)
-
-[node name="Arbre28" parent="décore/Arbres" unique_id=1318979695 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, -6.287)
-
-[node name="Arbre29" parent="décore/Arbres" unique_id=1220318991 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, -7.286886)
-
-[node name="Arbre30" parent="décore/Arbres" unique_id=993080123 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -7.287)
-
-[node name="Arbre31" parent="décore/Arbres" unique_id=1024650804 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -7.286886)
-
-[node name="Arbre32" parent="décore/Arbres" unique_id=343652786 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, -7.287)
-
-[node name="Arbre33" parent="décore/Arbres" unique_id=724156483 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, -0.28688622)
-
-[node name="Arbre34" parent="décore/Arbres" unique_id=1643719511 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -0.28700018)
-
-[node name="Arbre35" parent="décore/Arbres" unique_id=1562340191 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -0.28688622)
-
-[node name="Arbre36" parent="décore/Arbres" unique_id=1604537267 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, -0.28700018)
-
-[node name="Arbre37" parent="décore/Arbres" unique_id=1002265499 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, -1.2868862)
-
-[node name="Arbre38" parent="décore/Arbres" unique_id=1659678113 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -1.2870002)
-
-[node name="Arbre39" parent="décore/Arbres" unique_id=1403687297 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -1.2868862)
-
-[node name="Arbre40" parent="décore/Arbres" unique_id=1353813867 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, -1.2870002)
-
-[node name="Arbre41" parent="décore/Arbres" unique_id=794986462 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, -2.2868862)
-
-[node name="Arbre42" parent="décore/Arbres" unique_id=826356296 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -2.2870002)
-
-[node name="Arbre43" parent="décore/Arbres" unique_id=2027563703 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -2.2868862)
-
-[node name="Arbre44" parent="décore/Arbres" unique_id=1021073359 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, -2.2870002)
-
-[node name="Arbre45" parent="décore/Arbres" unique_id=368210977 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, -3.2868862)
-
-[node name="Arbre46" parent="décore/Arbres" unique_id=1290463096 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -3.2870002)
-
-[node name="Arbre47" parent="décore/Arbres" unique_id=286509787 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -3.2868862)
-
-[node name="Arbre48" parent="décore/Arbres" unique_id=637112067 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, -3.2870002)
-
-[node name="Arbre65" parent="décore/Arbres" unique_id=1718135159 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, -4.286886)
-
-[node name="Arbre66" parent="décore/Arbres" unique_id=1918118628 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1, -4.287)
-
-[node name="Arbre67" parent="décore/Arbres" unique_id=265457181 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, -4.286886)
-
-[node name="Arbre68" parent="décore/Arbres" unique_id=2105275323 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, -4.287)
-
-[node name="Arbre69" parent="décore/Arbres" unique_id=1077640246 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, -5.286886)
-
-[node name="Arbre70" parent="décore/Arbres" unique_id=1858543193 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1, -5.287)
-
-[node name="Arbre71" parent="décore/Arbres" unique_id=353480296 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, -5.286886)
-
-[node name="Arbre72" parent="décore/Arbres" unique_id=2082806670 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, -5.287)
-
-[node name="Arbre73" parent="décore/Arbres" unique_id=2129886533 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, -6.286886)
-
-[node name="Arbre74" parent="décore/Arbres" unique_id=1036969323 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1, -6.287)
-
-[node name="Arbre75" parent="décore/Arbres" unique_id=597940248 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, -6.286886)
-
-[node name="Arbre76" parent="décore/Arbres" unique_id=640525391 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, -6.287)
-
-[node name="Arbre77" parent="décore/Arbres" unique_id=524506927 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, -7.286886)
-
-[node name="Arbre78" parent="décore/Arbres" unique_id=55570583 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1, -7.287)
-
-[node name="Arbre79" parent="décore/Arbres" unique_id=1390317338 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, -7.286886)
-
-[node name="Arbre80" parent="décore/Arbres" unique_id=1670354693 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, -7.287)
-
-[node name="Arbre81" parent="décore/Arbres" unique_id=77471374 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, -0.28688622)
-
-[node name="Arbre82" parent="décore/Arbres" unique_id=10124629 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1, -0.28700018)
-
-[node name="Arbre83" parent="décore/Arbres" unique_id=2018485653 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, -0.28688622)
-
-[node name="Arbre84" parent="décore/Arbres" unique_id=1685429536 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, -0.28700018)
-
-[node name="Arbre85" parent="décore/Arbres" unique_id=1009738728 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, -1.2868862)
-
-[node name="Arbre86" parent="décore/Arbres" unique_id=395826990 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1, -1.2870002)
-
-[node name="Arbre87" parent="décore/Arbres" unique_id=671896089 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, -1.2868862)
-
-[node name="Arbre88" parent="décore/Arbres" unique_id=329426192 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, -1.2870002)
-
-[node name="Arbre89" parent="décore/Arbres" unique_id=207409632 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, -2.2868862)
-
-[node name="Arbre90" parent="décore/Arbres" unique_id=821645106 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1, -2.2870002)
-
-[node name="Arbre91" parent="décore/Arbres" unique_id=1470777773 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, -2.2868862)
-
-[node name="Arbre92" parent="décore/Arbres" unique_id=1154534312 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, -2.2870002)
-
-[node name="Arbre93" parent="décore/Arbres" unique_id=1659393795 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, -3.2868862)
-
-[node name="Arbre94" parent="décore/Arbres" unique_id=1262505280 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1, -3.2870002)
-
-[node name="Arbre95" parent="décore/Arbres" unique_id=2330703 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, -3.2868862)
-
-[node name="Arbre96" parent="décore/Arbres" unique_id=630949471 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, -3.2870002)
-
-[node name="Arbre49" parent="décore/Arbres" unique_id=1023934899 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, -4.286886)
-
-[node name="Arbre50" parent="décore/Arbres" unique_id=1726830196 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, -4.287)
-
-[node name="Arbre51" parent="décore/Arbres" unique_id=405025789 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -4.286886)
-
-[node name="Arbre52" parent="décore/Arbres" unique_id=602837970 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, -4.287)
-
-[node name="Arbre53" parent="décore/Arbres" unique_id=1023969809 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, -5.286886)
-
-[node name="Arbre54" parent="décore/Arbres" unique_id=2139339127 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, -5.287)
-
-[node name="Arbre55" parent="décore/Arbres" unique_id=1720559491 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -5.286886)
-
-[node name="Arbre56" parent="décore/Arbres" unique_id=2097331454 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, -5.287)
-
-[node name="Arbre57" parent="décore/Arbres" unique_id=261452377 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, -6.286886)
-
-[node name="Arbre58" parent="décore/Arbres" unique_id=1724905238 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, -6.287)
-
-[node name="Arbre59" parent="décore/Arbres" unique_id=1969442516 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -6.286886)
-
-[node name="Arbre60" parent="décore/Arbres" unique_id=1283186631 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, -6.287)
-
-[node name="Arbre61" parent="décore/Arbres" unique_id=2061989143 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, -7.286886)
-
-[node name="Arbre62" parent="décore/Arbres" unique_id=330721016 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, -7.287)
-
-[node name="Arbre63" parent="décore/Arbres" unique_id=708839694 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -7.286886)
-
-[node name="Arbre64" parent="décore/Arbres" unique_id=2104220594 instance=ExtResource("4_poke7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, -7.287)
 
 [node name="InterfaceCombat" type="Control" parent="." unique_id=1670358411]
 layout_mode = 3
@@ -694,6 +409,24 @@ texture_progress = ExtResource("15_l7pxt")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=441496462]
 environment = SubResource("Environment_poke7")
+
+[node name="Dessou_Pokemon" parent="." unique_id=1784572807 instance=ExtResource("18_a7dcr")]
+transform = Transform3D(0.11, 0, 0, 0, 0.11, 0, 0, 0, 0.11, -3.9275045, 0.6842246, -7.388361)
+
+[node name="Foret2" parent="." unique_id=212020847 instance=ExtResource("19_5i64c")]
+transform = Transform3D(0.14278373, 0, 0.060314212, 0, 0.155, 0, -0.060314212, 0, 0.14278373, -4.1815968, 0.8050605, -7.1517444)
+
+[node name="Foret_Fond_Montagne" parent="." unique_id=1838889118 instance=ExtResource("20_3mx84")]
+transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, -7.685, 4.145, -17.503)
+
+[node name="Montagne2" parent="." unique_id=450922289 instance=ExtResource("21_2gylr")]
+transform = Transform3D(0.107829824, 0, -0.021742307, 0, 0.11, 0, 0.021742307, 0, 0.107829824, -3.9275045, 0.6842246, -7.388361)
+
+[node name="Dessou_Pokemon2" parent="." unique_id=734316210 instance=ExtResource("18_a7dcr")]
+transform = Transform3D(0.08332305, 0, -0.016800873, 0, 0.085, 0, 0.016800873, 0, 0.08332305, -0.43479055, 0, -0.9668299)
+
+[node name="Dessou_Pokemon3" parent="." unique_id=1919168772 instance=ExtResource("18_a7dcr")]
+transform = Transform3D(0.08332305, 0, -0.016800873, 0, 0.085, 0, 0.016800873, 0, 0.08332305, 0.06700292, 0, -3.1772375)
 
 [connection signal="pressed" from="InterfaceCombat/MenuAttaque/Bouton-Attaque1" to="InterfaceCombat/MenuAttaque/Bouton-Attaque1" method="_on_button_pressed"]
 [connection signal="pressed" from="InterfaceCombat/MenuAttaque/Bouton-Attaque2" to="InterfaceCombat/MenuAttaque/Bouton-Attaque2" method="_on_button_pressed"]

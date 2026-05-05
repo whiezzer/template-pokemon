@@ -105,7 +105,6 @@ pv = 10
 attaque = 5
 defense = 5
 vitesse = 3
-_type_index = 1
 
 [sub_resource type="Resource" id="Resource_jwxpu"]
 script = ExtResource("12_tjr8v")
@@ -137,7 +136,6 @@ nom = "AttaqueNormal"
 puissance = 3
 PP_max = 20
 precision = 1.0
-_type_index = 0
 
 [sub_resource type="Resource" id="Resource_qot0l"]
 script = ExtResource("13_voxsg")
@@ -145,7 +143,6 @@ nom = "AttaqueFeu"
 puissance = 3
 PP_max = 20
 precision = 1.0
-_type_index = 1
 
 [sub_resource type="Resource" id="Resource_o1h8p"]
 script = ExtResource("13_voxsg")
@@ -153,7 +150,6 @@ nom = "AttaqueEau"
 puissance = 3
 PP_max = 20
 precision = 1.0
-_type_index = 2
 
 [sub_resource type="Resource" id="Resource_g565v"]
 script = ExtResource("13_voxsg")
@@ -161,7 +157,6 @@ nom = "AttaquePlante"
 puissance = 3
 PP_max = 20
 precision = 1.0
-_type_index = 3
 
 [node name="Map" type="Node3D" unique_id=337228639]
 
