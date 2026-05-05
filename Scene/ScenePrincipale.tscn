@@ -105,7 +105,25 @@ pv = 10
 attaque = 5
 defense = 5
 vitesse = 3
+_type_index = 1
+
+[sub_resource type="Resource" id="Resource_loqtx"]
+script = ExtResource("11_voxsg")
+nom = "Greupô"
+pv = 10
+attaque = 5
+defense = 5
+vitesse = 3
 _type_index = 3
+
+[sub_resource type="Resource" id="Resource_owyk3"]
+script = ExtResource("11_voxsg")
+nom = "Sainjypleu"
+pv = 10
+attaque = 5
+defense = 5
+vitesse = 3
+_type_index = 2
 
 [sub_resource type="Resource" id="Resource_jwxpu"]
 script = ExtResource("12_tjr8v")
@@ -646,6 +664,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.128716, 0.85703945, 3.56228
 script = ExtResource("4_dgiq7")
 listeDesNatures = Array[ExtResource("5_vfha3")]([SubResource("Resource_voxsg"), SubResource("Resource_l88oo"), SubResource("Resource_8i4vk"), SubResource("Resource_4wxh0"), SubResource("Resource_vpkbl"), SubResource("Resource_vaoup")])
 listeDesObjets = Array[ExtResource("9_x6yq0")]([SubResource("Resource_t1etj"), SubResource("Resource_u2fdv"), SubResource("Resource_bijkn")])
-listePokemonsJoueur = Array[ExtResource("11_voxsg")]([SubResource("Resource_8l02w")])
+listePokemons = Array[ExtResource("11_voxsg")]([SubResource("Resource_8l02w"), SubResource("Resource_loqtx"), SubResource("Resource_owyk3")])
 listeDesTypes = Array[ExtResource("12_tjr8v")]([SubResource("Resource_jwxpu"), SubResource("Resource_eqwqj"), SubResource("Resource_byug1"), SubResource("Resource_r2s0p")])
 listeDesAttaques = Array[ExtResource("13_voxsg")]([SubResource("Resource_x7wka"), SubResource("Resource_qot0l"), SubResource("Resource_o1h8p"), SubResource("Resource_g565v")])
+_type_index_pokemons_joueurs = 0

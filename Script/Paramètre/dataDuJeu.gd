@@ -76,28 +76,28 @@ func _verifierObjets() -> void:
 			if listeDesObjets[i] == null:
 				listeDesObjets[i] = ObjetInventaire.new()
 
-@export_category("Paramètres des Pokémons du joueur")
-# Liste des Pokémons du joueur visibles et modifiables dans l’inspecteur
-@export var listePokemonsJoueur: Array[PokemonData] = []:
+@export_category("Paramètres des Pokémons")
+# Liste des Pokémons visibles et modifiables dans l’inspecteur
+@export var listePokemons: Array[PokemonData] = []:
 	set(value):
-			listePokemonsJoueur = value
-			_verifierPokemonsJoueur()
-			_injecterTypesDansPokemonsDuJoueur()
+			listePokemons = value
+			_verifierPokemons()
+			_injecterTypesDansPokemons()
 			notify_property_list_changed()
 
-# Vérifie le pokémon du joueur et s'assure qu'il existe
-func _verifierPokemonsJoueur() -> void:
-	if 1 > listePokemonsJoueur.size():
-		listePokemonsJoueur = [PokemonData.new()]
-		listePokemonsJoueur[0].nom = "Bomjeton"
+# Vérifie les pokémons et s'assure qu'il existe au moins 1 pokémon
+func _verifierPokemons() -> void:
+	if 1 > listePokemons.size():
+		listePokemons = [PokemonData.new()]
+		listePokemons[0].nom = "Bomjeton"
 	else:
-		for i in range(listePokemonsJoueur.size()):
-			if listePokemonsJoueur[i] == null:
-				listePokemonsJoueur[i] = PokemonData.new()
-	for i in range(listePokemonsJoueur.size()):
-		if not listePokemonsJoueur[i]._listeDesTypes.is_empty():
-			if listePokemonsJoueur[i]._type_index >= listePokemonsJoueur[i]._listeDesTypes.size():
-				listePokemonsJoueur[i]._type_index = 0
+		for i in range(listePokemons.size()):
+			if listePokemons[i] == null:
+				listePokemons[i] = PokemonData.new()
+	for i in range(listePokemons.size()):
+		if not listePokemons[i]._listeDesTypes.is_empty():
+			if listePokemons[i]._type_index >= listePokemons[i]._listeDesTypes.size():
+				listePokemons[i]._type_index = 0
 
 @export_category("Paramètres des types")
 # Liste des différents types visibles et modifiables dans l’inspecteur
@@ -115,10 +115,10 @@ func _verifierPokemonsJoueur() -> void:
 				if type != null and not type.changed.is_connected(_verifierTypeChange):
 					type.changed.connect(_verifierTypeChange)
 			
-			_injecterTypesDansPokemonsDuJoueur()
+			_injecterTypesDansPokemons()
 			_injecterTypesDansAttaques()
 			_verifierAttaques()
-			_verifierPokemonsJoueur()
+			_verifierPokemons()
 			notify_property_list_changed()
 
 # Vérifie la liste et s'assure qu'elle contient toujours 6 natures
@@ -162,12 +162,41 @@ func _verifierAttaques() -> void:
 		if listeDesAttaques[i]._type_index >= listeDesTypes.size():
 			listeDesAttaques[i]._type_index = 0
 
-var pokemonJoueurStats: PokemonData
+var _type_index_pokemons_joueurs : int = 0
+
+@export_category("Pokémon de départ du joueur")
+# Pokémon de départ du joueur visible et modifiable dans l’inspecteur
+var pokemonJoueurStats: PokemonData:
+	get:
+		if listePokemons.is_empty() or _type_index_pokemons_joueurs < 0 or _type_index_pokemons_joueurs >= listePokemons.size():
+			return
+		return listePokemons[_type_index_pokemons_joueurs]
+	set(value):
+		if value == null or listePokemons.is_empty():
+			_type_index_pokemons_joueurs = 0
+			return
+		for i in range(listePokemons.size()):
+			if listePokemons[i] == value:
+				_type_index_pokemons_joueurs = i
+				return
+		_type_index_pokemons_joueurs = 0
+
+func _get_property_list():
+	var noms := listePokemons.map(func(t): return t.nom)
+	
+	return [{
+		"name": "_type_index_pokemons_joueurs",
+		"type": TYPE_INT,
+		"hint": PROPERTY_HINT_ENUM if not listePokemons.is_empty() else PROPERTY_HINT_NONE,
+		"hint_string": ",".join(noms),
+		"usage": PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_STORAGE 
+	}]
+
 var pokemonEnnemiStats: PokemonData
 
 # Injecte listeDesTypes dans chaque Pokémon pour que l'enum soit visible
-func _injecterTypesDansPokemonsDuJoueur() -> void:
-	for pokemon in listePokemonsJoueur:
+func _injecterTypesDansPokemons() -> void:
+	for pokemon in listePokemons:
 		if pokemon != null:
 			pokemon._listeDesTypes = listeDesTypes
 			pokemon.notify_property_list_changed()
@@ -187,19 +216,19 @@ func _verifierTypeChange() -> void:
 	_timerAttente = get_tree().create_timer(5.0) 
 	await _timerAttente.timeout
 	
-	_injecterTypesDansPokemonsDuJoueur()
+	_injecterTypesDansPokemons()
 	_injecterTypesDansAttaques()
 	_verifierAttaques()
-	_verifierPokemonsJoueur()
+	_verifierPokemons()
 	notify_property_list_changed()   
 
 # Appel automatique au démarrage pour s'assurer de la taille correcte
 func _enter_tree() -> void:
 	_injecterTypesDansAttaques()
-	_injecterTypesDansPokemonsDuJoueur()
+	_injecterTypesDansPokemons()
 	dataDuJeu.listeDesNatures = listeDesNatures
 	dataDuJeu.listeDesObjets = listeDesObjets
-	dataDuJeu.listePokemonsJoueur = listePokemonsJoueur
+	dataDuJeu.listePokemons = listePokemons
 	dataDuJeu.listeDesTypes = listeDesTypes
 	dataDuJeu.listeDesAttaques = listeDesAttaques
-	dataDuJeu.pokemonJoueurStats = listePokemonsJoueur[0]
+	dataDuJeu.pokemonJoueurStats = listePokemons[0]

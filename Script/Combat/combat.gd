@@ -22,7 +22,7 @@ var finCombat : bool = false
 func _enter_tree() -> void:
 	
 	pokemonJoueur = dataDuJeu.pokemonJoueurStats
-	pokemonEnnemi = PokemonData.new(randi() % dataDuJeu.listeDesTypes.size(), 7, 5, 3, 3)
+	pokemonEnnemi = dataDuJeu.listePokemons[randi() % dataDuJeu.listePokemons.size()].duplicate(true)
 	dataDuJeu.pokemonEnnemiStats = pokemonEnnemi 
 	message = $InterfaceCombat/ZoneDeTexte
 	

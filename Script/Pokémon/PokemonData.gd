@@ -35,7 +35,7 @@ func _get_property_list():
 		"type": TYPE_INT,
 		"hint": PROPERTY_HINT_ENUM if not _listeDesTypes.is_empty() else PROPERTY_HINT_NONE,
 		"hint_string": ",".join(noms),
-		"usage": PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_STORAGE  # ← toujours sauvegardé
+		"usage": PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_STORAGE 
 	}]
 
 @export var pv : int:
