@@ -1,12 +1,12 @@
 extends MenuButton
 
-var menuAttaque : Panel
+var menuAttaque : Control
 
-var menuObjet : Panel
+var menuObjet : Control
 
 func _ready() -> void:
-	menuAttaque = get_parent().get_node("MenuAttaque")
-	menuObjet = get_parent().get_node("MenuObjet")
+	menuAttaque = get_parent().get_parent().get_node("InterfaceCombat")
+	menuObjet = get_parent().get_parent().get_node("InterfaceSac")
 
 func _on_button_pressed() -> void:
 	if menuAttaque.visible:

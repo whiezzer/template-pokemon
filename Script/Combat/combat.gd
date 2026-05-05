@@ -263,20 +263,34 @@ func ecrire_texte(label: RichTextLabel, texte: String, vitesse := 0.03):
 
 # Fonction qui crée des boutons d'objets dans le menu objets par rapport au nombre d'objets dans la ListeDesObjets
 func _créerBoutonsMenuObjet() -> void:
-	var positionBoutonObjets = Vector2(77.0, 50.0)
+	var positionBoutonObjets = Vector2(150.0, 142.0)
 	
 	for objet in dataDuJeu.listeDesObjets:
 		
-		var bouton = Button.new()
+		var label = Label.new()
+		var bouton = TextureButton.new()
 		bouton.set_script(preload("res://Script/Combat/boutonObjet.gd"))
+		bouton.objetNom = label
 		
-		$InterfaceCombat/MenuObjet.add_child(bouton)
+		$InterfaceSac/MenuObjet.add_child(bouton)
+		$InterfaceSac/MenuObjet.add_child(label)
 		
 		bouton.objet = objet
 		bouton.position = positionBoutonObjets
-		bouton.size = Vector2(199.0, 25.0)
-		bouton.add_theme_font_override("font", preload("res://Assets/Text/pixel_operator/PixelOperator.ttf"))
-		bouton.add_theme_font_size_override("font_size", 20)
+		bouton.set_anchors_preset(Control.PRESET_TOP_LEFT)
+		bouton.size = Vector2(400.0, 50.0)
+		bouton.texture_normal = preload("res://Assets/Interface/Sac/SelectionSac.png")
+		bouton.texture_pressed = preload("res://Assets/Interface/Sac/SelectionSacAppuyer.png")
+		bouton.stretch_mode = TextureButton.STRETCH_SCALE
 		bouton.pressed.connect(bouton._on_button_pressed)
+		bouton.mouse_entered.connect(bouton._on_mouse_entered)
 		
-		positionBoutonObjets.y += 50.0
+		label.text = objet.objet.nom
+		label.add_theme_font_override("font", preload("res://Assets/Text/pixel_operator/PixelOperator.ttf"))
+		label.add_theme_font_size_override("font_size", 45)
+		label.position = positionBoutonObjets
+		label.position.x += -200.0
+		label.size = Vector2(800.0, 35.0)
+		label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		
+		positionBoutonObjets.y += 85.0

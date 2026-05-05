@@ -6,6 +6,8 @@ class_name Objet
 		nom = value if value != "" else "Pas de nom"
 		nom = value if value.length() < 15 else value.substr(0, 15)
 
+@export var texture : Texture2D
+
 @export var description : String:
 	set(value):
 		description = value if value != "" else "Pas de description"

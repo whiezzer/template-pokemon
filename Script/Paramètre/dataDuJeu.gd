@@ -83,6 +83,7 @@ func _verifierObjets() -> void:
 			listePokemons = value
 			_verifierPokemons()
 			_injecterTypesDansPokemons()
+			_verifierPokemonJoueur()
 			notify_property_list_changed()
 
 # Vérifie les pokémons et s'assure qu'il existe au moins 1 pokémon
@@ -152,7 +153,7 @@ func _verifierAttaques() -> void:
 			typesDejaCouvert.append(attaque.type)
 	for type in listeDesTypes:
 		if type.nom not in typesDejaCouvert:
-			var nouvelleAttaque = Attaque.new("Attaque"+type.nom)
+			var nouvelleAttaque = Attaque.new("Attaque")
 			nouvelleAttaque._listeDesTypes = listeDesTypes
 			nouvelleAttaque.type = type.nom  
 			listeDesAttaques.append(nouvelleAttaque)
@@ -169,17 +170,21 @@ var _type_index_pokemons_joueurs : int = 0
 var pokemonJoueurStats: PokemonData:
 	get:
 		if listePokemons.is_empty() or _type_index_pokemons_joueurs < 0 or _type_index_pokemons_joueurs >= listePokemons.size():
-			return
+			return listePokemons[_type_index_pokemons_joueurs]
 		return listePokemons[_type_index_pokemons_joueurs]
 	set(value):
-		if value == null or listePokemons.is_empty():
-			_type_index_pokemons_joueurs = 0
-			return
-		for i in range(listePokemons.size()):
-			if listePokemons[i] == value:
-				_type_index_pokemons_joueurs = i
-				return
+		pokemonJoueurStats = value
+		_verifierPokemonJoueur()
+
+func _verifierPokemonJoueur() -> void:
+	if pokemonJoueurStats == null or listePokemons.is_empty():
 		_type_index_pokemons_joueurs = 0
+		return
+	for i in range(listePokemons.size()):
+		if listePokemons[i] == pokemonJoueurStats:
+			_type_index_pokemons_joueurs = i
+			return
+	_type_index_pokemons_joueurs = 0
 
 func _get_property_list():
 	var noms := listePokemons.map(func(t): return t.nom)
@@ -220,6 +225,7 @@ func _verifierTypeChange() -> void:
 	_injecterTypesDansAttaques()
 	_verifierAttaques()
 	_verifierPokemons()
+	_verifierPokemonJoueur()
 	notify_property_list_changed()   
 
 # Appel automatique au démarrage pour s'assurer de la taille correcte

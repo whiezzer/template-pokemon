@@ -15,6 +15,7 @@
 [ext_resource type="FontFile" uid="uid://dc50vx3jow8oc" path="res://Assets/Text/pixel_operator/PixelOperatorMono.ttf" id="8_giger"]
 [ext_resource type="Texture2D" uid="uid://5avc3a2sw8q2" path="res://Assets/Interface/Combat/Bouton Sac1.png" id="8_mwjsy"]
 [ext_resource type="Texture2D" uid="uid://7uvnih8rb6bs" path="res://Assets/Interface/Combat/Bouton Pokemon1.png" id="10_yscag"]
+[ext_resource type="Texture2D" uid="uid://docioujmb3850" path="res://Assets/Interface/Sac/Remu Sac.png" id="12_5i64c"]
 [ext_resource type="Texture2D" uid="uid://j4id13h0sn60" path="res://Assets/Interface/Combat/boite de dialogue.png" id="13_l7pxt"]
 [ext_resource type="Texture2D" uid="uid://3l80a5fhati6" path="res://Assets/Interface/Combat/Interface Pokemon.png" id="14_gfmo1"]
 [ext_resource type="Texture2D" uid="uid://cloxtjb15vdmj" path="res://Assets/Interface/Combat/BARRE DE VIE DESSOUS FOND.png" id="15_a7dcr"]
@@ -27,6 +28,9 @@ texture = ExtResource("5_1fio0")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2gylr"]
 texture = ExtResource("14_gfmo1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v15y3"]
+texture = ExtResource("12_5i64c")
 
 [sub_resource type="Environment" id="Environment_poke7"]
 background_mode = 2
@@ -590,17 +594,6 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("8_giger")
 theme_override_font_sizes/font_size = 20
 
-[node name="MenuObjet" type="Panel" parent="InterfaceCombat" unique_id=872184245]
-visible = false
-layout_mode = 1
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -359.0
-grow_horizontal = 0
-grow_vertical = 2
-
 [node name="Bouton_MenuSacADos" type="MenuButton" parent="InterfaceCombat" unique_id=2080833461]
 texture_filter = 1
 layout_mode = 1
@@ -799,6 +792,72 @@ value = 10.0
 nine_patch_stretch = true
 texture_progress = ExtResource("15_l7pxt")
 
+[node name="InterfaceSac" type="Control" parent="." unique_id=2125010558]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuObjet" type="Panel" parent="InterfaceSac" unique_id=872184245]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_v15y3")
+
+[node name="Bouton_MenuSacADos" type="MenuButton" parent="InterfaceSac" unique_id=1000210926]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -115.0
+offset_top = -95.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("5_qqaya")
+theme_override_font_sizes/font_size = 25
+icon = ExtResource("8_mwjsy")
+expand_icon = true
+script = ExtResource("7_giger")
+
+[node name="Label_Description" type="Label" parent="InterfaceSac" unique_id=2117543612]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -446.0
+offset_top = -345.0
+offset_right = -34.0
+offset_bottom = -89.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("8_giger")
+theme_override_font_sizes/font_size = 30
+autowrap_mode = 3
+
+[node name="TextureRect_Objet" type="TextureRect" parent="InterfaceSac" unique_id=1553525447]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -335.0
+offset_top = 50.0
+offset_right = -138.0
+offset_bottom = 234.0
+grow_horizontal = 0
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=441496462]
 environment = SubResource("Environment_poke7")
 
@@ -807,3 +866,4 @@ environment = SubResource("Environment_poke7")
 [connection signal="pressed" from="InterfaceCombat/MenuAttaque/Bouton-Attaque3" to="InterfaceCombat/MenuAttaque/Bouton-Attaque3" method="_on_button_pressed"]
 [connection signal="pressed" from="InterfaceCombat/MenuAttaque/Bouton-Attaque4" to="InterfaceCombat/MenuAttaque/Bouton-Attaque4" method="_on_button_pressed"]
 [connection signal="pressed" from="InterfaceCombat/Bouton_MenuSacADos" to="InterfaceCombat/Bouton_MenuSacADos" method="_on_button_pressed"]
+[connection signal="pressed" from="InterfaceSac/Bouton_MenuSacADos" to="InterfaceSac/Bouton_MenuSacADos" method="_on_button_pressed"]
