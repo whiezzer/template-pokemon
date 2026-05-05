@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://canq81mixxba5"
-path="res://.godot/imported/Sainjypleur.png-3942952eac357fa694e277d67fe4c1ae.ctex"
+path="res://.godot/imported/Eau.png-e3b05930b3375ce9b0e7b33585b7412b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pokemon/Sainjypleur.png"
-dest_files=["res://.godot/imported/Sainjypleur.png-3942952eac357fa694e277d67fe4c1ae.ctex"]
+source_file="res://Assets/Pokemon/Eau.png"
+dest_files=["res://.godot/imported/Eau.png-e3b05930b3375ce9b0e7b33585b7412b.ctex"]
 
 [params]
 

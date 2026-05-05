@@ -55,6 +55,8 @@ var pv_Actuels : int
 	set(value):
 		vitesse = max(value, 1)
 
+@export var sprite : Texture2D
+
 var listeAttaque : Array[Attaque]
 
 var lvl : int = 1

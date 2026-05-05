@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp2ghoxx6gmvg"
-path="res://.godot/imported/Greupô.png-68d47a3d9e2d77b533a72eaee1b0b321.ctex"
+uid="uid://w8ggyy1fj20y"
+path="res://.godot/imported/Feu.png-7aa6f922d17ab8c10ca47de086ae1f7e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pokemon/Greupô.png"
-dest_files=["res://.godot/imported/Greupô.png-68d47a3d9e2d77b533a72eaee1b0b321.ctex"]
+source_file="res://Assets/Pokemon/Feu.png"
+dest_files=["res://.godot/imported/Feu.png-7aa6f922d17ab8c10ca47de086ae1f7e.ctex"]
 
 [params]
 
