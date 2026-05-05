@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w8ggyy1fj20y"
-path="res://.godot/imported/Bomjeton.png-3c2f25f0eb9de41933c8cfe46226331f.ctex"
+uid="uid://do5rdk2ol6871"
+path="res://.godot/imported/Bouton Neutre.png-16c8acd2eed72c9a074e42334d13b2be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pokemon/Bomjeton.png"
-dest_files=["res://.godot/imported/Bomjeton.png-3c2f25f0eb9de41933c8cfe46226331f.ctex"]
+source_file="res://Assets/Interface/Combat/Bouton Neutre.png"
+dest_files=["res://.godot/imported/Bouton Neutre.png-16c8acd2eed72c9a074e42334d13b2be.ctex"]
 
 [params]
 

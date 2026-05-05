@@ -24,8 +24,8 @@ func _ready() -> void:
 		_attribueStatsNature()
 		
 		_selectionAttaque()
-		
-		_selectionSprite()
+	
+	_selectionSprite()
 
 # Fonction appellé à chaque frame
 func _physics_process(delta: float) -> void:
@@ -38,14 +38,13 @@ func _physics_process(delta: float) -> void:
 
 # Fonction qui attribue un sprite au pokémon selon son type
 func _selectionSprite() -> void:
-	
-	match data.type.nom:
-		"Feu":
-			$Sprite3D.texture = load("res://Assets/Pokemon/Bomjeton.png")
-		"Plante":
-			$Sprite3D.texture = load("res://Assets/Pokemon/Greupô.png")
-		"Eau":
-			$Sprite3D.texture = load("res://Assets/Pokemon/Sainjypleur.png")
+	if data.sprite != null:
+		$Sprite3D.texture = data.sprite
+	else:
+		var sprite = load("res://Assets/Pokemon/PokemonNeutre.png") 
+		$Sprite3D.texture = sprite
+		$Sprite3D.modulate = data.type.color
+		data.sprite = sprite
 
 # Fonction qui attribue des stats aux pokemons selon leur nature
 func _attribueStatsNature() -> void:

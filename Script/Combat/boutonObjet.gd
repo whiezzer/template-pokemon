@@ -11,9 +11,10 @@ func _physics_process(delta: float) -> void:
 	self.text = objet.objet.nom + " : " + str(objet.quantite)
 
 func _on_button_pressed() -> void:
-	if objet == null || objet.quantite == 0:
+	if objet == null || objet.quantite == 0 || combat.tourDuJoueur == false || combat.enCoursDeTour == true:
 		return
 	
+	combat.enCoursDeTour = true
 	combat.ecrire_texte(combat.message, "Vous utilisez un " + objet.objet.nom)
 	await get_tree().create_timer(2.0).timeout
 	
