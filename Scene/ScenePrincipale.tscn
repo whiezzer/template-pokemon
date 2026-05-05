@@ -11,8 +11,11 @@
 [ext_resource type="Script" uid="uid://cf2qsij05s0s1" path="res://Script/Objet/objet.gd" id="9_8wwat"]
 [ext_resource type="Script" uid="uid://de8lxlc0xl4cr" path="res://Script/Objet/objetInventaire.gd" id="9_x6yq0"]
 [ext_resource type="Script" uid="uid://drg55xxdqqtc4" path="res://Script/Pokémon/PokemonData.gd" id="11_voxsg"]
+[ext_resource type="Texture2D" uid="uid://w8ggyy1fj20y" path="res://Assets/Pokemon/Bonjeton.png" id="12_4wxh0"]
 [ext_resource type="Script" uid="uid://d0veabi5o4mmv" path="res://Script/Pokémon/type.gd" id="12_tjr8v"]
 [ext_resource type="Script" uid="uid://d1hg32m277mqs" path="res://Script/Pokémon/attaque.gd" id="13_voxsg"]
+[ext_resource type="Texture2D" uid="uid://cp2ghoxx6gmvg" path="res://Assets/Pokemon/Greupô.png" id="13_vpkbl"]
+[ext_resource type="Texture2D" uid="uid://canq81mixxba5" path="res://Assets/Pokemon/Sinjypleur.png" id="14_vaoup"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_uv6h7"]
 size = Vector2(18, 18)
@@ -100,11 +103,12 @@ quantite = 1
 
 [sub_resource type="Resource" id="Resource_8l02w"]
 script = ExtResource("11_voxsg")
-nom = "Bomjeton"
+nom = "Bonjeton"
 pv = 10
 attaque = 5
 defense = 5
 vitesse = 3
+sprite = ExtResource("12_4wxh0")
 _type_index = 1
 
 [sub_resource type="Resource" id="Resource_jwxpu"]
@@ -114,6 +118,7 @@ pv = 10
 attaque = 5
 defense = 5
 vitesse = 3
+sprite = ExtResource("13_vpkbl")
 _type_index = 3
 
 [sub_resource type="Resource" id="Resource_eqwqj"]
@@ -123,7 +128,26 @@ pv = 10
 attaque = 5
 defense = 5
 vitesse = 3
+sprite = ExtResource("14_vaoup")
 _type_index = 2
+
+[sub_resource type="Resource" id="Resource_7l60e"]
+script = ExtResource("11_voxsg")
+nom = "Ectoplat"
+pv = 10
+attaque = 5
+defense = 5
+vitesse = 3
+_type_index = 4
+
+[sub_resource type="Resource" id="Resource_20jwu"]
+script = ExtResource("11_voxsg")
+nom = "Tomichu"
+pv = 10
+attaque = 5
+defense = 5
+vitesse = 3
+_type_index = 5
 
 [sub_resource type="Resource" id="Resource_byug1"]
 script = ExtResource("12_tjr8v")
@@ -152,6 +176,20 @@ nom = "Plante"
 faiblesse = "Feu"
 resistance = "Eau"
 color = Color(0.247, 0.516, 0.162, 1)
+
+[sub_resource type="Resource" id="Resource_lpfrn"]
+script = ExtResource("12_tjr8v")
+nom = "Tenebre"
+faiblesse = "Electrique"
+resistance = "Feu"
+color = Color(0.35292578, 0.21984193, 0.6967056, 1)
+
+[sub_resource type="Resource" id="Resource_dekyc"]
+script = ExtResource("12_tjr8v")
+nom = "Electrique"
+faiblesse = "Eau"
+resistance = "Tenebre"
+color = Color(0.6550896, 0.65898246, 0.20812565, 1)
 
 [sub_resource type="Resource" id="Resource_o1h8p"]
 script = ExtResource("13_voxsg")
@@ -185,6 +223,22 @@ PP_max = 20
 precision = 1.0
 _type_index = 3
 
+[sub_resource type="Resource" id="Resource_tag3l"]
+script = ExtResource("13_voxsg")
+nom = "AttaqueTenebre"
+puissance = 3
+PP_max = 20
+precision = 1.0
+_type_index = 4
+
+[sub_resource type="Resource" id="Resource_ibrmr"]
+script = ExtResource("13_voxsg")
+nom = "AttaqueElectrique"
+puissance = 3
+PP_max = 20
+precision = 1.0
+_type_index = 5
+
 [node name="Map" type="Node3D" unique_id=337228639]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=886342053]
@@ -197,7 +251,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1.9028616)
 up_direction = Vector3(0, 0.7071068, 0.7071068)
 
 [node name="PokemonJoueur" parent="." unique_id=965007536 instance=ExtResource("2_qm7m7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 3.494604)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 12.753826)
 
 [node name="décore" type="Node3D" parent="." unique_id=1731113598]
 
@@ -668,7 +722,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.128716, 0.85703945, 3.56228
 script = ExtResource("4_dgiq7")
 listeDesNatures = Array[ExtResource("5_vfha3")]([SubResource("Resource_voxsg"), SubResource("Resource_l88oo"), SubResource("Resource_8i4vk"), SubResource("Resource_4wxh0"), SubResource("Resource_vpkbl"), SubResource("Resource_vaoup")])
 listeDesObjets = Array[ExtResource("9_x6yq0")]([SubResource("Resource_t1etj"), SubResource("Resource_u2fdv"), SubResource("Resource_bijkn")])
-listePokemons = Array[ExtResource("11_voxsg")]([SubResource("Resource_8l02w"), SubResource("Resource_jwxpu"), SubResource("Resource_eqwqj")])
-listeDesTypes = Array[ExtResource("12_tjr8v")]([SubResource("Resource_byug1"), SubResource("Resource_r2s0p"), SubResource("Resource_x7wka"), SubResource("Resource_qot0l")])
-listeDesAttaques = Array[ExtResource("13_voxsg")]([SubResource("Resource_o1h8p"), SubResource("Resource_g565v"), SubResource("Resource_loqtx"), SubResource("Resource_owyk3")])
-_type_index_pokemons_joueurs = 2
+listePokemons = Array[ExtResource("11_voxsg")]([SubResource("Resource_8l02w"), SubResource("Resource_jwxpu"), SubResource("Resource_eqwqj"), SubResource("Resource_7l60e"), SubResource("Resource_20jwu")])
+listeDesTypes = Array[ExtResource("12_tjr8v")]([SubResource("Resource_byug1"), SubResource("Resource_r2s0p"), SubResource("Resource_x7wka"), SubResource("Resource_qot0l"), SubResource("Resource_lpfrn"), SubResource("Resource_dekyc")])
+listeDesAttaques = Array[ExtResource("13_voxsg")]([SubResource("Resource_o1h8p"), SubResource("Resource_g565v"), SubResource("Resource_loqtx"), SubResource("Resource_owyk3"), SubResource("Resource_tag3l"), SubResource("Resource_ibrmr")])
+_type_index_pokemons_joueurs = 4

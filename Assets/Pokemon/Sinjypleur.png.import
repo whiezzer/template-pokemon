@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w8ggyy1fj20y"
-path="res://.godot/imported/Feu.png-7aa6f922d17ab8c10ca47de086ae1f7e.ctex"
+uid="uid://canq81mixxba5"
+path="res://.godot/imported/Sinjypleur.png-7a85d837e3fd2917075396a2c7d82d57.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pokemon/Feu.png"
-dest_files=["res://.godot/imported/Feu.png-7aa6f922d17ab8c10ca47de086ae1f7e.ctex"]
+source_file="res://Assets/Pokemon/Sinjypleur.png"
+dest_files=["res://.godot/imported/Sinjypleur.png-7a85d837e3fd2917075396a2c7d82d57.ctex"]
 
 [params]
 

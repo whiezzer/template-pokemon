@@ -41,13 +41,10 @@ func _selectionSprite() -> void:
 	if data.sprite != null:
 		$Sprite3D.texture = data.sprite
 	else:
-		var sprite = load("res://Assets/Pokemon/" + data.type.nom + ".png") 
-		if sprite != null:
-			$Sprite3D.texture = sprite
-			data.sprite = sprite
-		else:
-			$Sprite3D.texture = load("res://Assets/Pokemon/Feu.png")
-			data.sprite = load("res://Assets/Pokemon/Feu.png")
+		var sprite = load("res://Assets/Pokemon/PokemonNeutre.png") 
+		$Sprite3D.texture = sprite
+		$Sprite3D.modulate = data.type.color
+		data.sprite = sprite
 
 # Fonction qui attribue des stats aux pokemons selon leur nature
 func _attribueStatsNature() -> void:

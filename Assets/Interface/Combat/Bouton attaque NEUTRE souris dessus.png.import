@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp2ghoxx6gmvg"
-path="res://.godot/imported/Plante.png-e0172e20634c8a9a18936ab16347404d.ctex"
+uid="uid://5khxss48n77"
+path="res://.godot/imported/Bouton attaque NEUTRE souris dessus.png-f6755ab1dc33d8da6ae002206189ce8a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pokemon/Plante.png"
-dest_files=["res://.godot/imported/Plante.png-e0172e20634c8a9a18936ab16347404d.ctex"]
+source_file="res://Assets/Interface/Combat/Bouton attaque NEUTRE souris dessus.png"
+dest_files=["res://.godot/imported/Bouton attaque NEUTRE souris dessus.png-f6755ab1dc33d8da6ae002206189ce8a.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://canq81mixxba5"
-path="res://.godot/imported/Eau.png-e3b05930b3375ce9b0e7b33585b7412b.ctex"
+uid="uid://w8ggyy1fj20y"
+path="res://.godot/imported/Bonjeton.png-f4274cf343b441193e51afa5652a86c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pokemon/Eau.png"
-dest_files=["res://.godot/imported/Eau.png-e3b05930b3375ce9b0e7b33585b7412b.ctex"]
+source_file="res://Assets/Pokemon/Bonjeton.png"
+dest_files=["res://.godot/imported/Bonjeton.png-f4274cf343b441193e51afa5652a86c2.ctex"]
 
 [params]
 

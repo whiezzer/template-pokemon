@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://c3swl7fcs2cr5" path="res://Assets/Interface/Combat/Emplacement attaque pokemon.png" id="5_1fio0"]
 [ext_resource type="FontFile" uid="uid://cex3sks87jmk6" path="res://Assets/Text/pixel_operator/PixelOperator.ttf" id="5_qqaya"]
 [ext_resource type="Texture2D" uid="uid://do5rdk2ol6871" path="res://Assets/Interface/Combat/Bouton Neutre.png" id="6_a7dcr"]
-[ext_resource type="Texture2D" uid="uid://16ia0v0d8gyi" path="res://Assets/Interface/Combat/Bouton attaque NEUTRE Appuyer.png" id="7_5i64c"]
 [ext_resource type="FontFile" uid="uid://datl1ctwq7utc" path="res://Assets/Text/pixel_operator/PixelOperator-Bold.ttf" id="7_8xilq"]
+[ext_resource type="Texture2D" uid="uid://5khxss48n77" path="res://Assets/Interface/Combat/Bouton attaque NEUTRE souris dessus.png" id="7_a7dcr"]
 [ext_resource type="Script" uid="uid://6xmc8leg1cp0" path="res://Script/Combat/boutonMenu.gd" id="7_giger"]
 [ext_resource type="Texture2D" uid="uid://dk8lqecltee8e" path="res://Assets/Interface/Combat/Bouton Neutre souris dessus.png" id="8_3mx84"]
 [ext_resource type="FontFile" uid="uid://dc50vx3jow8oc" path="res://Assets/Text/pixel_operator/PixelOperatorMono.ttf" id="8_giger"]
@@ -377,7 +377,7 @@ offset_top = 68.0
 offset_right = 319.0
 offset_bottom = 148.0
 texture_normal = ExtResource("6_a7dcr")
-texture_pressed = ExtResource("7_5i64c")
+texture_pressed = ExtResource("7_a7dcr")
 texture_hover = ExtResource("8_3mx84")
 stretch_mode = 0
 script = ExtResource("4_4oj6k")
@@ -415,7 +415,7 @@ offset_top = 212.0
 offset_right = 319.0
 offset_bottom = 292.0
 texture_normal = ExtResource("6_a7dcr")
-texture_pressed = ExtResource("7_5i64c")
+texture_pressed = ExtResource("7_a7dcr")
 texture_hover = ExtResource("8_3mx84")
 stretch_mode = 0
 script = ExtResource("4_4oj6k")
@@ -453,7 +453,7 @@ offset_top = 356.0
 offset_right = 319.0
 offset_bottom = 436.0
 texture_normal = ExtResource("6_a7dcr")
-texture_pressed = ExtResource("7_5i64c")
+texture_pressed = ExtResource("7_a7dcr")
 texture_hover = ExtResource("8_3mx84")
 stretch_mode = 0
 script = ExtResource("4_4oj6k")
@@ -491,7 +491,7 @@ offset_top = 500.0
 offset_right = 319.0
 offset_bottom = 580.0
 texture_normal = ExtResource("6_a7dcr")
-texture_pressed = ExtResource("7_5i64c")
+texture_pressed = ExtResource("7_a7dcr")
 texture_hover = ExtResource("8_3mx84")
 stretch_mode = 0
 script = ExtResource("4_4oj6k")
