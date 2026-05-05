@@ -3,19 +3,23 @@ extends Area3D
 @export_category("Paramètre des Hautes herbes")
 
 # Probabilité de rencontrer un pokémon dans les hautes herbes en pourcentage
-@export var probabiliteDeRencontre: float = 12.5
+static var probabiliteDeRencontre: float = 12.5
+var indetectable: bool = true
 
 # Fonction appellé au lancement du jeu
 func _ready() -> void:
 	_maxPourcentage()
 	_minPourcentage()
 	randomize()
+	await get_tree().create_timer(1.5).timeout
+	indetectable = false
 
 # Fonction appellé quand le joueur se déplace dans les hautes herbes
 func _onCollision(body) -> void:
-	var aleatoir = randf() * 100
-	if aleatoir <= probabiliteDeRencontre:
-		call_deferred("_lancer_combat")
+	if !indetectable:
+		var aleatoir = randf() * 100
+		if aleatoir <= probabiliteDeRencontre:
+			call_deferred("_lancer_combat")
 
 # Fonction qui permet de ne pas dépasser le pourcentage max de probabilité de rencontre
 func _maxPourcentage() -> void:

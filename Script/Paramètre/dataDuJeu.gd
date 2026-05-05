@@ -2,6 +2,7 @@
 extends Node3D
 
 var _timerAttente : SceneTreeTimer = null
+var coordonésJoueurs : Vector3 = Vector3(99.0, 99.0, 99.0)
 
 # Liste de base de 6 natures avec leurs valeurs par défaut
 func _creer_liste_nature_base() -> Array[NatureStat]:
@@ -190,7 +191,7 @@ func _verifierTypeChange() -> void:
 	_injecterTypesDansAttaques()
 	_verifierAttaques()
 	_verifierPokemonsJoueur()
-	notify_property_list_changed()
+	notify_property_list_changed()   
 
 # Appel automatique au démarrage pour s'assurer de la taille correcte
 func _enter_tree() -> void:

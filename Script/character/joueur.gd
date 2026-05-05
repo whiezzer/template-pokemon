@@ -6,7 +6,7 @@ extends CharacterBody3D
 @export var vitesse: float = 4.0
 
 # Modifier la valeur pour changer la position de départ du joueur ((0, 1, 0) celle de base)
-@export var position_initial: Vector3 = Vector3(0, 1, 0)
+@export var position_initial: Vector3 = Vector3(0.0, 1.0, 1.0)
 
 # Paramètre à ne pas toucher
 var tailleDeLaTuile: int = 1
@@ -18,7 +18,11 @@ var animEtat
 
 # Fonction appellé au lancement du jeu
 func _ready() -> void:
-	position = position_initial
+	add_to_group("Joueur")
+	if dataDuJeu.coordonésJoueurs == Vector3(99.0, 99.0, 99.0):
+		position = position_initial
+	else:
+		position = dataDuJeu.coordonésJoueurs
 	animArbre = $AnimationTree
 	animEtat = animArbre.get("parameters/playback")
 	animArbre.active = true
@@ -30,6 +34,7 @@ func _physics_process(delta: float) -> void:
 	elif direction != Vector2.ZERO:
 		animEtat.travel("Walk")
 		_movement(delta)
+		dataDuJeu.coordonésJoueurs = self.position
 	else:
 		animEtat.travel("Idle")
 
