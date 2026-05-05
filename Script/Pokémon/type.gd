@@ -21,8 +21,11 @@ class_name Type
 		resistance = value if value != "" else "Aucune"
 		resistance = value if value.length() < 10 else value.substr(0, 10)
 
+@export var color : Color
+
 # Constructeur pour initialiser les valeurs directement
-func _init(_nom = "Pas de nom", _faiblesse = "Aucune", _resistance = "Aucune"):
+func _init(_nom = "Pas de nom", _faiblesse = "Aucune", _resistance = "Aucune", _color = Color(0.5, 0.5, 0.5)):
 	nom = _nom
 	faiblesse = _faiblesse
 	resistance = _resistance
+	color = _color

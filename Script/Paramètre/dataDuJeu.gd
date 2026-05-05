@@ -27,9 +27,9 @@ func _creer_liste_objets_base() -> Array[ObjetInventaire]:
 func _creer_liste_types_base() -> Array[Type]:
 	return [
 		Type.new("Normal", "Aucune", "Aucune"),
-		Type.new("Feu", "Eau", "Plante"),
-		Type.new("Eau", "Plante", "Feu"),
-		Type.new("Plante", "Feu", "Eau")
+		Type.new("Feu", "Eau", "Plante", Color(0.947, 0.264, 0.236, 1.0)),
+		Type.new("Eau", "Plante", "Feu", Color(0.0, 0.636, 0.952, 1.0)),
+		Type.new("Plante", "Feu", "Eau", Color(0.247, 0.516, 0.162, 1.0))
 	]
 
 func _creer_liste_attaques_base() -> Array[Attaque]:
@@ -231,4 +231,4 @@ func _enter_tree() -> void:
 	dataDuJeu.listePokemons = listePokemons
 	dataDuJeu.listeDesTypes = listeDesTypes
 	dataDuJeu.listeDesAttaques = listeDesAttaques
-	dataDuJeu.pokemonJoueurStats = listePokemons[0]
+	dataDuJeu.pokemonJoueurStats = pokemonJoueurStats

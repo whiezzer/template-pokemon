@@ -234,13 +234,23 @@ func _misAJourInterface():
 	$InterfaceCombat/InterfaceInfoPokemon2/Texte_Level.text = str(pokemonEnnemi.lvl)
 	$InterfaceCombat/InterfaceInfoPokemon1/Texte_Level.text = str(pokemonJoueur.lvl)
 	
-	$"InterfaceCombat/MenuAttaque/Bouton-Attaque1".text = pokemonJoueur.listeAttaque[0].nom + "\n" + "\n            PP : " + str(pokemonJoueur.listeAttaque[0].PP) + "/" + str(pokemonJoueur.listeAttaque[0].PP_max)
-	$"InterfaceCombat/MenuAttaque/Bouton-Attaque2".text = pokemonJoueur.listeAttaque[1].nom + "\n" + "\n            PP : " + str(pokemonJoueur.listeAttaque[1].PP) + "/" + str(pokemonJoueur.listeAttaque[1].PP_max)
-	$"InterfaceCombat/MenuAttaque/Bouton-Attaque3".text = pokemonJoueur.listeAttaque[2].nom + "\n" + "\n            PP : " + str(pokemonJoueur.listeAttaque[2].PP) + "/" + str(pokemonJoueur.listeAttaque[2].PP_max)
-	$"InterfaceCombat/MenuAttaque/Bouton-Attaque4".text = pokemonJoueur.listeAttaque[3].nom + "\n" + "\n            PP : " + str(pokemonJoueur.listeAttaque[3].PP) + "/" + str(pokemonJoueur.listeAttaque[3].PP_max)
+	$"InterfaceCombat/MenuAttaque/Label_Attaque1".text = pokemonJoueur.listeAttaque[0].nom + "\n" + "\n            PP : " + str(pokemonJoueur.listeAttaque[0].PP) + "/" + str(pokemonJoueur.listeAttaque[0].PP_max)
+	$"InterfaceCombat/MenuAttaque/Label_Attaque2".text = pokemonJoueur.listeAttaque[1].nom + "\n" + "\n            PP : " + str(pokemonJoueur.listeAttaque[1].PP) + "/" + str(pokemonJoueur.listeAttaque[1].PP_max)
+	$"InterfaceCombat/MenuAttaque/Label_Attaque3".text = pokemonJoueur.listeAttaque[2].nom + "\n" + "\n            PP : " + str(pokemonJoueur.listeAttaque[2].PP) + "/" + str(pokemonJoueur.listeAttaque[2].PP_max)
+	$"InterfaceCombat/MenuAttaque/Label_Attaque4".text = pokemonJoueur.listeAttaque[3].nom + "\n" + "\n            PP : " + str(pokemonJoueur.listeAttaque[3].PP) + "/" + str(pokemonJoueur.listeAttaque[3].PP_max)
 	
 	for i in range(1, pokemonJoueur.listeAttaque.size()+1):
-		get_node("InterfaceCombat/MenuAttaque/Bouton-Attaque" + str(i) + "/TextureRect").texture = load("res://Assets/Interface/Type/" + pokemonJoueur.listeAttaque[i-1].type + ".png")
+		
+		get_node("InterfaceCombat/MenuAttaque/Bouton-Attaque" + str(i) + "/TextureRect").texture = load("res://Assets/Interface/Type/Normal.png")
+		var couleur = Color()
+		for type in pokemonJoueur._listeDesTypes:
+			if type.nom == pokemonJoueur.listeAttaque[i-1].type:
+				couleur = type.color
+		get_node("InterfaceCombat/MenuAttaque/Bouton-Attaque" + str(i) + "/TextureRect").modulate = couleur
+		
+		get_node("InterfaceCombat/MenuAttaque/Bouton-Attaque" + str(i) + "/Label_Type").text = pokemonJoueur.listeAttaque[i-1].type.substr(0, 4)
+		
+		get_node("InterfaceCombat/MenuAttaque/Bouton-Attaque" + str(i)).modulate = couleur
 
 # Fonction qui un text petit à petit
 func ecrire_texte(label: RichTextLabel, texte: String, vitesse := 0.03):
