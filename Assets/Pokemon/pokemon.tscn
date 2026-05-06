@@ -43,6 +43,73 @@
 [ext_resource type="Texture2D" uid="uid://dtnwe6uuou6xb" path="res://Assets/Attaque/Goutte/Goutte11.png" id="41_effqi"]
 [ext_resource type="Texture2D" uid="uid://iapffcdntsj5" path="res://Assets/Attaque/Goutte/Goutte12.png" id="42_w4nk4"]
 [ext_resource type="Texture2D" uid="uid://dtu3pd4ujb740" path="res://Assets/Attaque/Goutte/Goutte13.png" id="43_5ui7w"]
+[ext_resource type="Texture2D" uid="uid://guuacsxlwhds" path="res://Assets/Objets/Pokeballs/Pokeball attraper1.png" id="44_krcb0"]
+[ext_resource type="Texture2D" uid="uid://d4l15cxtj64td" path="res://Assets/Objets/Pokeballs/Pokeball attraper2.png" id="45_i8q78"]
+[ext_resource type="Texture2D" uid="uid://bvw2ckyr6yskk" path="res://Assets/Objets/Pokeballs/Pokeball attraper3.png" id="46_bsw5x"]
+[ext_resource type="Texture2D" uid="uid://jw0xtxos885h" path="res://Assets/Objets/Pokeballs/Pokeball attraper4.png" id="47_6i5ve"]
+[ext_resource type="Texture2D" uid="uid://cdh2kv25j7lxj" path="res://Assets/Objets/Pokeballs/Pokeball attraper5.png" id="48_lxtjo"]
+[ext_resource type="Texture2D" uid="uid://da03xe0qytywm" path="res://Assets/Objets/Pokeballs/Pokeball attraper6.png" id="49_8p2g4"]
+[ext_resource type="Texture2D" uid="uid://l2nuf66wxjpo" path="res://Assets/Objets/Pokeballs/Pokeball attraper7.png" id="50_j4hvd"]
+[ext_resource type="Texture2D" uid="uid://oenjx5jdnhya" path="res://Assets/Objets/Pokeballs/Pokeball attraper8.png" id="51_psj6o"]
+[ext_resource type="Texture2D" uid="uid://bgwbdnnyk1xrj" path="res://Assets/Objets/Pokeballs/Pokeball attraper9.png" id="52_rxl13"]
+[ext_resource type="Texture2D" uid="uid://dq6kgpsj0s7dv" path="res://Assets/Objets/Pokeballs/Pokeball attraper10.png" id="53_oojvi"]
+[ext_resource type="Texture2D" uid="uid://bnjcl003efc4b" path="res://Assets/Objets/Pokeballs/Pokeball attraper11.png" id="54_wa6xx"]
+[ext_resource type="Texture2D" uid="uid://c0a3lpohclw5s" path="res://Assets/Objets/Pokeballs/Pokeball attraper12.png" id="55_0bv7m"]
+[ext_resource type="Texture2D" uid="uid://brj4oaxbjkfo1" path="res://Assets/Objets/Pokeballs/Pokeball attraper13.png" id="56_55f78"]
+[ext_resource type="Texture2D" uid="uid://pu01o11u7463" path="res://Assets/Objets/Pokeballs/Pokeball attraper14.png" id="57_2rdlm"]
+[ext_resource type="Texture2D" uid="uid://cejbvhsh6cme2" path="res://Assets/Objets/Pokeballs/Pokeball attraper15.png" id="58_ckndc"]
+[ext_resource type="Texture2D" uid="uid://chohidirkv6bh" path="res://Assets/Objets/Pokeballs/Pokeball attraper16.png" id="59_esh2x"]
+[ext_resource type="Texture2D" uid="uid://dbbsmi8pmx4kd" path="res://Assets/Objets/Pokeballs/Pokeball attraper17.png" id="60_bp7ht"]
+[ext_resource type="Texture2D" uid="uid://bfs01a46sqbau" path="res://Assets/Objets/Pokeballs/Pokeball attraper18.png" id="61_3ugsr"]
+[ext_resource type="Texture2D" uid="uid://cfpbjiabyqvh6" path="res://Assets/Objets/Pokeballs/Pokeball attraper19.png" id="62_ejd42"]
+[ext_resource type="Texture2D" uid="uid://d10sxfmwh000o" path="res://Assets/Objets/Pokeballs/Pokeball attraper20.png" id="63_xp7u6"]
+[ext_resource type="Texture2D" uid="uid://ddnelxlst5nw2" path="res://Assets/Objets/Pokeballs/Pokeball attraper21.png" id="64_liw5g"]
+[ext_resource type="Texture2D" uid="uid://dtgo0eklysjgb" path="res://Assets/Objets/Pokeballs/Pokeball attraper22.png" id="65_n7s87"]
+[ext_resource type="Texture2D" uid="uid://d3vt64tlhs0fd" path="res://Assets/Objets/Pokeballs/Pokeball attraper23.png" id="66_s2eyt"]
+[ext_resource type="Texture2D" uid="uid://beg3hnq15nuo5" path="res://Assets/Objets/Pokeballs/Pokeball attraper24.png" id="67_kyigf"]
+[ext_resource type="Texture2D" uid="uid://cogm0aqgbc5v" path="res://Assets/Objets/Pokeballs/Pokeball attraper25.png" id="68_jqsqe"]
+[ext_resource type="Texture2D" uid="uid://dqg704gb5v7hi" path="res://Assets/Objets/Pokeballs/Pokeball attraper26.png" id="69_46arb"]
+[ext_resource type="Texture2D" uid="uid://boueisvk861b" path="res://Assets/Objets/Pokeballs/Pokeball attraper27.png" id="70_svt2k"]
+[ext_resource type="Texture2D" uid="uid://da2snjh8af0ky" path="res://Assets/Objets/Pokeballs/Pokeball attraper28.png" id="71_4ohbk"]
+[ext_resource type="Texture2D" uid="uid://bjd70bso8vus3" path="res://Assets/Objets/Pokeballs/Pokeball attraper29.png" id="72_06gl1"]
+[ext_resource type="Texture2D" uid="uid://oiaa4q3x5qbd" path="res://Assets/Objets/Pokeballs/Pokeball attraper30.png" id="73_des7f"]
+[ext_resource type="Texture2D" uid="uid://cvcwt43yog3b6" path="res://Assets/Objets/Pokeballs/Pokeball attraper31.png" id="74_wp7uu"]
+[ext_resource type="Texture2D" uid="uid://cugesso06g6kl" path="res://Assets/Objets/Pokeballs/Pokeball attraper32.png" id="75_k52sm"]
+[ext_resource type="Texture2D" uid="uid://b2hop88hqsqw8" path="res://Assets/Objets/Pokeballs/Pokeball attraper33.png" id="76_8vxc6"]
+[ext_resource type="Texture2D" uid="uid://c5mb71tb1tp2u" path="res://Assets/Objets/Pokeballs/Pokeball attraper34.png" id="77_0tvro"]
+[ext_resource type="Texture2D" uid="uid://bfbptrbry0gxh" path="res://Assets/Objets/Pokeballs/Pokeball attraper35.png" id="78_ckk5p"]
+[ext_resource type="Texture2D" uid="uid://c0lrnbgbwye66" path="res://Assets/Objets/Pokeballs/Pokeball attraper36.png" id="79_c5i6c"]
+[ext_resource type="Texture2D" uid="uid://dey1e71xtqqy8" path="res://Assets/Objets/Pokeballs/Pokeball attraper37.png" id="80_l0bul"]
+[ext_resource type="Texture2D" uid="uid://e112j5o7v5xm" path="res://Assets/Objets/Pokeballs/Pokeball attraper38.png" id="81_rx5vs"]
+[ext_resource type="Texture2D" uid="uid://c80gpvhlkcg75" path="res://Assets/Objets/Pokeballs/Pokeball attraper39.png" id="82_67ofu"]
+[ext_resource type="Texture2D" uid="uid://djr3f5rab0tpx" path="res://Assets/Objets/Pokeballs/Pokeball attraper40.png" id="83_1n57c"]
+[ext_resource type="Texture2D" uid="uid://piwhj708ddah" path="res://Assets/Objets/Pokeballs/Pokeball attraper41.png" id="84_prcb3"]
+[ext_resource type="Texture2D" uid="uid://vqn3cmi3sfrb" path="res://Assets/Objets/Pokeballs/Pokeball attraper42.png" id="85_31ljj"]
+[ext_resource type="Texture2D" uid="uid://ci3b46pqaohdn" path="res://Assets/Objets/Pokeballs/Pokeball attraper43.png" id="86_kkt52"]
+[ext_resource type="Texture2D" uid="uid://ii0bh2ihae3y" path="res://Assets/Objets/Pokeballs/Pokeball attraper44.png" id="87_smwww"]
+[ext_resource type="Texture2D" uid="uid://p1koy8irceom" path="res://Assets/Objets/Pokeballs/Pokeball attraper45.png" id="88_jf6di"]
+[ext_resource type="Texture2D" uid="uid://b4cgmbuij3qdi" path="res://Assets/Objets/Pokeballs/Pokeball attraper46.png" id="89_n846n"]
+[ext_resource type="Texture2D" uid="uid://xuqqrxmwe2oh" path="res://Assets/Objets/Pokeballs/Pokeball attraper47.png" id="90_w5kjx"]
+[ext_resource type="Texture2D" uid="uid://b7fqcdin7n2jy" path="res://Assets/Objets/Pokeballs/Pokeball attraper48.png" id="91_12cny"]
+[ext_resource type="Texture2D" uid="uid://bfdymdtqgu5kb" path="res://Assets/Objets/Pokeballs/Pokeball attraper49.png" id="92_ckct6"]
+[ext_resource type="Texture2D" uid="uid://cbtd8ix7ik15t" path="res://Assets/Objets/Pokeballs/Pokeball attraper50.png" id="93_bqpkh"]
+[ext_resource type="Texture2D" uid="uid://cu3a10jjgxy2h" path="res://Assets/Objets/Pokeballs/Pokeball attraper51.png" id="94_rh476"]
+[ext_resource type="Texture2D" uid="uid://ddxv0kpxsv43d" path="res://Assets/Objets/Pokeballs/Pokeball attraper52.png" id="95_d5mbp"]
+[ext_resource type="Texture2D" uid="uid://c6nrbhvqs876d" path="res://Assets/Objets/Pokeballs/Pokeball attraper53.png" id="96_8isq8"]
+[ext_resource type="Texture2D" uid="uid://c38pbuncvt27m" path="res://Assets/Objets/Pokeballs/Pokeball attraper54.png" id="97_406o7"]
+[ext_resource type="Texture2D" uid="uid://bdrer2p7ah30h" path="res://Assets/Objets/Pokeballs/Pokeball attraper55.png" id="98_tebji"]
+[ext_resource type="Texture2D" uid="uid://42cyq4mo2eil" path="res://Assets/Objets/Pokeballs/Pokeball attraper56.png" id="99_70vts"]
+[ext_resource type="Texture2D" uid="uid://ighayqdri1x4" path="res://Assets/Objets/Pokeballs/Pokeball attraper57.png" id="100_yu10y"]
+[ext_resource type="Texture2D" uid="uid://d1ac1jb2yp8lj" path="res://Assets/Objets/Pokeballs/Pokeball attraper58.png" id="101_ahlwe"]
+[ext_resource type="Texture2D" uid="uid://d1lhbtiw1ekxt" path="res://Assets/Objets/Pokeballs/Pokeball attraper59.png" id="102_08wlq"]
+[ext_resource type="Texture2D" uid="uid://cutmyxwuwqwin" path="res://Assets/Objets/Pokeballs/Pokeball attraper60.png" id="103_8blvd"]
+[ext_resource type="Texture2D" uid="uid://b3l73r8kfke4q" path="res://Assets/Objets/Pokeballs_casser/pokeball casser1.png" id="104_whfpp"]
+[ext_resource type="Texture2D" uid="uid://dwj8y2i32r6kg" path="res://Assets/Objets/Pokeballs_casser/pokeball casser2.png" id="105_n1qfh"]
+[ext_resource type="Texture2D" uid="uid://dlbdko4ffwewt" path="res://Assets/Objets/Pokeballs_casser/pokeball casser3.png" id="106_lmrkv"]
+[ext_resource type="Texture2D" uid="uid://ebusppxk2uut" path="res://Assets/Objets/Pokeballs_casser/pokeball casser4.png" id="107_qh7gv"]
+[ext_resource type="Texture2D" uid="uid://c7yulmqrnr4tm" path="res://Assets/Objets/Pokeballs_casser/pokeball casser5.png" id="108_722te"]
+[ext_resource type="Texture2D" uid="uid://c238s0068rfog" path="res://Assets/Objets/Pokeballs_casser/pokeball casser6.png" id="109_j2xjm"]
+[ext_resource type="Texture2D" uid="uid://dgmkp2e36jb7q" path="res://Assets/Objets/Pokeballs_casser/pokeball casser7.png" id="110_bj7g8"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rmibi"]
 radius = 0.30133057
@@ -192,6 +259,217 @@ animations = [{
 "loop": false,
 "name": &"Grosse Goutte",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("44_krcb0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_i8q78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_bsw5x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_6i5ve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_lxtjo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_8p2g4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_j4hvd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_psj6o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_rxl13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_oojvi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_wa6xx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_0bv7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_55f78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_2rdlm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_ckndc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_esh2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_bp7ht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_3ugsr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_ejd42")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_xp7u6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_liw5g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_n7s87")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_s2eyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_kyigf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_jqsqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_46arb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_svt2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_4ohbk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_06gl1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_des7f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_wp7uu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_k52sm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_8vxc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_0tvro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_ckk5p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_c5i6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_l0bul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_rx5vs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_67ofu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_1n57c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_prcb3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_31ljj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_kkt52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_smwww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_jf6di")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_n846n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_w5kjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_12cny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_ckct6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_bqpkh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_rh476")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_d5mbp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_8isq8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_406o7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_tebji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_70vts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_yu10y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_ahlwe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_08wlq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_8blvd")
+}],
+"loop": false,
+"name": &"Pokeball",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("104_whfpp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_n1qfh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_lmrkv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_qh7gv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_722te")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_j2xjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_bj7g8")
+}],
+"loop": false,
+"name": &"Pokeball_casser",
+"speed": 10.0
 }]
 
 [node name="Pokemon" type="CharacterBody3D" unique_id=965007536]
@@ -211,8 +489,9 @@ texture_filter = 0
 texture = ExtResource("2_3syjj")
 
 [node name="AnimatedSpriteAttaque" type="AnimatedSprite3D" parent="." unique_id=275567102]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.037840247, 0, 0.048479676)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.037840247, 0.10430059, 0.048479676)
 billboard = 2
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_xodrg")
 animation = &"Default"
+autoplay = "Default"

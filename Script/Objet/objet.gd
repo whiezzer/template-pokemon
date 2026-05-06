@@ -13,11 +13,26 @@ class_name Objet
 		description = value if value != "" else "Pas de description"
 		description = value if value.length() < 500 else value.substr(0, 500)
 
-@export var capture : bool
+@export var capture : bool:
+	set(value):
+		if value == true:
+			reanime = false
+			soigne = false
+		capture = value
 
-@export var reanime : bool
+@export var reanime : bool:
+	set(value):
+		if value == true:
+			capture = false
+			soigne = false
+		reanime = value
 
-@export var soigne : bool
+@export var soigne : bool:
+	set(value):
+		if value == true:
+			reanime = false
+			capture = false
+		soigne = value
 
 @export_enum("0%", "25%", "50%", "75%", "100%")
 var nbPvSoigne : String:
@@ -25,8 +40,9 @@ var nbPvSoigne : String:
 		nbPvSoigne = value if value != "" else "0%"
 
 # Constructeur pour initialiser les valeurs directement
-func _init(_nom = "Pas de nom", _description = "Pas de description", _capture = false, _reanime = false, _soigne = false, _nbPvSoigne = "0%"):
+func _init(_nom = "Pas de nom", _texture = null, _description = "Pas de description", _capture = false, _reanime = false, _soigne = false, _nbPvSoigne = "0%"):
 	nom = _nom
+	texture = _texture
 	description = _description
 	capture = _capture
 	reanime = _reanime

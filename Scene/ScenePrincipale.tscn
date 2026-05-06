@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://drg55xxdqqtc4" path="res://Script/Pokémon/PokemonData.gd" id="11_voxsg"]
 [ext_resource type="Texture2D" uid="uid://w8ggyy1fj20y" path="res://Assets/Pokemon/Bonjeton.png" id="12_4wxh0"]
 [ext_resource type="Script" uid="uid://d0veabi5o4mmv" path="res://Script/Pokémon/type.gd" id="12_tjr8v"]
+[ext_resource type="Texture2D" uid="uid://ighayqdri1x4" path="res://Assets/Objets/Pokeballs/Pokeball attraper57.png" id="12_vaoup"]
 [ext_resource type="Script" uid="uid://d1hg32m277mqs" path="res://Script/Pokémon/attaque.gd" id="13_voxsg"]
 [ext_resource type="Texture2D" uid="uid://cp2ghoxx6gmvg" path="res://Assets/Pokemon/Greupô.png" id="13_vpkbl"]
 [ext_resource type="Texture2D" uid="uid://canq81mixxba5" path="res://Assets/Pokemon/Sinjypleur.png" id="14_vaoup"]
@@ -68,6 +69,7 @@ modificateur2 = "-10%"
 [sub_resource type="Resource" id="Resource_jlrlv"]
 script = ExtResource("9_8wwat")
 nom = "Pokéball"
+texture = ExtResource("12_vaoup")
 description = "Cette Objet sert à capturer des Pokémons"
 capture = true
 nbPvSoigne = "0%"
@@ -93,7 +95,6 @@ quantite = 5
 script = ExtResource("9_8wwat")
 nom = "Rappel"
 description = "Cette Objet sert à réanimer des Pokemons"
-reanime = true
 soigne = true
 nbPvSoigne = "25%"
 

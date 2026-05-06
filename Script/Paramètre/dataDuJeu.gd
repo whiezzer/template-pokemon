@@ -18,9 +18,9 @@ func _creer_liste_nature_base() -> Array[NatureStat]:
 # Liste de base de 3 objets avec leurs valeurs par défaut
 func _creer_liste_objets_base() -> Array[ObjetInventaire]:
 	return [
-		ObjetInventaire.new(Objet.new("Pokéball", "Cette Objet sert à capturer des Pokémons", true, false, false, "0%"), 10),
-		ObjetInventaire.new(Objet.new("Potion de soin", "Cette Objet sert à soigner des pokémons", false, false, true, "75%"), 5),
-		ObjetInventaire.new(Objet.new("Rappel", "Cette Objet sert à réanimer des Pokemons", false, true, true, "25%"), 1)
+		ObjetInventaire.new(Objet.new("Pokéball", load("res://Assets/Objets/Pokeballs/Pokeball attraper57.png") , "Cette Objet sert à capturer des Pokémons", true, false, false, "0%"), 10),
+		ObjetInventaire.new(Objet.new("Potion de soin", null ,"Cette Objet sert à soigner des pokémons", false, false, true, "75%"), 5),
+		ObjetInventaire.new(Objet.new("Rappel", null, "Cette Objet sert à réanimer des Pokemons", false, true, true, "25%"), 1)
 	]
 
 # Liste de base de 3 types avec leurs valeurs par défaut
@@ -197,6 +197,8 @@ func _get_property_list():
 		"usage": PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_STORAGE 
 	}]
 
+var listePokemonsJoueur: Array[PokemonData] = []
+
 var pokemonEnnemiStats: PokemonData
 
 # Injecte listeDesTypes dans chaque Pokémon pour que l'enum soit visible
@@ -238,3 +240,5 @@ func _enter_tree() -> void:
 	dataDuJeu.listeDesTypes = listeDesTypes
 	dataDuJeu.listeDesAttaques = listeDesAttaques
 	dataDuJeu.pokemonJoueurStats = pokemonJoueurStats
+	listePokemonsJoueur.append(pokemonJoueurStats)
+	dataDuJeu.listePokemonsJoueur = listePokemonsJoueur
