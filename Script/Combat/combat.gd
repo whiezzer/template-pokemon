@@ -269,7 +269,7 @@ func _créerBoutonsMenuObjet() -> void:
 		
 		var label = Label.new()
 		var bouton = TextureButton.new()
-		bouton.set_script(preload("res://Script/Combat/boutonObjet.gd"))
+		bouton.set_script(preload("res://Script/Combat/boutonObjetCombat.gd"))
 		bouton.objetNom = label
 		
 		$InterfaceSac/MenuObjet.add_child(bouton)

@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://do5rdk2ol6871" path="res://Assets/Interface/Combat/Bouton Neutre.png" id="6_a7dcr"]
 [ext_resource type="FontFile" uid="uid://datl1ctwq7utc" path="res://Assets/Text/pixel_operator/PixelOperator-Bold.ttf" id="7_8xilq"]
 [ext_resource type="Texture2D" uid="uid://5khxss48n77" path="res://Assets/Interface/Combat/Bouton attaque NEUTRE souris dessus.png" id="7_a7dcr"]
-[ext_resource type="Script" uid="uid://6xmc8leg1cp0" path="res://Script/Combat/boutonMenu.gd" id="7_giger"]
+[ext_resource type="Script" uid="uid://6xmc8leg1cp0" path="res://Script/Combat/boutonMenuCombat.gd" id="7_giger"]
 [ext_resource type="Texture2D" uid="uid://dk8lqecltee8e" path="res://Assets/Interface/Combat/Bouton Neutre souris dessus.png" id="8_3mx84"]
 [ext_resource type="FontFile" uid="uid://dc50vx3jow8oc" path="res://Assets/Text/pixel_operator/PixelOperatorMono.ttf" id="8_giger"]
 [ext_resource type="Texture2D" uid="uid://5avc3a2sw8q2" path="res://Assets/Interface/Combat/Bouton Sac1.png" id="8_mwjsy"]

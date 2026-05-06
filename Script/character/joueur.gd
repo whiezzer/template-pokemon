@@ -15,6 +15,7 @@ var direction: Vector2 = Vector2.ZERO
 var estEnMouvement: bool = false
 var animArbre 
 var animEtat
+var pause: bool = false
 
 # Fonction appellé au lancement du jeu
 func _ready() -> void:
@@ -29,7 +30,7 @@ func _ready() -> void:
 
 # Fonction appellé à chaque frame
 func _physics_process(delta: float) -> void:
-	if !estEnMouvement:
+	if !estEnMouvement && !pause:
 		_enAttenteDeCommande()
 	elif direction != Vector2.ZERO:
 		animEtat.travel("Walk")
@@ -43,10 +44,10 @@ func _physics_process(delta: float) -> void:
 func _enAttenteDeCommande() -> void:
 	if direction.y == 0:
 		direction.x = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
-
+	
 	if direction.x == 0:
 		direction.y = int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up"))
-
+	
 	if direction != Vector2.ZERO:
 		animArbre.set("parameters/Idle/blend_position", direction)
 		animArbre.set("parameters/Walk/blend_position", direction)
@@ -58,21 +59,34 @@ func _enAttenteDeCommande() -> void:
 # Fonction qui permet de déplacer le joueur
 func _movement(delta: float) -> void:
 	pourcentageDeMouvementJusquALaProchaineTuile += vitesse * delta
-
+	
 	var cible = position_initial + (Vector3(direction.x, 0.0, direction.y) * tailleDeLaTuile)
 	var nouvelle_position = position_initial + (cible - position_initial) * pourcentageDeMouvementJusquALaProchaineTuile
-
+	
 	var mouvement = nouvelle_position - position
 	var collision = move_and_collide(mouvement)
-
+	
 	if collision:
 		direction = Vector2.ZERO
 		estEnMouvement = false
 		pourcentageDeMouvementJusquALaProchaineTuile = 0.0
 		return
-
+	
 	if pourcentageDeMouvementJusquALaProchaineTuile >= 1.0:
 		pourcentageDeMouvementJusquALaProchaineTuile = 0.0
 		position = cible
 		direction = Vector2.ZERO
 		estEnMouvement = false
+
+#Fonction qui vérifie si le joueur appuie sur Échape ou pas afin d'ouvrir le menu du jeu
+func _input(event):
+	if event.is_action_pressed("ui_cancel"):
+		var menu = get_parent().get_node("InterfaceMenu")
+		
+		if menu.visible == false:
+			menu.visible = true
+			pause = true
+		else:
+			menu.get_node("MenuObjet").visible = false
+			menu.visible = false
+			pause = false
