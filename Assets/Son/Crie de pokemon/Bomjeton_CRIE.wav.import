@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://di8icu8bcojx7"
+path="res://.godot/imported/Bomjeton_CRIE.wav-d1975ba567e795b0d732e435892f40a1.sample"
+
+[deps]
+
+source_file="res://Assets/Son/Crie de pokemon/Bomjeton_CRIE.wav"
+dest_files=["res://.godot/imported/Bomjeton_CRIE.wav-d1975ba567e795b0d732e435892f40a1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
