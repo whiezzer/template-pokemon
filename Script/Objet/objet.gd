@@ -6,7 +6,10 @@ class_name Objet
 		nom = value if value != "" else "Pas de nom"
 		nom = value if value.length() < 15 else value.substr(0, 15)
 
-@export var texture : Texture2D
+@export var texture : Texture2D:
+	set(value):
+			texture = value
+			_verifierSprite()
 
 @export var description : String:
 	set(value):
@@ -19,6 +22,7 @@ class_name Objet
 			reanime = false
 			soigne = false
 		capture = value
+		_verifierSprite()
 
 @export var reanime : bool:
 	set(value):
@@ -26,6 +30,7 @@ class_name Objet
 			capture = false
 			soigne = false
 		reanime = value
+		_verifierSprite()
 
 @export var soigne : bool:
 	set(value):
@@ -33,6 +38,7 @@ class_name Objet
 			reanime = false
 			capture = false
 		soigne = value
+		_verifierSprite()
 
 @export_enum("0%", "25%", "50%", "75%", "100%")
 var nbPvSoigne : String:
@@ -48,3 +54,8 @@ func _init(_nom = "Pas de nom", _texture = null, _description = "Pas de descript
 	reanime = _reanime
 	soigne = _soigne
 	nbPvSoigne = _nbPvSoigne
+
+func _verifierSprite() -> void:
+	if capture && Engine.is_editor_hint():
+		texture = load("res://Assets/Objets/Pokeballs/Pokeball attraper56.png")
+		notify_property_list_changed()

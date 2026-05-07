@@ -1,3 +1,4 @@
+@tool
 class_name PokemonData
 extends Resource
 
@@ -28,12 +29,18 @@ var type : Type:
 			_type_index = 0
 
 func _get_property_list():
+	var scene_root = Engine.get_main_loop().edited_scene_root
+	if scene_root:
+		var param = scene_root.find_child("Paramètre", true, false)
+		if param and param.get("listeDesTypes") != null:
+			_listeDesTypes = param.get("listeDesTypes")
+	
 	var noms := _listeDesTypes.map(func(t): return t.nom)
 	
 	return [{
 		"name": "_type_index",
 		"type": TYPE_INT,
-		"hint": PROPERTY_HINT_ENUM if not _listeDesTypes.is_empty() else PROPERTY_HINT_NONE,
+		"hint": PROPERTY_HINT_ENUM,
 		"hint_string": ",".join(noms),
 		"usage": PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_STORAGE 
 	}]
@@ -56,6 +63,8 @@ var pv_Actuels : int
 		vitesse = max(value, 1)
 
 @export var sprite : Texture2D
+
+@export var sprite_Dos : Texture2D
 
 var listeAttaque : Array[Attaque]
 

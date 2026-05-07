@@ -1,3 +1,4 @@
+@tool
 extends Resource
 class_name Attaque
 
@@ -28,20 +29,18 @@ var type : String:
 		_type_index = 0
 
 func _get_property_list():
-	if _listeDesTypes.is_empty() and Engine.is_editor_hint():
-		var scene_root = Engine.get_main_loop().edited_scene_root
-		if scene_root:
-			for child in scene_root.get_children():
-				if child.get("listeDesTypes") != null:
-					_listeDesTypes = child.get("listeDesTypes")
-					break
+	var scene_root = Engine.get_main_loop().edited_scene_root
+	if scene_root:
+		var param = scene_root.find_child("Paramètre", true, false)
+		if param and param.get("listeDesTypes") != null:
+			_listeDesTypes = param.get("listeDesTypes")
 	
 	var noms := _listeDesTypes.map(func(t): return t.nom)
 	
 	return [{
 		"name": "_type_index",
 		"type": TYPE_INT,
-		"hint": PROPERTY_HINT_ENUM if not _listeDesTypes.is_empty() else PROPERTY_HINT_NONE,
+		"hint": PROPERTY_HINT_ENUM,
 		"hint_string": ",".join(noms),
 		"usage": PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_STORAGE
 	}]
