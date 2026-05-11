@@ -35,8 +35,7 @@ func  _ready() -> void:
 	
 	ecrire_texte(message, "Début du combat")
 	
-	while not Input.is_action_just_pressed("ui_accept"):
-			await get_tree().process_frame
+	await get_tree().create_timer(3.0).timeout
 	
 	if pokemonJoueur.vitesse >= pokemonEnnemi.vitesse:
 		await get_tree().create_timer(1.0).timeout

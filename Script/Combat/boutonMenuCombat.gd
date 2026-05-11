@@ -1,4 +1,4 @@
-extends MenuButton
+extends TextureButton
 
 var menuAttaque : Control
 

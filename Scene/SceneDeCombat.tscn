@@ -22,15 +22,23 @@
 [ext_resource type="Texture2D" uid="uid://1mwb6idkhw5k" path="res://Assets/Interface/Combat/BARRE DE VIE DESSUS CONTOUR.png" id="17_yscag"]
 [ext_resource type="PackedScene" uid="uid://n4ylffjxxqsr" path="res://Assets/Model 3D/Dessou_Pokemon.glb" id="18_a7dcr"]
 [ext_resource type="Texture2D" uid="uid://gdngmhho4wm4" path="res://Assets/Interface/Combat/BARRE DE VIE DESSOUS REMPLIS.png" id="18_l7pxt"]
+[ext_resource type="Texture2D" uid="uid://wio1k2unaquj" path="res://Assets/Interface/Combat/Bouton Sac2.png" id="18_x7ml0"]
+[ext_resource type="Texture2D" uid="uid://v3vth8p1m1ai" path="res://Assets/Interface/Combat/Bouton Sac3.png" id="19_4p0ui"]
 [ext_resource type="PackedScene" uid="uid://vmf5a4fm2h14" path="res://Assets/Model 3D/Foret.glb" id="19_5i64c"]
 [ext_resource type="PackedScene" uid="uid://dsqrlgbhculpi" path="res://Assets/Model 3D/Foret_Fond_Montagne.glb" id="20_3mx84"]
 [ext_resource type="PackedScene" uid="uid://dwnc68cgc8td2" path="res://Assets/Model 3D/Montagne.glb" id="21_2gylr"]
+[ext_resource type="Texture2D" uid="uid://yump20xf8un3" path="res://Assets/Interface/Combat/Bouton Pokemon2.png" id="22_xq0oq"]
+[ext_resource type="Texture2D" uid="uid://to5y0m6ebeva" path="res://Assets/Interface/Combat/Bouton Pokemon3.png" id="23_k3rol"]
+[ext_resource type="Texture2D" uid="uid://byaco4grkvtvk" path="res://Assets/Interface/Combat/Interface Pokemon ENNEMIE.png" id="25_m71ca"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3mx84"]
 texture = ExtResource("5_1fio0")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2gylr"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xhw2v"]
 texture = ExtResource("14_gfmo1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2gylr"]
+texture = ExtResource("25_m71ca")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v15y3"]
 texture = ExtResource("12_5i64c")
@@ -325,35 +333,6 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("8_giger")
 theme_override_font_sizes/font_size = 20
 
-[node name="Bouton_MenuSacADos" type="MenuButton" parent="InterfaceCombat" unique_id=2080833461]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -474.0
-offset_top = -95.0
-offset_right = -359.0
-grow_horizontal = 0
-grow_vertical = 0
-theme_override_fonts/font = ExtResource("5_qqaya")
-theme_override_font_sizes/font_size = 25
-icon = ExtResource("8_mwjsy")
-expand_icon = true
-script = ExtResource("7_giger")
-
-[node name="Bouton_MenuPokemon" type="MenuButton" parent="InterfaceCombat" unique_id=1695074022]
-texture_filter = 1
-layout_mode = 0
-offset_right = 102.0
-offset_bottom = 79.0
-theme_override_fonts/font = ExtResource("5_qqaya")
-theme_override_font_sizes/font_size = 25
-icon = ExtResource("10_yscag")
-expand_icon = true
-
 [node name="FondZondeDeTexte" type="TextureRect" parent="InterfaceCombat" unique_id=1773930578]
 texture_filter = 1
 layout_mode = 1
@@ -362,7 +341,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 5.0
 offset_top = 549.0
-offset_right = -479.0
+offset_right = -360.0
 offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -376,7 +355,7 @@ anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 40.0
 offset_top = -82.0
-offset_right = 506.0
+offset_right = 592.0
 offset_bottom = -22.0
 grow_vertical = 0
 theme_override_colors/default_color = Color(0.42288277, 0.4228828, 0.4228828, 1)
@@ -389,6 +368,36 @@ theme_override_font_sizes/bold_font_size = 30
 theme_override_font_sizes/mono_font_size = 30
 bbcode_enabled = true
 
+[node name="Bouton_MenuSacADos" type="TextureButton" parent="InterfaceCombat" unique_id=679712234]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -510.0
+offset_top = -96.0
+offset_right = -395.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("8_mwjsy")
+texture_pressed = ExtResource("18_x7ml0")
+texture_hover = ExtResource("19_4p0ui")
+stretch_mode = 0
+script = ExtResource("7_giger")
+
+[node name="Bouton_MenuPokemon" type="TextureButton" parent="InterfaceCombat" unique_id=2086738739]
+texture_filter = 1
+layout_mode = 0
+offset_right = 104.0
+offset_bottom = 80.0
+texture_normal = ExtResource("10_yscag")
+texture_pressed = ExtResource("22_xq0oq")
+texture_hover = ExtResource("23_k3rol")
+stretch_mode = 0
+
 [node name="InterfaceInfoPokemon1" type="Panel" parent="InterfaceCombat" unique_id=382766776]
 texture_filter = 1
 layout_mode = 1
@@ -397,45 +406,45 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -136.0
-offset_top = 75.0
-offset_right = 172.0
-offset_bottom = 179.0
+offset_left = -197.0
+offset_top = 74.0
+offset_right = 197.0
+offset_bottom = 218.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_2gylr")
+theme_override_styles/panel = SubResource("StyleBoxTexture_xhw2v")
 
 [node name="Texte_Nom" type="Label" parent="InterfaceCombat/InterfaceInfoPokemon1" unique_id=1052517376]
 layout_mode = 0
-offset_left = 63.0
+offset_left = 78.0
 offset_top = 10.0
-offset_right = 201.0
-offset_bottom = 41.0
+offset_right = 216.0
+offset_bottom = 61.0
 theme_override_colors/font_color = Color(0.42352942, 0.42352942, 0.42352942, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_qqaya")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 50
 vertical_alignment = 1
 
 [node name="Texte_Level" type="Label" parent="InterfaceCombat/InterfaceInfoPokemon1" unique_id=297322887]
 layout_mode = 0
-offset_left = 255.0
+offset_left = 324.0
 offset_top = 11.0
-offset_right = 286.0
-offset_bottom = 42.0
+offset_right = 355.0
+offset_bottom = 62.0
 theme_override_colors/font_color = Color(0.42352942, 0.42352942, 0.42352942, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_qqaya")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 50
 horizontal_alignment = 1
 
 [node name="PV" type="TextureProgressBar" parent="InterfaceCombat/InterfaceInfoPokemon1" unique_id=711400166]
 texture_filter = 1
 layout_mode = 0
-offset_left = 99.0
-offset_top = 49.0
-offset_right = 291.0
-offset_bottom = 58.0
+offset_left = 126.0
+offset_top = 67.0
+offset_right = 373.0
+offset_bottom = 81.0
 step = 0.0
 value = 100.0
 nine_patch_stretch = true
@@ -444,10 +453,10 @@ texture_progress = ExtResource("15_l7pxt")
 [node name="LVL" type="TextureProgressBar" parent="InterfaceCombat/InterfaceInfoPokemon1" unique_id=478299421]
 texture_filter = 1
 layout_mode = 0
-offset_left = 8.0
-offset_top = 106.0
-offset_right = 315.0
-offset_bottom = 150.0
+offset_left = 26.0
+offset_top = 104.0
+offset_right = 379.0
+offset_bottom = 138.0
 step = 0.0
 nine_patch_stretch = true
 texture_under = ExtResource("15_a7dcr")
@@ -461,13 +470,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -116.5
-offset_top = -26.0
-offset_right = 113.5
-offset_bottom = -3.0
+offset_left = -109.5
+offset_right = 120.5
+offset_bottom = 23.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("5_qqaya")
+theme_override_font_sizes/font_size = 10
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -479,47 +488,47 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -379.575
-offset_top = -138.095
-offset_right = -71.57501
-offset_bottom = -34.095154
+offset_left = -391.0
+offset_top = -166.0
+offset_right = -87.0
+offset_bottom = -56.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_2gylr")
 
 [node name="Texte_Nom" type="Label" parent="InterfaceCombat/InterfaceInfoPokemon2" unique_id=2096975077]
 layout_mode = 0
-offset_left = 63.0
-offset_top = 10.0
-offset_right = 201.0
-offset_bottom = 41.0
+offset_left = 25.0
+offset_right = 163.0
+offset_bottom = 51.0
 theme_override_colors/font_color = Color(0.42352942, 0.42352942, 0.42352942, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_qqaya")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 36
 vertical_alignment = 1
 
 [node name="Texte_Level" type="Label" parent="InterfaceCombat/InterfaceInfoPokemon2" unique_id=1298850162]
 layout_mode = 0
-offset_left = 255.0
-offset_top = 11.0
-offset_right = 286.0
-offset_bottom = 42.0
+offset_left = 196.0
+offset_top = 9.0
+offset_right = 227.0
+offset_bottom = 60.0
 theme_override_colors/font_color = Color(0.42352942, 0.42352942, 0.42352942, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_qqaya")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 36
+text = "1"
 horizontal_alignment = 1
 
 [node name="PV" type="TextureProgressBar" parent="InterfaceCombat/InterfaceInfoPokemon2" unique_id=677890120]
 texture_filter = 1
 layout_mode = 0
-offset_left = 99.0
-offset_top = 49.0
-offset_right = 291.0
-offset_bottom = 58.0
+offset_left = 47.0
+offset_top = 51.0
+offset_right = 239.0
+offset_bottom = 62.0
 step = 0.0
-value = 10.0
+value = 100.0
 nine_patch_stretch = true
 texture_progress = ExtResource("15_l7pxt")
 
@@ -542,7 +551,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_v15y3")
 
-[node name="Bouton_MenuSacADos" type="MenuButton" parent="InterfaceSac" unique_id=1000210926]
+[node name="Bouton_MenuSacADos" type="TextureButton" parent="InterfaceSac" unique_id=1650067990]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 3
@@ -550,14 +559,14 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -115.0
+offset_left = -129.0
 offset_top = -95.0
 grow_horizontal = 0
 grow_vertical = 0
-theme_override_fonts/font = ExtResource("5_qqaya")
-theme_override_font_sizes/font_size = 25
-icon = ExtResource("8_mwjsy")
-expand_icon = true
+texture_normal = ExtResource("8_mwjsy")
+texture_pressed = ExtResource("18_x7ml0")
+texture_hover = ExtResource("19_4p0ui")
+stretch_mode = 0
 script = ExtResource("7_giger")
 
 [node name="Label_Description" type="Label" parent="InterfaceSac" unique_id=2117543612]
