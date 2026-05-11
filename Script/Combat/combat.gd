@@ -104,9 +104,12 @@ func _tourAdverse() -> void:
 	
 	$PokemonEnnemi._play(attaqueUtilse.bruit)
 	
-	$PokemonJoueur/AnimatedSpriteAttaque.play(attaqueUtilse.nom)
+	if $PokemonJoueur/AnimatedSpriteAttaque.sprite_frames.has_animation(attaqueUtilse.type):
+		$PokemonJoueur/AnimatedSpriteAttaque.play(attaqueUtilse.type)
+	else:
+		$PokemonJoueur/AnimatedSpriteAttaque.play("Neutre")
 	
-	await $PokemonEnnemi/AnimatedSpriteAttaque.animation_finished
+	await $PokemonJoueur/AnimatedSpriteAttaque.animation_finished
 	
 	if randf() <= attaqueUtilse.precision:
 		pokemonJoueur.pv_Actuels -= degatsInflige
@@ -169,7 +172,10 @@ func _tourJoueur(attaque : Attaque) -> void:
 	
 	$PokemonEnnemi._play(attaque.bruit)
 	
-	$PokemonEnnemi/AnimatedSpriteAttaque.play(attaque.type)
+	if $PokemonEnnemi/AnimatedSpriteAttaque.sprite_frames.has_animation(attaque.type):
+		$PokemonEnnemi/AnimatedSpriteAttaque.play(attaque.type)
+	else:
+		$PokemonEnnemi/AnimatedSpriteAttaque.play(&"Neutre")
 	
 	await $PokemonEnnemi/AnimatedSpriteAttaque.animation_finished
 	
