@@ -36,4 +36,4 @@ func _lancer_combat():
 	if !is_inside_tree():
 		return
 	
-	get_tree().change_scene_to_file("res://Scene/SceneDeCombat.tscn")
+	ecran_de_transition._changer_scene("res://Scene/SceneDeCombat.tscn")

@@ -67,7 +67,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.050530195, 0.25, -3.0587158
 [node name="Sol" parent="décore" unique_id=417281805 instance=ExtResource("1_rqkxw")]
 transform = Transform3D(1.265, 0, 0, 0, 1.265, 0, 0, 0, 1.265, -3.5344288, 0, -5.786859)
 
-[node name="Arbres" type="Node3D" parent="décore" unique_id=645713320]
+[node name="Dessou_Pokemon" parent="décore" unique_id=1784572807 instance=ExtResource("18_a7dcr")]
+transform = Transform3D(0.11, 0, 0, 0, 0.11, 0, 0, 0, 0.11, -3.9275045, 0.6842246, -7.388361)
+
+[node name="Foret2" parent="décore" unique_id=212020847 instance=ExtResource("19_5i64c")]
+transform = Transform3D(0.14278373, 0, 0.060314212, 0, 0.155, 0, -0.060314212, 0, 0.14278373, -4.1815968, 0.8050605, -7.1517444)
+
+[node name="Foret_Fond_Montagne" parent="décore" unique_id=1838889118 instance=ExtResource("20_3mx84")]
+transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, -7.685, 4.145, -17.503)
+
+[node name="Montagne2" parent="décore" unique_id=450922289 instance=ExtResource("21_2gylr")]
+transform = Transform3D(0.107829824, 0, -0.021742307, 0, 0.11, 0, 0.021742307, 0, 0.107829824, -3.9275045, 0.6842246, -7.388361)
+
+[node name="Dessou_Pokemon2" parent="décore" unique_id=734316210 instance=ExtResource("18_a7dcr")]
+transform = Transform3D(0.08332305, 0, -0.016800873, 0, 0.085, 0, 0.016800873, 0, 0.08332305, -0.43479055, 0, -0.9668299)
+
+[node name="Dessou_Pokemon3" parent="décore" unique_id=1919168772 instance=ExtResource("18_a7dcr")]
+transform = Transform3D(0.08332305, 0, -0.016800873, 0, 0.085, 0, 0.016800873, 0, 0.08332305, 0.06700292, 0, -3.1772375)
 
 [node name="InterfaceCombat" type="Control" parent="." unique_id=1670358411]
 layout_mode = 3
@@ -575,24 +591,6 @@ grow_horizontal = 0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=441496462]
 environment = SubResource("Environment_poke7")
-
-[node name="Dessou_Pokemon" parent="." unique_id=1784572807 instance=ExtResource("18_a7dcr")]
-transform = Transform3D(0.11, 0, 0, 0, 0.11, 0, 0, 0, 0.11, -3.9275045, 0.6842246, -7.388361)
-
-[node name="Foret2" parent="." unique_id=212020847 instance=ExtResource("19_5i64c")]
-transform = Transform3D(0.14278373, 0, 0.060314212, 0, 0.155, 0, -0.060314212, 0, 0.14278373, -4.1815968, 0.8050605, -7.1517444)
-
-[node name="Foret_Fond_Montagne" parent="." unique_id=1838889118 instance=ExtResource("20_3mx84")]
-transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, -7.685, 4.145, -17.503)
-
-[node name="Montagne2" parent="." unique_id=450922289 instance=ExtResource("21_2gylr")]
-transform = Transform3D(0.107829824, 0, -0.021742307, 0, 0.11, 0, 0.021742307, 0, 0.107829824, -3.9275045, 0.6842246, -7.388361)
-
-[node name="Dessou_Pokemon2" parent="." unique_id=734316210 instance=ExtResource("18_a7dcr")]
-transform = Transform3D(0.08332305, 0, -0.016800873, 0, 0.085, 0, 0.016800873, 0, 0.08332305, -0.43479055, 0, -0.9668299)
-
-[node name="Dessou_Pokemon3" parent="." unique_id=1919168772 instance=ExtResource("18_a7dcr")]
-transform = Transform3D(0.08332305, 0, -0.016800873, 0, 0.085, 0, 0.016800873, 0, 0.08332305, 0.06700292, 0, -3.1772375)
 
 [connection signal="pressed" from="InterfaceCombat/MenuAttaque/Bouton-Attaque1" to="InterfaceCombat/MenuAttaque/Bouton-Attaque1" method="_on_button_pressed"]
 [connection signal="pressed" from="InterfaceCombat/MenuAttaque/Bouton-Attaque2" to="InterfaceCombat/MenuAttaque/Bouton-Attaque2" method="_on_button_pressed"]
