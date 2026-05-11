@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://08un6kb4vjth"
-path="res://.godot/imported/Goutte7.png-8d520d47589b4017da59d836d97fc5ff.ctex"
+uid="uid://bqkttcjtfqf1g"
+path="res://.godot/imported/Bulle10.png-9c82c98a1b6fbc628ff40cce1414acf0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Attaque/Goutte/Goutte7.png"
-dest_files=["res://.godot/imported/Goutte7.png-8d520d47589b4017da59d836d97fc5ff.ctex"]
+source_file="res://Assets/Attaque/Goutte/Bulle10.png"
+dest_files=["res://.godot/imported/Bulle10.png-9c82c98a1b6fbc628ff40cce1414acf0.ctex"]
 
 [params]
 

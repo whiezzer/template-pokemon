@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dm3fakyypt5b4"
-path="res://.godot/imported/herbe tranche8.png-267ae043e8ee9d7f751907034edfff46.ctex"
+uid="uid://cjfdcba48qi2m"
+path="res://.godot/imported/Bulle8.png-33fbdd4d4ae801f0b022c42ab663845c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Attaque/Tranche herbe/herbe tranche8.png"
-dest_files=["res://.godot/imported/herbe tranche8.png-267ae043e8ee9d7f751907034edfff46.ctex"]
+source_file="res://Assets/Attaque/Goutte/Bulle8.png"
+dest_files=["res://.godot/imported/Bulle8.png-33fbdd4d4ae801f0b022c42ab663845c.ctex"]
 
 [params]
 
