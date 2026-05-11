@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://o31auolc4myx" path="res://Assets/sol/sol.tscn" id="1_rqkxw"]
 [ext_resource type="PackedScene" uid="uid://cg7bha5t87b70" path="res://Assets/Pokemon/pokemon.tscn" id="2_1jl81"]
-[ext_resource type="AudioStream" uid="uid://bmrm5hed5cvcm" path="res://Assets/Son/Combat/musique_Fight.mp3" id="2_k3rol"]
 [ext_resource type="Script" uid="uid://bit2nj7vgv60n" path="res://Script/Combat/combat.gd" id="3_1jl81"]
 [ext_resource type="Script" uid="uid://o62n2swlrafo" path="res://Script/Combat/boutonAttaque.gd" id="4_4oj6k"]
 [ext_resource type="Texture2D" uid="uid://c3swl7fcs2cr5" path="res://Assets/Interface/Combat/Emplacement attaque pokemon.png" id="5_1fio0"]
@@ -18,7 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://docioujmb3850" path="res://Assets/Interface/Sac/Remu Sac.png" id="12_5i64c"]
 [ext_resource type="Texture2D" uid="uid://j4id13h0sn60" path="res://Assets/Interface/Combat/boite de dialogue.png" id="13_l7pxt"]
 [ext_resource type="Texture2D" uid="uid://3l80a5fhati6" path="res://Assets/Interface/Combat/Interface Pokemon.png" id="14_gfmo1"]
-[ext_resource type="AudioStream" uid="uid://x6mchwmb3ecp" path="res://Assets/Son/menu/son_AttackButton.mp3" id="15_5eq4d"]
 [ext_resource type="Texture2D" uid="uid://cloxtjb15vdmj" path="res://Assets/Interface/Combat/BARRE DE VIE DESSOUS FOND.png" id="15_a7dcr"]
 [ext_resource type="Texture2D" uid="uid://c4v5w8xv6pc5r" path="res://Assets/Interface/Combat/Barre de vie VERT ENNEMIE.png" id="15_l7pxt"]
 [ext_resource type="Texture2D" uid="uid://1mwb6idkhw5k" path="res://Assets/Interface/Combat/BARRE DE VIE DESSUS CONTOUR.png" id="17_yscag"]
@@ -29,26 +27,12 @@
 [ext_resource type="PackedScene" uid="uid://vmf5a4fm2h14" path="res://Assets/Model 3D/Foret.glb" id="19_5i64c"]
 [ext_resource type="PackedScene" uid="uid://dsqrlgbhculpi" path="res://Assets/Model 3D/Foret_Fond_Montagne.glb" id="20_3mx84"]
 [ext_resource type="PackedScene" uid="uid://dwnc68cgc8td2" path="res://Assets/Model 3D/Montagne.glb" id="21_2gylr"]
-[ext_resource type="AudioStream" uid="uid://c2krnnpewo88u" path="res://Assets/Son/menu/son_MenuButton.mp3" id="22_td06p"]
 [ext_resource type="Texture2D" uid="uid://yump20xf8un3" path="res://Assets/Interface/Combat/Bouton Pokemon2.png" id="22_xq0oq"]
 [ext_resource type="Texture2D" uid="uid://to5y0m6ebeva" path="res://Assets/Interface/Combat/Bouton Pokemon3.png" id="23_k3rol"]
 [ext_resource type="Texture2D" uid="uid://byaco4grkvtvk" path="res://Assets/Interface/Combat/Interface Pokemon ENNEMIE.png" id="25_m71ca"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3mx84"]
 texture = ExtResource("5_1fio0")
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_xq0oq"]
-animations = [{
-"frames": [],
-"loop": true,
-"name": &"DresseurDebutDeCombat",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xhw2v"]
 texture = ExtResource("14_gfmo1")
@@ -59,11 +43,11 @@ texture = ExtResource("25_m71ca")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v15y3"]
 texture = ExtResource("12_5i64c")
 
-[sub_resource type="Environment" id="Environment_5eq4d"]
+[sub_resource type="Environment" id="Environment_poke7"]
 background_mode = 2
 background_color = Color(0.5928132, 0.7261616, 0.99888045, 1)
-ambient_light_source = 2
-ambient_light_color = Color(0.6763466, 0.41547537, 0.14145198, 1)
+ambient_light_source = 3
+ambient_light_color = Color(0.33298954, 0.54387474, 0.23784947, 1)
 reflected_light_source = 2
 glow_bloom = 0.23
 fog_enabled = true
@@ -75,21 +59,16 @@ script = ExtResource("3_1jl81")
 [node name="VueDeLaScene" type="Camera3D" parent="." unique_id=442836576]
 transform = Transform3D(0.9633475, -0.10209889, 0.24806759, 0.0062360163, 0.93301266, 0.35978952, -0.2681843, -0.34505534, 0.8994521, 0.5071883, 0.6809552, -0.4569716)
 
-[node name="MusiqueAudio3D" type="AudioStreamPlayer3D" parent="." unique_id=178644460]
-stream = ExtResource("2_k3rol")
-volume_db = -29.686
-autoplay = true
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1686996836]
 transform = Transform3D(1, 0, 0, 0, 0.489139, 0.8722059, 0, -0.8722059, 0.489139, 0, 0, 0)
 light_color = Color(0.9882353, 1, 0.59607846, 1)
 shadow_enabled = true
 
 [node name="PokemonJoueur" parent="." unique_id=965007536 instance=ExtResource("2_1jl81")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39005142, 0.25969976, -0.86780083)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39005142, 0.26275617, -0.86780083)
 
 [node name="PokemonEnnemi" parent="." unique_id=2002172973 instance=ExtResource("2_1jl81")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.050530195, 0.26400018, -3.0587158)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.050530195, 0.25934717, -3.0587158)
 
 [node name="décore" type="Node3D" parent="." unique_id=591067996]
 
@@ -172,10 +151,6 @@ theme_override_fonts/font = ExtResource("7_8xilq")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="InterfaceCombat/MenuAttaque/Bouton-Attaque1" unique_id=141167133]
-position = Vector2(-642, -552)
-stream = ExtResource("15_5eq4d")
-
 [node name="Bouton-Attaque2" type="TextureButton" parent="InterfaceCombat/MenuAttaque" unique_id=68839944]
 layout_mode = 0
 offset_left = 41.0
@@ -213,10 +188,6 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7_8xilq")
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="InterfaceCombat/MenuAttaque/Bouton-Attaque2" unique_id=179033733]
-position = Vector2(-642, -552)
-stream = ExtResource("15_5eq4d")
 
 [node name="Bouton-Attaque3" type="TextureButton" parent="InterfaceCombat/MenuAttaque" unique_id=325496119]
 layout_mode = 0
@@ -256,10 +227,6 @@ theme_override_fonts/font = ExtResource("7_8xilq")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="InterfaceCombat/MenuAttaque/Bouton-Attaque3" unique_id=1531110001]
-position = Vector2(-642, -552)
-stream = ExtResource("15_5eq4d")
-
 [node name="Bouton-Attaque4" type="TextureButton" parent="InterfaceCombat/MenuAttaque" unique_id=138460854]
 layout_mode = 0
 offset_left = 41.0
@@ -297,10 +264,6 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7_8xilq")
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="InterfaceCombat/MenuAttaque/Bouton-Attaque4" unique_id=1721904489]
-position = Vector2(-642, -552)
-stream = ExtResource("15_5eq4d")
 
 [node name="Label_Attaque1" type="Label" parent="InterfaceCombat/MenuAttaque" unique_id=1179529554]
 layout_mode = 1
@@ -370,10 +333,6 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("8_giger")
 theme_override_font_sizes/font_size = 20
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="InterfaceCombat/MenuAttaque" unique_id=1182007763]
-sprite_frames = SubResource("SpriteFrames_xq0oq")
-animation = &"DresseurDebutDeCombat"
-
 [node name="FondZondeDeTexte" type="TextureRect" parent="InterfaceCombat" unique_id=1773930578]
 texture_filter = 1
 layout_mode = 1
@@ -429,10 +388,6 @@ texture_hover = ExtResource("19_4p0ui")
 stretch_mode = 0
 script = ExtResource("7_giger")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="InterfaceCombat/Bouton_MenuSacADos" unique_id=96584679]
-position = Vector2(-642, -552)
-stream = ExtResource("22_td06p")
-
 [node name="Bouton_MenuPokemon" type="TextureButton" parent="InterfaceCombat" unique_id=2086738739]
 texture_filter = 1
 layout_mode = 0
@@ -442,10 +397,6 @@ texture_normal = ExtResource("10_yscag")
 texture_pressed = ExtResource("22_xq0oq")
 texture_hover = ExtResource("23_k3rol")
 stretch_mode = 0
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="InterfaceCombat/Bouton_MenuPokemon" unique_id=53497109]
-position = Vector2(-642, -552)
-stream = ExtResource("22_td06p")
 
 [node name="InterfaceInfoPokemon1" type="Panel" parent="InterfaceCombat" unique_id=382766776]
 texture_filter = 1
@@ -472,7 +423,7 @@ offset_bottom = 61.0
 theme_override_colors/font_color = Color(0.42352942, 0.42352942, 0.42352942, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_qqaya")
-theme_override_font_sizes/font_size = 42
+theme_override_font_sizes/font_size = 50
 vertical_alignment = 1
 
 [node name="Texte_Level" type="Label" parent="InterfaceCombat/InterfaceInfoPokemon1" unique_id=297322887]
@@ -553,7 +504,7 @@ offset_bottom = 51.0
 theme_override_colors/font_color = Color(0.42352942, 0.42352942, 0.42352942, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_qqaya")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 36
 vertical_alignment = 1
 
 [node name="Texte_Level" type="Label" parent="InterfaceCombat/InterfaceInfoPokemon2" unique_id=1298850162]
@@ -566,6 +517,7 @@ theme_override_colors/font_color = Color(0.42352942, 0.42352942, 0.42352942, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_qqaya")
 theme_override_font_sizes/font_size = 36
+text = "1"
 horizontal_alignment = 1
 
 [node name="PV" type="TextureProgressBar" parent="InterfaceCombat/InterfaceInfoPokemon2" unique_id=677890120]
@@ -617,10 +569,6 @@ texture_hover = ExtResource("19_4p0ui")
 stretch_mode = 0
 script = ExtResource("7_giger")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="InterfaceSac/Bouton_MenuSacADos" unique_id=1610795008]
-position = Vector2(-642, -552)
-stream = ExtResource("22_td06p")
-
 [node name="Label_Description" type="Label" parent="InterfaceSac" unique_id=2117543612]
 layout_mode = 1
 anchors_preset = 3
@@ -650,8 +598,8 @@ offset_right = -138.0
 offset_bottom = 234.0
 grow_horizontal = 0
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1208429735]
-environment = SubResource("Environment_5eq4d")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=441496462]
+environment = SubResource("Environment_poke7")
 
 [connection signal="pressed" from="InterfaceCombat/MenuAttaque/Bouton-Attaque1" to="InterfaceCombat/MenuAttaque/Bouton-Attaque1" method="_on_button_pressed"]
 [connection signal="pressed" from="InterfaceCombat/MenuAttaque/Bouton-Attaque2" to="InterfaceCombat/MenuAttaque/Bouton-Attaque2" method="_on_button_pressed"]
