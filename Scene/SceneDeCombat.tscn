@@ -57,7 +57,9 @@ fog_light_color = Color(0.73061717, 0.5199233, 0.2572144, 1)
 script = ExtResource("3_1jl81")
 
 [node name="VueDeLaScene" type="Camera3D" parent="." unique_id=442836576]
-transform = Transform3D(0.9633475, -0.10209889, 0.24806759, 0.0062360163, 0.93301266, 0.35978952, -0.2681843, -0.34505534, 0.8994521, 0.5071883, 0.6809552, -0.4569716)
+transform = Transform3D(0.9784808, -0.07990058, 0.19024016, 0.017441321, 0.9507104, 0.30958927, -0.20559968, -0.2996091, 0.9316454, 0.47232127, 0.66354024, -0.26400363)
+current = true
+fov = 83.4
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1686996836]
 transform = Transform3D(1, 0, 0, 0, 0.489139, 0.8722059, 0, -0.8722059, 0.489139, 0, 0, 0)
