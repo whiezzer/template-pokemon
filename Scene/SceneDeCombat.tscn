@@ -65,10 +65,10 @@ light_color = Color(0.9882353, 1, 0.59607846, 1)
 shadow_enabled = true
 
 [node name="PokemonJoueur" parent="." unique_id=965007536 instance=ExtResource("2_1jl81")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39005142, 0.25, -0.86780083)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39005142, 0.26275617, -0.86780083)
 
 [node name="PokemonEnnemi" parent="." unique_id=2002172973 instance=ExtResource("2_1jl81")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.050530195, 0.25, -3.0587158)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.050530195, 0.25934717, -3.0587158)
 
 [node name="décore" type="Node3D" parent="." unique_id=591067996]
 
