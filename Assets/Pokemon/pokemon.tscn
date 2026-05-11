@@ -110,6 +110,7 @@
 [ext_resource type="Texture2D" uid="uid://c7yulmqrnr4tm" path="res://Assets/Objets/Pokeballs_casser/pokeball casser5.png" id="108_722te"]
 [ext_resource type="Texture2D" uid="uid://c238s0068rfog" path="res://Assets/Objets/Pokeballs_casser/pokeball casser6.png" id="109_j2xjm"]
 [ext_resource type="Texture2D" uid="uid://dgmkp2e36jb7q" path="res://Assets/Objets/Pokeballs_casser/pokeball casser7.png" id="110_bj7g8"]
+[ext_resource type="AudioStream" uid="uid://crnv2nwnq8k81" path="res://Assets/Son/Crie de pokemon/Frog_CRIE.wav" id="111_i8q78"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rmibi"]
 radius = 0.30133057
@@ -495,3 +496,6 @@ texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_xodrg")
 animation = &"Default"
 autoplay = "Default"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1351633596]
+stream = ExtResource("111_i8q78")

@@ -62,6 +62,13 @@ var pv_Actuels : int
 	set(value):
 		vitesse = max(value, 1)
 
+@export var crie : AudioStream:
+	set(value):
+		if value == null:
+			crie = preload("res://Assets/Son/Crie de pokemon/Crie1.wav")
+		else:
+			crie = value
+
 @export var sprite : Texture2D
 
 @export var sprite_Dos : Texture2D

@@ -35,7 +35,9 @@ func  _ready() -> void:
 	
 	ecrire_texte(message, "Début du combat")
 	
-	await get_tree().create_timer(3.0).timeout
+	await get_tree().create_timer(2.0).timeout
+	
+	$PokemonEnnemi._play(pokemonEnnemi.crie)
 	
 	if pokemonJoueur.vitesse >= pokemonEnnemi.vitesse:
 		await get_tree().create_timer(1.0).timeout
@@ -98,7 +100,13 @@ func _tourAdverse() -> void:
 	
 	ecrire_texte(message, "Le " + pokemonEnnemi.nom + " adverse utilise : " + attaqueUtilse.nom)
 	
+	await get_tree().create_timer(1.0).timeout
+	
+	$PokemonEnnemi._play(attaqueUtilse.bruit)
+	
 	$PokemonJoueur/AnimatedSpriteAttaque.play(attaqueUtilse.nom)
+	
+	await $PokemonEnnemi/AnimatedSpriteAttaque.animation_finished
 	
 	if randf() <= attaqueUtilse.precision:
 		pokemonJoueur.pv_Actuels -= degatsInflige
@@ -156,6 +164,10 @@ func _tourJoueur(attaque : Attaque) -> void:
 	attaque.PP -= 1
 	
 	ecrire_texte(message, pokemonJoueur.nom + " utilise : " + attaque.nom)
+	
+	await get_tree().create_timer(1.0).timeout
+	
+	$PokemonEnnemi._play(attaque.bruit)
 	
 	$PokemonEnnemi/AnimatedSpriteAttaque.play(attaque.type)
 	
