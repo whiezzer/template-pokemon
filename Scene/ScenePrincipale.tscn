@@ -4,11 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://cg7bha5t87b70" path="res://Assets/Pokemon/pokemon.tscn" id="2_qm7m7"]
 [ext_resource type="Material" uid="uid://dmgcme55m5nt3" path="res://Assets/sol/Sol_material.tres" id="3_aipmw"]
 [ext_resource type="Script" uid="uid://brojl8fd7vanx" path="res://Script/Paramètre/dataDuJeu.gd" id="4_dgiq7"]
-[ext_resource type="PackedScene" uid="uid://0i1ijd73pnlf" path="res://Assets/Herbe/herbe1.tscn" id="4_qm7m7"]
-[ext_resource type="PackedScene" uid="uid://dgw0qieifultw" path="res://Assets/Herbe/herbe2.tscn" id="5_8wwat"]
 [ext_resource type="Script" uid="uid://d6vieo400icv" path="res://Script/Pokémon/natureStat.gd" id="5_vfha3"]
+[ext_resource type="PackedScene" uid="uid://b87i6gj04tgd0" path="res://Assets/Herbe/herbe3D.tscn" id="6_byug1"]
 [ext_resource type="PackedScene" uid="uid://ds4gjbbjisa65" path="res://Assets/Arbre/arbre.tscn" id="6_x6yq0"]
-[ext_resource type="PackedScene" uid="uid://cm5i1n6drauql" path="res://Assets/Model 3D/Herbe3Dmodel.glb" id="7_vpkbl"]
 [ext_resource type="Script" uid="uid://bq6de4c2mdxwp" path="res://Script/Interface/boutonMenu.gd" id="9_8l02w"]
 [ext_resource type="Script" uid="uid://cf2qsij05s0s1" path="res://Script/Objet/objet.gd" id="9_8wwat"]
 [ext_resource type="Texture2D" uid="uid://docioujmb3850" path="res://Assets/Interface/Sac/Remu Sac.png" id="9_bijkn"]
@@ -31,8 +29,6 @@
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_uv6h7"]
 size = Vector2(18, 18)
-
-[sub_resource type="QuadMesh" id="QuadMesh_qm7m7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_byug1"]
 bg_color = Color(0.99154645, 0.8486456, 0.850721, 1)
@@ -282,81 +278,80 @@ mesh = SubResource("PlaneMesh_uv6h7")
 
 [node name="HauteHerbe" type="Node3D" parent="décore" unique_id=348635075]
 
-[node name="herbe1" parent="décore/HauteHerbe" unique_id=1297478967 instance=ExtResource("4_qm7m7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.5, 0)
+[node name="Herbe3Dmodel2" parent="décore/HauteHerbe" unique_id=61230175 instance=ExtResource("6_byug1")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.173, -0.5)
 
-[node name="herbe2" parent="décore/HauteHerbe" unique_id=881962672 instance=ExtResource("5_8wwat")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.5, 0)
+[node name="Herbe3Dmodel3" parent="décore/HauteHerbe" unique_id=1568161353 instance=ExtResource("6_byug1")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -1, 0.173, -0.5)
 
-[node name="herbe3" parent="décore/HauteHerbe" unique_id=323408525 instance=ExtResource("4_qm7m7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.5, 0)
+[node name="Herbe3Dmodel4" parent="décore/HauteHerbe" unique_id=1647823378 instance=ExtResource("6_byug1")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -2, 0.173, -0.5)
 
-[node name="herbe4" parent="décore/HauteHerbe" unique_id=1464692417 instance=ExtResource("5_8wwat")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+[node name="Herbe3Dmodel1" parent="décore/HauteHerbe" unique_id=1037988055 instance=ExtResource("6_byug1")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -3, 0.173, -0.5)
 
-[node name="herbe5" parent="décore/HauteHerbe" unique_id=1547088251 instance=ExtResource("4_qm7m7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.5, -1)
+[node name="Herbe3Dmodel5" parent="décore/HauteHerbe" unique_id=1574795725 instance=ExtResource("6_byug1")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -4, 0.173, -0.5)
 
-[node name="herbe6" parent="décore/HauteHerbe" unique_id=1765014134 instance=ExtResource("5_8wwat")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.5, -1)
+[node name="Herbe3Dmodel6" parent="décore/HauteHerbe" unique_id=417894176 instance=ExtResource("6_byug1")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.173, -1.5)
 
-[node name="herbe7" parent="décore/HauteHerbe" unique_id=1512918144 instance=ExtResource("4_qm7m7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.5, -1)
+[node name="Herbe3Dmodel7" parent="décore/HauteHerbe" unique_id=123086239 instance=ExtResource("6_byug1")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -1, 0.173, -1.5)
 
-[node name="herbe8" parent="décore/HauteHerbe" unique_id=1987830856 instance=ExtResource("5_8wwat")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -1)
-mesh = SubResource("QuadMesh_qm7m7")
+[node name="Herbe3Dmodel8" parent="décore/HauteHerbe" unique_id=1948965649 instance=ExtResource("6_byug1")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -2, 0.173, -1.5)
 
-[node name="herbe9" parent="décore/HauteHerbe" unique_id=373462076 instance=ExtResource("4_qm7m7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.5, -2)
+[node name="Herbe3Dmodel9" parent="décore/HauteHerbe" unique_id=390847146 instance=ExtResource("6_byug1")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -3, 0.173, -1.5)
 
-[node name="herbe10" parent="décore/HauteHerbe" unique_id=1317480340 instance=ExtResource("5_8wwat")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.5, -2)
+[node name="Herbe3Dmodel10" parent="décore/HauteHerbe" unique_id=2041730671 instance=ExtResource("6_byug1")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -4, 0.173, -1.5)
 
-[node name="herbe11" parent="décore/HauteHerbe" unique_id=1694558245 instance=ExtResource("4_qm7m7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.5, -2)
+[node name="Herbe3Dmodel11" parent="décore/HauteHerbe" unique_id=1016565163 instance=ExtResource("6_byug1")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.173, -2.5)
 
-[node name="herbe12" parent="décore/HauteHerbe" unique_id=637679835 instance=ExtResource("5_8wwat")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -2)
+[node name="Herbe3Dmodel12" parent="décore/HauteHerbe" unique_id=142265630 instance=ExtResource("6_byug1")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -1, 0.173, -2.5)
 
-[node name="herbe13" parent="décore/HauteHerbe" unique_id=48679224 instance=ExtResource("4_qm7m7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.5, -3)
+[node name="Herbe3Dmodel13" parent="décore/HauteHerbe" unique_id=865443530 instance=ExtResource("6_byug1")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -2, 0.173, -2.5)
 
-[node name="herbe14" parent="décore/HauteHerbe" unique_id=388855004 instance=ExtResource("5_8wwat")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.5, -3)
+[node name="Herbe3Dmodel14" parent="décore/HauteHerbe" unique_id=2120638740 instance=ExtResource("6_byug1")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -3, 0.173, -2.5)
 
-[node name="herbe17" parent="décore/HauteHerbe" unique_id=1519991295 instance=ExtResource("5_8wwat")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.5, 0)
+[node name="Herbe3Dmodel15" parent="décore/HauteHerbe" unique_id=1498516393 instance=ExtResource("6_byug1")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -4, 0.173, -2.5)
 
-[node name="herbe18" parent="décore/HauteHerbe" unique_id=1707588268 instance=ExtResource("5_8wwat")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.5, -1)
+[node name="Herbe3Dmodel16" parent="décore/HauteHerbe" unique_id=1320076543 instance=ExtResource("6_byug1")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.173, -3.5)
 
-[node name="herbe19" parent="décore/HauteHerbe" unique_id=794639535 instance=ExtResource("5_8wwat")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.5, -2)
+[node name="Herbe3Dmodel17" parent="décore/HauteHerbe" unique_id=2119517155 instance=ExtResource("6_byug1")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -1, 0.173, -3.5)
 
-[node name="herbe20" parent="décore/HauteHerbe" unique_id=634277157 instance=ExtResource("5_8wwat")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.5, -3)
+[node name="Herbe3Dmodel18" parent="décore/HauteHerbe" unique_id=2113555150 instance=ExtResource("6_byug1")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -2, 0.173, -3.5)
 
-[node name="herbe15" parent="décore/HauteHerbe" unique_id=1807899170 instance=ExtResource("4_qm7m7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.5, -3)
+[node name="Herbe3Dmodel19" parent="décore/HauteHerbe" unique_id=262120944 instance=ExtResource("6_byug1")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -3, 0.173, -3.5)
 
-[node name="herbe16" parent="décore/HauteHerbe" unique_id=1101859551 instance=ExtResource("5_8wwat")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -3)
+[node name="Herbe3Dmodel20" parent="décore/HauteHerbe" unique_id=1713158121 instance=ExtResource("6_byug1")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -4, 0.173, -3.5)
 
-[node name="herbe21" parent="décore/HauteHerbe" unique_id=22048309 instance=ExtResource("4_qm7m7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.5, -4)
+[node name="Herbe3Dmodel21" parent="décore/HauteHerbe" unique_id=866241903 instance=ExtResource("6_byug1")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.173, -4.5)
 
-[node name="herbe22" parent="décore/HauteHerbe" unique_id=180770236 instance=ExtResource("5_8wwat")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.5, -4)
+[node name="Herbe3Dmodel22" parent="décore/HauteHerbe" unique_id=1099327411 instance=ExtResource("6_byug1")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -1, 0.173, -4.5)
 
-[node name="herbe23" parent="décore/HauteHerbe" unique_id=739735705 instance=ExtResource("5_8wwat")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.5, -4)
+[node name="Herbe3Dmodel23" parent="décore/HauteHerbe" unique_id=245806927 instance=ExtResource("6_byug1")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -2, 0.173, -4.5)
 
-[node name="herbe24" parent="décore/HauteHerbe" unique_id=529459213 instance=ExtResource("4_qm7m7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.5, -4)
+[node name="Herbe3Dmodel24" parent="décore/HauteHerbe" unique_id=2105239798 instance=ExtResource("6_byug1")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -3, 0.173, -4.5)
 
-[node name="herbe25" parent="décore/HauteHerbe" unique_id=843924901 instance=ExtResource("5_8wwat")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -4)
+[node name="Herbe3Dmodel25" parent="décore/HauteHerbe" unique_id=451336139 instance=ExtResource("6_byug1")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -4, 0.173, -4.5)
 
 [node name="Arbres" type="Node3D" parent="décore" unique_id=464374848]
 
@@ -738,9 +733,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -3)
 [node name="Arbre100" parent="décore/Arbres" unique_id=1300610324 instance=ExtResource("6_x6yq0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -4)
 
-[node name="Herbe3Dmodel2" parent="décore" unique_id=295031663 instance=ExtResource("7_vpkbl")]
-transform = Transform3D(-0.4, 0, -6.039832e-08, 0, 0.4, 0, 6.039832e-08, 0, -0.4, 0.747077, 0.18050748, 0.46691203)
-
 [node name="InterfaceMenu" type="Control" parent="." unique_id=1477991696]
 visible = false
 layout_mode = 3
@@ -867,7 +859,7 @@ listeDesObjets = Array[ExtResource("9_x6yq0")]([SubResource("Resource_20jwu"), S
 listePokemons = Array[ExtResource("11_voxsg")]([SubResource("Resource_8l02w"), SubResource("Resource_jwxpu"), SubResource("Resource_ibrmr"), SubResource("Resource_yqeg5"), SubResource("Resource_7w3f3")])
 listeDesTypes = Array[ExtResource("12_tjr8v")]([SubResource("Resource_byug1"), SubResource("Resource_r2s0p"), SubResource("Resource_x7wka"), SubResource("Resource_qot0l"), SubResource("Resource_lpfrn"), SubResource("Resource_dekyc")])
 listeDesAttaques = Array[ExtResource("13_voxsg")]([SubResource("Resource_eqwqj"), SubResource("Resource_o1h8p"), SubResource("Resource_g565v"), SubResource("Resource_loqtx"), SubResource("Resource_owyk3"), SubResource("Resource_tag3l")])
-_type_index_pokemons_joueurs = 0
+_type_index_pokemons_joueurs = 2
 
 [connection signal="pressed" from="InterfaceMenu/TextureButton_Objets" to="InterfaceMenu/TextureButton_Objets" method="_on_button_pressed"]
 [connection signal="pressed" from="InterfaceMenu/MenuObjet/Bouton_MenuSacADos" to="InterfaceMenu/MenuObjet/Bouton_MenuSacADos" method="_on_button_pressed"]
