@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dktcxdge2mcr2"]
+
+[ext_resource type="PackedScene" uid="uid://qrjveotcsxen" path="res://Assets/Model 3D/Arbre_Model_3D.glb" id="1_ela1m"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ela1m"]
+size = Vector3(1, 3, 1)
+
+[node name="Arbre_Model_3D" unique_id=718013094 instance=ExtResource("1_ela1m")]
+
+[node name="Arbre Model 3D" parent="." index="0" unique_id=1280672443]
+transform = Transform3D(0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=357251533]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=2147043296]
+shape = SubResource("BoxShape3D_ela1m")
