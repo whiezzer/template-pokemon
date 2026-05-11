@@ -35,8 +35,10 @@ func  _ready() -> void:
 	
 	ecrire_texte(message, "Début du combat")
 	
+	await get_tree().create_timer(3.0).timeout
+	
 	if pokemonJoueur.vitesse >= pokemonEnnemi.vitesse:
-		await get_tree().create_timer(2.0).timeout
+		await get_tree().create_timer(1.0).timeout
 		ecrire_texte(message, "Choisissez une action")
 		tourDuJoueur = true
 	else :
@@ -155,7 +157,9 @@ func _tourJoueur(attaque : Attaque) -> void:
 	
 	ecrire_texte(message, pokemonJoueur.nom + " utilise : " + attaque.nom)
 	
-	$PokemonEnnemi/AnimatedSpriteAttaque.play(attaque.nom)
+	$PokemonEnnemi/AnimatedSpriteAttaque.play(attaque.type)
+	
+	await $PokemonEnnemi/AnimatedSpriteAttaque.animation_finished
 	
 	if randf() <= attaque.precision:
 		pokemonEnnemi.pv_Actuels -= degatsInflige
@@ -189,9 +193,6 @@ func _finDeTour() -> void :
 		ecrire_texte(message, "[color=blue]Victoire ![/color]")
 		
 		while not Input.is_action_just_pressed("ui_accept"):
-			await get_tree().process_frame
-		
-		while Input.is_action_pressed("ui_accept"):
 			await get_tree().process_frame
 		
 		pokemonJoueur.xp += 250 * pokemonEnnemi.lvl

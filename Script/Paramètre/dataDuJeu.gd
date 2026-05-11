@@ -116,6 +116,7 @@ func _verifierObjets() -> void:
 @export var listePokemons: Array[PokemonData] = []:
 	set(value):
 			listePokemons = value
+			
 			_verifierPokemons()
 			_injecterTypesDansPokemons()
 			_verifierPokemonJoueur()
@@ -205,7 +206,7 @@ var _type_index_pokemons_joueurs : int = 0
 var pokemonJoueurStats: PokemonData:
 	get:
 		if listePokemons.is_empty() or _type_index_pokemons_joueurs < 0 or _type_index_pokemons_joueurs >= listePokemons.size():
-			return listePokemons[_type_index_pokemons_joueurs]
+			return 
 		return listePokemons[_type_index_pokemons_joueurs]
 	set(value):
 		pokemonJoueurStats = value
@@ -267,14 +268,17 @@ func _verifierTypeChange() -> void:
 
 # Appel automatique au démarrage pour s'assurer de la taille correcte
 func _enter_tree() -> void:
+	var ref = get_tree().current_scene.find_child("Paramètre", true, false)
+	dataDuJeu.listeDesNatures = ref.listeDesNatures
+	dataDuJeu.listeDesObjets = ref.listeDesObjets
+	dataDuJeu.listeDesTypes = ref.listeDesTypes
 	_injecterTypesDansAttaques()
 	_injecterTypesDansPokemons()
-	dataDuJeu.listeDesNatures = listeDesNatures
-	dataDuJeu.listeDesObjets = listeDesObjets
-	dataDuJeu.listePokemons = listePokemons
-	dataDuJeu.listeDesTypes = listeDesTypes
-	dataDuJeu.listeDesAttaques = listeDesAttaques
-	dataDuJeu.pokemonJoueurStats = pokemonJoueurStats
+	dataDuJeu.listePokemons = ref.listePokemons
+	dataDuJeu.listeDesAttaques = ref.listeDesAttaques
+	dataDuJeu._type_index_pokemons_joueurs = ref._type_index_pokemons_joueurs
+	print(ref.pokemonJoueurStats._type_index)
+	listePokemonsJoueur.clear()
 	listePokemonsJoueur.append(pokemonJoueurStats)
-	dataDuJeu.listePokemonsJoueur = listePokemonsJoueur
+	dataDuJeu.listePokemonsJoueur = ref.listePokemonsJoueur
 	_créerBoutonsMenuObjet()

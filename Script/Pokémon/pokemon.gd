@@ -38,13 +38,20 @@ func _physics_process(delta: float) -> void:
 
 # Fonction qui attribue un sprite au pokémon selon son type
 func _selectionSprite() -> void:
-	if data.sprite != null:
-		$Sprite3D.texture = data.sprite
+	if self.name == "PokemonJoueur":
+		if data.sprite_Dos != null:
+			$Sprite3D.texture = data.sprite_Dos
+		else:
+			var sprite = load("res://Assets/Pokemon/PokemonNeutre.png") 
+			$Sprite3D.texture = sprite
+			$Sprite3D.modulate = data.type.color
 	else:
-		var sprite = load("res://Assets/Pokemon/PokemonNeutre.png") 
-		$Sprite3D.texture = sprite
-		$Sprite3D.modulate = data.type.color
-		data.sprite = sprite
+		if data.sprite != null:
+			$Sprite3D.texture = data.sprite
+		else:
+			var sprite = load("res://Assets/Pokemon/PokemonNeutre.png") 
+			$Sprite3D.texture = sprite
+			$Sprite3D.modulate = data.type.color
 
 # Fonction qui attribue des stats aux pokemons selon leur nature
 func _attribueStatsNature() -> void:
