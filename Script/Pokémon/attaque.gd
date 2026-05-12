@@ -62,7 +62,7 @@ var PP : int
 @export var bruit : AudioStream:
 	set(value):
 		if value == null:
-			bruit = preload("C:/Users/cotis/Documents/Godot/template-pokemon/Assets/Son/Combat/son_Attaque1.wav")
+			bruit = preload("res://Assets/Son/Combat/son_Attaque1.wav")
 		else:
 			bruit = value
 

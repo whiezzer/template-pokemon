@@ -188,7 +188,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"TransitionTrouver",
-"speed": 10.0
+"speed": 15.0
 }, {
 "frames": [],
 "loop": true,
@@ -205,3 +205,4 @@ process_mode = 3
 position = Vector2(577.5, 327)
 scale = Vector2(2.41875, 2.4222221)
 sprite_frames = SubResource("SpriteFrames_vijqq")
+animation = &"TransitionEntree"

@@ -48,13 +48,27 @@ texture = ExtResource("12_5i64c")
 
 [sub_resource type="Environment" id="Environment_poke7"]
 background_mode = 2
-background_color = Color(0.5928132, 0.7261616, 0.99888045, 1)
-ambient_light_source = 3
-ambient_light_color = Color(0.33298954, 0.54387474, 0.23784947, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.7302456, 0.36909077, 0.28357202, 1)
 reflected_light_source = 2
+sdfgi_cascades = 2
+sdfgi_min_cell_size = 0.46875
 glow_bloom = 0.23
 fog_enabled = true
-fog_light_color = Color(0.73061717, 0.5199233, 0.2572144, 1)
+fog_light_color = Color(0.82918394, 0.43932098, 0.37885845, 1)
+volumetric_fog_enabled = true
+volumetric_fog_albedo = Color(0.8418652, 0.35429892, 0.7428293, 1)
+volumetric_fog_emission = Color(0.4509804, 0, 0, 1)
+volumetric_fog_emission_energy = 1.4
+adjustment_enabled = true
+adjustment_brightness = 1.05
+adjustment_contrast = 1.1
+adjustment_saturation = 1.1
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_5eq4d"]
+dof_blur_far_enabled = true
+dof_blur_far_distance = 0.01
+dof_blur_far_transition = 50.0
 
 [node name="SceneDeCombat" type="Node3D" unique_id=384346761]
 script = ExtResource("3_1jl81")
@@ -629,6 +643,7 @@ grow_horizontal = 0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=441496462]
 environment = SubResource("Environment_poke7")
+camera_attributes = SubResource("CameraAttributesPractical_5eq4d")
 
 [connection signal="pressed" from="InterfaceCombat/MenuAttaque/Bouton-Attaque1" to="InterfaceCombat/MenuAttaque/Bouton-Attaque1" method="_on_button_pressed"]
 [connection signal="pressed" from="InterfaceCombat/MenuAttaque/Bouton-Attaque2" to="InterfaceCombat/MenuAttaque/Bouton-Attaque2" method="_on_button_pressed"]
