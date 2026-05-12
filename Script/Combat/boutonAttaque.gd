@@ -14,6 +14,8 @@ func _ready() -> void:
 			attaque = dataDuJeu.pokemonJoueurStats.listeAttaque[3]
 
 func _on_button_pressed() -> void:
+	$AudioStreamPlayer2D.playing = true
+	
 	var combat = get_node("/root/SceneDeCombat")
 	if combat.tourDuJoueur == true:
 		combat._tourJoueur(attaque)

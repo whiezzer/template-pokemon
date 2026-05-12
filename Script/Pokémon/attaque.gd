@@ -59,6 +59,13 @@ var PP : int
 	set(value):
 		precision = clamp(value, 0.0, 1.0)
 
+@export var bruit : AudioStream:
+	set(value):
+		if value == null:
+			bruit = preload("C:/Users/cotis/Documents/Godot/template-pokemon/Assets/Son/Combat/son_Attaque1.wav")
+		else:
+			bruit = value
+
 # Constructeur pour initialiser les valeurs directement
 func _init(_nom = "Pas de nom", _type = "Normal", _puissance = 3, _PP_max = 20, _precision = 1.0):
 	nom = _nom

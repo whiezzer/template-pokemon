@@ -104,3 +104,8 @@ func _niveauSuperieur() -> void:
 	data.vitesse += randi_range(1, 2) 
 	
 	_attribueStatsNature()
+
+# Fonction qui joue le crie du pokémon
+func _play(son : AudioStream) -> void:
+	$AudioStreamPlayer3D.stream = son
+	$AudioStreamPlayer3D.playing = true

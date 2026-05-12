@@ -33,27 +33,44 @@
 [ext_resource type="Texture2D" uid="uid://cwjipdwdaefrw" path="res://Assets/Attaque/Goutte/Bulle1.png" id="31_8p2g4"]
 [ext_resource type="Texture2D" uid="uid://bub1gj6smtwxf" path="res://Assets/Attaque/Goutte/Bulle2.png" id="32_j4hvd"]
 [ext_resource type="Texture2D" uid="uid://btyxykrntdq3c" path="res://Assets/Attaque/Goutte/Bulle3.png" id="33_psj6o"]
+[ext_resource type="Texture2D" uid="uid://dux2h1s3ns34y" path="res://Assets/Attaque/Neutre/Poing1.png" id="34_kyigf"]
 [ext_resource type="Texture2D" uid="uid://c40l3u20ace1u" path="res://Assets/Attaque/Goutte/Bulle4.png" id="34_rxl13"]
+[ext_resource type="Texture2D" uid="uid://1wh401bafryu" path="res://Assets/Attaque/Neutre/Poing2.png" id="35_jqsqe"]
 [ext_resource type="Texture2D" uid="uid://c0pgqvedgsk18" path="res://Assets/Attaque/Goutte/Bulle5.png" id="35_oojvi"]
+[ext_resource type="Texture2D" uid="uid://bbs3ja4a2l1gb" path="res://Assets/Attaque/Neutre/Poing3.png" id="36_46arb"]
 [ext_resource type="Texture2D" uid="uid://t220nycdak5t" path="res://Assets/Attaque/Goutte/Bulle6.png" id="36_wa6xx"]
 [ext_resource type="Texture2D" uid="uid://dxv08d1re1uxs" path="res://Assets/Attaque/Goutte/Bulle7.png" id="37_0bv7m"]
+[ext_resource type="Texture2D" uid="uid://c6jg2csibvimh" path="res://Assets/Attaque/Neutre/Poing4.png" id="37_svt2k"]
+[ext_resource type="Texture2D" uid="uid://cl78q4qqgv07q" path="res://Assets/Attaque/Neutre/Poing5.png" id="38_4ohbk"]
 [ext_resource type="Texture2D" uid="uid://cjfdcba48qi2m" path="res://Assets/Attaque/Goutte/Bulle8.png" id="38_55f78"]
 [ext_resource type="Texture2D" uid="uid://bd8vyet51v4mf" path="res://Assets/Attaque/Goutte/Bulle9.png" id="39_2rdlm"]
+[ext_resource type="Texture2D" uid="uid://bpb2nj604hyip" path="res://Assets/Attaque/Neutre/Poing6.png" id="39_06gl1"]
 [ext_resource type="Texture2D" uid="uid://bqkttcjtfqf1g" path="res://Assets/Attaque/Goutte/Bulle10.png" id="40_ckndc"]
+[ext_resource type="Texture2D" uid="uid://b6gn5hbklal48" path="res://Assets/Attaque/Neutre/Poing7.png" id="40_des7f"]
 [ext_resource type="Texture2D" uid="uid://dk4tb2nudgvxm" path="res://Assets/Attaque/Goutte/Bulle11.png" id="41_esh2x"]
+[ext_resource type="Texture2D" uid="uid://b4kplp5q3atsy" path="res://Assets/Attaque/Neutre/Poing8.png" id="41_wp7uu"]
 [ext_resource type="Texture2D" uid="uid://b1lbiomxd8rja" path="res://Assets/Attaque/Goutte/Bulle12.png" id="42_bp7ht"]
+[ext_resource type="Texture2D" uid="uid://boj2154gmq4yb" path="res://Assets/Attaque/Neutre/Poing9.png" id="42_k52sm"]
 [ext_resource type="Texture2D" uid="uid://buu1qc7oyvrjs" path="res://Assets/Attaque/Goutte/Bulle13.png" id="43_3ugsr"]
+[ext_resource type="Texture2D" uid="uid://brphouywhfm6m" path="res://Assets/Attaque/Neutre/Poing10.png" id="43_8vxc6"]
+[ext_resource type="Texture2D" uid="uid://ug48u8lfugws" path="res://Assets/Attaque/Neutre/Poing11.png" id="44_0tvro"]
 [ext_resource type="Texture2D" uid="uid://dya8ub55dnuck" path="res://Assets/Attaque/Goutte/Bulle14.png" id="44_ejd42"]
 [ext_resource type="Texture2D" uid="uid://guuacsxlwhds" path="res://Assets/Objets/Pokeballs/Pokeball attraper1.png" id="44_krcb0"]
+[ext_resource type="Texture2D" uid="uid://bsweghqh8h4eu" path="res://Assets/Attaque/Neutre/Poing12.png" id="45_ckk5p"]
 [ext_resource type="Texture2D" uid="uid://d4l15cxtj64td" path="res://Assets/Objets/Pokeballs/Pokeball attraper2.png" id="45_i8q78"]
 [ext_resource type="Texture2D" uid="uid://dh3pvxl13e4vi" path="res://Assets/Attaque/Goutte/Bulle15.png" id="45_xp7u6"]
 [ext_resource type="Texture2D" uid="uid://bvw2ckyr6yskk" path="res://Assets/Objets/Pokeballs/Pokeball attraper3.png" id="46_bsw5x"]
+[ext_resource type="Texture2D" uid="uid://3jeyipqv51tw" path="res://Assets/Attaque/Neutre/Poing13.png" id="46_c5i6c"]
 [ext_resource type="Texture2D" uid="uid://bcctlthf4mjc0" path="res://Assets/Attaque/Goutte/Bulle16.png" id="46_liw5g"]
 [ext_resource type="Texture2D" uid="uid://jw0xtxos885h" path="res://Assets/Objets/Pokeballs/Pokeball attraper4.png" id="47_6i5ve"]
+[ext_resource type="Texture2D" uid="uid://dp1kd2uw1vk1t" path="res://Assets/Attaque/Neutre/Poing14.png" id="47_l0bul"]
 [ext_resource type="Texture2D" uid="uid://df451r04wrucb" path="res://Assets/Attaque/Goutte/Bulle17.png" id="47_n7s87"]
 [ext_resource type="Texture2D" uid="uid://cdh2kv25j7lxj" path="res://Assets/Objets/Pokeballs/Pokeball attraper5.png" id="48_lxtjo"]
+[ext_resource type="Texture2D" uid="uid://ckyieidathn1c" path="res://Assets/Attaque/Neutre/Poing15.png" id="48_rx5vs"]
 [ext_resource type="Texture2D" uid="uid://byh1xhx33unn" path="res://Assets/Attaque/Goutte/Bulle18.png" id="48_s2eyt"]
 [ext_resource type="Texture2D" uid="uid://da03xe0qytywm" path="res://Assets/Objets/Pokeballs/Pokeball attraper6.png" id="49_8p2g4"]
+[ext_resource type="Texture2D" uid="uid://c0n8wajnhttli" path="res://Assets/Attaque/Neutre/Poing16.png" id="49_67ofu"]
+[ext_resource type="Texture2D" uid="uid://5228d4se1obh" path="res://Assets/Attaque/Neutre/Poing17.png" id="50_1n57c"]
 [ext_resource type="Texture2D" uid="uid://l2nuf66wxjpo" path="res://Assets/Objets/Pokeballs/Pokeball attraper7.png" id="50_j4hvd"]
 [ext_resource type="Texture2D" uid="uid://oenjx5jdnhya" path="res://Assets/Objets/Pokeballs/Pokeball attraper8.png" id="51_psj6o"]
 [ext_resource type="Texture2D" uid="uid://bgwbdnnyk1xrj" path="res://Assets/Objets/Pokeballs/Pokeball attraper9.png" id="52_rxl13"]
@@ -115,6 +132,7 @@
 [ext_resource type="Texture2D" uid="uid://c7yulmqrnr4tm" path="res://Assets/Objets/Pokeballs_casser/pokeball casser5.png" id="108_722te"]
 [ext_resource type="Texture2D" uid="uid://c238s0068rfog" path="res://Assets/Objets/Pokeballs_casser/pokeball casser6.png" id="109_j2xjm"]
 [ext_resource type="Texture2D" uid="uid://dgmkp2e36jb7q" path="res://Assets/Objets/Pokeballs_casser/pokeball casser7.png" id="110_bj7g8"]
+[ext_resource type="AudioStream" uid="uid://crnv2nwnq8k81" path="res://Assets/Son/Crie de pokemon/Frog_CRIE.wav" id="111_i8q78"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rmibi"]
 radius = 0.30133057
@@ -181,6 +199,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("48_s2eyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_1n57c")
 }],
 "loop": false,
 "name": &"Eau",
@@ -228,6 +249,62 @@ animations = [{
 }],
 "loop": false,
 "name": &"Flamme",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_kyigf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_jqsqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_46arb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_svt2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_4ohbk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_06gl1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_des7f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_wp7uu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_k52sm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_8vxc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_0tvro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_ckk5p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_c5i6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_l0bul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_rx5vs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_67ofu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_1n57c")
+}],
+"loop": false,
+"name": &"Neutre",
 "speed": 10.0
 }, {
 "frames": [{
@@ -515,3 +592,6 @@ texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_xodrg")
 animation = &"Default"
 autoplay = "Default"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1351633596]
+stream = ExtResource("111_i8q78")

@@ -12,6 +12,8 @@ func _ready() -> void:
 	combat = get_parent().get_parent()
 
 func _on_button_pressed() -> void:
+	$AudioStreamPlayer2D.playing = true
+	
 	if combat.tourDuJoueur == true && combat.enCoursDeTour == false:
 		if menuAttaque.visible:
 			menuAttaque.visible = false
