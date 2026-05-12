@@ -17,10 +17,10 @@ func _physics_process(delta: float) -> void:
 		enDialogue = true
 		joueur.pause = true
 		menuDialogue.visible = true
-		await ecrire_texte(dialogue, "Bonjour, je m'appelle Tom. Je suis le créateur de Bob le Roi parmi les rois !")
+		await ecrire_texte(dialogue, "Bonjour, je m'appelle Nedy. Je suis le meilleur dresseur, le Roi parmi les rois !")
 		while not Input.is_action_just_pressed("ui_accept"):
 			await get_tree().process_frame
-		await ecrire_texte(dialogue, "Ça te dirait de manger la pâte du siècle ?")
+		await ecrire_texte(dialogue, "Ça te dirait de manger la pâtée du siècle ?")
 		while not Input.is_action_just_pressed("ui_accept"):
 			await get_tree().process_frame
 		await ecrire_texte(dialogue, "C'est une question rhétorique en fait.")

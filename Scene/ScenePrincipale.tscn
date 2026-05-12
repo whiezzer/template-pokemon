@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cg7bha5t87b70" path="res://Assets/Pokemon/pokemon.tscn" id="2_qm7m7"]
 [ext_resource type="Material" uid="uid://dmgcme55m5nt3" path="res://Assets/sol/Sol_material.tres" id="3_aipmw"]
 [ext_resource type="Script" uid="uid://brojl8fd7vanx" path="res://Script/Paramètre/dataDuJeu.gd" id="4_dgiq7"]
+[ext_resource type="Texture2D" uid="uid://buq4jk764ko6f" path="res://Assets/Character/Nedy/Nedy.png" id="4_owyk3"]
 [ext_resource type="PackedScene" uid="uid://dktcxdge2mcr2" path="res://Assets/Arbre/arbre3d.tscn" id="5_jwxpu"]
 [ext_resource type="Script" uid="uid://bcfcghafi6pxq" path="res://Script/character/PNJ.gd" id="5_owyk3"]
 [ext_resource type="Script" uid="uid://d6vieo400icv" path="res://Script/Pokémon/natureStat.gd" id="5_vfha3"]
@@ -34,7 +35,6 @@
 [ext_resource type="Texture2D" uid="uid://canq81mixxba5" path="res://Assets/Pokemon/Sinjypleur.png" id="25_r2s0p"]
 [ext_resource type="AudioStream" uid="uid://crnv2nwnq8k81" path="res://Assets/Son/Crie de pokemon/Frog_CRIE.wav" id="25_x7wka"]
 [ext_resource type="Texture2D" uid="uid://cp2ghoxx6gmvg" path="res://Assets/Pokemon/Greupô.png" id="26_x7wka"]
-[ext_resource type="Texture2D" uid="uid://dvm3ac5q68t22" path="res://Assets/Character/Character_Sprite_Sheet.png" id="31_qot0l"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qot0l"]
 radius = 0.19238281
@@ -335,16 +335,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 12.753826)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.313, -5.7438865)
 
 [node name="Sprite3D" type="Sprite3D" parent="PersonnageNonJoueur" unique_id=863894577]
-transform = Transform3D(2.3000002, 0, 0, 0, 2.3000002, 0, 0, 0, 0.99999994, 0, 0, 0)
+transform = Transform3D(2.3000002, 0, 0, 0, 2.3000002, 0, 0, 0, 0.99999994, 0, -0.08885056, 0)
 cast_shadow = 2
 billboard = 2
 shaded = true
 double_sided = false
 alpha_cut = 3
 texture_filter = 0
-texture = ExtResource("31_qot0l")
-hframes = 12
-vframes = 19
+texture = ExtResource("4_owyk3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PersonnageNonJoueur" unique_id=57271727]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 0, -0.07718971, 0)
