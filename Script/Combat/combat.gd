@@ -279,7 +279,7 @@ func _misAJourInterface():
 		
 		get_node("InterfaceCombat/MenuAttaque/Bouton-Attaque" + str(i)).modulate = couleur
 
-# Fonction qui un text petit à petit
+# Fonction qui écrit un text petit à petit
 func ecrire_texte(label: RichTextLabel, texte: String, vitesse := 0.03):
 	label.text = texte
 	label.visible_characters = 0
