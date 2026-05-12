@@ -30,6 +30,11 @@
 [ext_resource type="Texture2D" uid="uid://canq81mixxba5" path="res://Assets/Pokemon/Sinjypleur.png" id="25_r2s0p"]
 [ext_resource type="AudioStream" uid="uid://crnv2nwnq8k81" path="res://Assets/Son/Crie de pokemon/Frog_CRIE.wav" id="25_x7wka"]
 [ext_resource type="Texture2D" uid="uid://cp2ghoxx6gmvg" path="res://Assets/Pokemon/Greupô.png" id="26_x7wka"]
+[ext_resource type="Texture2D" uid="uid://dvm3ac5q68t22" path="res://Assets/Character/Character_Sprite_Sheet.png" id="31_qot0l"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qot0l"]
+radius = 0.19238281
+height = 0.47424316
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_uv6h7"]
 size = Vector2(18, 18)
@@ -217,7 +222,7 @@ color = Color(0.6550896, 0.65898246, 0.20812565, 1)
 
 [sub_resource type="Resource" id="Resource_eqwqj"]
 script = ExtResource("13_voxsg")
-nom = "Charge"
+nom = "Flick"
 puissance = 3
 PP_max = 20
 precision = 1.0
@@ -225,7 +230,7 @@ _type_index = 0
 
 [sub_resource type="Resource" id="Resource_o1h8p"]
 script = ExtResource("13_voxsg")
-nom = "Flamme"
+nom = "Ignis"
 puissance = 3
 PP_max = 20
 precision = 1.0
@@ -233,7 +238,7 @@ _type_index = 1
 
 [sub_resource type="Resource" id="Resource_g565v"]
 script = ExtResource("13_voxsg")
-nom = "Pist'o"
+nom = "Cirkeau"
 puissance = 3
 PP_max = 20
 precision = 1.0
@@ -241,7 +246,7 @@ _type_index = 2
 
 [sub_resource type="Resource" id="Resource_loqtx"]
 script = ExtResource("13_voxsg")
-nom = "Slash feuille"
+nom = "Folium-Crucis"
 puissance = 3
 PP_max = 20
 precision = 1.0
@@ -262,6 +267,14 @@ puissance = 3
 PP_max = 20
 precision = 1.0
 _type_index = 5
+
+[sub_resource type="Resource" id="Resource_4bkny"]
+script = ExtResource("13_voxsg")
+nom = "Pugnus"
+puissance = 5
+PP_max = 20
+precision = 0.9
+_type_index = 0
 
 [sub_resource type="Environment" id="Environment_r2s0p"]
 background_mode = 2
@@ -305,11 +318,30 @@ stream = ExtResource("1_x7wka")
 autoplay = true
 
 [node name="Joueur" parent="." unique_id=1292424602 instance=ExtResource("1_wg3re")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1.9028616)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.9028616)
 up_direction = Vector3(0, 0.7071068, 0.7071068)
 
 [node name="PokemonJoueur" parent="." unique_id=965007536 instance=ExtResource("2_qm7m7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 12.753826)
+
+[node name="PersonnageNonJoueur" type="CharacterBody3D" parent="." unique_id=2018576566]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.313, -5.7438865)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PersonnageNonJoueur" unique_id=57271727]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 0, -0.07718971, 0)
+shape = SubResource("CapsuleShape3D_qot0l")
+
+[node name="Sprite3D" type="Sprite3D" parent="PersonnageNonJoueur" unique_id=863894577]
+transform = Transform3D(2.3000002, 0, 0, 0, 2.3000002, 0, 0, 0, 0.99999994, 0, 0, 0)
+cast_shadow = 2
+billboard = 2
+shaded = true
+double_sided = false
+alpha_cut = 3
+texture_filter = 0
+texture = ExtResource("31_qot0l")
+hframes = 12
+vframes = 19
 
 [node name="décore" type="Node3D" parent="." unique_id=1731113598]
 
@@ -997,8 +1029,8 @@ listeDesNatures = Array[ExtResource("5_vfha3")]([SubResource("Resource_voxsg"), 
 listeDesObjets = Array[ExtResource("9_x6yq0")]([SubResource("Resource_20jwu"), SubResource("Resource_qvqry"), SubResource("Resource_p2xxs")])
 listePokemons = Array[ExtResource("11_voxsg")]([SubResource("Resource_8l02w"), SubResource("Resource_jwxpu"), SubResource("Resource_ibrmr"), SubResource("Resource_yqeg5"), SubResource("Resource_7w3f3")])
 listeDesTypes = Array[ExtResource("12_tjr8v")]([SubResource("Resource_byug1"), SubResource("Resource_r2s0p"), SubResource("Resource_x7wka"), SubResource("Resource_qot0l"), SubResource("Resource_lpfrn"), SubResource("Resource_dekyc")])
-listeDesAttaques = Array[ExtResource("13_voxsg")]([SubResource("Resource_eqwqj"), SubResource("Resource_o1h8p"), SubResource("Resource_g565v"), SubResource("Resource_loqtx"), SubResource("Resource_owyk3"), SubResource("Resource_tag3l")])
-_type_index_pokemons_joueurs = 3
+listeDesAttaques = Array[ExtResource("13_voxsg")]([SubResource("Resource_eqwqj"), SubResource("Resource_o1h8p"), SubResource("Resource_g565v"), SubResource("Resource_loqtx"), SubResource("Resource_owyk3"), SubResource("Resource_tag3l"), SubResource("Resource_4bkny")])
+_type_index_pokemons_joueurs = 0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2071441840]
 environment = SubResource("Environment_r2s0p")

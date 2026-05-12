@@ -2,34 +2,34 @@
 
 [ext_resource type="Script" uid="uid://b1ywj4hkif2up" path="res://Script/Pokémon/pokemon.gd" id="1_t2fpj"]
 [ext_resource type="Texture2D" uid="uid://cp2ghoxx6gmvg" path="res://Assets/Pokemon/Greupô.png" id="2_3syjj"]
-[ext_resource type="Texture2D" uid="uid://bsto8ot8qohei" path="res://Assets/Attaque/Tranche herbe/herbe tranche1.png" id="3_b8jjb"]
-[ext_resource type="Texture2D" uid="uid://b30wacgyxgiav" path="res://Assets/Attaque/Tranche herbe/herbe tranche2.png" id="4_e76do"]
-[ext_resource type="Texture2D" uid="uid://bqjvcvxu74elk" path="res://Assets/Attaque/Tranche herbe/herbe tranche3.png" id="5_jqld0"]
-[ext_resource type="Texture2D" uid="uid://cb77wxb4t640n" path="res://Assets/Attaque/Tranche herbe/herbe tranche4.png" id="6_vfnp0"]
-[ext_resource type="Texture2D" uid="uid://dbc4nx6f0bmb2" path="res://Assets/Attaque/Tranche herbe/herbe tranche5.png" id="7_l8h4x"]
-[ext_resource type="Texture2D" uid="uid://dkuh8pd7jbuyo" path="res://Assets/Attaque/Tranche herbe/herbe tranche6.png" id="8_d3p1a"]
-[ext_resource type="Texture2D" uid="uid://ddt1pxvjlw0y4" path="res://Assets/Attaque/Tranche herbe/herbe tranche7.png" id="9_jrhoj"]
-[ext_resource type="Texture2D" uid="uid://dm3fakyypt5b4" path="res://Assets/Attaque/Tranche herbe/herbe tranche8.png" id="10_hinfr"]
-[ext_resource type="Texture2D" uid="uid://biilx82r57lrd" path="res://Assets/Attaque/Tranche herbe/herbe tranche9.png" id="11_ml7v5"]
-[ext_resource type="Texture2D" uid="uid://djfrmkwdfl0di" path="res://Assets/Attaque/Tranche herbe/herbe tranche10.png" id="12_frehu"]
-[ext_resource type="Texture2D" uid="uid://d2cx6llg8vh60" path="res://Assets/Attaque/Tranche herbe/herbe tranche11.png" id="13_4hrb5"]
-[ext_resource type="Texture2D" uid="uid://bly5bhkp6d8xp" path="res://Assets/Attaque/Tranche herbe/herbe tranche12.png" id="14_usepa"]
-[ext_resource type="Texture2D" uid="uid://b10wh2jiukkve" path="res://Assets/Attaque/Tranche herbe/herbe tranche13.png" id="15_mj8mx"]
-[ext_resource type="Texture2D" uid="uid://bjcgyt6xc4fq7" path="res://Assets/Attaque/Tranche herbe/herbe tranche14.png" id="16_rsmh2"]
-[ext_resource type="Texture2D" uid="uid://dag1ustv8b3v2" path="res://Assets/Attaque/Tranche herbe/herbe tranche15.png" id="17_kts4q"]
-[ext_resource type="Texture2D" uid="uid://p2xgb15qv6fs" path="res://Assets/Attaque/Flamme/Flamme1.png" id="18_xwpov"]
-[ext_resource type="Texture2D" uid="uid://j8fkykhwpl61" path="res://Assets/Attaque/Flamme/Flamme2.png" id="19_mnx64"]
-[ext_resource type="Texture2D" uid="uid://dtocindcpgrvi" path="res://Assets/Attaque/Flamme/Flamme3.png" id="20_ng33e"]
-[ext_resource type="Texture2D" uid="uid://bvs2iv0x860og" path="res://Assets/Attaque/Flamme/Flamme4.png" id="21_e38ua"]
-[ext_resource type="Texture2D" uid="uid://vg8nxbv3iafv" path="res://Assets/Attaque/Flamme/Flamme5.png" id="22_kucs6"]
-[ext_resource type="Texture2D" uid="uid://bano2bgflmc5t" path="res://Assets/Attaque/Flamme/Flamme6.png" id="23_s5u73"]
-[ext_resource type="Texture2D" uid="uid://b708fxrqvr5bj" path="res://Assets/Attaque/Flamme/Flamme7.png" id="24_h7vs6"]
-[ext_resource type="Texture2D" uid="uid://bqmwhuiaiinvt" path="res://Assets/Attaque/Flamme/Flamme8.png" id="25_cu00f"]
-[ext_resource type="Texture2D" uid="uid://bar3521bsjnml" path="res://Assets/Attaque/Flamme/Flamme9.png" id="26_efk4p"]
-[ext_resource type="Texture2D" uid="uid://dhr14g8phc7vg" path="res://Assets/Attaque/Flamme/Flamme10.png" id="27_x8mn1"]
-[ext_resource type="Texture2D" uid="uid://3c2vqut4p2p4" path="res://Assets/Attaque/Flamme/Flamme11.png" id="28_n6kow"]
-[ext_resource type="Texture2D" uid="uid://c677y2fpeht50" path="res://Assets/Attaque/Flamme/Flamme12.png" id="29_o3vxt"]
-[ext_resource type="Texture2D" uid="uid://33emfgyd42rm" path="res://Assets/Attaque/Flamme/Flamme13.png" id="30_586sk"]
+[ext_resource type="Texture2D" uid="uid://bsto8ot8qohei" path="res://Assets/Attaque/Folium-Crucis/herbe tranche1.png" id="3_b8jjb"]
+[ext_resource type="Texture2D" uid="uid://b30wacgyxgiav" path="res://Assets/Attaque/Folium-Crucis/herbe tranche2.png" id="4_e76do"]
+[ext_resource type="Texture2D" uid="uid://bqjvcvxu74elk" path="res://Assets/Attaque/Folium-Crucis/herbe tranche3.png" id="5_jqld0"]
+[ext_resource type="Texture2D" uid="uid://cb77wxb4t640n" path="res://Assets/Attaque/Folium-Crucis/herbe tranche4.png" id="6_vfnp0"]
+[ext_resource type="Texture2D" uid="uid://dbc4nx6f0bmb2" path="res://Assets/Attaque/Folium-Crucis/herbe tranche5.png" id="7_l8h4x"]
+[ext_resource type="Texture2D" uid="uid://dkuh8pd7jbuyo" path="res://Assets/Attaque/Folium-Crucis/herbe tranche6.png" id="8_d3p1a"]
+[ext_resource type="Texture2D" uid="uid://ddt1pxvjlw0y4" path="res://Assets/Attaque/Folium-Crucis/herbe tranche7.png" id="9_jrhoj"]
+[ext_resource type="Texture2D" uid="uid://dm3fakyypt5b4" path="res://Assets/Attaque/Folium-Crucis/herbe tranche8.png" id="10_hinfr"]
+[ext_resource type="Texture2D" uid="uid://biilx82r57lrd" path="res://Assets/Attaque/Folium-Crucis/herbe tranche9.png" id="11_ml7v5"]
+[ext_resource type="Texture2D" uid="uid://djfrmkwdfl0di" path="res://Assets/Attaque/Folium-Crucis/herbe tranche10.png" id="12_frehu"]
+[ext_resource type="Texture2D" uid="uid://d2cx6llg8vh60" path="res://Assets/Attaque/Folium-Crucis/herbe tranche11.png" id="13_4hrb5"]
+[ext_resource type="Texture2D" uid="uid://bly5bhkp6d8xp" path="res://Assets/Attaque/Folium-Crucis/herbe tranche12.png" id="14_usepa"]
+[ext_resource type="Texture2D" uid="uid://b10wh2jiukkve" path="res://Assets/Attaque/Folium-Crucis/herbe tranche13.png" id="15_mj8mx"]
+[ext_resource type="Texture2D" uid="uid://bjcgyt6xc4fq7" path="res://Assets/Attaque/Folium-Crucis/herbe tranche14.png" id="16_rsmh2"]
+[ext_resource type="Texture2D" uid="uid://dag1ustv8b3v2" path="res://Assets/Attaque/Folium-Crucis/herbe tranche15.png" id="17_kts4q"]
+[ext_resource type="Texture2D" uid="uid://p2xgb15qv6fs" path="res://Assets/Attaque/Ignis/Flamme1.png" id="18_xwpov"]
+[ext_resource type="Texture2D" uid="uid://j8fkykhwpl61" path="res://Assets/Attaque/Ignis/Flamme2.png" id="19_mnx64"]
+[ext_resource type="Texture2D" uid="uid://dtocindcpgrvi" path="res://Assets/Attaque/Ignis/Flamme3.png" id="20_ng33e"]
+[ext_resource type="Texture2D" uid="uid://bvs2iv0x860og" path="res://Assets/Attaque/Ignis/Flamme4.png" id="21_e38ua"]
+[ext_resource type="Texture2D" uid="uid://vg8nxbv3iafv" path="res://Assets/Attaque/Ignis/Flamme5.png" id="22_kucs6"]
+[ext_resource type="Texture2D" uid="uid://bano2bgflmc5t" path="res://Assets/Attaque/Ignis/Flamme6.png" id="23_s5u73"]
+[ext_resource type="Texture2D" uid="uid://b708fxrqvr5bj" path="res://Assets/Attaque/Ignis/Flamme7.png" id="24_h7vs6"]
+[ext_resource type="Texture2D" uid="uid://bqmwhuiaiinvt" path="res://Assets/Attaque/Ignis/Flamme8.png" id="25_cu00f"]
+[ext_resource type="Texture2D" uid="uid://bar3521bsjnml" path="res://Assets/Attaque/Ignis/Flamme9.png" id="26_efk4p"]
+[ext_resource type="Texture2D" uid="uid://dhr14g8phc7vg" path="res://Assets/Attaque/Ignis/Flamme10.png" id="27_x8mn1"]
+[ext_resource type="Texture2D" uid="uid://3c2vqut4p2p4" path="res://Assets/Attaque/Ignis/Flamme11.png" id="28_n6kow"]
+[ext_resource type="Texture2D" uid="uid://c677y2fpeht50" path="res://Assets/Attaque/Ignis/Flamme12.png" id="29_o3vxt"]
+[ext_resource type="Texture2D" uid="uid://33emfgyd42rm" path="res://Assets/Attaque/Ignis/Flamme13.png" id="30_586sk"]
 [ext_resource type="Texture2D" uid="uid://cwjipdwdaefrw" path="res://Assets/Attaque/Goutte/Bulle1.png" id="31_8p2g4"]
 [ext_resource type="Texture2D" uid="uid://bub1gj6smtwxf" path="res://Assets/Attaque/Goutte/Bulle2.png" id="32_j4hvd"]
 [ext_resource type="Texture2D" uid="uid://btyxykrntdq3c" path="res://Assets/Attaque/Goutte/Bulle3.png" id="33_psj6o"]
@@ -72,18 +72,30 @@
 [ext_resource type="Texture2D" uid="uid://c0n8wajnhttli" path="res://Assets/Attaque/Neutre/Poing16.png" id="49_67ofu"]
 [ext_resource type="Texture2D" uid="uid://5228d4se1obh" path="res://Assets/Attaque/Neutre/Poing17.png" id="50_1n57c"]
 [ext_resource type="Texture2D" uid="uid://l2nuf66wxjpo" path="res://Assets/Objets/Pokeballs/Pokeball attraper7.png" id="50_j4hvd"]
+[ext_resource type="Texture2D" uid="uid://by5b5fvwitoxj" path="res://Assets/Attaque/Flick/Pichenette1.png" id="51_c5i6c"]
 [ext_resource type="Texture2D" uid="uid://oenjx5jdnhya" path="res://Assets/Objets/Pokeballs/Pokeball attraper8.png" id="51_psj6o"]
+[ext_resource type="Texture2D" uid="uid://biu3vebhq4x2a" path="res://Assets/Attaque/Flick/Pichenette2.png" id="52_l0bul"]
 [ext_resource type="Texture2D" uid="uid://bgwbdnnyk1xrj" path="res://Assets/Objets/Pokeballs/Pokeball attraper9.png" id="52_rxl13"]
 [ext_resource type="Texture2D" uid="uid://dq6kgpsj0s7dv" path="res://Assets/Objets/Pokeballs/Pokeball attraper10.png" id="53_oojvi"]
+[ext_resource type="Texture2D" uid="uid://blrt1wdwrxo7t" path="res://Assets/Attaque/Flick/Pichenette3.png" id="53_rx5vs"]
+[ext_resource type="Texture2D" uid="uid://djkeak0y3qnvs" path="res://Assets/Attaque/Flick/Pichenette4.png" id="54_67ofu"]
 [ext_resource type="Texture2D" uid="uid://bnjcl003efc4b" path="res://Assets/Objets/Pokeballs/Pokeball attraper11.png" id="54_wa6xx"]
 [ext_resource type="Texture2D" uid="uid://c0a3lpohclw5s" path="res://Assets/Objets/Pokeballs/Pokeball attraper12.png" id="55_0bv7m"]
+[ext_resource type="Texture2D" uid="uid://b3swp7ajrof7e" path="res://Assets/Attaque/Flick/Pichenette5.png" id="55_1n57c"]
 [ext_resource type="Texture2D" uid="uid://brj4oaxbjkfo1" path="res://Assets/Objets/Pokeballs/Pokeball attraper13.png" id="56_55f78"]
+[ext_resource type="Texture2D" uid="uid://kuuqnm5jw5vv" path="res://Assets/Attaque/Flick/Pichenette6.png" id="56_prcb3"]
 [ext_resource type="Texture2D" uid="uid://pu01o11u7463" path="res://Assets/Objets/Pokeballs/Pokeball attraper14.png" id="57_2rdlm"]
+[ext_resource type="Texture2D" uid="uid://dkuwb0fyq6csd" path="res://Assets/Attaque/Flick/Pichenette7.png" id="57_31ljj"]
 [ext_resource type="Texture2D" uid="uid://cejbvhsh6cme2" path="res://Assets/Objets/Pokeballs/Pokeball attraper15.png" id="58_ckndc"]
+[ext_resource type="Texture2D" uid="uid://bpsom3jpn2hdo" path="res://Assets/Attaque/Flick/Pichenette8.png" id="58_kkt52"]
 [ext_resource type="Texture2D" uid="uid://chohidirkv6bh" path="res://Assets/Objets/Pokeballs/Pokeball attraper16.png" id="59_esh2x"]
+[ext_resource type="Texture2D" uid="uid://iwamoaepgurg" path="res://Assets/Attaque/Flick/Pichenette9.png" id="59_smwww"]
 [ext_resource type="Texture2D" uid="uid://dbbsmi8pmx4kd" path="res://Assets/Objets/Pokeballs/Pokeball attraper17.png" id="60_bp7ht"]
+[ext_resource type="Texture2D" uid="uid://cjf453qxc7qgd" path="res://Assets/Attaque/Flick/Pichenette10.png" id="60_jf6di"]
 [ext_resource type="Texture2D" uid="uid://bfs01a46sqbau" path="res://Assets/Objets/Pokeballs/Pokeball attraper18.png" id="61_3ugsr"]
+[ext_resource type="Texture2D" uid="uid://dyjwxeimeoja4" path="res://Assets/Attaque/Flick/Pichenette11.png" id="61_n846n"]
 [ext_resource type="Texture2D" uid="uid://cfpbjiabyqvh6" path="res://Assets/Objets/Pokeballs/Pokeball attraper19.png" id="62_ejd42"]
+[ext_resource type="Texture2D" uid="uid://c8armri51vp7j" path="res://Assets/Attaque/Flick/Pichenette12.png" id="62_w5kjx"]
 [ext_resource type="Texture2D" uid="uid://d10sxfmwh000o" path="res://Assets/Objets/Pokeballs/Pokeball attraper20.png" id="63_xp7u6"]
 [ext_resource type="Texture2D" uid="uid://ddnelxlst5nw2" path="res://Assets/Objets/Pokeballs/Pokeball attraper21.png" id="64_liw5g"]
 [ext_resource type="Texture2D" uid="uid://dtgo0eklysjgb" path="res://Assets/Objets/Pokeballs/Pokeball attraper22.png" id="65_n7s87"]
@@ -140,11 +152,6 @@ height = 0.60266113
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xodrg"]
 animations = [{
-"frames": [],
-"loop": false,
-"name": &"Default",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("31_8p2g4")
@@ -204,7 +211,106 @@ animations = [{
 "texture": ExtResource("50_1n57c")
 }],
 "loop": false,
-"name": &"Eau",
+"name": &"Cirkeau",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"Default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("51_c5i6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_l0bul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_rx5vs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_67ofu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_1n57c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_prcb3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_31ljj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_kkt52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_smwww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_jf6di")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_n846n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_w5kjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_586sk")
+}],
+"loop": false,
+"name": &"Flick",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_b8jjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_e76do")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jqld0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vfnp0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_l8h4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_d3p1a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jrhoj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hinfr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ml7v5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_frehu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_4hrb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_usepa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_mj8mx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_rsmh2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_kts4q")
+}],
+"loop": false,
+"name": &"Folium-Crucis",
 "speed": 10.0
 }, {
 "frames": [{
@@ -248,7 +354,7 @@ animations = [{
 "texture": ExtResource("30_586sk")
 }],
 "loop": false,
-"name": &"Flamme",
+"name": &"Ignis",
 "speed": 10.0
 }, {
 "frames": [{
@@ -305,56 +411,6 @@ animations = [{
 }],
 "loop": false,
 "name": &"Neutre",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_b8jjb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_e76do")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_jqld0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_vfnp0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_l8h4x")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_d3p1a")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_jrhoj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_hinfr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_ml7v5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_frehu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_4hrb5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_usepa")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_mj8mx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_rsmh2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_kts4q")
-}],
-"loop": false,
-"name": &"Plante",
 "speed": 10.0
 }, {
 "frames": [{

@@ -17,7 +17,7 @@ func _ready() -> void:
 # Fonction appellé quand le joueur se déplace dans les hautes herbes
 func _onCollision(body) -> void:
 	if !indetectable:
-		$AudioStreamPlayer3D.stream = load("res://Assets/Son/environnement/PasHerbe-" + str(randi_range(1, 6)) + ".wav")
+		$AudioStreamPlayer3D.stream = load("res://Assets/Son/environnement/PasHerbe-" + str(randi_range(1, 5)) + ".wav")
 		$AudioStreamPlayer3D.playing = true
 		var aleatoir = randf() * 100
 		if aleatoir <= probabiliteDeRencontre:

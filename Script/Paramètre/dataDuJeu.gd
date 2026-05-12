@@ -274,10 +274,11 @@ func _enter_tree() -> void:
 	dataDuJeu.listeDesTypes = ref.listeDesTypes
 	_injecterTypesDansAttaques()
 	_injecterTypesDansPokemons()
+	for i in range(ref.listeDesAttaques.size()):
+		ref.listeDesAttaques[i].PP =ref.listeDesAttaques[i].PP_max
 	dataDuJeu.listePokemons = ref.listePokemons
 	dataDuJeu.listeDesAttaques = ref.listeDesAttaques
 	dataDuJeu._type_index_pokemons_joueurs = ref._type_index_pokemons_joueurs
-	print(ref.pokemonJoueurStats._type_index)
 	listePokemonsJoueur.clear()
 	listePokemonsJoueur.append(pokemonJoueurStats)
 	dataDuJeu.listePokemonsJoueur = ref.listePokemonsJoueur

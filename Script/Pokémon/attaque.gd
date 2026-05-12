@@ -71,6 +71,5 @@ func _init(_nom = "Pas de nom", _type = "Normal", _puissance = 3, _PP_max = 20, 
 	nom = _nom
 	type = _type
 	puissance = _puissance
-	PP = _PP_max
 	PP_max = _PP_max
 	precision = _precision

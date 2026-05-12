@@ -90,6 +90,7 @@ func _selectionAttaque() -> void:
 	for i in range(4):
 		var attaque = listeAttaqueDuMemeType.pick_random()
 		data.listeAttaque.append(attaque.duplicate(true))
+		data.listeAttaque[i].PP = data.listeAttaque[i].PP_max
 		data.listeAttaque[i]._listeDesTypes = attaque._listeDesTypes
 		data.listeAttaque[i].type = attaque.type
 
