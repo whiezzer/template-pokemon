@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://kxcut6a2ewks"]
 
 [ext_resource type="PackedScene" uid="uid://n4arh46goj77" path="res://Assets/Character/joueur.tscn" id="1_wg3re"]
+[ext_resource type="AudioStream" uid="uid://dg4nssnn73x2r" path="res://Assets/Son/environnement/musique_Environnement.mp3" id="1_x7wka"]
 [ext_resource type="PackedScene" uid="uid://cg7bha5t87b70" path="res://Assets/Pokemon/pokemon.tscn" id="2_qm7m7"]
 [ext_resource type="Material" uid="uid://dmgcme55m5nt3" path="res://Assets/sol/Sol_material.tres" id="3_aipmw"]
 [ext_resource type="Script" uid="uid://brojl8fd7vanx" path="res://Script/Paramètre/dataDuJeu.gd" id="4_dgiq7"]
@@ -267,10 +268,29 @@ background_mode = 2
 background_color = Color(0.5928132, 0.7261616, 0.99888045, 1)
 ambient_light_source = 2
 ambient_light_color = Color(0.81220996, 0.38017634, 0.5961037, 1)
+ambient_light_energy = 0.8
 reflected_light_source = 2
-glow_bloom = 0.23
+sdfgi_use_occlusion = true
+sdfgi_bounce_feedback = 1.0
+sdfgi_cascades = 2
+sdfgi_energy = 0.1
+sdfgi_normal_bias = 0.8
+sdfgi_probe_bias = 1.2
+glow_enabled = true
+glow_strength = 0.8
+glow_bloom = 0.1
+glow_blend_mode = 0
 fog_enabled = true
 fog_light_color = Color(0.73061717, 0.5199233, 0.2572144, 1)
+volumetric_fog_density = 0.2932
+adjustment_enabled = true
+adjustment_brightness = 1.05
+adjustment_contrast = 1.1
+adjustment_saturation = 1.1
+
+[sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_r2s0p"]
+exposure_multiplier = 1.26
+frustum_near = 10.0
 
 [node name="Map" type="Node3D" unique_id=337228639]
 
@@ -278,6 +298,11 @@ fog_light_color = Color(0.73061717, 0.5199233, 0.2572144, 1)
 transform = Transform3D(0.8307708, 0.36155885, 0.4231963, -0.5566145, 0.53964174, 0.6316381, 0, -0.76030374, 0.6495675, 0, 0, 0)
 light_color = Color(0.9882353, 1, 0.59607846, 1)
 shadow_enabled = true
+
+[node name="AudioMusique3D" type="AudioStreamPlayer3D" parent="." unique_id=1103463198]
+process_mode = 3
+stream = ExtResource("1_x7wka")
+autoplay = true
 
 [node name="Joueur" parent="." unique_id=1292424602 instance=ExtResource("1_wg3re")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1.9028616)
@@ -289,6 +314,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 12.753826)
 [node name="décore" type="Node3D" parent="." unique_id=1731113598]
 
 [node name="Sol" type="MeshInstance3D" parent="décore" unique_id=1057862754]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.2351927, 0, 0, 0)
 material_override = ExtResource("3_aipmw")
 mesh = SubResource("PlaneMesh_uv6h7")
 
@@ -972,10 +998,11 @@ listeDesObjets = Array[ExtResource("9_x6yq0")]([SubResource("Resource_20jwu"), S
 listePokemons = Array[ExtResource("11_voxsg")]([SubResource("Resource_8l02w"), SubResource("Resource_jwxpu"), SubResource("Resource_ibrmr"), SubResource("Resource_yqeg5"), SubResource("Resource_7w3f3")])
 listeDesTypes = Array[ExtResource("12_tjr8v")]([SubResource("Resource_byug1"), SubResource("Resource_r2s0p"), SubResource("Resource_x7wka"), SubResource("Resource_qot0l"), SubResource("Resource_lpfrn"), SubResource("Resource_dekyc")])
 listeDesAttaques = Array[ExtResource("13_voxsg")]([SubResource("Resource_eqwqj"), SubResource("Resource_o1h8p"), SubResource("Resource_g565v"), SubResource("Resource_loqtx"), SubResource("Resource_owyk3"), SubResource("Resource_tag3l")])
-_type_index_pokemons_joueurs = 1
+_type_index_pokemons_joueurs = 3
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=883248919]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2071441840]
 environment = SubResource("Environment_r2s0p")
+camera_attributes = SubResource("CameraAttributesPhysical_r2s0p")
 
 [connection signal="pressed" from="InterfaceMenu/TextureButton_Objets" to="InterfaceMenu/TextureButton_Objets" method="_on_button_pressed"]
 [connection signal="pressed" from="InterfaceMenu/MenuObjet/Bouton_MenuSacADos" to="InterfaceMenu/MenuObjet/Bouton_MenuSacADos" method="_on_button_pressed"]

@@ -73,6 +73,8 @@ func _movement(delta: float) -> void:
 		return
 	
 	if pourcentageDeMouvementJusquALaProchaineTuile >= 1.0:
+		$AudioStreamPlayer3D.stream = load("res://Assets/Son/environnement/Pas-" + str(randi_range(1, 6)) + ".wav")
+		$AudioStreamPlayer3D.playing = true
 		pourcentageDeMouvementJusquALaProchaineTuile = 0.0
 		position = cible
 		direction = Vector2.ZERO

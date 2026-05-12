@@ -175,6 +175,9 @@ func _tourJoueur(attaque : Attaque) -> void:
 	if $PokemonEnnemi/AnimatedSpriteAttaque.sprite_frames.has_animation(attaque.type):
 		$PokemonEnnemi/AnimatedSpriteAttaque.play(attaque.type)
 	else:
+		for type in dataDuJeu.listeDesTypes:
+			if type.nom == attaque.type:
+				$PokemonEnnemi/AnimatedSpriteAttaque.modulate = type.color
 		$PokemonEnnemi/AnimatedSpriteAttaque.play(&"Neutre")
 	
 	await $PokemonEnnemi/AnimatedSpriteAttaque.animation_finished
