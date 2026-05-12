@@ -49,7 +49,7 @@ texture = ExtResource("12_5i64c")
 [sub_resource type="Environment" id="Environment_poke7"]
 background_mode = 2
 ambient_light_source = 2
-ambient_light_color = Color(0.7302456, 0.36909077, 0.28357202, 1)
+ambient_light_color = Color(0.85430974, 0.40685266, 0.7667377, 1)
 reflected_light_source = 2
 sdfgi_cascades = 2
 sdfgi_min_cell_size = 0.46875

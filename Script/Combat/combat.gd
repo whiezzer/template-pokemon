@@ -104,9 +104,13 @@ func _tourAdverse() -> void:
 	
 	$PokemonEnnemi._play(attaqueUtilse.bruit)
 	
-	if $PokemonJoueur/AnimatedSpriteAttaque.sprite_frames.has_animation(attaqueUtilse.type):
-		$PokemonJoueur/AnimatedSpriteAttaque.play(attaqueUtilse.type)
+	if $PokemonJoueur/AnimatedSpriteAttaque.sprite_frames.has_animation(attaqueUtilse.nom):
+		$PokemonJoueur/AnimatedSpriteAttaque.modulate = Color(1, 1, 1, 1)
+		$PokemonJoueur/AnimatedSpriteAttaque.play(attaqueUtilse.nom)
 	else:
+		for type in dataDuJeu.listeDesTypes:
+			if type.nom == attaqueUtilse.type:
+				$PokemonJoueur/AnimatedSpriteAttaque.modulate = type.color
 		$PokemonJoueur/AnimatedSpriteAttaque.play("Neutre")
 	
 	await $PokemonJoueur/AnimatedSpriteAttaque.animation_finished
@@ -172,8 +176,9 @@ func _tourJoueur(attaque : Attaque) -> void:
 	
 	$PokemonEnnemi._play(attaque.bruit)
 	
-	if $PokemonEnnemi/AnimatedSpriteAttaque.sprite_frames.has_animation(attaque.type):
-		$PokemonEnnemi/AnimatedSpriteAttaque.play(attaque.type)
+	if $PokemonEnnemi/AnimatedSpriteAttaque.sprite_frames.has_animation(attaque.nom):
+		$PokemonEnnemi/AnimatedSpriteAttaque.modulate = Color(1, 1, 1, 1)
+		$PokemonEnnemi/AnimatedSpriteAttaque.play(attaque.nom)
 	else:
 		for type in dataDuJeu.listeDesTypes:
 			if type.nom == attaque.type:

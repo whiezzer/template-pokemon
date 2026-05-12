@@ -3,19 +3,20 @@ extends CharacterBody3D
 @export_category("Paramètre du joueur")
 
 # Modifier la valeur pour changer la vitesse du joueur (4.0 celle de base)
-@export var vitesse: float = 4.0
+@export var vitesse: float = 64.0
 
 # Modifier la valeur pour changer la position de départ du joueur ((0, 1, 0) celle de base)
 @export var position_initial: Vector3 = Vector3(0.0, 1.0, 1.0)
 
 # Paramètre à ne pas toucher
-var tailleDeLaTuile: int = 1
+var tailleDeLaTuile: float = 0.1
 var pourcentageDeMouvementJusquALaProchaineTuile: float = 0.0
 var direction: Vector2 = Vector2.ZERO
 var estEnMouvement: bool = false
 var animArbre 
 var animEtat
 var pause: bool = false
+var bruitActif: bool = false
 
 # Fonction appellé au lancement du jeu
 func _ready() -> void:
@@ -73,8 +74,7 @@ func _movement(delta: float) -> void:
 		return
 	
 	if pourcentageDeMouvementJusquALaProchaineTuile >= 1.0:
-		$AudioStreamPlayer3D.stream = load("res://Assets/Son/environnement/Pas-" + str(randi_range(1, 6)) + ".wav")
-		$AudioStreamPlayer3D.playing = true
+		_bruitDePas()
 		pourcentageDeMouvementJusquALaProchaineTuile = 0.0
 		position = cible
 		direction = Vector2.ZERO
@@ -92,3 +92,13 @@ func _input(event):
 			menu.get_node("MenuObjet").visible = false
 			menu.visible = false
 			pause = false
+
+func _bruitDePas() -> void:
+	if bruitActif == true:
+		return
+	
+	bruitActif = true
+	$AudioStreamPlayer3D.stream = load("res://Assets/Son/environnement/Pas-" + str(randi_range(1, 5)) + ".wav")
+	$AudioStreamPlayer3D.playing = true
+	await $AudioStreamPlayer3D.finished
+	bruitActif = false
