@@ -3,32 +3,78 @@ extends Area3D
 var dialogue: RichTextLabel
 var menuDialogue: Control
 var joueur: CharacterBody3D
+var conteneur: VBoxContainer
 
 var proche: bool = false
 var enDialogue: bool = false
+
+var textes: Dictionary 
+var line_index: int = 0
+var current_id: String = "intro"
 
 func _ready() -> void:
 	dialogue = get_tree().current_scene.get_node("InterfaceDialogue/ZoneDeTexte")
 	menuDialogue = get_tree().current_scene.get_node("InterfaceDialogue")
 	joueur = get_tree().current_scene.get_node("Joueur")
+	textes = load("res://Script/Dialogue/" + get_parent().name + ".json").data
+	conteneur = get_tree().current_scene.get_node("InterfaceDialogue/Choix/VBoxContainer")
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") && proche && !enDialogue:
+		menuDialogue.visible = true
 		enDialogue = true
 		joueur.pause = true
-		menuDialogue.visible = true
-		await ecrire_texte(dialogue, "Bonjour, je m'appelle Nedy. Je suis le meilleur dresseur, le Roi parmi les rois !")
+		_lireTexte()
+
+# Fonction qui permet d'afficher les dialogues d'un personnage
+func _lireTexte() -> void:
+	var node = textes[current_id]
+	
+	if line_index < node["lines"].size():
+		await _ecrireTexte(dialogue, node["lines"][line_index])
+		line_index += 1
 		while not Input.is_action_just_pressed("ui_accept"):
 			await get_tree().process_frame
-		await ecrire_texte(dialogue, "Ça te dirait de manger la pâtée du siècle ?")
-		while not Input.is_action_just_pressed("ui_accept"):
-			await get_tree().process_frame
-		await ecrire_texte(dialogue, "C'est une question rhétorique en fait.")
-		while not Input.is_action_just_pressed("ui_accept"):
-			await get_tree().process_frame
-		menuDialogue.visible = false
-		await get_tree().create_timer(0.5).timeout
+		_lireTexte()
+	else:
+		_lireChoix()
+
+# Fonction qui permet d'afficher les différents choix de dialogue du joueur
+func _lireChoix() -> void:
+	var node = textes[current_id]
+	var boutonID = 0
+	
+	if node.has("choices"):
+		for c in node["choices"]:
+			creer_bouton(boutonID, c["text"])
+			boutonID += 1
+	elif current_id == "combat":
 		_lancer_combat()
+	else:
+		menuDialogue.visible = false
+		joueur.pause = false
+		await get_tree().create_timer(1.0).timeout
+		enDialogue = false
+		current_id = "dejaParle"
+		line_index = 0
+
+# Fonction qui permet au joueur de choisir une réponse
+func _choisir(choix_index: int) -> void:
+	var node = textes[current_id]
+	current_id = node["choices"][choix_index]["next"]
+	line_index = 0
+	for child in conteneur.get_children():
+		child.queue_free()
+	_lireTexte()
+
+# Fonction qui écrit un text petit à petit
+func _ecrireTexte(label: RichTextLabel, texte: String, vitesse := 0.03):
+	label.text = texte
+	label.visible_characters = 0
+	
+	while label.visible_characters < texte.length():
+		label.visible_characters += 1
+		await get_tree().create_timer(vitesse).timeout
 
 # Fonction appellé quand le joueur est en face du PNJ
 func _onCollision(body) -> void:
@@ -37,18 +83,18 @@ func _onCollision(body) -> void:
 	else:
 		proche = true
 
-# Fonction qui écrit un text petit à petit
-func ecrire_texte(label: RichTextLabel, texte: String, vitesse := 0.03):
-	label.text = texte
-	label.visible_characters = 0
-	
-	while label.visible_characters < texte.length():
-		label.visible_characters += 1
-		await get_tree().create_timer(vitesse).timeout
-
 # Fonction qui permet de lancer un combat
 func _lancer_combat():
 	if !is_inside_tree():
 		return
 	
 	ecran_de_transition._changer_scene("res://Scene/SceneDeCombat.tscn")
+
+# Fonction qui crée un bouton
+func creer_bouton(index: int, text: String) -> void:
+	var button = Button.new()
+	button.text = text
+	
+	button.pressed.connect(_choisir.bind(index))
+	
+	conteneur.add_child(button)

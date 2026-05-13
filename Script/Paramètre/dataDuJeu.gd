@@ -266,7 +266,7 @@ func _verifierTypeChange() -> void:
 	_verifierPokemonJoueur()
 	notify_property_list_changed()   
 
-# Appel automatique au démarrage pour s'assurer de la taille correcte
+# Appel automatique au démarrage pour s'assurer que tout est correct
 func _enter_tree() -> void:
 	var ref = get_tree().current_scene.find_child("Paramètre", true, false)
 	dataDuJeu.listeDesNatures = ref.listeDesNatures

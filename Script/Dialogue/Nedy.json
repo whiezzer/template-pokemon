@@ -1,0 +1,51 @@
+{
+	"intro": {
+		"speaker": "Nedy",
+		"lines": [
+			"Bonjour, je m'appelle Nedy.",
+			"Je suis le meilleur dresseur, le Roi parmi les rois !",
+			"Ça te dirait de manger la pâtée du siècle ?"
+		],
+		"choices": [
+			{
+				"text": "En garde !!",
+				"next": "combat"
+			},
+			{
+				"text": "Non merci.",
+				"next": "fin"
+			}
+		]
+	},
+	
+	"combat": {
+		"speaker": "Nedy",
+		"lines": [
+			"Ok, alors c'est parti !!"
+		]
+	},
+	
+	"fin": {
+		"speaker": "Nedy",
+		"lines": [
+			"Oh, dommage."
+		]
+	},
+	
+	"dejaParle": {
+		"speaker": "Nedy",
+		"lines": [
+			"Alors ? T'es prêt maintenant !?"
+		],
+		"choices": [
+			{
+				"text": "En garde !!",
+				"next": "combat"
+			},
+			{
+				"text": "Toujours pas.",
+				"next": "fin"
+			}
+		]
+	}
+}
