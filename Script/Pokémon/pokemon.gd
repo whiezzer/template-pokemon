@@ -5,27 +5,7 @@ var data : PokemonData
 
 # Fonction appellé au lancement du jeu
 func _ready() -> void:
-	
-	if self.name == "PokemonJoueur":
-		data = dataDuJeu.pokemonJoueurStats
-	else:
-		data = dataDuJeu.pokemonEnnemiStats
-	
-	if data.nature == null:
-		var indexNature = randi() % dataDuJeu.listeDesNatures.size()
-		data.nature = dataDuJeu.listeDesNatures[indexNature]
-	
-	if self.name == "PokemonEnnemi":
-		if dataDuJeu.pokemonJoueurStats.lvl > 1:
-			for lvl in range (2, dataDuJeu.pokemonJoueurStats.lvl + 1 + randi_range(-1, 1)):
-				_niveauSuperieur()
-	
-	if data.listeAttaque.size() == 0:
-		_attribueStatsNature()
-		
-		_selectionAttaque()
-	
-	_selectionSprite()
+	initialise()
 
 # Fonction appellé à chaque frame
 func _physics_process(delta: float) -> void:
@@ -110,3 +90,25 @@ func _niveauSuperieur() -> void:
 func _play(son : AudioStream) -> void:
 	$AudioStreamPlayer3D.stream = son
 	$AudioStreamPlayer3D.playing = true
+
+func initialise() -> void:
+	if self.name == "PokemonJoueur":
+		data = dataDuJeu.pokemonJoueurStats
+	else:
+		data = dataDuJeu.pokemonEnnemiStats
+	
+	if data.nature == null:
+		var indexNature = randi() % dataDuJeu.listeDesNatures.size()
+		data.nature = dataDuJeu.listeDesNatures[indexNature]
+	
+	if self.name == "PokemonEnnemi":
+		if dataDuJeu.pokemonJoueurStats.lvl > 1:
+			for lvl in range (2, dataDuJeu.pokemonJoueurStats.lvl + 1 + randi_range(-1, 1)):
+				_niveauSuperieur()
+	
+	if data.listeAttaque.size() == 0:
+		_attribueStatsNature()
+		
+		_selectionAttaque()
+	
+	_selectionSprite()

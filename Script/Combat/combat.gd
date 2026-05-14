@@ -18,11 +18,17 @@ var enCoursDeTour : bool = false
 
 var finCombat : bool = false
 
+var dresseur : bool = false
+
 # Fonction qui se lance avant toutes les autres
 func _enter_tree() -> void:
 	
 	pokemonJoueur = dataDuJeu.pokemonJoueurStats
-	pokemonEnnemi = dataDuJeu.listePokemons[randi() % dataDuJeu.listePokemons.size()].duplicate(true)
+	if dataDuJeu.listePokemonsEnnemie == []:
+		pokemonEnnemi = dataDuJeu.listePokemons[randi() % dataDuJeu.listePokemons.size()].duplicate(true)
+	else:
+		pokemonEnnemi = dataDuJeu.listePokemonsEnnemie[0]
+		dataDuJeu.pokemonEnnemiStats = pokemonEnnemi 
 	dataDuJeu.pokemonEnnemiStats = pokemonEnnemi 
 	message = $InterfaceCombat/ZoneDeTexte
 	
@@ -214,6 +220,26 @@ func _tourJoueur(attaque : Attaque) -> void:
 func _finDeTour() -> void :
 	
 	if pokemonEnnemi.pv_Actuels <= 0:
+		for pokemon in dataDuJeu.listePokemonsEnnemie:
+			if pokemon.pv_Actuels > 0:
+				dataDuJeu.pokemonEnnemiStats = pokemon
+				$PokemonEnnemi.initialise()
+				pokemonEnnemi = dataDuJeu.pokemonEnnemiStats
+				break
+	elif pokemonJoueur.pv_Actuels <= 0:
+		for pokemon in dataDuJeu.listePokemonsJoueur:
+			if pokemon.pv_Actuels > 0:
+				for i in range(dataDuJeu.listePokemons.size()):
+					if pokemon.nom == dataDuJeu.listePokemons[i].nom:
+						dataDuJeu._type_index_pokemons_joueurs = i
+				dataDuJeu.pokemonJoueurStats = pokemon
+				$PokemonJoueur.initialise()
+				pokemonJoueur = dataDuJeu.pokemonJoueurStats
+				print(dataDuJeu.pokemonJoueurStats.nom)
+				print(dataDuJeu.pokemonJoueurStats.pv_Actuels)
+				break
+	
+	if pokemonEnnemi.pv_Actuels <= 0:
 		
 		finCombat = true
 		ecrire_texte(message, "[color=blue]Victoire ![/color]")
@@ -230,6 +256,8 @@ func _finDeTour() -> void :
 		while not Input.is_action_just_pressed("ui_accept"):
 			await get_tree().process_frame
 		
+		dataDuJeu.listePokemonsEnnemie.clear()
+		
 		get_tree().change_scene_to_file("res://Scene/ScenePrincipale.tscn")
 		
 	elif pokemonJoueur.pv_Actuels <= 0:
@@ -240,7 +268,13 @@ func _finDeTour() -> void :
 		while not Input.is_action_just_pressed("ui_accept"):
 			await get_tree().process_frame
 		
-		pokemonJoueur.pv_Actuels = pokemonJoueur.pv
+		for pokemon in dataDuJeu.listePokemonsJoueur:
+			pokemon.pv_Actuels = pokemon.pv
+			for attaque in pokemon.listeAttaque:
+				attaque.PP = attaque.PP_max
+		
+		dataDuJeu.listePokemonsEnnemie.clear()
+		
 		get_tree().change_scene_to_file("res://Scene/ScenePrincipale.tscn")
 
 # Fonction qui met à jour l'interface

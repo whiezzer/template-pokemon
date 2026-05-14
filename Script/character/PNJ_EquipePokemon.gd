@@ -1,7 +1,5 @@
 @tool
-extends Node
-
-var nom: String
+extends CharacterBody3D
 
 var equipePokemon: Array[int] = []:
 	set(value):
@@ -33,8 +31,3 @@ func _get_property_list():
 			"usage": PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_STORAGE
 		}
 	]
-
-var gagner: bool
-
-func _ready() -> void:
-	nom = self.name

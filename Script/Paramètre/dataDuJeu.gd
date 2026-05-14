@@ -233,9 +233,13 @@ func _get_property_list():
 		"usage": PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_STORAGE 
 	}]
 
+var indexPokemonJoueurActif: int = 0
+
 var listePokemonsJoueur: Array[PokemonData] = []
 
 var pokemonEnnemiStats: PokemonData
+
+var listePokemonsEnnemie: Array[PokemonData] = []
 
 # Injecte listeDesTypes dans chaque Pokémon pour que l'enum soit visible
 func _injecterTypesDansPokemons() -> void:
@@ -278,8 +282,7 @@ func _enter_tree() -> void:
 		ref.listeDesAttaques[i].PP =ref.listeDesAttaques[i].PP_max
 	dataDuJeu.listePokemons = ref.listePokemons
 	dataDuJeu.listeDesAttaques = ref.listeDesAttaques
-	dataDuJeu._type_index_pokemons_joueurs = ref._type_index_pokemons_joueurs
-	listePokemonsJoueur.clear()
-	listePokemonsJoueur.append(pokemonJoueurStats)
-	dataDuJeu.listePokemonsJoueur = ref.listePokemonsJoueur
+	if dataDuJeu.listePokemonsJoueur == []:
+		dataDuJeu._type_index_pokemons_joueurs = ref._type_index_pokemons_joueurs
+		listePokemonsJoueur.append(pokemonJoueurStats)
 	_créerBoutonsMenuObjet()

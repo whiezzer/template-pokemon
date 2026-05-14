@@ -3,10 +3,11 @@ extends Area3D
 var dialogue: RichTextLabel
 var menuDialogue: Control
 var joueur: CharacterBody3D
-var conteneur: VBoxContainer
+var conteneur: HBoxContainer
 
 var proche: bool = false
 var enDialogue: bool = false
+var gagner: bool
 
 var textes: Dictionary 
 var line_index: int = 0
@@ -17,7 +18,7 @@ func _ready() -> void:
 	menuDialogue = get_tree().current_scene.get_node("InterfaceDialogue")
 	joueur = get_tree().current_scene.get_node("Joueur")
 	textes = load("res://Script/Dialogue/" + get_parent().name + ".json").data
-	conteneur = get_tree().current_scene.get_node("InterfaceDialogue/Choix/VBoxContainer")
+	conteneur = get_tree().current_scene.get_node("InterfaceDialogue/Choix/HBoxContainer")
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") && proche && !enDialogue:
@@ -88,6 +89,8 @@ func _lancer_combat():
 	if !is_inside_tree():
 		return
 	
+	for pokemonIndex in get_parent().equipePokemon:
+		dataDuJeu.listePokemonsEnnemie.append(dataDuJeu.listePokemons[pokemonIndex].duplicate(true))
 	ecran_de_transition._changer_scene("res://Scene/SceneDeCombat.tscn")
 
 # Fonction qui crée un bouton

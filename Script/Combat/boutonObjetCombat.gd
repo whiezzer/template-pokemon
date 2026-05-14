@@ -50,12 +50,13 @@ func _on_button_pressed() -> void:
 		if dataDuJeu.pokemonJoueurStats.pv_Actuels > dataDuJeu.pokemonJoueurStats.pv:
 			dataDuJeu.pokemonJoueurStats.pv_Actuels = dataDuJeu.pokemonJoueurStats.pv
 	
-	await get_tree().create_timer(2.0).timeout
-	
-	combat.enCoursDeTour = false
-	combat.tourDuJoueur = false
-	combat._tourAdverse()
-	objet.quantite -= 1
+	if combat.enCoursDeTour == true:
+		await get_tree().create_timer(2.0).timeout
+		
+		combat.enCoursDeTour = false
+		combat.tourDuJoueur = false
+		combat._tourAdverse()
+		objet.quantite -= 1
 
 func _on_mouse_entered() -> void:
 	objetDescription.text = objet.objet.description
@@ -74,12 +75,16 @@ func _capture() -> void:
 		
 		combat.ecrire_texte(combat.message, "Bravo ! Vous avez attrapé un " + dataDuJeu.pokemonEnnemiStats.nom + " sauvage")
 		
-		await get_tree().create_timer(2.0).timeout
+		while not Input.is_action_just_pressed("ui_accept"):
+			await get_tree().process_frame
 		
-		dataDuJeu.listePokemonsJoueur.append(dataDuJeu.pokemonEnnemiStats)
-		dataDuJeu.pokemonEnnemiStats.pv_Actuels = 0
+		dataDuJeu.listePokemonsJoueur.append(dataDuJeu.pokemonEnnemiStats.duplicate(true))
 		
-		combat._finDeTour()
+		dataDuJeu.listePokemonsEnnemie.clear()
+		
+		combat.enCoursDeTour = false
+		
+		get_tree().change_scene_to_file("res://Scene/ScenePrincipale.tscn")
 		
 	else:
 		
