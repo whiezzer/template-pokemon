@@ -18,4 +18,4 @@ func _on_button_pressed() -> void:
 	
 	var combat = get_node("/root/SceneDeCombat")
 	if combat.tourDuJoueur == true:
-		combat._tourJoueur(attaque)
+		combat._tour(attaque)

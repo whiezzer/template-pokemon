@@ -11,7 +11,7 @@ var gagner: bool
 
 var textes: Dictionary 
 var line_index: int = 0
-var current_id: String = "intro"
+var current_id: String
 
 func _ready() -> void:
 	dialogue = get_tree().current_scene.get_node("InterfaceDialogue/ZoneDeTexte")
@@ -19,6 +19,7 @@ func _ready() -> void:
 	joueur = get_tree().current_scene.get_node("Joueur")
 	textes = load("res://Script/Dialogue/" + get_parent().name + ".json").data
 	conteneur = get_tree().current_scene.get_node("InterfaceDialogue/Choix/HBoxContainer")
+	_choisitID("intro")
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") && proche && !enDialogue:
@@ -56,7 +57,7 @@ func _lireChoix() -> void:
 		joueur.pause = false
 		await get_tree().create_timer(1.0).timeout
 		enDialogue = false
-		current_id = "dejaParle"
+		_choisitID("dejaParle")
 		line_index = 0
 
 # Fonction qui permet au joueur de choisir une réponse
@@ -89,15 +90,34 @@ func _lancer_combat():
 	if !is_inside_tree():
 		return
 	
-	for pokemonIndex in get_parent().equipePokemon:
-		dataDuJeu.listePokemonsEnnemie.append(dataDuJeu.listePokemons[pokemonIndex].duplicate(true))
+	for index in get_parent().equipePokemon:
+		dataDuJeu.listePokemonsEnnemie.append(dataDuJeu.listePokemons[index].duplicate(true))
+	
+	dataDuJeu.adversaire = get_parent().name
+	
 	ecran_de_transition._changer_scene("res://Scene/SceneDeCombat.tscn")
 
 # Fonction qui crée un bouton
 func creer_bouton(index: int, text: String) -> void:
 	var button = Button.new()
 	button.text = text
-	
+	button.add_theme_color_override("font_color", Color.BLACK)
+	button.add_theme_font_size_override("font_size", 30)
+	button.add_theme_font_override("font", preload("res://Assets/Text/pixel_operator/PixelOperator.ttf"))
+	var style = StyleBoxTexture.new()
+	style.texture = preload("res://Assets/Interface/Combat/Bouton attaque normal.png")
+	button.add_theme_stylebox_override("normal", style)
 	button.pressed.connect(_choisir.bind(index))
-	
+	button.custom_minimum_size.x = 250
+	button.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	conteneur.add_child(button)
+
+# Fonction qui choisit l'ID du texte à utiliser
+func _choisitID(value: String) -> void:
+	if dataDuJeu.listeDesDresseurs.has(get_parent().name):
+		if dataDuJeu.listeDesDresseurs[get_parent().name] == false:
+			current_id = "victoire"
+		else:
+			current_id = "defaite"
+	else:
+		current_id = value

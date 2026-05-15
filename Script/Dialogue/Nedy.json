@@ -47,5 +47,29 @@
 				"next": "fin"
 			}
 		]
+	},
+	
+	"victoire": {
+		"speaker": "Nedy",
+		"lines": [
+			"Tu veux reprendre une raclée ?"
+		],
+		"choices": [
+			{
+				"text": "En garde !!",
+				"next": "combat"
+			},
+			{
+				"text": "Non.",
+				"next": "fin"
+			}
+		]
+	},
+	
+	"defaite": {
+		"speaker": "Nedy",
+		"lines": [
+			"T'as eu de la chance, c'est tout !"
+		]
 	}
 }

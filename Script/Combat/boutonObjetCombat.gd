@@ -35,7 +35,9 @@ func _on_button_pressed() -> void:
 		menuAttaque.visible = true
 		menuObjet.visible = false
 	
+	objet.quantite -= 1
 	combat.enCoursDeTour = true
+	
 	combat.ecrire_texte(combat.message, "Vous utilisez un " + objet.objet.nom)
 	await get_tree().create_timer(2.0).timeout
 	
@@ -55,8 +57,11 @@ func _on_button_pressed() -> void:
 		
 		combat.enCoursDeTour = false
 		combat.tourDuJoueur = false
-		combat._tourAdverse()
-		objet.quantite -= 1
+		
+		await combat._tourAdverse()
+		
+		combat.tourDuJoueur = true
+		combat.ecrire_texte(combat.message, "Choisissez une action")
 
 func _on_mouse_entered() -> void:
 	objetDescription.text = objet.objet.description

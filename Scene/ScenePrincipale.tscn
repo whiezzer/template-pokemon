@@ -138,7 +138,7 @@ nom = "Bonjeton"
 pv = 10
 attaque = 5
 defense = 5
-vitesse = 3
+vitesse = 10
 crie = ExtResource("21_byug1")
 sprite = ExtResource("24_byug1")
 sprite_Dos = ExtResource("24_byug1")
@@ -344,7 +344,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 12.753826)
 [node name="Nedy" type="CharacterBody3D" parent="." unique_id=2018576566]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.313, -5.7438865)
 script = ExtResource("4_7l60e")
-equipePokemon = Array[int]([0, 4])
+equipePokemon = Array[int]([0, 4, 2])
 
 [node name="Sprite3D" type="Sprite3D" parent="Nedy" unique_id=863894577]
 transform = Transform3D(2.3000002, 0, 0, 0, 2.3000002, 0, 0, 0, 0.99999994, 0, -0.08885056, 0)
@@ -1123,7 +1123,7 @@ listeDesObjets = Array[ExtResource("9_x6yq0")]([SubResource("Resource_20jwu"), S
 listePokemons = Array[ExtResource("11_voxsg")]([SubResource("Resource_8l02w"), SubResource("Resource_jwxpu"), SubResource("Resource_ibrmr"), SubResource("Resource_yqeg5"), SubResource("Resource_7w3f3"), SubResource("Resource_hfy5n")])
 listeDesTypes = Array[ExtResource("12_tjr8v")]([SubResource("Resource_byug1"), SubResource("Resource_r2s0p"), SubResource("Resource_x7wka"), SubResource("Resource_qot0l"), SubResource("Resource_lpfrn"), SubResource("Resource_dekyc")])
 listeDesAttaques = Array[ExtResource("13_voxsg")]([SubResource("Resource_eqwqj"), SubResource("Resource_o1h8p"), SubResource("Resource_g565v"), SubResource("Resource_loqtx"), SubResource("Resource_owyk3"), SubResource("Resource_tag3l"), SubResource("Resource_4bkny")])
-_type_index_pokemons_joueurs = 1
+_type_index_pokemons_joueurs = 0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2071441840]
 environment = SubResource("Environment_r2s0p")

@@ -37,6 +37,9 @@ func _créerBoutonsMenuObjet() -> void:
 var _timerAttente : SceneTreeTimer = null
 var coordonésJoueurs : Vector3 = Vector3(99.0, 99.0, 99.0)
 
+var listeDesDresseurs : Dictionary[String, bool] = {}
+var adversaire : String = ""
+
 # Liste de base de 6 natures avec leurs valeurs par défaut
 func _creer_liste_nature_base() -> Array[NatureStat]:
 	return [

@@ -11,9 +11,11 @@ config_version=5
 [application]
 
 config/name="Template_Pokemon"
+config/description="Template de jeu Pokémon facilement modifiable. Pour vous aider, veuillez lire la documentation du Template."
+config/version="Beta-1"
 run/main_scene="res://Scene/ScenePrincipale.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://w8ggyy1fj20y"
 
 [autoload]
 

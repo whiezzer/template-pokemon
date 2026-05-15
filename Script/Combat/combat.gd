@@ -45,14 +45,11 @@ func  _ready() -> void:
 	
 	$PokemonEnnemi._play(pokemonEnnemi.crie)
 	
-	if pokemonJoueur.vitesse >= pokemonEnnemi.vitesse:
-		await get_tree().create_timer(1.0).timeout
-		ecrire_texte(message, "Choisissez une action")
-		tourDuJoueur = true
-	else :
-		tourDuJoueur = false
-		await get_tree().create_timer(2.0).timeout
-		_tourAdverse()
+	await get_tree().create_timer(1.0).timeout
+	
+	ecrire_texte(message, "Choisissez une action")
+	
+	tourDuJoueur = true
 
 # Fonction appellé à chaque frame
 func _physics_process(delta: float) -> void:
@@ -68,6 +65,22 @@ func _physics_process(delta: float) -> void:
 		pvEnnemiInterface = pokemonEnnemi.pv_Actuels
 	
 	_misAJourInterface()
+
+# Fonction qui gère l'ordre des tours
+func _tour(attaque: Attaque) -> void:
+	
+	if pokemonJoueur.vitesse >= pokemonEnnemi.vitesse:
+		tourDuJoueur = false
+		await _tourJoueur(attaque)
+		await _tourAdverse()
+	else :
+		tourDuJoueur = false
+		await _tourAdverse()
+		await _tourJoueur(attaque)
+	
+	if finCombat == false:
+		tourDuJoueur = true
+		ecrire_texte(message, "Choisissez une action")
 
 # Fonction qui gère le tour de l'adversaire
 func _tourAdverse() -> void:
@@ -135,14 +148,11 @@ func _tourAdverse() -> void:
 	
 	await get_tree().create_timer(2.0).timeout
 	
-	ecrire_texte(message, "Choisissez une action")
-	
-	_finDeTour()
+	await _finDeTour()
 	
 	if finCombat == false:
 		
 		enCoursDeTour = false
-		tourDuJoueur = true
 
 # Fonction qui gère le tour du joueur
 func _tourJoueur(attaque : Attaque) -> void:
@@ -207,14 +217,11 @@ func _tourJoueur(attaque : Attaque) -> void:
 	
 	await get_tree().create_timer(2.0).timeout
 	
-	_finDeTour()
+	await _finDeTour()
 	
 	if finCombat == false:
 		
 		enCoursDeTour = false
-		tourDuJoueur = false
-		
-		await _tourAdverse()
 
 # Fonction qui vérifie si le combat est terminé ou pas après le tour d'un combattant
 func _finDeTour() -> void :
@@ -249,7 +256,7 @@ func _finDeTour() -> void :
 		
 		pokemonJoueur.xp += 250 * pokemonEnnemi.lvl
 		
-		ecrire_texte(message, pokemonJoueur.nom + " gagne " + "[color=blue]" + str(250 * pokemonEnnemi.lvl) + "[/color]" + " points de niveaux")
+		await ecrire_texte(message, pokemonJoueur.nom + " gagne " + "[color=blue]" + str(250 * pokemonEnnemi.lvl) + "[/color]" + " points de niveaux")
 		
 		_misAJourInterface()
 		
@@ -257,6 +264,8 @@ func _finDeTour() -> void :
 			await get_tree().process_frame
 		
 		dataDuJeu.listePokemonsEnnemie.clear()
+		dataDuJeu.listeDesDresseurs[dataDuJeu.adversaire] = true
+		dataDuJeu. adversaire = ""
 		
 		get_tree().change_scene_to_file("res://Scene/ScenePrincipale.tscn")
 		
@@ -274,6 +283,8 @@ func _finDeTour() -> void :
 				attaque.PP = attaque.PP_max
 		
 		dataDuJeu.listePokemonsEnnemie.clear()
+		dataDuJeu.listeDesDresseurs[dataDuJeu.adversaire] = false
+		dataDuJeu. adversaire = ""
 		
 		get_tree().change_scene_to_file("res://Scene/ScenePrincipale.tscn")
 
