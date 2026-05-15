@@ -22,7 +22,8 @@ var dresseur : bool = false
 
 # Fonction qui se lance avant toutes les autres
 func _enter_tree() -> void:
-	
+	for pokemon in dataDuJeu.listePokemonsJoueur:
+		print(pokemon.nom)
 	pokemonJoueur = dataDuJeu.pokemonJoueurStats
 	if dataDuJeu.listePokemonsEnnemie == []:
 		pokemonEnnemi = dataDuJeu.listePokemons[randi() % dataDuJeu.listePokemons.size()].duplicate(true)
@@ -234,16 +235,11 @@ func _finDeTour() -> void :
 				pokemonEnnemi = dataDuJeu.pokemonEnnemiStats
 				break
 	elif pokemonJoueur.pv_Actuels <= 0:
-		for pokemon in dataDuJeu.listePokemonsJoueur:
-			if pokemon.pv_Actuels > 0:
-				for i in range(dataDuJeu.listePokemons.size()):
-					if pokemon.nom == dataDuJeu.listePokemons[i].nom:
-						dataDuJeu._type_index_pokemons_joueurs = i
-				dataDuJeu.pokemonJoueurStats = pokemon
+		for i in range(dataDuJeu.listePokemonsJoueur.size()):
+			if dataDuJeu.listePokemonsJoueur[i].pv_Actuels > 0:
+				dataDuJeu.indexPokemonJoueurActif = i
 				$PokemonJoueur.initialise()
 				pokemonJoueur = dataDuJeu.pokemonJoueurStats
-				print(dataDuJeu.pokemonJoueurStats.nom)
-				print(dataDuJeu.pokemonJoueurStats.pv_Actuels)
 				break
 	
 	if pokemonEnnemi.pv_Actuels <= 0:
@@ -285,6 +281,7 @@ func _finDeTour() -> void :
 		dataDuJeu.listePokemonsEnnemie.clear()
 		dataDuJeu.listeDesDresseurs[dataDuJeu.adversaire] = false
 		dataDuJeu. adversaire = ""
+		dataDuJeu.indexPokemonJoueurActif = 0
 		
 		get_tree().change_scene_to_file("res://Scene/ScenePrincipale.tscn")
 

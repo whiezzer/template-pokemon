@@ -208,9 +208,9 @@ var _type_index_pokemons_joueurs : int = 0
 # Pokémon de départ du joueur visible et modifiable dans l’inspecteur
 var pokemonJoueurStats: PokemonData:
 	get:
-		if listePokemons.is_empty() or _type_index_pokemons_joueurs < 0 or _type_index_pokemons_joueurs >= listePokemons.size():
+		if listePokemonsJoueur.is_empty() or indexPokemonJoueurActif < 0 or indexPokemonJoueurActif >= listePokemonsJoueur.size():
 			return 
-		return listePokemons[_type_index_pokemons_joueurs]
+		return listePokemonsJoueur[indexPokemonJoueurActif]
 	set(value):
 		pokemonJoueurStats = value
 		_verifierPokemonJoueur()
@@ -285,7 +285,6 @@ func _enter_tree() -> void:
 		ref.listeDesAttaques[i].PP =ref.listeDesAttaques[i].PP_max
 	dataDuJeu.listePokemons = ref.listePokemons
 	dataDuJeu.listeDesAttaques = ref.listeDesAttaques
-	if dataDuJeu.listePokemonsJoueur == []:
-		dataDuJeu._type_index_pokemons_joueurs = ref._type_index_pokemons_joueurs
-		listePokemonsJoueur.append(pokemonJoueurStats)
+	dataDuJeu._type_index_pokemons_joueurs = ref._type_index_pokemons_joueurs
+	listePokemonsJoueur.append(listePokemons[_type_index_pokemons_joueurs])
 	_créerBoutonsMenuObjet()

@@ -2,7 +2,7 @@ extends TextureButton
 
 var attaque: Attaque
 
-func _ready() -> void:
+func _physics_process(delta: float) -> void:
 	match self.name:
 		"Bouton-Attaque1":
 			attaque = dataDuJeu.pokemonJoueurStats.listeAttaque[0]

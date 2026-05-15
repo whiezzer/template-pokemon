@@ -27,6 +27,8 @@ func _physics_process(delta: float) -> void:
 func _on_button_pressed() -> void:
 	if objet == null || objet.quantite == 0 || combat.tourDuJoueur == false || combat.enCoursDeTour == true:
 		return
+	if objet.objet.capture == true && dataDuJeu.listePokemonsEnnemie != []:
+		return
 	
 	if menuAttaque.visible:
 		menuAttaque.visible = false
