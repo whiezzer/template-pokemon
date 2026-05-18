@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgrob5t6oicbe"
-path="res://.godot/imported/Intro_dresseur_lenotre21.png-d5fbb37abf645c4df90e193de66fbcb0.ctex"
+uid="uid://dx8x3jx4r0shu"
+path="res://.godot/imported/Intro_dresseur_lenotre27.png-a24f6fd6a8426df19a550e3273736bc6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Character/AnimCombat/Intro_dresseur_lenotre21.png"
-dest_files=["res://.godot/imported/Intro_dresseur_lenotre21.png-d5fbb37abf645c4df90e193de66fbcb0.ctex"]
+source_file="res://Assets/Character/AnimCombat/Intro_dresseur_lenotre27.png"
+dest_files=["res://.godot/imported/Intro_dresseur_lenotre27.png-a24f6fd6a8426df19a550e3273736bc6.ctex"]
 
 [params]
 
