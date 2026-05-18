@@ -23,6 +23,8 @@ func _créerBoutonsMenuObjet() -> void:
 		bouton.texture_pressed = preload("res://Assets/Interface/Sac/SelectionSacAppuyer.png")
 		bouton.stretch_mode = TextureButton.STRETCH_SCALE
 		bouton.mouse_entered.connect(bouton._on_mouse_entered)
+		bouton.mouse_exited.connect(bouton._on_mouse_exited)
+		bouton.pressed.connect(bouton._on_pressed)
 		
 		label.text = objet.objet.nom
 		label.add_theme_font_override("font", preload("res://Assets/Text/pixel_operator/PixelOperator.ttf"))
