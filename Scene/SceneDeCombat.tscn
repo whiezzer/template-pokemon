@@ -89,10 +89,10 @@ light_color = Color(0.9882353, 1, 0.59607846, 1)
 shadow_enabled = true
 
 [node name="PokemonJoueur" parent="." unique_id=965007536 instance=ExtResource("2_1jl81")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39005142, 0.26275617, -0.86780083)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.30091596, 0.26275617, -0.6623769)
 
 [node name="PokemonEnnemi" parent="." unique_id=2002172973 instance=ExtResource("2_1jl81")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.050530195, 0.25934717, -3.0587158)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.050530195, 0.25934717, -2.4580204)
 
 [node name="décore" type="Node3D" parent="." unique_id=591067996]
 
@@ -112,10 +112,10 @@ transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, -7.685, 4.145, -17.5
 transform = Transform3D(0.107829824, 0, -0.021742307, 0, 0.11, 0, 0.021742307, 0, 0.107829824, -3.9275045, 0.6842246, -7.388361)
 
 [node name="Dessou_Pokemon2" parent="décore" unique_id=734316210 instance=ExtResource("18_a7dcr")]
-transform = Transform3D(0.08332305, 0, -0.016800873, 0, 0.085, 0, 0.016800873, 0, 0.08332305, -0.43479055, 0, -0.9668299)
+transform = Transform3D(0.08332305, 0, -0.016800873, 0, 0.085, 0, 0.016800873, 0, 0.08332305, -0.43592963, 0, -0.79697794)
 
 [node name="Dessou_Pokemon3" parent="décore" unique_id=1919168772 instance=ExtResource("18_a7dcr")]
-transform = Transform3D(0.08332305, 0, -0.016800873, 0, 0.085, 0, 0.016800873, 0, 0.08332305, 0.06700292, 0, -3.1772375)
+transform = Transform3D(0.08332305, 0, -0.016800873, 0, 0.085, 0, 0.016800873, 0, 0.08332305, 0.06700292, 0, -2.5973115)
 
 [node name="InterfaceCombat" type="Control" parent="." unique_id=1670358411]
 layout_mode = 3
@@ -530,10 +530,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -391.0
-offset_top = -166.0
-offset_right = -87.0
-offset_bottom = -56.0
+offset_left = -369.0
+offset_top = -193.0
+offset_right = -65.0
+offset_bottom = -83.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_2gylr")

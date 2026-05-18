@@ -22,14 +22,14 @@ func _selectionSprite() -> void:
 		if data.sprite_Dos != null:
 			$Sprite3D.texture = data.sprite_Dos
 		else:
-			var sprite = load("res://Assets/Pokemon/PokemonNeutre.png") 
+			var sprite = load("res://Assets/Pokemon/Neutre/NeutreDos.png") 
 			$Sprite3D.texture = sprite
 			$Sprite3D.modulate = data.type.color
 	else:
 		if data.sprite != null:
 			$Sprite3D.texture = data.sprite
 		else:
-			var sprite = load("res://Assets/Pokemon/PokemonNeutre.png") 
+			var sprite = load("res://Assets/Pokemon/Neutre/NeutreFace.png") 
 			$Sprite3D.texture = sprite
 			$Sprite3D.modulate = data.type.color
 

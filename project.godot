@@ -15,7 +15,6 @@ config/description="Template de jeu Pokémon facilement modifiable. Pour vous ai
 config/version="Beta-1"
 run/main_scene="res://Scene/ScenePrincipale.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="uid://w8ggyy1fj20y"
 
 [autoload]
 

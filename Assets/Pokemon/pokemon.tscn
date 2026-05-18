@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cg7bha5t87b70"]
 
 [ext_resource type="Script" uid="uid://b1ywj4hkif2up" path="res://Script/Pokémon/pokemon.gd" id="1_t2fpj"]
-[ext_resource type="Texture2D" uid="uid://cp2ghoxx6gmvg" path="res://Assets/Pokemon/Greupô.png" id="2_3syjj"]
+[ext_resource type="Texture2D" uid="uid://do1y6ytq4u43d" path="res://Assets/Pokemon/Cabufo/CabufoFace.png" id="2_8blvd"]
 [ext_resource type="Texture2D" uid="uid://bsto8ot8qohei" path="res://Assets/Attaque/Folium-Crucis/herbe tranche1.png" id="3_b8jjb"]
 [ext_resource type="Texture2D" uid="uid://b30wacgyxgiav" path="res://Assets/Attaque/Folium-Crucis/herbe tranche2.png" id="4_e76do"]
 [ext_resource type="Texture2D" uid="uid://bqjvcvxu74elk" path="res://Assets/Attaque/Folium-Crucis/herbe tranche3.png" id="5_jqld0"]
@@ -94,31 +94,55 @@
 [ext_resource type="Texture2D" uid="uid://cjf453qxc7qgd" path="res://Assets/Attaque/Flick/Pichenette10.png" id="60_jf6di"]
 [ext_resource type="Texture2D" uid="uid://bfs01a46sqbau" path="res://Assets/Objets/Pokeballs/Pokeball attraper18.png" id="61_3ugsr"]
 [ext_resource type="Texture2D" uid="uid://dyjwxeimeoja4" path="res://Assets/Attaque/Flick/Pichenette11.png" id="61_n846n"]
+[ext_resource type="Texture2D" uid="uid://cptpt17456k25" path="res://Assets/Character/AnimCombat/Intro_dresseur_lenotre1.png" id="62_8blvd"]
 [ext_resource type="Texture2D" uid="uid://cfpbjiabyqvh6" path="res://Assets/Objets/Pokeballs/Pokeball attraper19.png" id="62_ejd42"]
 [ext_resource type="Texture2D" uid="uid://c8armri51vp7j" path="res://Assets/Attaque/Flick/Pichenette12.png" id="62_w5kjx"]
+[ext_resource type="Texture2D" uid="uid://bqfxgwobbrjy5" path="res://Assets/Character/AnimCombat/Intro_dresseur_lenotre2.png" id="63_whfpp"]
 [ext_resource type="Texture2D" uid="uid://d10sxfmwh000o" path="res://Assets/Objets/Pokeballs/Pokeball attraper20.png" id="63_xp7u6"]
 [ext_resource type="Texture2D" uid="uid://ddnelxlst5nw2" path="res://Assets/Objets/Pokeballs/Pokeball attraper21.png" id="64_liw5g"]
+[ext_resource type="Texture2D" uid="uid://lx038nu8jhiw" path="res://Assets/Character/AnimCombat/Intro_dresseur_lenotre3.png" id="64_n1qfh"]
+[ext_resource type="Texture2D" uid="uid://c402w4ykst7lk" path="res://Assets/Character/AnimCombat/Intro_dresseur_lenotre4.png" id="65_lmrkv"]
 [ext_resource type="Texture2D" uid="uid://dtgo0eklysjgb" path="res://Assets/Objets/Pokeballs/Pokeball attraper22.png" id="65_n7s87"]
+[ext_resource type="Texture2D" uid="uid://cjtlaqi5iub5j" path="res://Assets/Character/AnimCombat/Intro_dresseur_lenotre5.png" id="66_qh7gv"]
 [ext_resource type="Texture2D" uid="uid://d3vt64tlhs0fd" path="res://Assets/Objets/Pokeballs/Pokeball attraper23.png" id="66_s2eyt"]
+[ext_resource type="Texture2D" uid="uid://gjlmljuhx0ka" path="res://Assets/Character/AnimCombat/Intro_dresseur_lenotre6.png" id="67_722te"]
 [ext_resource type="Texture2D" uid="uid://beg3hnq15nuo5" path="res://Assets/Objets/Pokeballs/Pokeball attraper24.png" id="67_kyigf"]
+[ext_resource type="Texture2D" uid="uid://17nt12fs5h7r" path="res://Assets/Character/AnimCombat/Intro_dresseur_lenotre7.png" id="68_j2xjm"]
 [ext_resource type="Texture2D" uid="uid://cogm0aqgbc5v" path="res://Assets/Objets/Pokeballs/Pokeball attraper25.png" id="68_jqsqe"]
 [ext_resource type="Texture2D" uid="uid://dqg704gb5v7hi" path="res://Assets/Objets/Pokeballs/Pokeball attraper26.png" id="69_46arb"]
+[ext_resource type="Texture2D" uid="uid://ho6fgbcxcppp" path="res://Assets/Character/AnimCombat/Intro_dresseur_lenotre8.png" id="69_bj7g8"]
 [ext_resource type="Texture2D" uid="uid://boueisvk861b" path="res://Assets/Objets/Pokeballs/Pokeball attraper27.png" id="70_svt2k"]
+[ext_resource type="Texture2D" uid="uid://bffchvxopsega" path="res://Assets/Character/AnimCombat/Intro_dresseur_lenotre9.png" id="70_vvw1q"]
 [ext_resource type="Texture2D" uid="uid://da2snjh8af0ky" path="res://Assets/Objets/Pokeballs/Pokeball attraper28.png" id="71_4ohbk"]
+[ext_resource type="Texture2D" uid="uid://bxo8c8i3qy55i" path="res://Assets/Character/AnimCombat/Intro_dresseur_lenotre10.png" id="71_gidey"]
 [ext_resource type="Texture2D" uid="uid://bjd70bso8vus3" path="res://Assets/Objets/Pokeballs/Pokeball attraper29.png" id="72_06gl1"]
+[ext_resource type="Texture2D" uid="uid://dqqulvft0wxni" path="res://Assets/Character/AnimCombat/Intro_dresseur_lenotre11.png" id="72_ymf17"]
 [ext_resource type="Texture2D" uid="uid://oiaa4q3x5qbd" path="res://Assets/Objets/Pokeballs/Pokeball attraper30.png" id="73_des7f"]
+[ext_resource type="Texture2D" uid="uid://b800r5b8pvegn" path="res://Assets/Character/AnimCombat/Intro_dresseur_lenotre12.png" id="73_tbvqc"]
+[ext_resource type="Texture2D" uid="uid://b41h15dv2k4em" path="res://Assets/Character/AnimCombat/Intro_dresseur_lenotre13.png" id="74_mwig2"]
 [ext_resource type="Texture2D" uid="uid://cvcwt43yog3b6" path="res://Assets/Objets/Pokeballs/Pokeball attraper31.png" id="74_wp7uu"]
 [ext_resource type="Texture2D" uid="uid://cugesso06g6kl" path="res://Assets/Objets/Pokeballs/Pokeball attraper32.png" id="75_k52sm"]
+[ext_resource type="Texture2D" uid="uid://10v3kumeeavm" path="res://Assets/Character/AnimCombat/Intro_dresseur_lenotre14.png" id="75_s6ysj"]
 [ext_resource type="Texture2D" uid="uid://b2hop88hqsqw8" path="res://Assets/Objets/Pokeballs/Pokeball attraper33.png" id="76_8vxc6"]
+[ext_resource type="Texture2D" uid="uid://yecbstomd5lh" path="res://Assets/Character/AnimCombat/Intro_dresseur_lenotre15.png" id="76_r3c3g"]
 [ext_resource type="Texture2D" uid="uid://c5mb71tb1tp2u" path="res://Assets/Objets/Pokeballs/Pokeball attraper34.png" id="77_0tvro"]
+[ext_resource type="Texture2D" uid="uid://b60toc6ppflcj" path="res://Assets/Character/AnimCombat/Intro_dresseur_lenotre16.png" id="77_savrm"]
 [ext_resource type="Texture2D" uid="uid://bfbptrbry0gxh" path="res://Assets/Objets/Pokeballs/Pokeball attraper35.png" id="78_ckk5p"]
+[ext_resource type="Texture2D" uid="uid://c30y4as0naa4s" path="res://Assets/Character/AnimCombat/Intro_dresseur_lenotre17.png" id="78_lmv0l"]
+[ext_resource type="Texture2D" uid="uid://2tdwjdforpeo" path="res://Assets/Character/AnimCombat/Intro_dresseur_lenotre18.png" id="79_bd7hx"]
 [ext_resource type="Texture2D" uid="uid://c0lrnbgbwye66" path="res://Assets/Objets/Pokeballs/Pokeball attraper36.png" id="79_c5i6c"]
 [ext_resource type="Texture2D" uid="uid://dey1e71xtqqy8" path="res://Assets/Objets/Pokeballs/Pokeball attraper37.png" id="80_l0bul"]
+[ext_resource type="Texture2D" uid="uid://dc0pr0di571nl" path="res://Assets/Character/AnimCombat/Intro_dresseur_lenotre19.png" id="80_pu27g"]
 [ext_resource type="Texture2D" uid="uid://e112j5o7v5xm" path="res://Assets/Objets/Pokeballs/Pokeball attraper38.png" id="81_rx5vs"]
+[ext_resource type="Texture2D" uid="uid://bv4mrdm0a6d7h" path="res://Assets/Character/AnimCombat/Intro_dresseur_lenotre20.png" id="81_ychb1"]
 [ext_resource type="Texture2D" uid="uid://c80gpvhlkcg75" path="res://Assets/Objets/Pokeballs/Pokeball attraper39.png" id="82_67ofu"]
+[ext_resource type="Texture2D" uid="uid://20sem2sv31ts" path="res://Assets/Character/AnimCombat/Intro_dresseur_lenotre21.png" id="82_kpnje"]
 [ext_resource type="Texture2D" uid="uid://djr3f5rab0tpx" path="res://Assets/Objets/Pokeballs/Pokeball attraper40.png" id="83_1n57c"]
+[ext_resource type="Texture2D" uid="uid://dyoqhiqsrvmx6" path="res://Assets/Character/AnimCombat/Intro_dresseur_lenotre22.png" id="83_y323h"]
 [ext_resource type="Texture2D" uid="uid://piwhj708ddah" path="res://Assets/Objets/Pokeballs/Pokeball attraper41.png" id="84_prcb3"]
+[ext_resource type="Texture2D" uid="uid://cbqwrpwchysbc" path="res://Assets/Character/AnimCombat/Intro_dresseur_lenotre23.png" id="84_y7vy2"]
 [ext_resource type="Texture2D" uid="uid://vqn3cmi3sfrb" path="res://Assets/Objets/Pokeballs/Pokeball attraper42.png" id="85_31ljj"]
+[ext_resource type="Texture2D" uid="uid://va7ufh06fh65" path="res://Assets/Character/AnimCombat/Intro_dresseur_lenotre24.png" id="85_im7fl"]
 [ext_resource type="Texture2D" uid="uid://ci3b46pqaohdn" path="res://Assets/Objets/Pokeballs/Pokeball attraper43.png" id="86_kkt52"]
 [ext_resource type="Texture2D" uid="uid://ii0bh2ihae3y" path="res://Assets/Objets/Pokeballs/Pokeball attraper44.png" id="87_smwww"]
 [ext_resource type="Texture2D" uid="uid://p1koy8irceom" path="res://Assets/Objets/Pokeballs/Pokeball attraper45.png" id="88_jf6di"]
@@ -355,6 +379,83 @@ animations = [{
 }],
 "loop": false,
 "name": &"Ignis",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("62_8blvd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_whfpp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_n1qfh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_lmrkv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_qh7gv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_722te")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_j2xjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_bj7g8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_vvw1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_gidey")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_ymf17")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_tbvqc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_mwig2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_s6ysj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_r3c3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_savrm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_lmv0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_bd7hx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_pu27g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_ychb1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_kpnje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_y323h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_y7vy2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_im7fl")
+}],
+"loop": false,
+"name": &"Intro_Lenotre",
 "speed": 10.0
 }, {
 "frames": [{
@@ -639,15 +740,17 @@ shaded = true
 double_sided = false
 alpha_cut = 3
 texture_filter = 0
-texture = ExtResource("2_3syjj")
+texture = ExtResource("2_8blvd")
 
 [node name="AnimatedSpriteAttaque" type="AnimatedSprite3D" parent="." unique_id=275567102]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.037840247, 0.10430059, 0.048479676)
 billboard = 2
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_xodrg")
-animation = &"Default"
+animation = &"Intro_Lenotre"
 autoplay = "Default"
+frame = 23
+frame_progress = 1.0
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1351633596]
 stream = ExtResource("111_i8q78")

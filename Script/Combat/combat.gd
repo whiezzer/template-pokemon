@@ -22,14 +22,15 @@ var dresseur : bool = false
 
 # Fonction qui se lance avant toutes les autres
 func _enter_tree() -> void:
-	for pokemon in dataDuJeu.listePokemonsJoueur:
-		print(pokemon.nom)
+	
 	pokemonJoueur = dataDuJeu.pokemonJoueurStats
+	
 	if dataDuJeu.listePokemonsEnnemie == []:
 		pokemonEnnemi = dataDuJeu.listePokemons[randi() % dataDuJeu.listePokemons.size()].duplicate(true)
 	else:
 		pokemonEnnemi = dataDuJeu.listePokemonsEnnemie[0]
 		dataDuJeu.pokemonEnnemiStats = pokemonEnnemi 
+	
 	dataDuJeu.pokemonEnnemiStats = pokemonEnnemi 
 	message = $InterfaceCombat/ZoneDeTexte
 	
@@ -40,9 +41,19 @@ func  _ready() -> void:
 	
 	_créerBoutonsMenuObjet()
 	
-	ecrire_texte(message, "Début du combat")
+	$PokemonJoueur/Sprite3D.visible = false
 	
 	await get_tree().create_timer(2.0).timeout
+	
+	$PokemonJoueur/AnimatedSpriteAttaque.play("Intro_Lenotre")
+	
+	await $PokemonJoueur/AnimatedSpriteAttaque.animation_finished
+	
+	$PokemonJoueur/Sprite3D.visible = true
+	
+	ecrire_texte(message, "Début du combat")
+	
+	await get_tree().create_timer(1.0).timeout
 	
 	$PokemonEnnemi._play(pokemonEnnemi.crie)
 	
