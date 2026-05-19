@@ -2,6 +2,8 @@ extends TextureButton
 
 var pokemon : PokemonData
 
+var combat : Node3D
+
 var appuyer : bool = false
 
 static var boutonActif : TextureButton = null
@@ -12,6 +14,9 @@ var textDescription : String = ""
 
 var couleur : Color
 var sprite : Texture2D
+
+func _ready() -> void:
+	combat = get_tree().current_scene
 
 func _physics_process(delta: float) -> void:
 	if int(self.name.substr(self.name.length()-1, 1)) > dataDuJeu.listePokemonsJoueur.size():
@@ -48,13 +53,7 @@ func _on_mouse_entered() -> void:
 		get_parent().get_node("Label_Description").text = textDescription
 
 func _on_mouse_exited() -> void:
-	if boutonActif != null:
-		get_parent().get_node("TextureRect_Pokemon").texture = boutonActif.sprite
-		get_parent().get_node("Label_Stats1").text = boutonActif.textStats1
-		get_parent().get_node("Label_Stats2").text = boutonActif.textStats2
-		get_parent().get_node("TextureRect_Pokemon").modulate = boutonActif.couleur
-		get_parent().get_node("Label_Description").text = boutonActif.textDescription
-	else:
+	if boutonActif == null:
 		get_parent().get_node("TextureRect_Pokemon").texture = null
 		get_parent().get_node("Label_Stats1").text = ""
 		get_parent().get_node("Label_Stats2").text = ""
@@ -62,13 +61,52 @@ func _on_mouse_exited() -> void:
 		get_parent().get_node("Label_Description").text = ""
 
 func _on_pressed() -> void:
-	if boutonActif == self:
-		boutonActif = null
-	else:
-		if pokemon != null:
+	if pokemon != null:
 			boutonActif = self
+			
+			if boutonActif.pokemon.pv_Actuels <= 0 || boutonActif.pokemon == dataDuJeu.pokemonJoueurStats:
+				boutonActif = null
+				return
+			
 			get_parent().get_node("TextureRect_Pokemon").texture = boutonActif.sprite
 			get_parent().get_node("Label_Stats1").text = boutonActif.textStats1
 			get_parent().get_node("Label_Stats2").text = boutonActif.textStats2
 			get_parent().get_node("TextureRect_Pokemon").modulate = boutonActif.couleur
 			get_parent().get_node("Label_Description").text = boutonActif.textDescription
+			get_parent().get_node("PopUp-Confirmation").visible = true
+
+func _confirmer() -> void:
+	
+	get_parent().get_node("PopUp-Confirmation").visible = false
+	get_parent().visible = false
+	get_tree().current_scene.get_node("InterfaceCombat").visible = true
+	
+	if boutonActif.pokemon.pv_Actuels <= 0:
+		return
+	
+	get_tree().current_scene.get_node("PokemonJoueur/Sprite3D").visible = false
+	
+	dataDuJeu.indexPokemonJoueurActif = int(boutonActif.name.substr(boutonActif.name.length()-1, 1))-1
+	get_tree().current_scene.get_node("PokemonJoueur").initialise()
+	combat.pokemonJoueur = dataDuJeu.pokemonJoueurStats
+	
+	combat.ecrire_texte(combat.message, "Vous lancez un " + boutonActif.pokemon.nom)
+	
+	get_tree().current_scene.get_node("PokemonJoueur/AnimatedSpriteAttaque").play("Intro_Lenotre")
+	await get_tree().current_scene.get_node("PokemonJoueur/AnimatedSpriteAttaque").animation_finished
+	
+	get_tree().current_scene.get_node("PokemonJoueur/Sprite3D").visible = true
+	
+	combat.enCoursDeTour = false
+	combat.tourDuJoueur = false
+	
+	await combat._tourAdverse()
+	
+	combat.tourDuJoueur = true
+	boutonActif = null
+	
+	combat.ecrire_texte(combat.message, "Choisissez une action")
+
+func _annuler() -> void:
+	get_parent().get_node("PopUp-Confirmation").visible = false
+	boutonActif = null

@@ -1467,7 +1467,8 @@ theme_override_fonts/font = ExtResource("13_byug1")
 theme_override_font_sizes/font_size = 50
 text = "Stats :"
 
-[node name="MenuPrincipal" type="Control" parent="." unique_id=873146367]
+[node name="InterfaceMenuPrincipal" type="Control" parent="." unique_id=873146367]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -1476,7 +1477,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("27_7w3f3")
 
-[node name="Fond" type="Panel" parent="MenuPrincipal" unique_id=1735464558]
+[node name="Fond" type="Panel" parent="InterfaceMenuPrincipal" unique_id=1735464558]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1485,7 +1486,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_hfy5n")
 
-[node name="Titre" type="Label" parent="MenuPrincipal" unique_id=1812456181]
+[node name="Titre" type="Label" parent="InterfaceMenuPrincipal" unique_id=1812456181]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 5
@@ -1502,7 +1503,7 @@ text = "Pokenjmin"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureButton_Jouer" type="TextureButton" parent="MenuPrincipal" unique_id=367538090]
+[node name="TextureButton_Jouer" type="TextureButton" parent="InterfaceMenuPrincipal" unique_id=367538090]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1521,7 +1522,7 @@ texture_pressed = ExtResource("24_qvqry")
 texture_hover = ExtResource("25_m3ql3")
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="MenuPrincipal/TextureButton_Jouer" unique_id=972417181]
+[node name="Label" type="Label" parent="InterfaceMenuPrincipal/TextureButton_Jouer" unique_id=972417181]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1540,7 +1541,7 @@ theme_override_fonts/font = ExtResource("13_byug1")
 theme_override_font_sizes/font_size = 25
 text = "Jouer"
 
-[node name="TextureButton_Credits" type="TextureButton" parent="MenuPrincipal" unique_id=157252756]
+[node name="TextureButton_Credits" type="TextureButton" parent="InterfaceMenuPrincipal" unique_id=157252756]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1559,7 +1560,7 @@ texture_pressed = ExtResource("24_qvqry")
 texture_hover = ExtResource("25_m3ql3")
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="MenuPrincipal/TextureButton_Credits" unique_id=353977884]
+[node name="Label" type="Label" parent="InterfaceMenuPrincipal/TextureButton_Credits" unique_id=353977884]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1578,7 +1579,7 @@ theme_override_fonts/font = ExtResource("13_byug1")
 theme_override_font_sizes/font_size = 25
 text = "Crédits"
 
-[node name="TextureButton_Quitter" type="TextureButton" parent="MenuPrincipal" unique_id=68476930]
+[node name="TextureButton_Quitter" type="TextureButton" parent="InterfaceMenuPrincipal" unique_id=68476930]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1597,7 +1598,7 @@ texture_pressed = ExtResource("24_qvqry")
 texture_hover = ExtResource("25_m3ql3")
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="MenuPrincipal/TextureButton_Quitter" unique_id=787604615]
+[node name="Label" type="Label" parent="InterfaceMenuPrincipal/TextureButton_Quitter" unique_id=787604615]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1616,7 +1617,7 @@ theme_override_fonts/font = ExtResource("13_byug1")
 theme_override_font_sizes/font_size = 25
 text = "Quitter"
 
-[node name="Credits" type="Panel" parent="MenuPrincipal" unique_id=342497220]
+[node name="Credits" type="Panel" parent="InterfaceMenuPrincipal" unique_id=342497220]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -1626,7 +1627,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_aay3d")
 
-[node name="TextureButton_RetourMenu" type="TextureButton" parent="MenuPrincipal/Credits" unique_id=205692670]
+[node name="TextureButton_RetourMenu" type="TextureButton" parent="InterfaceMenuPrincipal/Credits" unique_id=205692670]
 texture_filter = 1
 layout_mode = 1
 offset_left = 18.0
@@ -1638,7 +1639,7 @@ texture_pressed = ExtResource("28_7w3f3")
 texture_hover = ExtResource("28_7w3f3")
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="MenuPrincipal/Credits" unique_id=643319501]
+[node name="Label" type="Label" parent="InterfaceMenuPrincipal/Credits" unique_id=643319501]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 13
@@ -1696,7 +1697,7 @@ camera_attributes = SubResource("CameraAttributesPhysical_r2s0p")
 [connection signal="mouse_exited" from="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" method="_on_mouse_exited"]
 [connection signal="pressed" from="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" method="_on_pressed"]
 [connection signal="pressed" from="InterfaceMenu/MenuPokemon/TextureButton_Equipe" to="InterfaceMenu/MenuPokemon/TextureButton_Equipe" method="_on_menu_pokemon_pressed"]
-[connection signal="pressed" from="MenuPrincipal/TextureButton_Jouer" to="MenuPrincipal" method="_jouer"]
-[connection signal="pressed" from="MenuPrincipal/TextureButton_Credits" to="MenuPrincipal" method="_afficherCrédits"]
-[connection signal="pressed" from="MenuPrincipal/TextureButton_Quitter" to="MenuPrincipal" method="_quitter"]
-[connection signal="pressed" from="MenuPrincipal/Credits/TextureButton_RetourMenu" to="MenuPrincipal" method="_afficherCrédits"]
+[connection signal="pressed" from="InterfaceMenuPrincipal/TextureButton_Jouer" to="InterfaceMenuPrincipal" method="_jouer"]
+[connection signal="pressed" from="InterfaceMenuPrincipal/TextureButton_Credits" to="InterfaceMenuPrincipal" method="_afficherCrédits"]
+[connection signal="pressed" from="InterfaceMenuPrincipal/TextureButton_Quitter" to="InterfaceMenuPrincipal" method="_quitter"]
+[connection signal="pressed" from="InterfaceMenuPrincipal/Credits/TextureButton_RetourMenu" to="InterfaceMenuPrincipal" method="_afficherCrédits"]

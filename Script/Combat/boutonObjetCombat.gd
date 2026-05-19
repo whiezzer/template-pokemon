@@ -85,7 +85,11 @@ func _capture() -> void:
 		while not Input.is_action_just_pressed("ui_accept"):
 			await get_tree().process_frame
 		
-		dataDuJeu.listePokemonsJoueur.append(dataDuJeu.pokemonEnnemiStats.duplicate(true))
+		var nouveauPokemon = dataDuJeu.pokemonEnnemiStats.duplicate(true)
+		nouveauPokemon._listeDesTypes = dataDuJeu.listeDesTypes
+		nouveauPokemon._type_index = dataDuJeu.pokemonEnnemiStats._type_index
+		nouveauPokemon.nature = dataDuJeu.pokemonEnnemiStats.nature
+		dataDuJeu.listePokemonsJoueur.append(nouveauPokemon)
 		
 		dataDuJeu.listePokemonsEnnemie.clear()
 		

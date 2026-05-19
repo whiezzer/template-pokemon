@@ -248,6 +248,14 @@ func _finDeTour() -> void :
 	elif pokemonJoueur.pv_Actuels <= 0:
 		for i in range(dataDuJeu.listePokemonsJoueur.size()):
 			if dataDuJeu.listePokemonsJoueur[i].pv_Actuels > 0:
+				
+				ecrire_texte(message, "Vous lancez un " + dataDuJeu.listePokemonsJoueur[i].nom)
+				
+				$PokemonJoueur/Sprite3D.visible = false
+				$PokemonJoueur/AnimatedSpriteAttaque.play("Intro_Lenotre")
+				await $PokemonJoueur/AnimatedSpriteAttaque.animation_finished
+				$PokemonJoueur/Sprite3D.visible = true
+				
 				dataDuJeu.indexPokemonJoueurActif = i
 				$PokemonJoueur.initialise()
 				pokemonJoueur = dataDuJeu.pokemonJoueurStats
