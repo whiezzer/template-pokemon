@@ -37,6 +37,10 @@
 [ext_resource type="Texture2D" uid="uid://crk6rq45nmwd1" path="res://Assets/Interface/Combat/Bouton attaque normal appuyer.png" id="25_m3ql3"]
 [ext_resource type="AudioStream" uid="uid://crnv2nwnq8k81" path="res://Assets/Son/Crie de pokemon/Frog_CRIE.wav" id="25_x7wka"]
 [ext_resource type="Script" uid="uid://cyuksgb1kw34x" path="res://Script/Interface/boutonPokemon.gd" id="26_qvqry"]
+[ext_resource type="Script" uid="uid://cc8ysqjjskgps" path="res://Script/Interface/menuPrincipal.gd" id="27_7w3f3"]
+[ext_resource type="FontFile" uid="uid://fy6tlq7q5c2k" path="res://Assets/Text/pixel_operator/PixelOperatorHB8.ttf" id="27_yqeg5"]
+[ext_resource type="Texture2D" uid="uid://kge242jh4ye2" path="res://Assets/Interface/Credits/Croix.png" id="28_7w3f3"]
+[ext_resource type="FontFile" uid="uid://dt6fiuvjpdrco" path="res://Assets/Text/pixel_operator/PixelOperator8-Bold.ttf" id="29_4bkny"]
 [ext_resource type="Texture2D" uid="uid://balfv5pu1pwhs" path="res://Assets/Pokemon/Bomjeton/BomjetonFace.png" id="30_20jwu"]
 [ext_resource type="Texture2D" uid="uid://cqfupb62i7ifd" path="res://Assets/Pokemon/Bomjeton/BomjetonDos.png" id="31_lpfrn"]
 [ext_resource type="Texture2D" uid="uid://fv6hnfh7rmbw" path="res://Assets/Pokemon/Sinjypleur/SinjypleurFace.png" id="33_dekyc"]
@@ -62,6 +66,12 @@ texture = ExtResource("9_bijkn")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p2xxs"]
 bg_color = Color(0.74587977, 0.56127954, 0.32760647, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hfy5n"]
+bg_color = Color(0.6748004, 0.5478027, 0.7106605, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aay3d"]
+bg_color = Color(1, 1, 1, 1)
 
 [sub_resource type="Resource" id="Resource_voxsg"]
 script = ExtResource("5_vfha3")
@@ -1457,6 +1467,197 @@ theme_override_fonts/font = ExtResource("13_byug1")
 theme_override_font_sizes/font_size = 50
 text = "Stats :"
 
+[node name="MenuPrincipal" type="Control" parent="." unique_id=873146367]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("27_7w3f3")
+
+[node name="Fond" type="Panel" parent="MenuPrincipal" unique_id=1735464558]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hfy5n")
+
+[node name="Titre" type="Label" parent="MenuPrincipal" unique_id=1812456181]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -112.0
+offset_top = 51.0
+offset_right = 111.5
+offset_bottom = 147.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("27_yqeg5")
+theme_override_font_sizes/font_size = 50
+text = "Pokenjmin"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton_Jouer" type="TextureButton" parent="MenuPrincipal" unique_id=367538090]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -92.0
+offset_right = 100.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("23_5u2mo")
+texture_pressed = ExtResource("24_qvqry")
+texture_hover = ExtResource("25_m3ql3")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="MenuPrincipal/TextureButton_Jouer" unique_id=972417181]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_byug1")
+theme_override_font_sizes/font_size = 25
+text = "Jouer"
+
+[node name="TextureButton_Credits" type="TextureButton" parent="MenuPrincipal" unique_id=157252756]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = 33.0
+offset_right = 100.0
+offset_bottom = 133.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("23_5u2mo")
+texture_pressed = ExtResource("24_qvqry")
+texture_hover = ExtResource("25_m3ql3")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="MenuPrincipal/TextureButton_Credits" unique_id=353977884]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_byug1")
+theme_override_font_sizes/font_size = 25
+text = "Crédits"
+
+[node name="TextureButton_Quitter" type="TextureButton" parent="MenuPrincipal" unique_id=68476930]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = 158.0
+offset_right = 100.0
+offset_bottom = 258.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("23_5u2mo")
+texture_pressed = ExtResource("24_qvqry")
+texture_hover = ExtResource("25_m3ql3")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="MenuPrincipal/TextureButton_Quitter" unique_id=787604615]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_byug1")
+theme_override_font_sizes/font_size = 25
+text = "Quitter"
+
+[node name="Credits" type="Panel" parent="MenuPrincipal" unique_id=342497220]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_aay3d")
+
+[node name="TextureButton_RetourMenu" type="TextureButton" parent="MenuPrincipal/Credits" unique_id=205692670]
+texture_filter = 1
+layout_mode = 1
+offset_left = 18.0
+offset_top = 21.0
+offset_right = 64.0
+offset_bottom = 71.0
+texture_normal = ExtResource("28_7w3f3")
+texture_pressed = ExtResource("28_7w3f3")
+texture_hover = ExtResource("28_7w3f3")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="MenuPrincipal/Credits" unique_id=643319501]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -44.0
+offset_right = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("29_4bkny")
+theme_override_font_sizes/font_size = 25
+text = "Endy TURRIN
+
+Tom BERCIER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Paramètre" type="Node3D" parent="." unique_id=256808770]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.128716, 0.85703945, 3.5622892)
 script = ExtResource("4_dgiq7")
@@ -1495,3 +1696,7 @@ camera_attributes = SubResource("CameraAttributesPhysical_r2s0p")
 [connection signal="mouse_exited" from="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" method="_on_mouse_exited"]
 [connection signal="pressed" from="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" method="_on_pressed"]
 [connection signal="pressed" from="InterfaceMenu/MenuPokemon/TextureButton_Equipe" to="InterfaceMenu/MenuPokemon/TextureButton_Equipe" method="_on_menu_pokemon_pressed"]
+[connection signal="pressed" from="MenuPrincipal/TextureButton_Jouer" to="MenuPrincipal" method="_jouer"]
+[connection signal="pressed" from="MenuPrincipal/TextureButton_Credits" to="MenuPrincipal" method="_afficherCrédits"]
+[connection signal="pressed" from="MenuPrincipal/TextureButton_Quitter" to="MenuPrincipal" method="_quitter"]
+[connection signal="pressed" from="MenuPrincipal/Credits/TextureButton_RetourMenu" to="MenuPrincipal" method="_afficherCrédits"]

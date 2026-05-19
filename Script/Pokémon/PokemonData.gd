@@ -11,6 +11,15 @@ extends Resource
 		else :
 			nom = value
 
+@export var description : String:
+	set(value):
+		if value.length() > 100 :
+			description = value.substr(0, 100)
+		elif value == "" :
+			description = "Pas de description"
+		else :
+			description = value
+
 var _listeDesTypes : Array[Type] = []
 
 var _type_index

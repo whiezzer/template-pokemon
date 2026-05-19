@@ -21,8 +21,9 @@ func _physics_process(delta: float) -> void:
 	objetNom.text = objet.objet.nom + " : " + str(objet.quantite)
 
 func _on_mouse_entered() -> void:
-	objetDescription.text = objet.objet.description
-	textureObjet.texture = objet.objet.texture
+	if objet != null and boutonActif == null:
+		objetDescription.text = objet.objet.description
+		textureObjet.texture = objet.objet.texture
 
 func _on_mouse_exited() -> void:
 	if boutonActif != null:

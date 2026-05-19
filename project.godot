@@ -13,7 +13,7 @@ config_version=5
 config/name="Template_Pokemon"
 config/description="Template de jeu Pokémon facilement modifiable. Pour vous aider, veuillez lire la documentation du Template."
 config/version="Beta-1"
-run/main_scene="res://Scene/ScenePrincipale.tscn"
+run/main_scene="uid://kxcut6a2ewks"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
 [autoload]
