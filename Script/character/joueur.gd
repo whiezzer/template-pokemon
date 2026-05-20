@@ -39,6 +39,9 @@ func _physics_process(delta: float) -> void:
 		dataDuJeu.coordonésJoueurs = self.position
 	else:
 		animEtat.travel("Idle")
+	
+	if dataDuJeu.menuPrincipalActif:
+		pause = true
 
 # Fonction qui gère si le joueur doit se déplacer ou pas,
 # en fonction de si oui ou non des commandes de déplacement ont été pressé.
@@ -82,7 +85,7 @@ func _movement(delta: float) -> void:
 
 #Fonction qui vérifie si le joueur appuie sur Échape ou pas afin d'ouvrir le menu du jeu
 func _input(event):
-	if event.is_action_pressed("ui_cancel"):
+	if event.is_action_pressed("ui_cancel") && !dataDuJeu.menuPrincipalActif :
 		var menu = get_parent().get_node("InterfaceMenu")
 		
 		if menu.visible == false:
@@ -90,6 +93,7 @@ func _input(event):
 			pause = true
 		else:
 			menu.get_node("MenuObjet").visible = false
+			menu.get_node("MenuPokemon").visible = false
 			menu.visible = false
 			pause = false
 
