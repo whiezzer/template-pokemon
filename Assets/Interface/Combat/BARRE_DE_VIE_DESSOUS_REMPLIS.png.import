@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gdngmhho4wm4"
-path="res://.godot/imported/BARRE DE VIE DESSOUS REMPLIS.png-387e197e7c5b94d8b15a0d68ffb1744f.ctex"
+uid="uid://ddu55e5uupghn"
+path="res://.godot/imported/BARRE_DE_VIE_DESSOUS_REMPLIS.png-dd40323e12dfa18b0d0614be06bf2be8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Interface/Combat/BARRE DE VIE DESSOUS REMPLIS.png"
-dest_files=["res://.godot/imported/BARRE DE VIE DESSOUS REMPLIS.png-387e197e7c5b94d8b15a0d68ffb1744f.ctex"]
+source_file="res://Assets/Interface/Combat/BARRE_DE_VIE_DESSOUS_REMPLIS.png"
+dest_files=["res://.godot/imported/BARRE_DE_VIE_DESSOUS_REMPLIS.png-dd40323e12dfa18b0d0614be06bf2be8.ctex"]
 
 [params]
 
@@ -23,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -37,4 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

@@ -32,8 +32,11 @@
 [ext_resource type="AudioStream" uid="uid://di8icu8bcojx7" path="res://Assets/Son/Crie de pokemon/Bomjeton_CRIE.wav" id="21_byug1"]
 [ext_resource type="Texture2D" uid="uid://42cyq4mo2eil" path="res://Assets/Objets/Pokeballs/Pokeball attraper56.png" id="22_8l02w"]
 [ext_resource type="Texture2D" uid="uid://clq2sg8e8kcak" path="res://Assets/Interface/Combat/Bouton attaque normal.png" id="23_5u2mo"]
+[ext_resource type="Texture2D" uid="uid://bfkyd0jctjccn" path="res://Assets/Interface/MenuPokemon/Pokemon/Fond.png" id="23_eisab"]
 [ext_resource type="AudioStream" uid="uid://dpqk46ugjtnb1" path="res://Assets/Son/Crie de pokemon/Sinjypleur_CRIE.wav" id="23_r2s0p"]
+[ext_resource type="Texture2D" uid="uid://clcutuupv82ud" path="res://Assets/Interface/MenuPokemon/Pokemon/BoutonPoke.png" id="24_d4gcl"]
 [ext_resource type="Texture2D" uid="uid://w1q1engl8nkq" path="res://Assets/Interface/Combat/Bouton attaque normal souris dessus.png" id="24_qvqry"]
+[ext_resource type="Texture2D" uid="uid://d1jvjm5jgvour" path="res://Assets/Interface/MenuPokemon/Pokemon/BoutonPokeSourisDessus.png" id="25_1brqj"]
 [ext_resource type="Texture2D" uid="uid://crk6rq45nmwd1" path="res://Assets/Interface/Combat/Bouton attaque normal appuyer.png" id="25_m3ql3"]
 [ext_resource type="AudioStream" uid="uid://crnv2nwnq8k81" path="res://Assets/Son/Crie de pokemon/Frog_CRIE.wav" id="25_x7wka"]
 [ext_resource type="Script" uid="uid://cyuksgb1kw34x" path="res://Script/Interface/boutonPokemon.gd" id="26_qvqry"]
@@ -47,7 +50,9 @@
 [ext_resource type="Texture2D" uid="uid://balfv5pu1pwhs" path="res://Assets/Pokemon/Bomjeton/BomjetonFace.png" id="30_20jwu"]
 [ext_resource type="Texture2D" uid="uid://yrblw4f5r4fv" path="res://Assets/Interface/MenuPokemon/Resume/BarreContourResume.png" id="30_ediv8"]
 [ext_resource type="Texture2D" uid="uid://cqfupb62i7ifd" path="res://Assets/Pokemon/Bomjeton/BomjetonDos.png" id="31_lpfrn"]
+[ext_resource type="Texture2D" uid="uid://cotk3mdbgce8o" path="res://Assets/Interface/MenuPokemon/Resume/BoutonRetour.png" id="32_e6qsf"]
 [ext_resource type="Texture2D" uid="uid://fv6hnfh7rmbw" path="res://Assets/Pokemon/Sinjypleur/SinjypleurFace.png" id="33_dekyc"]
+[ext_resource type="Texture2D" uid="uid://clpttm2gjoffo" path="res://Assets/Interface/MenuPokemon/Resume/BoutonRetourSourisDessus.png" id="33_ediv8"]
 [ext_resource type="Texture2D" uid="uid://buvnklao20pck" path="res://Assets/Pokemon/Sinjypleur/SinjypleurDos.png" id="34_tag3l"]
 [ext_resource type="Texture2D" uid="uid://do1y6ytq4u43d" path="res://Assets/Pokemon/Cabufo/CabufoFace.png" id="36_ibrmr"]
 [ext_resource type="Texture2D" uid="uid://bbexnkrb64qk0" path="res://Assets/Pokemon/Cabufo/CabufoDos.png" id="37_5u2mo"]
@@ -68,8 +73,8 @@ bg_color = Color(0.99154645, 0.8486456, 0.850721, 1)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r2s0p"]
 texture = ExtResource("9_bijkn")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p2xxs"]
-bg_color = Color(0.74587977, 0.56127954, 0.32760647, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qr8td"]
+texture = ExtResource("23_eisab")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ou8r4"]
 texture = ExtResource("27_ifajr")
@@ -1146,28 +1151,28 @@ stream = ExtResource("9_r2s0p")
 
 [node name="MenuPokemon" type="Panel" parent="InterfaceMenu" unique_id=2024740771]
 visible = false
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_p2xxs")
+theme_override_styles/panel = SubResource("StyleBoxTexture_qr8td")
 
 [node name="TextureButton_Pokemon1" type="TextureButton" parent="InterfaceMenu/MenuPokemon" unique_id=595732357]
 texture_filter = 1
 layout_mode = 0
-offset_left = 114.0
-offset_top = 193.0
-offset_right = 314.0
-offset_bottom = 293.0
-texture_normal = ExtResource("23_5u2mo")
-texture_pressed = ExtResource("24_qvqry")
-texture_hover = ExtResource("25_m3ql3")
+offset_left = 55.0
+offset_top = 36.0
+offset_right = 389.0
+offset_bottom = 195.0
+texture_normal = ExtResource("24_d4gcl")
+texture_hover = ExtResource("25_1brqj")
 stretch_mode = 0
 script = ExtResource("26_qvqry")
 
-[node name="Label" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon1" unique_id=80427721]
+[node name="Label_Nom" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon1" unique_id=80427721]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1175,30 +1180,93 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
+offset_left = -36.0
+offset_top = -40.5
+offset_right = 4.0
+offset_bottom = -14.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("13_byug1")
 theme_override_font_sizes/font_size = 25
+
+[node name="TextureRect_Pokemon" type="TextureRect" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon1" unique_id=1218085713]
+texture_filter = 1
+layout_mode = 1
+offset_left = -1.0
+offset_top = -9.0
+offset_right = 76.0
+offset_bottom = 54.0
+
+[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon1" unique_id=1112403733]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -217.0
+offset_top = -48.0
+offset_right = -33.0
+offset_bottom = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1, 0.2400006)
+nine_patch_stretch = true
+texture_under = ExtResource("28_0cgjh")
+texture_progress = ExtResource("29_e6qsf")
+
+[node name="TextureRect-Contour" type="TextureRect" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon1/TextureProgressBar_PV" unique_id=53798613]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.0
+offset_top = -37.0
+offset_right = 102.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("30_ediv8")
+
+[node name="Label_PV" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon1" unique_id=1852818692]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -153.0
+offset_top = 20.5
+offset_right = -60.0
+offset_bottom = 46.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_byug1")
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="TextureButton_Pokemon3" type="TextureButton" parent="InterfaceMenu/MenuPokemon" unique_id=879123604]
 texture_filter = 1
 layout_mode = 0
-offset_left = 114.0
-offset_top = 318.0
-offset_right = 314.0
-offset_bottom = 418.0
-texture_normal = ExtResource("23_5u2mo")
+offset_left = 55.0
+offset_top = 242.0
+offset_right = 389.0
+offset_bottom = 401.0
+texture_normal = ExtResource("24_d4gcl")
 texture_pressed = ExtResource("24_qvqry")
-texture_hover = ExtResource("25_m3ql3")
+texture_hover = ExtResource("25_1brqj")
 stretch_mode = 0
 script = ExtResource("26_qvqry")
 
-[node name="Label" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon3" unique_id=1926979230]
+[node name="Label" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon3" unique_id=2109453510]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1206,30 +1274,93 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
+offset_left = -36.0
+offset_top = -40.5
+offset_right = 4.0
+offset_bottom = -14.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("13_byug1")
 theme_override_font_sizes/font_size = 25
+
+[node name="TextureRect_Pokemon" type="TextureRect" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon3" unique_id=1442187444]
+texture_filter = 1
+layout_mode = 0
+offset_left = -1.0
+offset_top = -9.0
+offset_right = 76.0
+offset_bottom = 54.0
+
+[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon3" unique_id=905354887]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -217.0
+offset_top = -48.0
+offset_right = -33.0
+offset_bottom = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1, 0.2400006)
+nine_patch_stretch = true
+texture_under = ExtResource("28_0cgjh")
+texture_progress = ExtResource("29_e6qsf")
+
+[node name="TextureRect-Contour" type="TextureRect" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon3/TextureProgressBar_PV" unique_id=71177169]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.0
+offset_top = -37.0
+offset_right = 102.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("30_ediv8")
+
+[node name="Label_PV" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon3" unique_id=90215288]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -153.0
+offset_top = 20.5
+offset_right = -60.0
+offset_bottom = 46.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_byug1")
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="TextureButton_Pokemon5" type="TextureButton" parent="InterfaceMenu/MenuPokemon" unique_id=72902082]
 texture_filter = 1
 layout_mode = 0
-offset_left = 114.0
-offset_top = 443.0
-offset_right = 314.0
-offset_bottom = 543.0
-texture_normal = ExtResource("23_5u2mo")
+offset_left = 55.0
+offset_top = 451.0
+offset_right = 389.0
+offset_bottom = 610.0
+texture_normal = ExtResource("24_d4gcl")
 texture_pressed = ExtResource("24_qvqry")
-texture_hover = ExtResource("25_m3ql3")
+texture_hover = ExtResource("25_1brqj")
 stretch_mode = 0
 script = ExtResource("26_qvqry")
 
-[node name="Label" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon5" unique_id=662369276]
+[node name="Label" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon5" unique_id=1086001909]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1237,30 +1368,93 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
+offset_left = -36.0
+offset_top = -40.5
+offset_right = 4.0
+offset_bottom = -14.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("13_byug1")
 theme_override_font_sizes/font_size = 25
+
+[node name="TextureRect_Pokemon" type="TextureRect" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon5" unique_id=1287990131]
+texture_filter = 1
+layout_mode = 0
+offset_left = -1.0
+offset_top = -9.0
+offset_right = 76.0
+offset_bottom = 54.0
+
+[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon5" unique_id=1147910751]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -217.0
+offset_top = -48.0
+offset_right = -33.0
+offset_bottom = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1, 0.2400006)
+nine_patch_stretch = true
+texture_under = ExtResource("28_0cgjh")
+texture_progress = ExtResource("29_e6qsf")
+
+[node name="TextureRect-Contour" type="TextureRect" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon5/TextureProgressBar_PV" unique_id=1190515247]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.0
+offset_top = -37.0
+offset_right = 102.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("30_ediv8")
+
+[node name="Label_PV" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon5" unique_id=1830235309]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -153.0
+offset_top = 20.5
+offset_right = -60.0
+offset_bottom = 46.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_byug1")
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="TextureButton_Pokemon2" type="TextureButton" parent="InterfaceMenu/MenuPokemon" unique_id=593780920]
 texture_filter = 1
 layout_mode = 0
-offset_left = 414.0
-offset_top = 193.0
-offset_right = 614.0
-offset_bottom = 293.0
-texture_normal = ExtResource("23_5u2mo")
+offset_left = 451.0
+offset_top = 36.0
+offset_right = 785.0
+offset_bottom = 195.0
+texture_normal = ExtResource("24_d4gcl")
 texture_pressed = ExtResource("24_qvqry")
-texture_hover = ExtResource("25_m3ql3")
+texture_hover = ExtResource("25_1brqj")
 stretch_mode = 0
 script = ExtResource("26_qvqry")
 
-[node name="Label" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon2" unique_id=236220655]
+[node name="Label" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon2" unique_id=105025371]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1268,30 +1462,93 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
+offset_left = -36.0
+offset_top = -40.5
+offset_right = 4.0
+offset_bottom = -14.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("13_byug1")
 theme_override_font_sizes/font_size = 25
+
+[node name="TextureRect_Pokemon" type="TextureRect" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon2" unique_id=1327836312]
+texture_filter = 1
+layout_mode = 0
+offset_left = -1.0
+offset_top = -9.0
+offset_right = 76.0
+offset_bottom = 54.0
+
+[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon2" unique_id=272252970]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -217.0
+offset_top = -48.0
+offset_right = -33.0
+offset_bottom = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1, 0.2400006)
+nine_patch_stretch = true
+texture_under = ExtResource("28_0cgjh")
+texture_progress = ExtResource("29_e6qsf")
+
+[node name="TextureRect-Contour" type="TextureRect" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon2/TextureProgressBar_PV" unique_id=1852627044]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.0
+offset_top = -37.0
+offset_right = 102.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("30_ediv8")
+
+[node name="Label_PV" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon2" unique_id=1019540511]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -153.0
+offset_top = 20.5
+offset_right = -60.0
+offset_bottom = 46.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_byug1")
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="TextureButton_Pokemon4" type="TextureButton" parent="InterfaceMenu/MenuPokemon" unique_id=832757309]
 texture_filter = 1
 layout_mode = 0
-offset_left = 414.0
-offset_top = 318.0
-offset_right = 614.0
-offset_bottom = 418.0
-texture_normal = ExtResource("23_5u2mo")
+offset_left = 451.0
+offset_top = 242.0
+offset_right = 785.0
+offset_bottom = 401.0
+texture_normal = ExtResource("24_d4gcl")
 texture_pressed = ExtResource("24_qvqry")
-texture_hover = ExtResource("25_m3ql3")
+texture_hover = ExtResource("25_1brqj")
 stretch_mode = 0
 script = ExtResource("26_qvqry")
 
-[node name="Label" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon4" unique_id=1208583332]
+[node name="Label" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon4" unique_id=317304158]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1299,30 +1556,93 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
+offset_left = -36.0
+offset_top = -40.5
+offset_right = 4.0
+offset_bottom = -14.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("13_byug1")
 theme_override_font_sizes/font_size = 25
+
+[node name="TextureRect_Pokemon" type="TextureRect" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon4" unique_id=1903178180]
+texture_filter = 1
+layout_mode = 0
+offset_left = -1.0
+offset_top = -9.0
+offset_right = 76.0
+offset_bottom = 54.0
+
+[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon4" unique_id=946871822]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -217.0
+offset_top = -48.0
+offset_right = -33.0
+offset_bottom = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1, 0.2400006)
+nine_patch_stretch = true
+texture_under = ExtResource("28_0cgjh")
+texture_progress = ExtResource("29_e6qsf")
+
+[node name="TextureRect-Contour" type="TextureRect" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon4/TextureProgressBar_PV" unique_id=935128379]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.0
+offset_top = -37.0
+offset_right = 102.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("30_ediv8")
+
+[node name="Label_PV" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon4" unique_id=1228973143]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -153.0
+offset_top = 20.5
+offset_right = -60.0
+offset_bottom = 46.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_byug1")
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="TextureButton_Pokemon6" type="TextureButton" parent="InterfaceMenu/MenuPokemon" unique_id=495691938]
 texture_filter = 1
 layout_mode = 0
-offset_left = 414.0
-offset_top = 443.0
-offset_right = 614.0
-offset_bottom = 543.0
-texture_normal = ExtResource("23_5u2mo")
+offset_left = 451.0
+offset_top = 451.0
+offset_right = 785.0
+offset_bottom = 610.0
+texture_normal = ExtResource("24_d4gcl")
 texture_pressed = ExtResource("24_qvqry")
-texture_hover = ExtResource("25_m3ql3")
+texture_hover = ExtResource("25_1brqj")
 stretch_mode = 0
 script = ExtResource("26_qvqry")
 
-[node name="Label" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" unique_id=1669633798]
+[node name="Label" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" unique_id=1055644387]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1330,27 +1650,78 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
+offset_left = -36.0
+offset_top = -40.5
+offset_right = 4.0
+offset_bottom = -14.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("13_byug1")
 theme_override_font_sizes/font_size = 25
 
-[node name="TextureRect_Pokemon" type="TextureRect" parent="InterfaceMenu/MenuPokemon" unique_id=1218085713]
+[node name="TextureRect_Pokemon" type="TextureRect" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" unique_id=265904913]
+texture_filter = 1
+layout_mode = 0
+offset_left = -1.0
+offset_top = -9.0
+offset_right = 76.0
+offset_bottom = 54.0
+
+[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" unique_id=1104720774]
 texture_filter = 1
 layout_mode = 1
-anchors_preset = 1
+anchors_preset = 3
 anchor_left = 1.0
+anchor_top = 1.0
 anchor_right = 1.0
-offset_left = -390.0
-offset_top = 19.0
-offset_right = -193.0
-offset_bottom = 203.0
+anchor_bottom = 1.0
+offset_left = -217.0
+offset_top = -48.0
+offset_right = -33.0
+offset_bottom = -16.0
 grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1, 0.2400006)
+nine_patch_stretch = true
+texture_under = ExtResource("28_0cgjh")
+texture_progress = ExtResource("29_e6qsf")
+
+[node name="TextureRect-Contour" type="TextureRect" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6/TextureProgressBar_PV" unique_id=741375829]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.0
+offset_top = -37.0
+offset_right = 102.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("30_ediv8")
+
+[node name="Label_PV" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" unique_id=2014938988]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -153.0
+offset_top = 20.5
+offset_right = -60.0
+offset_bottom = 46.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_byug1")
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="TextureButton_Equipe" type="TextureButton" parent="InterfaceMenu/MenuPokemon" unique_id=1870916449]
 texture_filter = 1
@@ -1377,50 +1748,6 @@ script = ExtResource("9_8l02w")
 position = Vector2(-642, -552)
 stream = ExtResource("9_r2s0p")
 
-[node name="TEMPORAIRE1" type="Label" parent="InterfaceMenu/MenuPokemon" unique_id=1286712430]
-layout_mode = 0
-offset_left = 81.0
-offset_top = 45.0
-offset_right = 431.0
-offset_bottom = 96.0
-theme_override_fonts/font = ExtResource("13_byug1")
-theme_override_font_sizes/font_size = 50
-text = "Equipe Pokémon"
-
-[node name="TEMPORAIRE2" type="Label" parent="InterfaceMenu/MenuPokemon" unique_id=1415484083]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -446.0
-offset_top = -276.0
-offset_right = -96.0
-offset_bottom = -225.0
-grow_horizontal = 0
-grow_vertical = 0
-theme_override_fonts/font = ExtResource("13_byug1")
-theme_override_font_sizes/font_size = 50
-text = "Description :"
-
-[node name="TEMPORAIRE3" type="Label" parent="InterfaceMenu/MenuPokemon" unique_id=365958637]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -446.0
-offset_top = -438.0
-offset_right = -96.0
-offset_bottom = -387.0
-grow_horizontal = 0
-grow_vertical = 0
-theme_override_fonts/font = ExtResource("13_byug1")
-theme_override_font_sizes/font_size = 50
-text = "Stats :"
-
 [node name="Resume" type="Panel" parent="InterfaceMenu/MenuPokemon" unique_id=621402747]
 visible = false
 texture_filter = 1
@@ -1432,23 +1759,40 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ou8r4")
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="InterfaceMenu/MenuPokemon/Resume" unique_id=1431172290]
+[node name="Label_PV" type="Label" parent="InterfaceMenu/MenuPokemon/Resume" unique_id=1345921272]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -215.0
+offset_top = 82.0
+offset_right = -96.0
+offset_bottom = 108.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_byug1")
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfaceMenu/MenuPokemon/Resume" unique_id=1431172290]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -287.0
-offset_top = 104.00001
+offset_top = 117.0
 offset_right = -103.0
-offset_bottom = 136.0
+offset_bottom = 149.0
 grow_horizontal = 0
 scale = Vector2(1, 0.2400006)
 nine_patch_stretch = true
 texture_under = ExtResource("28_0cgjh")
 texture_progress = ExtResource("29_e6qsf")
 
-[node name="TextureRect-Contour" type="TextureRect" parent="InterfaceMenu/MenuPokemon/Resume/TextureProgressBar" unique_id=1450754019]
+[node name="TextureRect-Contour" type="TextureRect" parent="InterfaceMenu/MenuPokemon/Resume/TextureProgressBar_PV" unique_id=1450754019]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1551,6 +1895,15 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("13_byug1")
 theme_override_font_sizes/font_size = 40
 vertical_alignment = 2
+
+[node name="TextureButton_PokemonRetour" type="TextureButton" parent="InterfaceMenu/MenuPokemon/Resume" unique_id=2097387771]
+texture_filter = 1
+layout_mode = 1
+offset_right = 105.0
+offset_bottom = 66.0
+texture_normal = ExtResource("32_e6qsf")
+texture_hover = ExtResource("33_ediv8")
+stretch_mode = 0
 
 [node name="InterfaceMenuPrincipal" type="Control" parent="." unique_id=873146367]
 visible = false
@@ -1763,25 +2116,14 @@ camera_attributes = SubResource("CameraAttributesPhysical_r2s0p")
 [connection signal="pressed" from="InterfaceMenu/TextureButton_Equipe" to="InterfaceMenu/TextureButton_Equipe" method="_on_menu_pokemon_pressed"]
 [connection signal="pressed" from="InterfaceMenu/TextureButton_Objets" to="InterfaceMenu/TextureButton_Objets" method="_on_menu_objet_pressed"]
 [connection signal="pressed" from="InterfaceMenu/MenuObjet/Bouton_MenuSacADos" to="InterfaceMenu/MenuObjet/Bouton_MenuSacADos" method="_on_menu_objet_pressed"]
-[connection signal="mouse_entered" from="InterfaceMenu/MenuPokemon/TextureButton_Pokemon1" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon1" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="InterfaceMenu/MenuPokemon/TextureButton_Pokemon1" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon1" method="_on_mouse_exited"]
 [connection signal="pressed" from="InterfaceMenu/MenuPokemon/TextureButton_Pokemon1" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon1" method="_on_pressed"]
-[connection signal="mouse_entered" from="InterfaceMenu/MenuPokemon/TextureButton_Pokemon3" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon3" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="InterfaceMenu/MenuPokemon/TextureButton_Pokemon3" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon3" method="_on_mouse_exited"]
 [connection signal="pressed" from="InterfaceMenu/MenuPokemon/TextureButton_Pokemon3" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon3" method="_on_pressed"]
-[connection signal="mouse_entered" from="InterfaceMenu/MenuPokemon/TextureButton_Pokemon5" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon5" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="InterfaceMenu/MenuPokemon/TextureButton_Pokemon5" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon5" method="_on_mouse_exited"]
 [connection signal="pressed" from="InterfaceMenu/MenuPokemon/TextureButton_Pokemon5" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon5" method="_on_pressed"]
-[connection signal="mouse_entered" from="InterfaceMenu/MenuPokemon/TextureButton_Pokemon2" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon2" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="InterfaceMenu/MenuPokemon/TextureButton_Pokemon2" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon2" method="_on_mouse_exited"]
 [connection signal="pressed" from="InterfaceMenu/MenuPokemon/TextureButton_Pokemon2" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon2" method="_on_pressed"]
-[connection signal="mouse_entered" from="InterfaceMenu/MenuPokemon/TextureButton_Pokemon4" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon4" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="InterfaceMenu/MenuPokemon/TextureButton_Pokemon4" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon4" method="_on_mouse_exited"]
 [connection signal="pressed" from="InterfaceMenu/MenuPokemon/TextureButton_Pokemon4" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon4" method="_on_pressed"]
-[connection signal="mouse_entered" from="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" method="_on_mouse_exited"]
 [connection signal="pressed" from="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" method="_on_pressed"]
 [connection signal="pressed" from="InterfaceMenu/MenuPokemon/TextureButton_Equipe" to="InterfaceMenu/MenuPokemon/TextureButton_Equipe" method="_on_menu_pokemon_pressed"]
+[connection signal="pressed" from="InterfaceMenu/MenuPokemon/Resume/TextureButton_PokemonRetour" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" method="_on_pressed"]
 [connection signal="pressed" from="InterfaceMenuPrincipal/TextureButton_Jouer" to="InterfaceMenuPrincipal" method="_jouer"]
 [connection signal="pressed" from="InterfaceMenuPrincipal/TextureButton_Credits" to="InterfaceMenuPrincipal" method="_afficherCrédits"]
 [connection signal="pressed" from="InterfaceMenuPrincipal/TextureButton_Quitter" to="InterfaceMenuPrincipal" method="_quitter"]

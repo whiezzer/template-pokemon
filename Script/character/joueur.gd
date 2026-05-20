@@ -94,6 +94,8 @@ func _input(event):
 		else:
 			menu.get_node("MenuObjet").visible = false
 			menu.get_node("MenuPokemon").visible = false
+			menu.get_node("MenuPokemon/Resume").visible = false
+			menu.get_node("MenuPokemon/TextureButton_Pokemon6").boutonActif = null
 			menu.visible = false
 			pause = false
 
