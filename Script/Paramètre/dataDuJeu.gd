@@ -1,6 +1,8 @@
 @tool
 extends Node3D
 
+var menuPrincipalActif : bool = true
+
 # Fonction qui crée des boutons d'objets dans le menu objets par rapport au nombre d'objets dans la ListeDesObjets
 func _créerBoutonsMenuObjet() -> void:
 	var positionBoutonObjets = Vector2(150.0, 142.0)
@@ -290,3 +292,6 @@ func _enter_tree() -> void:
 	dataDuJeu._type_index_pokemons_joueurs = ref._type_index_pokemons_joueurs
 	listePokemonsJoueur.append(listePokemons[_type_index_pokemons_joueurs])
 	_créerBoutonsMenuObjet()
+	
+	if dataDuJeu.menuPrincipalActif:
+		get_tree().current_scene.get_node("InterfaceMenuPrincipal").visible = true

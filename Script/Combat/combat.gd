@@ -241,6 +241,13 @@ func _finDeTour() -> void :
 	if pokemonEnnemi.pv_Actuels <= 0:
 		for pokemon in dataDuJeu.listePokemonsEnnemie:
 			if pokemon.pv_Actuels > 0:
+				
+				pokemonJoueur.xp += 250 * pokemonEnnemi.lvl
+				
+				await ecrire_texte(message, pokemonJoueur.nom + " gagne " + "[color=blue]" + str(250 * pokemonEnnemi.lvl) + "[/color]" + " points de niveaux")
+				
+				await get_tree().create_timer(1.0).timeout
+				
 				dataDuJeu.pokemonEnnemiStats = pokemon
 				$PokemonEnnemi.initialise()
 				pokemonEnnemi = dataDuJeu.pokemonEnnemiStats
