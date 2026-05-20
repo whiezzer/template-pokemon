@@ -38,10 +38,14 @@
 [ext_resource type="AudioStream" uid="uid://crnv2nwnq8k81" path="res://Assets/Son/Crie de pokemon/Frog_CRIE.wav" id="25_x7wka"]
 [ext_resource type="Script" uid="uid://cyuksgb1kw34x" path="res://Script/Interface/boutonPokemon.gd" id="26_qvqry"]
 [ext_resource type="Script" uid="uid://cc8ysqjjskgps" path="res://Script/Interface/menuPrincipal.gd" id="27_7w3f3"]
+[ext_resource type="Texture2D" uid="uid://br356dx4rdc15" path="res://Assets/Interface/MenuPokemon/Resume/IntefacePokemonRESUME.png" id="27_ifajr"]
 [ext_resource type="FontFile" uid="uid://fy6tlq7q5c2k" path="res://Assets/Text/pixel_operator/PixelOperatorHB8.ttf" id="27_yqeg5"]
+[ext_resource type="Texture2D" uid="uid://ceebavwbbh5c6" path="res://Assets/Interface/MenuPokemon/Resume/BarreRougeResume.png" id="28_0cgjh"]
 [ext_resource type="Texture2D" uid="uid://kge242jh4ye2" path="res://Assets/Interface/Credits/Croix.png" id="28_7w3f3"]
 [ext_resource type="FontFile" uid="uid://dt6fiuvjpdrco" path="res://Assets/Text/pixel_operator/PixelOperator8-Bold.ttf" id="29_4bkny"]
+[ext_resource type="Texture2D" uid="uid://b7i1r44u22mfp" path="res://Assets/Interface/MenuPokemon/Resume/BarreVertResume.png" id="29_e6qsf"]
 [ext_resource type="Texture2D" uid="uid://balfv5pu1pwhs" path="res://Assets/Pokemon/Bomjeton/BomjetonFace.png" id="30_20jwu"]
+[ext_resource type="Texture2D" uid="uid://yrblw4f5r4fv" path="res://Assets/Interface/MenuPokemon/Resume/BarreContourResume.png" id="30_ediv8"]
 [ext_resource type="Texture2D" uid="uid://cqfupb62i7ifd" path="res://Assets/Pokemon/Bomjeton/BomjetonDos.png" id="31_lpfrn"]
 [ext_resource type="Texture2D" uid="uid://fv6hnfh7rmbw" path="res://Assets/Pokemon/Sinjypleur/SinjypleurFace.png" id="33_dekyc"]
 [ext_resource type="Texture2D" uid="uid://buvnklao20pck" path="res://Assets/Pokemon/Sinjypleur/SinjypleurDos.png" id="34_tag3l"]
@@ -66,6 +70,9 @@ texture = ExtResource("9_bijkn")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p2xxs"]
 bg_color = Color(0.74587977, 0.56127954, 0.32760647, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ou8r4"]
+texture = ExtResource("27_ifajr")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hfy5n"]
 bg_color = Color(0.6748004, 0.5478027, 0.7106605, 1)
@@ -155,6 +162,7 @@ quantite = 1
 [sub_resource type="Resource" id="Resource_8l02w"]
 script = ExtResource("11_voxsg")
 nom = "Bomjeton"
+description = "Ce pokemon ressemble à son créateur dans la vraie vie."
 pv = 10
 attaque = 5
 defense = 5
@@ -1332,60 +1340,6 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("13_byug1")
 theme_override_font_sizes/font_size = 25
 
-[node name="Label_Description" type="Label" parent="InterfaceMenu/MenuPokemon" unique_id=771513634]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -431.0
-offset_top = -223.0
-offset_right = -11.0
-offset_bottom = -41.0
-grow_horizontal = 0
-grow_vertical = 0
-scale = Vector2(1, 0.64)
-theme_override_fonts/font = ExtResource("13_byug1")
-theme_override_font_sizes/font_size = 30
-
-[node name="Label_Stats1" type="Label" parent="InterfaceMenu/MenuPokemon" unique_id=1885768960]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -446.0
-offset_top = -367.0
-offset_right = -26.0
-offset_bottom = -185.0
-grow_horizontal = 0
-grow_vertical = 0
-scale = Vector2(1, 0.64)
-theme_override_fonts/font = ExtResource("13_byug1")
-theme_override_font_sizes/font_size = 30
-
-[node name="Label_Stats2" type="Label" parent="InterfaceMenu/MenuPokemon" unique_id=1486184827]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -203.0
-offset_top = -367.0
-offset_right = 217.0
-offset_bottom = -185.0
-grow_horizontal = 0
-grow_vertical = 0
-scale = Vector2(1, 0.64)
-theme_override_fonts/font = ExtResource("13_byug1")
-theme_override_font_sizes/font_size = 30
-
 [node name="TextureRect_Pokemon" type="TextureRect" parent="InterfaceMenu/MenuPokemon" unique_id=1218085713]
 texture_filter = 1
 layout_mode = 1
@@ -1466,6 +1420,137 @@ grow_vertical = 0
 theme_override_fonts/font = ExtResource("13_byug1")
 theme_override_font_sizes/font_size = 50
 text = "Stats :"
+
+[node name="Resume" type="Panel" parent="InterfaceMenu/MenuPokemon" unique_id=621402747]
+visible = false
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ou8r4")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="InterfaceMenu/MenuPokemon/Resume" unique_id=1431172290]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -287.0
+offset_top = 104.00001
+offset_right = -103.0
+offset_bottom = 136.0
+grow_horizontal = 0
+scale = Vector2(1, 0.2400006)
+nine_patch_stretch = true
+texture_under = ExtResource("28_0cgjh")
+texture_progress = ExtResource("29_e6qsf")
+
+[node name="TextureRect-Contour" type="TextureRect" parent="InterfaceMenu/MenuPokemon/Resume/TextureProgressBar" unique_id=1450754019]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.0
+offset_top = -37.0
+offset_right = 102.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("30_ediv8")
+
+[node name="TextureRect_Pokemon" type="TextureRect" parent="InterfaceMenu/MenuPokemon/Resume" unique_id=1382396662]
+texture_filter = 1
+layout_mode = 1
+offset_left = 188.0
+offset_top = 74.0
+offset_right = 491.0
+offset_bottom = 373.0
+
+[node name="Label_Stats1" type="Label" parent="InterfaceMenu/MenuPokemon/Resume" unique_id=1885768960]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -942.0
+offset_top = -217.0
+offset_right = -583.0
+offset_bottom = -48.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1, 0.64)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("27_yqeg5")
+theme_override_font_sizes/font_size = 35
+text = "
+"
+
+[node name="Label_Stats2" type="Label" parent="InterfaceMenu/MenuPokemon/Resume" unique_id=1486184827]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -204.0
+offset_top = -493.0
+offset_right = -95.0
+offset_bottom = -177.375
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1, 0.64)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_byug1")
+theme_override_font_sizes/font_size = 53
+
+[node name="Label_Description" type="Label" parent="InterfaceMenu/MenuPokemon/Resume" unique_id=771513634]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -391.0
+offset_top = -236.0
+offset_right = -92.0
+offset_bottom = -67.25
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1, 0.64)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_byug1")
+theme_override_font_sizes/font_size = 25
+autowrap_mode = 3
+
+[node name="Label_Nature" type="Label" parent="InterfaceMenu/MenuPokemon/Resume" unique_id=1204331225]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -396.0
+offset_top = -27.0
+offset_right = -86.0
+offset_bottom = 70.5
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1, 0.64)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_byug1")
+theme_override_font_sizes/font_size = 40
+vertical_alignment = 2
 
 [node name="InterfaceMenuPrincipal" type="Control" parent="." unique_id=873146367]
 visible = false
