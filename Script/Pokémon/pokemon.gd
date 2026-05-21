@@ -40,7 +40,6 @@ func _attribueStatsNature() -> void:
 	match data.nature.stat1:
 		"pv":
 			data.pv += ceil(int(data.nature.modificateur1.substr(1, data.nature.modificateur1.length() - 2)) / 100.0 * data.pv)
-			data.pv_Actuels = data.pv
 		"attaque":
 			data.attaque += ceil(int(data.nature.modificateur1.substr(1, data.nature.modificateur1.length() - 2)) / 100.0 * data.attaque)
 		"defense":
@@ -51,13 +50,14 @@ func _attribueStatsNature() -> void:
 	match data.nature.stat2:
 		"pv":
 			data.pv -= ceil(int(data.nature.modificateur2.substr(1, data.nature.modificateur2.length() - 2)) / 100.0 * data.pv)
-			data.pv_Actuels = data.pv
 		"attaque":
 			data.attaque -= ceil(int(data.nature.modificateur2.substr(1, data.nature.modificateur2.length() - 2)) / 100.0 * data.attaque)
 		"defense":
 			data.defense -= ceil(int(data.nature.modificateur2.substr(1, data.nature.modificateur2.length() - 2)) / 100.0 * data.defense)
 		"vitesse":
 			data.vitesse -= ceil(int(data.nature.modificateur2.substr(1, data.nature.modificateur2.length() - 2)) / 100.0 * data.vitesse)
+	
+	data.pv_Actuels = data.pv
 
 # Fonction qui attribue des attaques au pokémon selon son type
 func _selectionAttaque() -> void:

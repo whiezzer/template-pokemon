@@ -19,3 +19,17 @@ func _changer_scene(chemin: String) -> void:
 		sprite.play("TransitionEntree")
 		await sprite.animation_finished
 		sprite.visible = false
+
+func _fondu(chemin: String) -> void:
+	sprite.visible = true
+	sprite.play("FonduIn")
+	await sprite.animation_finished
+	
+	if get_tree().current_scene.get_node(chemin).visible:
+		get_tree().current_scene.get_node(chemin).visible = false
+	else:
+		get_tree().current_scene.get_node(chemin).visible = true
+	
+	sprite.play("FonduOut")
+	await sprite.animation_finished
+	sprite.visible = false

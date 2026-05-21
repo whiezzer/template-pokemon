@@ -49,11 +49,12 @@ func _physics_process(delta: float) -> void:
 func _on_pressed() -> void:
 	if boutonActif != null:
 		boutonActif = null
-		get_parent().get_node("Resume").visible = false
+		ecran_de_transition._fondu("InterfaceMenu/MenuPokemon/Resume")
 	else:
 		if pokemon != null:
 			boutonActif = self
-			get_parent().get_node("Resume").visible = true
+			
+			ecran_de_transition._fondu("InterfaceMenu/MenuPokemon/Resume")
 			get_parent().get_node("Resume/TextureRect_Pokemon").texture = boutonActif.sprite
 			get_parent().get_node("Resume/Label_Stats1").text = boutonActif.textStats1
 			get_parent().get_node("Resume/Label_Stats2").text = boutonActif.textStats2

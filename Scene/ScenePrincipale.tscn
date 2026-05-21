@@ -1266,7 +1266,7 @@ texture_hover = ExtResource("25_1brqj")
 stretch_mode = 0
 script = ExtResource("26_qvqry")
 
-[node name="Label" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon3" unique_id=2109453510]
+[node name="Label_Nom" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon3" unique_id=2109453510]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1360,7 +1360,7 @@ texture_hover = ExtResource("25_1brqj")
 stretch_mode = 0
 script = ExtResource("26_qvqry")
 
-[node name="Label" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon5" unique_id=1086001909]
+[node name="Label_Nom" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon5" unique_id=1086001909]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1454,7 +1454,7 @@ texture_hover = ExtResource("25_1brqj")
 stretch_mode = 0
 script = ExtResource("26_qvqry")
 
-[node name="Label" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon2" unique_id=105025371]
+[node name="Label_Nom" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon2" unique_id=105025371]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1548,7 +1548,7 @@ texture_hover = ExtResource("25_1brqj")
 stretch_mode = 0
 script = ExtResource("26_qvqry")
 
-[node name="Label" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon4" unique_id=317304158]
+[node name="Label_Nom" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon4" unique_id=317304158]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1642,7 +1642,7 @@ texture_hover = ExtResource("25_1brqj")
 stretch_mode = 0
 script = ExtResource("26_qvqry")
 
-[node name="Label" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" unique_id=1055644387]
+[node name="Label_Nom" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" unique_id=1055644387]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1937,7 +1937,7 @@ offset_bottom = 147.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("27_yqeg5")
 theme_override_font_sizes/font_size = 50
-text = "Pokenjmin"
+text = "Godomon"
 horizontal_alignment = 1
 vertical_alignment = 1
 

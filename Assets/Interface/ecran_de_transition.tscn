@@ -3,20 +3,35 @@
 [ext_resource type="Script" uid="uid://bty4mloau6qhx" path="res://Script/Interface/transition.gd" id="1_1sh4y"]
 [ext_resource type="Texture2D" uid="uid://b4q3alesyvj2l" path="res://Assets/Interface/AnimationCombatEntree/Anim Com Entrée1.png" id="1_cku56"]
 [ext_resource type="Texture2D" uid="uid://dpng8m7qgf7fu" path="res://Assets/Interface/AnimationCombatEntree/Anim Com Entrée2.png" id="2_1sh4y"]
+[ext_resource type="Texture2D" uid="uid://cgjj8iqy3jahl" path="res://Assets/Interface/Fondu/In/In1.png" id="2_xefng"]
+[ext_resource type="Texture2D" uid="uid://drthpty7expq1" path="res://Assets/Interface/Fondu/In/In2.png" id="3_8u2bt"]
 [ext_resource type="Texture2D" uid="uid://dq4gqegxxv4ik" path="res://Assets/Interface/AnimationCombatEntree/Anim Com Entrée3.png" id="3_vrf74"]
 [ext_resource type="Texture2D" uid="uid://b1wkenxyyvhyp" path="res://Assets/Interface/AnimationCombatEntree/Anim Com Entrée4.png" id="4_piei3"]
+[ext_resource type="Texture2D" uid="uid://2q8t8clm8a7w" path="res://Assets/Interface/Fondu/In/In3.png" id="4_tc0e8"]
+[ext_resource type="Texture2D" uid="uid://dugpsr1iuuxb0" path="res://Assets/Interface/Fondu/In/In4.png" id="5_jyyvk"]
 [ext_resource type="Texture2D" uid="uid://c65cmxyo2dg6s" path="res://Assets/Interface/AnimationCombatEntree/Anim Com Entrée5.png" id="5_r4oi6"]
 [ext_resource type="Texture2D" uid="uid://bt0lsigpx5doi" path="res://Assets/Interface/AnimationCombatEntree/Anim Com Entrée6.png" id="6_6jj1r"]
+[ext_resource type="Texture2D" uid="uid://d3bre4aca5d8k" path="res://Assets/Interface/Fondu/In/In5.png" id="6_ntcs2"]
+[ext_resource type="Texture2D" uid="uid://bi08dcr5f432i" path="res://Assets/Interface/Fondu/In/In6.png" id="7_8sxq6"]
 [ext_resource type="Texture2D" uid="uid://bgv03swbmpi25" path="res://Assets/Interface/AnimationCombatEntree/Anim Com Entrée7.png" id="7_locr8"]
+[ext_resource type="Texture2D" uid="uid://pm6mih7vcx2q" path="res://Assets/Interface/Fondu/In/In7.png" id="8_1bhfj"]
 [ext_resource type="Texture2D" uid="uid://q8q5mdcsm74" path="res://Assets/Interface/AnimationCombatEntree/Anim Com Entrée8.png" id="8_33rmf"]
 [ext_resource type="Texture2D" uid="uid://dd2sbmut602kc" path="res://Assets/Interface/AnimationCombatEntree/Anim Com Entrée9.png" id="9_46bit"]
+[ext_resource type="Texture2D" uid="uid://ctaimorv3gk4m" path="res://Assets/Interface/Fondu/Out/out1.png" id="9_g8lal"]
 [ext_resource type="Texture2D" uid="uid://cfbams5ph70t5" path="res://Assets/Interface/AnimationCombatEntree/Anim Com Entrée10.png" id="10_m8mu5"]
+[ext_resource type="Texture2D" uid="uid://b7uubwyupeqtk" path="res://Assets/Interface/Fondu/Out/out2.png" id="10_we4pi"]
 [ext_resource type="Texture2D" uid="uid://eywodvmovo60" path="res://Assets/Interface/AnimationCombatEntree/Anim Com Entrée11.png" id="11_66imo"]
+[ext_resource type="Texture2D" uid="uid://d3yhw3x3okd8x" path="res://Assets/Interface/Fondu/Out/out3.png" id="11_h7cdq"]
+[ext_resource type="Texture2D" uid="uid://8nxuwdcni0b" path="res://Assets/Interface/Fondu/Out/out4.png" id="12_85n7q"]
 [ext_resource type="Texture2D" uid="uid://cfu8poti6ujp8" path="res://Assets/Interface/AnimationCombatEntree/Anim Com Entrée12.png" id="12_87gch"]
+[ext_resource type="Texture2D" uid="uid://3r8asauqk06h" path="res://Assets/Interface/Fondu/Out/out5.png" id="13_t20hs"]
 [ext_resource type="Texture2D" uid="uid://bqjtev8x8o3af" path="res://Assets/Interface/AnimationCombatEntree/Anim Com Entrée13.png" id="13_x2uwh"]
+[ext_resource type="Texture2D" uid="uid://criol5jnri2wh" path="res://Assets/Interface/Fondu/Out/out6.png" id="14_dguep"]
 [ext_resource type="Texture2D" uid="uid://drti2xyhnoydu" path="res://Assets/Interface/AnimationCombatEntree/Anim Com Entrée14.png" id="14_mm6wh"]
+[ext_resource type="Texture2D" uid="uid://d2lmwddvbxohd" path="res://Assets/Interface/Fondu/Out/out7.png" id="15_6ednu"]
 [ext_resource type="Texture2D" uid="uid://btuu6t25doqf7" path="res://Assets/Interface/AnimationCombatEntree/Anim Com Entrée15.png" id="15_ec62l"]
 [ext_resource type="Texture2D" uid="uid://cyc24yt5qr2aw" path="res://Assets/Interface/AnimationCombatEntree/Anim Com Entrée16.png" id="16_kddtb"]
+[ext_resource type="Texture2D" uid="uid://cpnneip6hgwh2" path="res://Assets/Interface/Fondu/Out/out8.png" id="16_o4s3e"]
 [ext_resource type="Texture2D" uid="uid://cihvrrlv04e6a" path="res://Assets/Interface/AnimationCombatEntree/Anim Com Entrée17.png" id="17_xefng"]
 [ext_resource type="Texture2D" uid="uid://dd72ubmfpao84" path="res://Assets/Interface/AnimationCombatEntree/Anim Com Entrée18.png" id="18_8u2bt"]
 [ext_resource type="Texture2D" uid="uid://b7f6g6qii7qmy" path="res://Assets/Interface/AnimationCombatEntree/Anim Com Entrée19.png" id="19_tc0e8"]
@@ -48,6 +63,61 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vijqq"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xefng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8u2bt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tc0e8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jyyvk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ntcs2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8sxq6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1bhfj")
+}],
+"loop": false,
+"name": &"FonduIn",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_g8lal")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_we4pi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_h7cdq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_85n7q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_t20hs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_dguep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_6ednu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_o4s3e")
+}],
+"loop": false,
+"name": &"FonduOut",
+"speed": 20.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_cku56")
@@ -205,4 +275,4 @@ process_mode = 3
 position = Vector2(577.5, 327)
 scale = Vector2(2.41875, 2.4222221)
 sprite_frames = SubResource("SpriteFrames_vijqq")
-animation = &"TransitionEntree"
+animation = &"FonduOut"

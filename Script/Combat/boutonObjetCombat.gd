@@ -30,7 +30,7 @@ func _on_button_pressed() -> void:
 	if objet.objet.capture == true && dataDuJeu.listePokemonsEnnemie != []:
 		return
 	
-	if menuAttaque.visible:
+	if !menuObjet.visible:
 		menuAttaque.visible = false
 		menuObjet.visible = true
 	else:
