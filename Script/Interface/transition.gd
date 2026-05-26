@@ -9,6 +9,7 @@ func _ready() -> void:
 
 func _changer_scene(chemin: String) -> void:
 		get_tree().paused = true  
+		sprite.speed_scale = 1.0
 		sprite.visible = true
 		sprite.play("TransitionTrouver")
 		get_tree().current_scene.get_node("AudioMusique3D").stream = preload("res://Assets/Son/Combat/son_TransitionCombat.wav")
@@ -20,8 +21,9 @@ func _changer_scene(chemin: String) -> void:
 		await sprite.animation_finished
 		sprite.visible = false
 
-func _fondu(chemin: String) -> void:
+func _fondu(chemin: String, vitesse: float = 1.0) -> void:
 	sprite.visible = true
+	sprite.speed_scale = vitesse
 	sprite.play("FonduIn")
 	await sprite.animation_finished
 	
@@ -33,3 +35,32 @@ func _fondu(chemin: String) -> void:
 	sprite.play("FonduOut")
 	await sprite.animation_finished
 	sprite.visible = false
+
+func _fonduEnOuvertureAudio(audio: AudioStreamPlayer3D, duree: float = 2.0):
+
+	audio.volume_db = -80
+	audio.play()
+
+	var tween = create_tween()
+
+	tween.tween_property(
+		audio,
+		"volume_db",
+		0,
+		duree
+	)
+
+func _fonduEnFermetureAudio(audio: AudioStreamPlayer3D, duree: float = 2.0):
+
+	var tween = create_tween()
+
+	tween.tween_property(
+		audio,
+		"volume_db",
+		-80,
+		duree
+	)
+
+	await tween.finished
+
+	audio.stop()

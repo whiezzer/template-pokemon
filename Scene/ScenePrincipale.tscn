@@ -31,21 +31,17 @@
 [ext_resource type="Texture2D" uid="uid://v3vth8p1m1ai" path="res://Assets/Interface/Combat/Bouton Sac3.png" id="14_loqtx"]
 [ext_resource type="AudioStream" uid="uid://di8icu8bcojx7" path="res://Assets/Son/Crie de pokemon/Bomjeton_CRIE.wav" id="21_byug1"]
 [ext_resource type="Texture2D" uid="uid://42cyq4mo2eil" path="res://Assets/Objets/Pokeballs/Pokeball attraper56.png" id="22_8l02w"]
-[ext_resource type="Texture2D" uid="uid://clq2sg8e8kcak" path="res://Assets/Interface/Combat/Bouton attaque normal.png" id="23_5u2mo"]
 [ext_resource type="Texture2D" uid="uid://bfkyd0jctjccn" path="res://Assets/Interface/MenuPokemon/Pokemon/Fond.png" id="23_eisab"]
 [ext_resource type="AudioStream" uid="uid://dpqk46ugjtnb1" path="res://Assets/Son/Crie de pokemon/Sinjypleur_CRIE.wav" id="23_r2s0p"]
 [ext_resource type="Texture2D" uid="uid://clcutuupv82ud" path="res://Assets/Interface/MenuPokemon/Pokemon/BoutonPoke.png" id="24_d4gcl"]
 [ext_resource type="Texture2D" uid="uid://w1q1engl8nkq" path="res://Assets/Interface/Combat/Bouton attaque normal souris dessus.png" id="24_qvqry"]
 [ext_resource type="Texture2D" uid="uid://d1jvjm5jgvour" path="res://Assets/Interface/MenuPokemon/Pokemon/BoutonPokeSourisDessus.png" id="25_1brqj"]
-[ext_resource type="Texture2D" uid="uid://crk6rq45nmwd1" path="res://Assets/Interface/Combat/Bouton attaque normal appuyer.png" id="25_m3ql3"]
 [ext_resource type="AudioStream" uid="uid://crnv2nwnq8k81" path="res://Assets/Son/Crie de pokemon/Frog_CRIE.wav" id="25_x7wka"]
 [ext_resource type="Script" uid="uid://cyuksgb1kw34x" path="res://Script/Interface/boutonPokemon.gd" id="26_qvqry"]
 [ext_resource type="Script" uid="uid://cc8ysqjjskgps" path="res://Script/Interface/menuPrincipal.gd" id="27_7w3f3"]
 [ext_resource type="Texture2D" uid="uid://br356dx4rdc15" path="res://Assets/Interface/MenuPokemon/Resume/IntefacePokemonRESUME.png" id="27_ifajr"]
 [ext_resource type="FontFile" uid="uid://fy6tlq7q5c2k" path="res://Assets/Text/pixel_operator/PixelOperatorHB8.ttf" id="27_yqeg5"]
 [ext_resource type="Texture2D" uid="uid://ceebavwbbh5c6" path="res://Assets/Interface/MenuPokemon/Resume/BarreRougeResume.png" id="28_0cgjh"]
-[ext_resource type="Texture2D" uid="uid://kge242jh4ye2" path="res://Assets/Interface/Credits/Croix.png" id="28_7w3f3"]
-[ext_resource type="FontFile" uid="uid://dt6fiuvjpdrco" path="res://Assets/Text/pixel_operator/PixelOperator8-Bold.ttf" id="29_4bkny"]
 [ext_resource type="Texture2D" uid="uid://b7i1r44u22mfp" path="res://Assets/Interface/MenuPokemon/Resume/BarreVertResume.png" id="29_e6qsf"]
 [ext_resource type="Texture2D" uid="uid://balfv5pu1pwhs" path="res://Assets/Pokemon/Bomjeton/BomjetonFace.png" id="30_20jwu"]
 [ext_resource type="Texture2D" uid="uid://yrblw4f5r4fv" path="res://Assets/Interface/MenuPokemon/Resume/BarreContourResume.png" id="30_ediv8"]
@@ -55,7 +51,37 @@
 [ext_resource type="Texture2D" uid="uid://clpttm2gjoffo" path="res://Assets/Interface/MenuPokemon/Resume/BoutonRetourSourisDessus.png" id="33_ediv8"]
 [ext_resource type="Texture2D" uid="uid://buvnklao20pck" path="res://Assets/Pokemon/Sinjypleur/SinjypleurDos.png" id="34_tag3l"]
 [ext_resource type="Texture2D" uid="uid://do1y6ytq4u43d" path="res://Assets/Pokemon/Cabufo/CabufoFace.png" id="36_ibrmr"]
+[ext_resource type="Texture2D" uid="uid://c0b17wk4eqh7w" path="res://Assets/Interface/MainMenu/Main_menu1.png" id="36_q66mb"]
 [ext_resource type="Texture2D" uid="uid://bbexnkrb64qk0" path="res://Assets/Pokemon/Cabufo/CabufoDos.png" id="37_5u2mo"]
+[ext_resource type="Texture2D" uid="uid://cc5p5mcufmmt0" path="res://Assets/Interface/MainMenu/Main_menu2.png" id="37_dmy24"]
+[ext_resource type="Texture2D" uid="uid://bcy1iftibbdrd" path="res://Assets/Interface/MainMenu/Main_menu3.png" id="38_je3ga"]
+[ext_resource type="Texture2D" uid="uid://bamvhdk6eqtqv" path="res://Assets/Interface/MainMenu/Main_menu4.png" id="39_86a52"]
+[ext_resource type="Texture2D" uid="uid://bwlofhyqut70e" path="res://Assets/Interface/MainMenu/Main_menu5.png" id="40_71rpj"]
+[ext_resource type="Texture2D" uid="uid://dpwbddrk02api" path="res://Assets/Interface/MainMenu/Main_menu6.png" id="41_40irl"]
+[ext_resource type="Texture2D" uid="uid://dp5owaneuc58k" path="res://Assets/Interface/MainMenu/Main_menu7.png" id="42_1y0xa"]
+[ext_resource type="Texture2D" uid="uid://bve6fmhrrad4h" path="res://Assets/Interface/MainMenu/Main_menu8.png" id="43_dq13u"]
+[ext_resource type="Texture2D" uid="uid://bpcq0bqamtijv" path="res://Assets/Interface/MainMenu/Main_menu9.png" id="44_8i56a"]
+[ext_resource type="Texture2D" uid="uid://covn1qhw8yojs" path="res://Assets/Interface/MainMenu/Main_menu10.png" id="45_x8d5j"]
+[ext_resource type="Texture2D" uid="uid://dklj0jhjep7ec" path="res://Assets/Interface/MainMenu/Main_menu11.png" id="46_15qxy"]
+[ext_resource type="Texture2D" uid="uid://bys526vad4ql8" path="res://Assets/Interface/MainMenu/Main_menu12.png" id="47_llcau"]
+[ext_resource type="Texture2D" uid="uid://r7dorg66qa60" path="res://Assets/Interface/MainMenu/Main_menu13.png" id="48_5krid"]
+[ext_resource type="Texture2D" uid="uid://c6df0impt0xnr" path="res://Assets/Interface/MainMenu/Main_menu14.png" id="49_tl1mc"]
+[ext_resource type="Texture2D" uid="uid://c382fmaj3owbh" path="res://Assets/Interface/MainMenu/Main_menu15.png" id="50_wagys"]
+[ext_resource type="Texture2D" uid="uid://c55npxmiqpor0" path="res://Assets/Interface/MainMenu/Main_menu16.png" id="51_lfee6"]
+[ext_resource type="Texture2D" uid="uid://d2kev37dv4x0s" path="res://Assets/Interface/MainMenu/Main_menu17.png" id="52_3mu66"]
+[ext_resource type="Texture2D" uid="uid://dakruw4rd7hwx" path="res://Assets/Interface/MainMenu/Main_menu19.png" id="54_ns0bq"]
+[ext_resource type="Texture2D" uid="uid://d2n1q504homot" path="res://Assets/Interface/MainMenu/Main_menu20.png" id="55_ixwgq"]
+[ext_resource type="Texture2D" uid="uid://bgd2kxf45n6hi" path="res://Assets/Interface/MainMenu/Main_menu21.png" id="56_kdr5y"]
+[ext_resource type="Texture2D" uid="uid://bm2ji5u8tdher" path="res://Assets/Interface/MainMenu/Main_menu22.png" id="57_168bq"]
+[ext_resource type="Texture2D" uid="uid://dg1d1jjrxyane" path="res://Assets/Interface/MainMenu/Main_menu23.png" id="58_mpy6k"]
+[ext_resource type="Texture2D" uid="uid://dbgdcfqdqi2u" path="res://Assets/Interface/MainMenu/Main_menu24.png" id="59_0sscw"]
+[ext_resource type="Texture2D" uid="uid://d3o4235a384kf" path="res://Assets/Interface/MainMenu/Main_menu25.png" id="60_76hys"]
+[ext_resource type="Texture2D" uid="uid://cly33c7i86qh" path="res://Assets/Interface/MainMenu/Main_menu26.png" id="61_050fk"]
+[ext_resource type="Texture2D" uid="uid://bwouswf8km8cs" path="res://Assets/Interface/MainMenu/Main_menu27.png" id="62_cmwer"]
+[ext_resource type="Texture2D" uid="uid://chbi54nh6l6wx" path="res://Assets/Interface/MainMenu/Main_menu28.png" id="63_vs275"]
+[ext_resource type="Texture2D" uid="uid://c2xbdkarnhvw0" path="res://Assets/Interface/MainMenu/Main_menu29.png" id="64_3kyet"]
+[ext_resource type="Texture2D" uid="uid://cfabjo7mf7n85" path="res://Assets/Interface/MainMenu/Main_menu30.png" id="65_i748f"]
+[ext_resource type="Texture2D" uid="uid://cuytjkecknpe1" path="res://Assets/Interface/MainMenu/Main_menu31.png" id="66_f6kb6"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qot0l"]
 radius = 0.19238281
@@ -79,11 +105,113 @@ texture = ExtResource("23_eisab")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ou8r4"]
 texture = ExtResource("27_ifajr")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hfy5n"]
-bg_color = Color(0.6748004, 0.5478027, 0.7106605, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aay3d"]
-bg_color = Color(1, 1, 1, 1)
+[sub_resource type="SpriteFrames" id="SpriteFrames_aek4d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("54_ns0bq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_ixwgq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_kdr5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_168bq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_mpy6k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_0sscw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_76hys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_050fk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_cmwer")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_vs275")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_3kyet")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_i748f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_f6kb6")
+}],
+"loop": true,
+"name": &"MainMenu",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("36_q66mb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_dmy24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_je3ga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_86a52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_71rpj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_40irl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_1y0xa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_dq13u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_8i56a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_x8d5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_15qxy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_llcau")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_5krid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_tl1mc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_wagys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_lfee6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_3mu66")
+}],
+"loop": false,
+"name": &"MainMenuIntro",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="Resource" id="Resource_voxsg"]
 script = ExtResource("5_vfha3")
@@ -127,7 +255,7 @@ modificateur1 = "+10%"
 stat2 = "vitesse"
 modificateur2 = "-10%"
 
-[sub_resource type="Resource" id="Resource_7l60e"]
+[sub_resource type="Resource" id="Resource_7y8wi"]
 script = ExtResource("9_8wwat")
 nom = "Pokéball"
 texture = ExtResource("22_8l02w")
@@ -135,33 +263,34 @@ description = "Cette Objet sert à capturer des Pokémons"
 capture = true
 nbPvSoigne = "0%"
 
-[sub_resource type="Resource" id="Resource_20jwu"]
+[sub_resource type="Resource" id="Resource_q66mb"]
 script = ExtResource("9_x6yq0")
-objet = SubResource("Resource_7l60e")
+objet = SubResource("Resource_7y8wi")
 quantite = 10
 
-[sub_resource type="Resource" id="Resource_5u2mo"]
+[sub_resource type="Resource" id="Resource_dmy24"]
 script = ExtResource("9_8wwat")
 nom = "Potion de soin"
 description = "Cette Objet sert à soigner des pokémons"
 soigne = true
 nbPvSoigne = "75%"
 
-[sub_resource type="Resource" id="Resource_qvqry"]
+[sub_resource type="Resource" id="Resource_je3ga"]
 script = ExtResource("9_x6yq0")
-objet = SubResource("Resource_5u2mo")
+objet = SubResource("Resource_dmy24")
 quantite = 5
 
-[sub_resource type="Resource" id="Resource_m3ql3"]
+[sub_resource type="Resource" id="Resource_86a52"]
 script = ExtResource("9_8wwat")
 nom = "Rappel"
+texture = ExtResource("22_8l02w")
 description = "Cette Objet sert à réanimer des Pokemons"
-soigne = true
+reanime = true
 nbPvSoigne = "25%"
 
-[sub_resource type="Resource" id="Resource_p2xxs"]
+[sub_resource type="Resource" id="Resource_71rpj"]
 script = ExtResource("9_x6yq0")
-objet = SubResource("Resource_m3ql3")
+objet = SubResource("Resource_86a52")
 quantite = 1
 
 [sub_resource type="Resource" id="Resource_8l02w"]
@@ -1906,7 +2035,6 @@ texture_hover = ExtResource("33_ediv8")
 stretch_mode = 0
 
 [node name="InterfaceMenuPrincipal" type="Control" parent="." unique_id=873146367]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -1915,193 +2043,19 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("27_7w3f3")
 
-[node name="Fond" type="Panel" parent="InterfaceMenuPrincipal" unique_id=1735464558]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_hfy5n")
-
-[node name="Titre" type="Label" parent="InterfaceMenuPrincipal" unique_id=1812456181]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="InterfaceMenuPrincipal" unique_id=1190697393]
 texture_filter = 1
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -112.0
-offset_top = 51.0
-offset_right = 111.5
-offset_bottom = 147.0
-grow_horizontal = 2
-theme_override_fonts/font = ExtResource("27_yqeg5")
-theme_override_font_sizes/font_size = 50
-text = "Godomon"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="TextureButton_Jouer" type="TextureButton" parent="InterfaceMenuPrincipal" unique_id=367538090]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = -92.0
-offset_right = 100.0
-offset_bottom = 8.0
-grow_horizontal = 2
-grow_vertical = 2
-texture_normal = ExtResource("23_5u2mo")
-texture_pressed = ExtResource("24_qvqry")
-texture_hover = ExtResource("25_m3ql3")
-stretch_mode = 0
-
-[node name="Label" type="Label" parent="InterfaceMenuPrincipal/TextureButton_Jouer" unique_id=972417181]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("13_byug1")
-theme_override_font_sizes/font_size = 25
-text = "Jouer"
-
-[node name="TextureButton_Credits" type="TextureButton" parent="InterfaceMenuPrincipal" unique_id=157252756]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = 33.0
-offset_right = 100.0
-offset_bottom = 133.0
-grow_horizontal = 2
-grow_vertical = 2
-texture_normal = ExtResource("23_5u2mo")
-texture_pressed = ExtResource("24_qvqry")
-texture_hover = ExtResource("25_m3ql3")
-stretch_mode = 0
-
-[node name="Label" type="Label" parent="InterfaceMenuPrincipal/TextureButton_Credits" unique_id=353977884]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("13_byug1")
-theme_override_font_sizes/font_size = 25
-text = "Crédits"
-
-[node name="TextureButton_Quitter" type="TextureButton" parent="InterfaceMenuPrincipal" unique_id=68476930]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = 158.0
-offset_right = 100.0
-offset_bottom = 258.0
-grow_horizontal = 2
-grow_vertical = 2
-texture_normal = ExtResource("23_5u2mo")
-texture_pressed = ExtResource("24_qvqry")
-texture_hover = ExtResource("25_m3ql3")
-stretch_mode = 0
-
-[node name="Label" type="Label" parent="InterfaceMenuPrincipal/TextureButton_Quitter" unique_id=787604615]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("13_byug1")
-theme_override_font_sizes/font_size = 25
-text = "Quitter"
-
-[node name="Credits" type="Panel" parent="InterfaceMenuPrincipal" unique_id=342497220]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_aay3d")
-
-[node name="TextureButton_RetourMenu" type="TextureButton" parent="InterfaceMenuPrincipal/Credits" unique_id=205692670]
-texture_filter = 1
-layout_mode = 1
-offset_left = 18.0
-offset_top = 21.0
-offset_right = 64.0
-offset_bottom = 71.0
-texture_normal = ExtResource("28_7w3f3")
-texture_pressed = ExtResource("28_7w3f3")
-texture_hover = ExtResource("28_7w3f3")
-stretch_mode = 0
-
-[node name="Label" type="Label" parent="InterfaceMenuPrincipal/Credits" unique_id=643319501]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 13
-anchor_left = 0.5
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -44.0
-offset_right = 44.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("29_4bkny")
-theme_override_font_sizes/font_size = 25
-text = "Endy TURRIN
-
-Tom BERCIER"
-horizontal_alignment = 1
-vertical_alignment = 1
+position = Vector2(576.50006, 324.5)
+scale = Vector2(2.41875, 2.4555552)
+sprite_frames = SubResource("SpriteFrames_aek4d")
+animation = &"MainMenuIntro"
+autoplay = "MainMenuIntro"
 
 [node name="Paramètre" type="Node3D" parent="." unique_id=256808770]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.128716, 0.85703945, 3.5622892)
 script = ExtResource("4_dgiq7")
 listeDesNatures = Array[ExtResource("5_vfha3")]([SubResource("Resource_voxsg"), SubResource("Resource_l88oo"), SubResource("Resource_8i4vk"), SubResource("Resource_4wxh0"), SubResource("Resource_vpkbl"), SubResource("Resource_vaoup")])
-listeDesObjets = Array[ExtResource("9_x6yq0")]([SubResource("Resource_20jwu"), SubResource("Resource_qvqry"), SubResource("Resource_p2xxs")])
+listeDesObjets = Array[ExtResource("9_x6yq0")]([SubResource("Resource_q66mb"), SubResource("Resource_je3ga"), SubResource("Resource_71rpj")])
 listePokemons = Array[ExtResource("11_voxsg")]([SubResource("Resource_8l02w"), SubResource("Resource_jwxpu"), SubResource("Resource_ibrmr"), SubResource("Resource_yqeg5"), SubResource("Resource_7w3f3"), SubResource("Resource_hfy5n")])
 listeDesTypes = Array[ExtResource("12_tjr8v")]([SubResource("Resource_byug1"), SubResource("Resource_r2s0p"), SubResource("Resource_x7wka"), SubResource("Resource_qot0l"), SubResource("Resource_lpfrn"), SubResource("Resource_dekyc")])
 listeDesAttaques = Array[ExtResource("13_voxsg")]([SubResource("Resource_eqwqj"), SubResource("Resource_o1h8p"), SubResource("Resource_g565v"), SubResource("Resource_loqtx"), SubResource("Resource_owyk3"), SubResource("Resource_tag3l"), SubResource("Resource_4bkny")])
@@ -2124,7 +2078,3 @@ camera_attributes = SubResource("CameraAttributesPhysical_r2s0p")
 [connection signal="pressed" from="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" method="_on_pressed"]
 [connection signal="pressed" from="InterfaceMenu/MenuPokemon/TextureButton_Equipe" to="InterfaceMenu/MenuPokemon/TextureButton_Equipe" method="_on_menu_pokemon_pressed"]
 [connection signal="pressed" from="InterfaceMenu/MenuPokemon/Resume/TextureButton_PokemonRetour" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" method="_on_pressed"]
-[connection signal="pressed" from="InterfaceMenuPrincipal/TextureButton_Jouer" to="InterfaceMenuPrincipal" method="_jouer"]
-[connection signal="pressed" from="InterfaceMenuPrincipal/TextureButton_Credits" to="InterfaceMenuPrincipal" method="_afficherCrédits"]
-[connection signal="pressed" from="InterfaceMenuPrincipal/TextureButton_Quitter" to="InterfaceMenuPrincipal" method="_quitter"]
-[connection signal="pressed" from="InterfaceMenuPrincipal/Credits/TextureButton_RetourMenu" to="InterfaceMenuPrincipal" method="_afficherCrédits"]

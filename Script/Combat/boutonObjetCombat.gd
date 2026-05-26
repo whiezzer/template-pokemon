@@ -37,22 +37,13 @@ func _on_button_pressed() -> void:
 		menuAttaque.visible = true
 		menuObjet.visible = false
 	
-	objet.quantite -= 1
-	combat.enCoursDeTour = true
-	
-	combat.ecrire_texte(combat.message, "Vous utilisez un " + objet.objet.nom)
-	await get_tree().create_timer(2.0).timeout
-	
 	if objet.objet.capture == true:
 		combat.ecrire_texte(combat.message, "Vous tentez de capturer un " + dataDuJeu.pokemonEnnemiStats.nom + " sauvage")
 		await _capture()
 	elif objet.objet.reanime == true:
-		combat.ecrire_texte(combat.message, "Vous reanimez " + dataDuJeu.pokemonJoueurStats.nom)
+		await _choixPokemon()
 	elif objet.objet.soigne == true:
-		combat.ecrire_texte(combat.message, "Vous soignez " + dataDuJeu.pokemonJoueurStats.nom + " de " + str(dataDuJeu.pokemonJoueurStats.pv * int(objet.objet.nbPvSoigne.substr(0, objet.objet.nbPvSoigne.length() - 1)) / 100) + " points de vies")
-		dataDuJeu.pokemonJoueurStats.pv_Actuels += dataDuJeu.pokemonJoueurStats.pv * int(objet.objet.nbPvSoigne.substr(0, objet.objet.nbPvSoigne.length() - 1)) / 100
-		if dataDuJeu.pokemonJoueurStats.pv_Actuels > dataDuJeu.pokemonJoueurStats.pv:
-			dataDuJeu.pokemonJoueurStats.pv_Actuels = dataDuJeu.pokemonJoueurStats.pv
+		await _choixPokemon()
 	
 	if combat.enCoursDeTour == true:
 		await get_tree().create_timer(2.0).timeout
@@ -71,6 +62,9 @@ func _on_mouse_entered() -> void:
 
 func _capture() -> void:
 	
+	objet.quantite -= 1
+	combat.enCoursDeTour = true
+	
 	var resultat = randf() * (100.0 * (dataDuJeu.pokemonEnnemiStats.pv_Actuels / dataDuJeu.pokemonEnnemiStats.pv * 1))
 	
 	get_tree().current_scene.get_node_or_null("PokemonEnnemi/AnimatedSpriteAttaque").play("Pokeball")
@@ -81,6 +75,8 @@ func _capture() -> void:
 		await get_tree().current_scene.get_node_or_null("PokemonEnnemi/AnimatedSpriteAttaque").animation_finished
 		
 		combat.ecrire_texte(combat.message, "Bravo ! Vous avez attrapé un " + dataDuJeu.pokemonEnnemiStats.nom + " sauvage")
+		get_tree().current_scene.get_node("AudioMusique3D").stream = load("res://Assets/Son/Combat/Victoire.mp3")
+		get_tree().current_scene.get_node("AudioMusique3D").play()
 		
 		while not Input.is_action_just_pressed("ui_accept"):
 			await get_tree().process_frame
@@ -110,3 +106,7 @@ func _capture() -> void:
 		combat.ecrire_texte(combat.message, "Ca a raté ..")
 		
 		await get_tree().create_timer(1.0).timeout
+
+func _choixPokemon() -> void:
+	await ecran_de_transition._fondu("InterfacePokemon")
+	dataDuJeu.objetUtilisé = objet

@@ -3,6 +3,8 @@ extends Node3D
 
 var menuPrincipalActif : bool = true
 
+var objetUtilisé : ObjetInventaire
+
 # Fonction qui crée des boutons d'objets dans le menu objets par rapport au nombre d'objets dans la ListeDesObjets
 func _créerBoutonsMenuObjet() -> void:
 	var positionBoutonObjets = Vector2(150.0, 142.0)
@@ -60,7 +62,7 @@ func _creer_liste_objets_base() -> Array[ObjetInventaire]:
 	return [
 		ObjetInventaire.new(Objet.new("Pokéball", load("res://Assets/Objets/Pokeballs/Pokeball attraper57.png") , "Cette Objet sert à capturer des Pokémons", true, false, false, "0%"), 10),
 		ObjetInventaire.new(Objet.new("Potion de soin", null ,"Cette Objet sert à soigner des pokémons", false, false, true, "75%"), 5),
-		ObjetInventaire.new(Objet.new("Rappel", null, "Cette Objet sert à réanimer des Pokemons", false, true, true, "25%"), 1)
+		ObjetInventaire.new(Objet.new("Rappel", null, "Cette Objet sert à réanimer des Pokemons", false, true, false, "25%"), 1)
 	]
 
 # Liste de base de 3 types avec leurs valeurs par défaut

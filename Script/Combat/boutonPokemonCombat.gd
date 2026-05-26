@@ -36,7 +36,7 @@ func _physics_process(delta: float) -> void:
 		get_node("Label_PV").text = str(pokemon.pv_Actuels) + "/" + str(pokemon.pv)
 
 func _on_pressed() -> void:
-	if pokemon != null:
+	if pokemon != null && dataDuJeu.objetUtilisé == null:
 			boutonActif = self
 			
 			if boutonActif.pokemon.pv_Actuels <= 0 || boutonActif.pokemon == dataDuJeu.pokemonJoueurStats:
@@ -44,8 +44,25 @@ func _on_pressed() -> void:
 				return
 			
 			get_parent().get_node("PopUp-Confirmation").visible = true
+	
+	if pokemon != null && dataDuJeu.objetUtilisé.objet.reanime && pokemon.pv_Actuels <= 0:
+		boutonActif = self
+		get_parent().get_node("PopUp-Confirmation").visible = true
+	
+	if pokemon != null && dataDuJeu.objetUtilisé.objet.soigne && pokemon.pv_Actuels > 0:
+		boutonActif = self
+		get_parent().get_node("PopUp-Confirmation").visible = true
 
 func _confirmer() -> void:
+	
+	if dataDuJeu.objetUtilisé.objet.reanime:
+		_reanime()
+	elif dataDuJeu.objetUtilisé.objet.soigne:
+		_soigne()
+	else:
+		_changer()
+
+func _changer() -> void:
 	
 	get_parent().get_node("PopUp-Confirmation").visible = false
 	get_parent().visible = false
@@ -76,6 +93,62 @@ func _confirmer() -> void:
 	boutonActif = null
 	
 	combat.ecrire_texte(combat.message, "Choisissez une action")
+
+func _reanime() -> void:
+	get_parent().get_node("PopUp-Confirmation").visible = false
+	get_parent().visible = false
+	get_tree().current_scene.get_node("InterfaceCombat").visible = true
+	
+	combat.ecrire_texte(combat.message, "Vous utilisez un/une " +dataDuJeu.objetUtilisé.objet.nom)
+	
+	await get_tree().create_timer(2.0).timeout
+	
+	combat.ecrire_texte(combat.message, "Vous réanimez " + boutonActif.pokemon.nom)
+	
+	boutonActif.pokemon.pv_Actuels = boutonActif.pokemon.pv * int(dataDuJeu.objetUtilisé.objet.nbPvSoigne.substr(0, dataDuJeu.objetUtilisé.objet.nbPvSoigne.length() - 1)) / 100
+	
+	combat.enCoursDeTour = false
+	combat.tourDuJoueur = false
+	
+	await combat._tourAdverse()
+	
+	combat.tourDuJoueur = true
+	boutonActif = null
+	
+	combat.ecrire_texte(combat.message, "Choisissez une action")
+	
+	dataDuJeu.objetUtilisé = null
+
+func _soigne() -> void:
+	get_parent().get_node("PopUp-Confirmation").visible = false
+	get_parent().visible = false
+	get_tree().current_scene.get_node("InterfaceCombat").visible = true
+	
+	dataDuJeu.objetUtilisé.quantite -= 1
+	combat.enCoursDeTour = true
+	
+	combat.ecrire_texte(combat.message, "Vous utilisez un/une " +dataDuJeu.objetUtilisé.objet.nom)
+	
+	await get_tree().create_timer(2.0).timeout
+	
+	combat.ecrire_texte(combat.message, "Vous soignez " + boutonActif.pokemon.nom + " de " + str(boutonActif.pokemon.pv * int(dataDuJeu.objetUtilisé.objet.nbPvSoigne.substr(0, dataDuJeu.objetUtilisé.objet.nbPvSoigne.length() - 1)) / 100) + " points de vies")
+	
+	boutonActif.pokemon.pv_Actuels += boutonActif.pokemon.pv * int(dataDuJeu.objetUtilisé.objet.nbPvSoigne.substr(0, dataDuJeu.objetUtilisé.objet.nbPvSoigne.length() - 1)) / 100
+	
+	if boutonActif.pokemon.pv_Actuels > boutonActif.pokemon.pv:
+		boutonActif.pokemon.pv_Actuels = boutonActif.pokemon.pv
+	
+	combat.enCoursDeTour = false
+	combat.tourDuJoueur = false
+	
+	await combat._tourAdverse()
+	
+	combat.tourDuJoueur = true
+	boutonActif = null
+	
+	combat.ecrire_texte(combat.message, "Choisissez une action")
+	
+	dataDuJeu.objetUtilisé = null
 
 func _annuler() -> void:
 	get_parent().get_node("PopUp-Confirmation").visible = false

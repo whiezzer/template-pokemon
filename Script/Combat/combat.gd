@@ -45,6 +45,8 @@ func  _ready() -> void:
 	
 	await get_tree().create_timer(2.0).timeout
 	
+	$PokemonEnnemi._play(pokemonEnnemi.crie)
+	
 	$PokemonJoueur/AnimatedSpriteAttaque.play("Intro_Lenotre")
 	
 	await $PokemonJoueur/AnimatedSpriteAttaque.animation_finished
@@ -53,9 +55,7 @@ func  _ready() -> void:
 	
 	ecrire_texte(message, "Début du combat")
 	
-	await get_tree().create_timer(1.0).timeout
-	
-	$PokemonEnnemi._play(pokemonEnnemi.crie)
+	$PokemonEnnemi._play(pokemonJoueur.crie)
 	
 	await get_tree().create_timer(1.0).timeout
 	
@@ -272,6 +272,8 @@ func _finDeTour() -> void :
 		
 		finCombat = true
 		ecrire_texte(message, "[color=blue]Victoire ![/color]")
+		get_tree().current_scene.get_node("AudioMusique3D").stream = load("res://Assets/Son/Combat/Victoire.mp3")
+		get_tree().current_scene.get_node("AudioMusique3D").play()
 		
 		while not Input.is_action_just_pressed("ui_accept"):
 			await get_tree().process_frame
@@ -295,6 +297,7 @@ func _finDeTour() -> void :
 		
 		finCombat = true
 		ecrire_texte(message, "[color=red]Défaite[/color]")
+		await ecran_de_transition._fonduEnFermetureAudio(get_tree().current_scene.get_node("AudioMusique3D"), 1.0)
 		
 		while not Input.is_action_just_pressed("ui_accept"):
 			await get_tree().process_frame
