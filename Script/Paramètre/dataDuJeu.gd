@@ -89,7 +89,7 @@ func _creer_liste_attaques_base() -> Array[Attaque]:
 		listeDeBase.append(Attaque.new("Attaque" + type.nom, type.nom))
 	return listeDeBase
 
-@export_category("Paramètres des natures des pokémons")
+@export_category("Paramètres des natures des Godomons")
 # Liste de toutes les natures possibles visibles et modifiables dans l’inspecteur
 @export var listeDesNatures : Array[NatureStat] = []:
 	set(value):
@@ -129,7 +129,7 @@ func _verifierObjets() -> void:
 			if listeDesObjets[i] == null:
 				listeDesObjets[i] = ObjetInventaire.new()
 
-@export_category("Paramètres des Pokémons")
+@export_category("Paramètres des Godomons")
 # Liste des Pokémons visibles et modifiables dans l’inspecteur
 @export var listePokemons: Array[PokemonData] = []:
 	set(value):
@@ -232,7 +232,6 @@ func _verifierAttaques() -> void:
 
 var _type_index_pokemons_joueurs : int = 0
 
-@export_category("Pokémon de départ du joueur")
 # Pokémon de départ du joueur visible et modifiable dans l’inspecteur
 var pokemonJoueurStats: PokemonData:
 	get:
@@ -271,6 +270,40 @@ var listePokemonsJoueur: Array[PokemonData] = []
 var pokemonEnnemiStats: PokemonData
 
 var listePokemonsEnnemie: Array[PokemonData] = []
+
+@export_category("Paramétres Audios")
+@export var musiqueMenu : AudioStream:
+	set(value):
+		if value == null:
+			musiqueMenu = load("res://Assets/Son/menu/musiqueMenu.mp3")
+		else:
+			musiqueMenu = value
+@export var musiquePrincipal : AudioStream:
+	set(value):
+		if value == null:
+			musiquePrincipal = load("res://Assets/Son/environnement/musique_Environnement.mp3")
+		else:
+			musiquePrincipal = value
+@export var musiqueCombat : AudioStream:
+	set(value):
+		if value == null:
+			musiqueCombat = load("res://Assets/Son/Combat/musique_Fight.mp3")
+		else:
+			musiqueCombat = value
+@export var musiqueTransitionCombat : AudioStream:
+	set(value):
+		if value == null:
+			musiqueTransitionCombat = load("res://Assets/Son/Combat/son_TransitionCombat.wav")
+		else:
+			musiqueTransitionCombat = value
+@export var musiqueVictoire : AudioStream:
+	set(value):
+		if value == null:
+			musiqueVictoire = load("res://Assets/Son/Combat/Victoire.mp3")
+		else:
+			musiqueVictoire = value
+
+@export_category("Godomon de départ")
 
 # Injecte listeDesTypes dans chaque Pokémon pour que l'enum soit visible
 func _injecterTypesDansPokemons() -> void:
@@ -319,3 +352,9 @@ func _enter_tree() -> void:
 	
 	if dataDuJeu.menuPrincipalActif:
 		get_tree().current_scene.get_node("InterfaceMenuPrincipal").visible = true
+	
+	dataDuJeu.musiqueMenu = ref.musiqueMenu
+	dataDuJeu.musiquePrincipal = ref.musiquePrincipal
+	dataDuJeu.musiqueCombat = ref.musiqueCombat
+	dataDuJeu.musiqueTransitionCombat = ref.musiqueTransitionCombat
+	dataDuJeu.musiqueVictoire = ref.musiqueVictoire

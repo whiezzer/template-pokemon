@@ -3,13 +3,16 @@ extends Node
 func _ready() -> void:
 	if dataDuJeu.menuPrincipalActif:
 		_lancerMenu()
+	else:
+		get_tree().current_scene.get_node("AudioMusique3D").stream = dataDuJeu.musiquePrincipal
+		get_tree().current_scene.get_node("AudioMusique3D").play()
 
 func _physics_process(delta: float) -> void:
 	if !dataDuJeu.menuPrincipalActif:
 		self.visible = false
 
 func _lancerMenu() -> void:
-	get_tree().current_scene.get_node("AudioMusique3D").stream = load("res://Assets/Son/menu/musiqueMenu.mp3")
+	get_tree().current_scene.get_node("AudioMusique3D").stream = dataDuJeu.musiqueMenu
 	get_tree().current_scene.get_node("AudioMusique3D").play()
 	await get_node("AnimatedSprite2D").animation_finished
 	get_node("AnimatedSprite2D").play("MainMenu")

@@ -85,6 +85,10 @@
 [ext_resource type="Texture2D" uid="uid://cfabjo7mf7n85" path="res://Assets/Interface/MainMenu/Main_menu30.png" id="65_i748f"]
 [ext_resource type="Texture2D" uid="uid://cuytjkecknpe1" path="res://Assets/Interface/MainMenu/Main_menu31.png" id="66_f6kb6"]
 [ext_resource type="AudioStream" uid="uid://c85gut6g8rjw1" path="res://Assets/Son/Crie de pokemon/Crie1.wav" id="72_q66mb"]
+[ext_resource type="AudioStream" uid="uid://rkg02i1mk08c" path="res://Assets/Son/menu/musiqueMenu.mp3" id="86_86a52"]
+[ext_resource type="AudioStream" uid="uid://bmrm5hed5cvcm" path="res://Assets/Son/Combat/musique_Fight.mp3" id="87_71rpj"]
+[ext_resource type="AudioStream" uid="uid://2irc74i8b32a" path="res://Assets/Son/Combat/son_TransitionCombat.wav" id="88_1y0xa"]
+[ext_resource type="AudioStream" uid="uid://b48h0vkjkn7a5" path="res://Assets/Son/Combat/Victoire.mp3" id="89_dq13u"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qot0l"]
 radius = 0.19238281
@@ -484,7 +488,6 @@ shadow_enabled = true
 
 [node name="AudioMusique3D" type="AudioStreamPlayer3D" parent="." unique_id=1103463198]
 process_mode = 3
-stream = ExtResource("1_x7wka")
 autoplay = true
 
 [node name="Joueur" parent="." unique_id=1292424602 instance=ExtResource("1_wg3re")]
@@ -2060,6 +2063,11 @@ listeDesObjets = Array[ExtResource("9_x6yq0")]([SubResource("Resource_q66mb"), S
 listePokemons = Array[ExtResource("11_voxsg")]([SubResource("Resource_40irl"), SubResource("Resource_1y0xa"), SubResource("Resource_dq13u"), SubResource("Resource_8i56a"), SubResource("Resource_tl1mc")])
 listeDesTypes = Array[ExtResource("12_tjr8v")]([SubResource("Resource_x8d5j"), SubResource("Resource_15qxy"), SubResource("Resource_llcau"), SubResource("Resource_5krid"), SubResource("Resource_wagys")])
 listeDesAttaques = Array[ExtResource("13_voxsg")]([SubResource("Resource_lfee6"), SubResource("Resource_3mu66"), SubResource("Resource_b0uwa"), SubResource("Resource_ns0bq"), SubResource("Resource_ixwgq")])
+musiqueMenu = ExtResource("86_86a52")
+musiquePrincipal = ExtResource("1_x7wka")
+musiqueCombat = ExtResource("87_71rpj")
+musiqueTransitionCombat = ExtResource("88_1y0xa")
+musiqueVictoire = ExtResource("89_dq13u")
 _type_index_pokemons_joueurs = 4
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2071441840]

@@ -35,6 +35,9 @@ func _enter_tree() -> void:
 	message = $InterfaceCombat/ZoneDeTexte
 	
 	_misAJourInterface()
+	
+	get_tree().current_scene.get_node("AudioMusique3D").stream = dataDuJeu.musiqueCombat
+	get_tree().current_scene.get_node("AudioMusique3D").play()
 
 # Fonction appellé au lancement du combat
 func  _ready() -> void:
@@ -305,7 +308,7 @@ func _finDeTour() -> void :
 		
 		finCombat = true
 		ecrire_texte(message, "[color=red]Défaite[/color]")
-		await ecran_de_transition._fonduEnFermetureAudio(get_tree().current_scene.get_node("AudioMusique3D"), 1.0)
+		await ecran_de_transition._fonduEnFermetureAudio(get_tree().current_scene.get_node("AudioMusique3D"), 1.0, dataDuJeu.musiqueVictoire)
 		
 		$InterfaceCombat/AnimatedSprite2D.visible = true
 		

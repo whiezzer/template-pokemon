@@ -112,9 +112,9 @@ func creer_bouton(index: int, text: String) -> void:
 	label.add_theme_font_size_override("font_size", 30)
 	label.add_theme_font_override("font", preload("res://Assets/Text/pixel_operator/PixelOperator.ttf"))
 	label.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
-	button.texture_normal = preload("res://Assets/Interface/BoutonOuiNon/NonBouton.png")
-	button.texture_pressed = preload("res://Assets/Interface/BoutonOuiNon/NonCliquer.png")
-	button.texture_hover = preload("res://Assets/Interface/BoutonOuiNon/NonSouris.png")
+	button.texture_normal = preload("res://Assets/Interface/BoutonDialogue/DialogueBouton.png")
+	button.texture_pressed = preload("res://Assets/Interface/BoutonDialogue/DialogueBoutonAppuyer.png")
+	button.texture_hover = preload("res://Assets/Interface/BoutonDialogue/DialogueBoutonSouris.png")
 	button.pressed.connect(_choisir.bind(index))
 	button.custom_minimum_size = Vector2(210, 50)
 	button.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST

@@ -91,15 +91,13 @@ func _input(event):
 		if menu.visible == false:
 			pause = true
 			ecran_de_transition._fondu("InterfaceMenu", 0.5)
-			await ecran_de_transition._fonduEnFermetureAudio(get_tree().current_scene.get_node("AudioMusique3D"), 1.0)
-			get_tree().current_scene.get_node("AudioMusique3D").stream = load("res://Assets/Son/menu/musiqueMenu.mp3")
+			await ecran_de_transition._fonduEnFermetureAudio(get_tree().current_scene.get_node("AudioMusique3D"), 1.0, dataDuJeu.musiqueMenu)
 			get_tree().current_scene.get_node("AudioMusique3D").play()
 			ecran_de_transition._fonduEnOuvertureAudio(get_tree().current_scene.get_node("AudioMusique3D"), 1.0)
 			
 		else:
 			ecran_de_transition._fondu("InterfaceMenu", 0.5)
-			await ecran_de_transition._fonduEnFermetureAudio(get_tree().current_scene.get_node("AudioMusique3D"), 1.0)
-			get_tree().current_scene.get_node("AudioMusique3D").stream = load("res://Assets/Son/environnement/musique_Environnement.mp3")
+			await ecran_de_transition._fonduEnFermetureAudio(get_tree().current_scene.get_node("AudioMusique3D"), 1.0, dataDuJeu.musiquePrincipal)
 			get_tree().current_scene.get_node("AudioMusique3D").play()
 			ecran_de_transition._fonduEnOuvertureAudio(get_tree().current_scene.get_node("AudioMusique3D"), 1.0)
 			menu.get_node("MenuObjet").visible = false
