@@ -28,7 +28,9 @@
 [ext_resource type="FontFile" uid="uid://dc50vx3jow8oc" path="res://Assets/Text/pixel_operator/PixelOperatorMono.ttf" id="13_byug1"]
 [ext_resource type="Texture2D" uid="uid://wio1k2unaquj" path="res://Assets/Interface/Combat/Bouton Sac2.png" id="13_g565v"]
 [ext_resource type="Script" uid="uid://d1hg32m277mqs" path="res://Script/Pokémon/attaque.gd" id="13_voxsg"]
+[ext_resource type="Texture2D" uid="uid://dqooe18ebh55o" path="res://Assets/Interface/triangle/triangle1.png" id="14_je3ga"]
 [ext_resource type="Texture2D" uid="uid://v3vth8p1m1ai" path="res://Assets/Interface/Combat/Bouton Sac3.png" id="14_loqtx"]
+[ext_resource type="Texture2D" uid="uid://bq3fju46c2ryt" path="res://Assets/Interface/triangle/triangle2.png" id="15_86a52"]
 [ext_resource type="AudioStream" uid="uid://di8icu8bcojx7" path="res://Assets/Son/Crie de pokemon/Bomjeton_CRIE.wav" id="21_byug1"]
 [ext_resource type="Texture2D" uid="uid://42cyq4mo2eil" path="res://Assets/Objets/Pokeballs/Pokeball attraper56.png" id="22_8l02w"]
 [ext_resource type="Texture2D" uid="uid://bfkyd0jctjccn" path="res://Assets/Interface/MenuPokemon/Pokemon/Fond.png" id="23_eisab"]
@@ -93,6 +95,25 @@ size = Vector3(0.41674805, 1, 0.7089844)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_uv6h7"]
 size = Vector2(18, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_71rpj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_je3ga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_86a52")
+}],
+"loop": true,
+"name": &"Triangle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_byug1"]
 bg_color = Color(0.99154645, 0.8486456, 0.850721, 1)
@@ -1103,19 +1124,28 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="InterfaceDialogue/Choix" unique_id=1244270028]
+[node name="VBoxContainer" type="VBoxContainer" parent="InterfaceDialogue/Choix" unique_id=859327047]
 layout_mode = 1
-anchors_preset = 12
+anchors_preset = 3
+anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 67.0
-offset_top = -84.0
-offset_right = -298.0
-offset_bottom = -34.0
-grow_horizontal = 2
+offset_left = -236.0
+offset_top = -120.0
+offset_right = -31.0
+offset_bottom = -23.0
+grow_horizontal = 0
 grow_vertical = 0
-theme_override_constants/separation = 50
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="InterfaceDialogue" unique_id=1270580205]
+visible = false
+texture_filter = 1
+position = Vector2(853.625, 599.125)
+scale = Vector2(4.9642897, 5.7083306)
+sprite_frames = SubResource("SpriteFrames_71rpj")
+animation = &"Triangle"
+autoplay = "Triangle"
 
 [node name="InterfaceMenu" type="Control" parent="." unique_id=1477991696]
 visible = false
@@ -2005,6 +2035,7 @@ texture_hover = ExtResource("33_ediv8")
 stretch_mode = 0
 
 [node name="InterfaceMenuPrincipal" type="Control" parent="." unique_id=873146367]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

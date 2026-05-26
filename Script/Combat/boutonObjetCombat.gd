@@ -78,8 +78,12 @@ func _capture() -> void:
 		get_tree().current_scene.get_node("AudioMusique3D").stream = load("res://Assets/Son/Combat/Victoire.mp3")
 		get_tree().current_scene.get_node("AudioMusique3D").play()
 		
+		combat.get_node("InterfaceCombat/AnimatedSprite2D").visible = true
+		
 		while not Input.is_action_just_pressed("ui_accept"):
 			await get_tree().process_frame
+		
+		combat.get_node("InterfaceCombat/AnimatedSprite2D").visible = false
 		
 		var nouveauPokemon = dataDuJeu.pokemonEnnemiStats.duplicate(true)
 		nouveauPokemon._listeDesTypes = dataDuJeu.listeDesTypes

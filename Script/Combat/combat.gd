@@ -275,8 +275,12 @@ func _finDeTour() -> void :
 		get_tree().current_scene.get_node("AudioMusique3D").stream = load("res://Assets/Son/Combat/Victoire.mp3")
 		get_tree().current_scene.get_node("AudioMusique3D").play()
 		
+		$InterfaceCombat/AnimatedSprite2D.visible = true
+		
 		while not Input.is_action_just_pressed("ui_accept"):
 			await get_tree().process_frame
+		
+		$InterfaceCombat/AnimatedSprite2D.visible = false
 		
 		pokemonJoueur.xp += 250 * pokemonEnnemi.lvl
 		
@@ -284,8 +288,12 @@ func _finDeTour() -> void :
 		
 		_misAJourInterface()
 		
+		$InterfaceCombat/AnimatedSprite2D.visible = true
+		
 		while not Input.is_action_just_pressed("ui_accept"):
 			await get_tree().process_frame
+		
+		$InterfaceCombat/AnimatedSprite2D.visible = false
 		
 		dataDuJeu.listePokemonsEnnemie.clear()
 		dataDuJeu.listeDesDresseurs[dataDuJeu.adversaire] = true
@@ -299,8 +307,12 @@ func _finDeTour() -> void :
 		ecrire_texte(message, "[color=red]Défaite[/color]")
 		await ecran_de_transition._fonduEnFermetureAudio(get_tree().current_scene.get_node("AudioMusique3D"), 1.0)
 		
+		$InterfaceCombat/AnimatedSprite2D.visible = true
+		
 		while not Input.is_action_just_pressed("ui_accept"):
 			await get_tree().process_frame
+		
+		$InterfaceCombat/AnimatedSprite2D.visible = false
 		
 		for pokemon in dataDuJeu.listePokemonsJoueur:
 			pokemon.pv_Actuels = pokemon.pv

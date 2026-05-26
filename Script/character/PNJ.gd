@@ -3,7 +3,7 @@ extends Area3D
 var dialogue: RichTextLabel
 var menuDialogue: Control
 var joueur: CharacterBody3D
-var conteneur: HBoxContainer
+var conteneur: VBoxContainer
 
 var proche: bool = false
 var enDialogue: bool = false
@@ -18,7 +18,7 @@ func _ready() -> void:
 	menuDialogue = get_tree().current_scene.get_node("InterfaceDialogue")
 	joueur = get_tree().current_scene.get_node("Joueur")
 	textes = load("res://Script/Dialogue/" + get_parent().name + ".json").data
-	conteneur = get_tree().current_scene.get_node("InterfaceDialogue/Choix/HBoxContainer")
+	conteneur = get_tree().current_scene.get_node("InterfaceDialogue/Choix/VBoxContainer")
 	_choisitID("intro")
 
 func _physics_process(delta: float) -> void:
@@ -35,8 +35,14 @@ func _lireTexte() -> void:
 	if line_index < node["lines"].size():
 		await _ecrireTexte(dialogue, node["lines"][line_index])
 		line_index += 1
+		
+		get_tree().current_scene.get_node("InterfaceDialogue/AnimatedSprite2D").visible = true
+		
 		while not Input.is_action_just_pressed("ui_accept"):
 			await get_tree().process_frame
+		
+		get_tree().current_scene.get_node("InterfaceDialogue/AnimatedSprite2D").visible = false
+		
 		_lireTexte()
 	else:
 		_lireChoix()
@@ -99,18 +105,29 @@ func _lancer_combat():
 
 # Fonction qui crée un bouton
 func creer_bouton(index: int, text: String) -> void:
-	var button = Button.new()
-	button.text = text
-	button.add_theme_color_override("font_color", Color.BLACK)
-	button.add_theme_font_size_override("font_size", 30)
-	button.add_theme_font_override("font", preload("res://Assets/Text/pixel_operator/PixelOperator.ttf"))
-	var style = StyleBoxTexture.new()
-	style.texture = preload("res://Assets/Interface/Combat/Bouton attaque normal.png")
-	button.add_theme_stylebox_override("normal", style)
+	var button = TextureButton.new()
+	var label = Label.new()
+	label.text = text
+	label.add_theme_color_override("font_color", Color.BLACK)
+	label.add_theme_font_size_override("font_size", 30)
+	label.add_theme_font_override("font", preload("res://Assets/Text/pixel_operator/PixelOperator.ttf"))
+	label.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	button.texture_normal = preload("res://Assets/Interface/BoutonOuiNon/NonBouton.png")
+	button.texture_pressed = preload("res://Assets/Interface/BoutonOuiNon/NonCliquer.png")
+	button.texture_hover = preload("res://Assets/Interface/BoutonOuiNon/NonSouris.png")
 	button.pressed.connect(_choisir.bind(index))
-	button.custom_minimum_size.x = 250
+	button.custom_minimum_size = Vector2(210, 50)
 	button.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	button.stretch_mode = TextureButton.STRETCH_SCALE
 	conteneur.add_child(button)
+	button.add_child(label)
+	label.set_anchors_preset(Control.PRESET_FULL_RECT)
+	label.offset_left = 0
+	label.offset_top = 0
+	label.offset_right = 0
+	label.offset_bottom = 0
+	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 
 # Fonction qui choisit l'ID du texte à utiliser
 func _choisitID(value: String) -> void:

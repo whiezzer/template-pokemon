@@ -23,9 +23,11 @@
 [ext_resource type="Texture2D" uid="uid://1mwb6idkhw5k" path="res://Assets/Interface/Combat/BARRE DE VIE DESSUS CONTOUR.png" id="17_yscag"]
 [ext_resource type="PackedScene" uid="uid://n4ylffjxxqsr" path="res://Assets/Model 3D/Dessou_Pokemon.glb" id="18_a7dcr"]
 [ext_resource type="Texture2D" uid="uid://wio1k2unaquj" path="res://Assets/Interface/Combat/Bouton Sac2.png" id="18_x7ml0"]
+[ext_resource type="Texture2D" uid="uid://dqooe18ebh55o" path="res://Assets/Interface/triangle/triangle1.png" id="19_0vcqs"]
 [ext_resource type="Texture2D" uid="uid://v3vth8p1m1ai" path="res://Assets/Interface/Combat/Bouton Sac3.png" id="19_4p0ui"]
 [ext_resource type="PackedScene" uid="uid://vmf5a4fm2h14" path="res://Assets/Model 3D/Foret.glb" id="19_5i64c"]
 [ext_resource type="PackedScene" uid="uid://dsqrlgbhculpi" path="res://Assets/Model 3D/Foret_Fond_Montagne.glb" id="20_3mx84"]
+[ext_resource type="Texture2D" uid="uid://bq3fju46c2ryt" path="res://Assets/Interface/triangle/triangle2.png" id="20_7ldkh"]
 [ext_resource type="PackedScene" uid="uid://dwnc68cgc8td2" path="res://Assets/Model 3D/Montagne.glb" id="21_2gylr"]
 [ext_resource type="AudioStream" uid="uid://c2krnnpewo88u" path="res://Assets/Son/menu/son_MenuButton.mp3" id="22_td06p"]
 [ext_resource type="Texture2D" uid="uid://yump20xf8un3" path="res://Assets/Interface/Combat/Bouton Pokemon2.png" id="22_xq0oq"]
@@ -47,6 +49,25 @@
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3mx84"]
 texture = ExtResource("5_1fio0")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fvri4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_0vcqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_7ldkh")
+}],
+"loop": true,
+"name": &"Triangle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xhw2v"]
 texture = ExtResource("14_gfmo1")
@@ -420,6 +441,15 @@ theme_override_font_sizes/normal_font_size = 30
 theme_override_font_sizes/bold_font_size = 30
 theme_override_font_sizes/mono_font_size = 30
 bbcode_enabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="InterfaceCombat" unique_id=2125851479]
+visible = false
+texture_filter = 1
+position = Vector2(587.75, 612.75)
+scale = Vector2(3.928573, 4.583329)
+sprite_frames = SubResource("SpriteFrames_fvri4")
+animation = &"Triangle"
+autoplay = "Triangle"
 
 [node name="Bouton_MenuSacADos" type="TextureButton" parent="InterfaceCombat" unique_id=679712234]
 texture_filter = 1
