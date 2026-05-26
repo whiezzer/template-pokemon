@@ -96,8 +96,8 @@ func _lancer_combat():
 	if !is_inside_tree():
 		return
 	
-	for index in get_parent().equipePokemon:
-		dataDuJeu.listePokemonsEnnemie.append(dataDuJeu.listePokemons[index].duplicate(true))
+	for index in get_parent().equipeGodomon:
+		dataDuJeu.listeGodomonsEnnemie.append(dataDuJeu.listeGodomons[index].duplicate(true))
 	
 	dataDuJeu.adversaire = get_parent().name
 	

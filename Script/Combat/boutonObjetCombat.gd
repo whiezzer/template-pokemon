@@ -27,7 +27,7 @@ func _physics_process(delta: float) -> void:
 func _on_button_pressed() -> void:
 	if objet == null || objet.quantite == 0 || combat.tourDuJoueur == false || combat.enCoursDeTour == true:
 		return
-	if objet.objet.capture == true && dataDuJeu.listePokemonsEnnemie != []:
+	if objet.objet.capture == true && dataDuJeu.listeGodomonsEnnemie != []:
 		return
 	
 	if !menuObjet.visible:
@@ -38,12 +38,12 @@ func _on_button_pressed() -> void:
 		menuObjet.visible = false
 	
 	if objet.objet.capture == true:
-		combat.ecrire_texte(combat.message, "Vous tentez de capturer un " + dataDuJeu.pokemonEnnemiStats.nom + " sauvage")
+		combat.ecrire_texte(combat.message, "Vous tentez de capturer un/une " + dataDuJeu.pokemonEnnemiStats.nom + " sauvage")
 		await _capture()
 	elif objet.objet.reanime == true:
-		await _choixPokemon()
+		await _choixGodomon()
 	elif objet.objet.soigne == true:
-		await _choixPokemon()
+		await _choixGodomon()
 	
 	if combat.enCoursDeTour == true:
 		await get_tree().create_timer(2.0).timeout
@@ -67,14 +67,14 @@ func _capture() -> void:
 	
 	var resultat = randf() * (100.0 * (dataDuJeu.pokemonEnnemiStats.pv_Actuels / dataDuJeu.pokemonEnnemiStats.pv * 1))
 	
-	get_tree().current_scene.get_node_or_null("PokemonEnnemi/AnimatedSpriteAttaque").play("Pokeball")
-	get_tree().current_scene.get_node_or_null("PokemonEnnemi/Sprite3D").visible = false
+	get_tree().current_scene.get_node_or_null("GodomonEnnemi/AnimatedSpriteAttaque").play("Pokeball")
+	get_tree().current_scene.get_node_or_null("GodomonEnnemi/Sprite3D").visible = false
 	
 	if resultat <= 10.0:
 		
-		await get_tree().current_scene.get_node_or_null("PokemonEnnemi/AnimatedSpriteAttaque").animation_finished
+		await get_tree().current_scene.get_node_or_null("GodomonEnnemi/AnimatedSpriteAttaque").animation_finished
 		
-		combat.ecrire_texte(combat.message, "Bravo ! Vous avez attrapé un " + dataDuJeu.pokemonEnnemiStats.nom + " sauvage")
+		combat.ecrire_texte(combat.message, "Bravo ! Vous avez attrapé un/une " + dataDuJeu.pokemonEnnemiStats.nom + " sauvage")
 		get_tree().current_scene.get_node("AudioMusique3D").stream = load("res://Assets/Son/Combat/Victoire.mp3")
 		get_tree().current_scene.get_node("AudioMusique3D").play()
 		
@@ -85,13 +85,13 @@ func _capture() -> void:
 		
 		combat.get_node("InterfaceCombat/AnimatedSprite2D").visible = false
 		
-		var nouveauPokemon = dataDuJeu.pokemonEnnemiStats.duplicate(true)
-		nouveauPokemon._listeDesTypes = dataDuJeu.listeDesTypes
-		nouveauPokemon._type_index = dataDuJeu.pokemonEnnemiStats._type_index
-		nouveauPokemon.nature = dataDuJeu.pokemonEnnemiStats.nature
-		dataDuJeu.listePokemonsJoueur.append(nouveauPokemon)
+		var nouveauGodomon = dataDuJeu.pokemonEnnemiStats.duplicate(true)
+		nouveauGodomon._listeDesTypes = dataDuJeu.listeDesTypes
+		nouveauGodomon._type_index = dataDuJeu.pokemonEnnemiStats._type_index
+		nouveauGodomon.nature = dataDuJeu.pokemonEnnemiStats.nature
+		dataDuJeu.listeGodomonsJoueur.append(nouveauGodomon)
 		
-		dataDuJeu.listePokemonsEnnemie.clear()
+		dataDuJeu.listeGodomonsEnnemie.clear()
 		
 		combat.enCoursDeTour = false
 		
@@ -101,16 +101,16 @@ func _capture() -> void:
 		
 		await get_tree().create_timer(3.0).timeout
 		
-		get_tree().current_scene.get_node_or_null("PokemonEnnemi/AnimatedSpriteAttaque").play("Pokeball_casser")
+		get_tree().current_scene.get_node_or_null("GodomonEnnemi/AnimatedSpriteAttaque").play("Pokeball_casser")
 		
-		get_tree().current_scene.get_node_or_null("PokemonEnnemi/Sprite3D").visible = true
+		get_tree().current_scene.get_node_or_null("GodomonEnnemi/Sprite3D").visible = true
 		
-		await get_tree().current_scene.get_node_or_null("PokemonEnnemi/AnimatedSpriteAttaque").animation_finished
+		await get_tree().current_scene.get_node_or_null("GodomonEnnemi/AnimatedSpriteAttaque").animation_finished
 		
 		combat.ecrire_texte(combat.message, "Ca a raté ..")
 		
 		await get_tree().create_timer(1.0).timeout
 
-func _choixPokemon() -> void:
-	await ecran_de_transition._fondu("InterfacePokemon")
+func _choixGodomon() -> void:
+	await ecran_de_transition._fondu("InterfaceGodomon")
 	dataDuJeu.objetUtilisé = objet

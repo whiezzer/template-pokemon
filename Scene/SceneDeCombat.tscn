@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b5m747p0kpud8"]
 
 [ext_resource type="PackedScene" uid="uid://o31auolc4myx" path="res://Assets/sol/sol.tscn" id="1_rqkxw"]
-[ext_resource type="PackedScene" uid="uid://cg7bha5t87b70" path="res://Assets/Pokemon/pokemon.tscn" id="2_1jl81"]
+[ext_resource type="PackedScene" uid="uid://cg7bha5t87b70" path="res://Assets/Godomon/Godomon.tscn" id="2_1jl81"]
 [ext_resource type="Script" uid="uid://bit2nj7vgv60n" path="res://Script/Combat/combat.gd" id="3_1jl81"]
 [ext_resource type="Script" uid="uid://o62n2swlrafo" path="res://Script/Combat/boutonAttaque.gd" id="4_4oj6k"]
 [ext_resource type="Texture2D" uid="uid://c3swl7fcs2cr5" path="res://Assets/Interface/Combat/Emplacement attaque pokemon.png" id="5_1fio0"]
@@ -34,17 +34,17 @@
 [ext_resource type="Texture2D" uid="uid://byaco4grkvtvk" path="res://Assets/Interface/Combat/Interface Pokemon ENNEMIE.png" id="25_m71ca"]
 [ext_resource type="Texture2D" uid="uid://day4ph4i22h3e" path="res://Assets/Interface/Combat/BARRE_DE_VIE_DESSOUS_FOND.png" id="29_0cmka"]
 [ext_resource type="Texture2D" uid="uid://ddu55e5uupghn" path="res://Assets/Interface/Combat/BARRE_DE_VIE_DESSOUS_REMPLIS.png" id="30_0cmka"]
-[ext_resource type="Texture2D" uid="uid://bfkyd0jctjccn" path="res://Assets/Interface/MenuPokemon/Pokemon/Fond.png" id="34_0cmka"]
+[ext_resource type="Texture2D" uid="uid://bfkyd0jctjccn" path="res://Assets/Interface/MenuGodomon/Godomon/Fond.png" id="34_0cmka"]
 [ext_resource type="Texture2D" uid="uid://clq2sg8e8kcak" path="res://Assets/Interface/Combat/Bouton attaque normal.png" id="34_addy8"]
-[ext_resource type="Texture2D" uid="uid://clcutuupv82ud" path="res://Assets/Interface/MenuPokemon/Pokemon/BoutonPoke.png" id="35_2wrsc"]
+[ext_resource type="Texture2D" uid="uid://clcutuupv82ud" path="res://Assets/Interface/MenuGodomon/Godomon/BoutonPoke.png" id="35_2wrsc"]
 [ext_resource type="Texture2D" uid="uid://w1q1engl8nkq" path="res://Assets/Interface/Combat/Bouton attaque normal souris dessus.png" id="35_e6obo"]
-[ext_resource type="Texture2D" uid="uid://d1jvjm5jgvour" path="res://Assets/Interface/MenuPokemon/Pokemon/BoutonPokeSourisDessus.png" id="36_0vcqs"]
+[ext_resource type="Texture2D" uid="uid://d1jvjm5jgvour" path="res://Assets/Interface/MenuGodomon/Godomon/BoutonPokeSourisDessus.png" id="36_0vcqs"]
 [ext_resource type="Texture2D" uid="uid://crk6rq45nmwd1" path="res://Assets/Interface/Combat/Bouton attaque normal appuyer.png" id="36_qgjf0"]
-[ext_resource type="Texture2D" uid="uid://ceebavwbbh5c6" path="res://Assets/Interface/MenuPokemon/Resume/BarreRougeResume.png" id="38_7ldkh"]
-[ext_resource type="Script" uid="uid://dhl2cordkter2" path="res://Script/Combat/boutonPokemonCombat.gd" id="38_addy8"]
-[ext_resource type="Texture2D" uid="uid://b7i1r44u22mfp" path="res://Assets/Interface/MenuPokemon/Resume/BarreVertResume.png" id="39_fvri4"]
-[ext_resource type="Texture2D" uid="uid://yrblw4f5r4fv" path="res://Assets/Interface/MenuPokemon/Resume/BarreContourResume.png" id="40_hxtqm"]
-[ext_resource type="Texture2D" uid="uid://bj3hohj5qfi81" path="res://Assets/Interface/MenuPokemon/Pokemon/MeneApparait.png" id="41_cnus0"]
+[ext_resource type="Texture2D" uid="uid://ceebavwbbh5c6" path="res://Assets/Interface/MenuGodomon/Resume/BarreRougeResume.png" id="38_7ldkh"]
+[ext_resource type="Script" uid="uid://dhl2cordkter2" path="res://Script/Combat/boutonGodomonCombat.gd" id="38_addy8"]
+[ext_resource type="Texture2D" uid="uid://b7i1r44u22mfp" path="res://Assets/Interface/MenuGodomon/Resume/BarreVertResume.png" id="39_fvri4"]
+[ext_resource type="Texture2D" uid="uid://yrblw4f5r4fv" path="res://Assets/Interface/MenuGodomon/Resume/BarreContourResume.png" id="40_hxtqm"]
+[ext_resource type="Texture2D" uid="uid://bj3hohj5qfi81" path="res://Assets/Interface/MenuGodomon/Godomon/MeneApparait.png" id="41_cnus0"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3mx84"]
 texture = ExtResource("5_1fio0")
@@ -124,10 +124,10 @@ transform = Transform3D(1, 0, 0, 0, 0.489139, 0.8722059, 0, -0.8722059, 0.489139
 light_color = Color(0.9882353, 1, 0.59607846, 1)
 shadow_enabled = true
 
-[node name="PokemonJoueur" parent="." unique_id=965007536 instance=ExtResource("2_1jl81")]
+[node name="GodomonJoueur" parent="." unique_id=965007536 instance=ExtResource("2_1jl81")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.30091596, 0.26275617, -0.6623769)
 
-[node name="PokemonEnnemi" parent="." unique_id=2002172973 instance=ExtResource("2_1jl81")]
+[node name="GodomonEnnemi" parent="." unique_id=2002172973 instance=ExtResource("2_1jl81")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.050530195, 0.25934717, -2.4580204)
 
 [node name="décore" type="Node3D" parent="." unique_id=591067996]
@@ -135,7 +135,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.050530195, 0.25934717, -2.4
 [node name="Sol" parent="décore" unique_id=417281805 instance=ExtResource("1_rqkxw")]
 transform = Transform3D(1.265, 0, 0, 0, 1.265, 0, 0, 0, 1.265, -3.5344288, 0, -5.786859)
 
-[node name="Dessou_Pokemon" parent="décore" unique_id=1784572807 instance=ExtResource("18_a7dcr")]
+[node name="Dessou_Godomon" parent="décore" unique_id=1784572807 instance=ExtResource("18_a7dcr")]
 transform = Transform3D(0.11, 0, 0, 0, 0.11, 0, 0, 0, 0.11, -3.9275045, 0.6842246, -7.388361)
 
 [node name="Foret2" parent="décore" unique_id=212020847 instance=ExtResource("19_5i64c")]
@@ -147,10 +147,10 @@ transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, -7.685, 4.145, -17.5
 [node name="Montagne2" parent="décore" unique_id=450922289 instance=ExtResource("21_2gylr")]
 transform = Transform3D(0.107829824, 0, -0.021742307, 0, 0.11, 0, 0.021742307, 0, 0.107829824, -3.9275045, 0.6842246, -7.388361)
 
-[node name="Dessou_Pokemon2" parent="décore" unique_id=734316210 instance=ExtResource("18_a7dcr")]
+[node name="Dessou_Godomon2" parent="décore" unique_id=734316210 instance=ExtResource("18_a7dcr")]
 transform = Transform3D(0.08332305, 0, -0.016800873, 0, 0.085, 0, 0.016800873, 0, 0.08332305, -0.43592963, 0, -0.79697794)
 
-[node name="Dessou_Pokemon3" parent="décore" unique_id=1919168772 instance=ExtResource("18_a7dcr")]
+[node name="Dessou_Godomon3" parent="décore" unique_id=1919168772 instance=ExtResource("18_a7dcr")]
 transform = Transform3D(0.08332305, 0, -0.016800873, 0, 0.085, 0, 0.016800873, 0, 0.08332305, 0.06700292, 0, -2.5973115)
 
 [node name="InterfaceCombat" type="Control" parent="." unique_id=1670358411]
@@ -486,7 +486,7 @@ script = ExtResource("7_giger")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="InterfaceCombat/Bouton_MenuPokemon" unique_id=340413480]
 stream = ExtResource("22_td06p")
 
-[node name="InterfaceInfoPokemon1" type="Panel" parent="InterfaceCombat" unique_id=382766776]
+[node name="InterfaceInfoGodomon1" type="Panel" parent="InterfaceCombat" unique_id=382766776]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -502,7 +502,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_xhw2v")
 
-[node name="Texte_Nom" type="Label" parent="InterfaceCombat/InterfaceInfoPokemon1" unique_id=1052517376]
+[node name="Texte_Nom" type="Label" parent="InterfaceCombat/InterfaceInfoGodomon1" unique_id=1052517376]
 layout_mode = 0
 offset_left = 78.0
 offset_top = 10.0
@@ -514,7 +514,7 @@ theme_override_fonts/font = ExtResource("5_qqaya")
 theme_override_font_sizes/font_size = 42
 vertical_alignment = 1
 
-[node name="Texte_Level" type="Label" parent="InterfaceCombat/InterfaceInfoPokemon1" unique_id=297322887]
+[node name="Texte_Level" type="Label" parent="InterfaceCombat/InterfaceInfoGodomon1" unique_id=297322887]
 layout_mode = 0
 offset_left = 324.0
 offset_top = 11.0
@@ -526,7 +526,7 @@ theme_override_fonts/font = ExtResource("5_qqaya")
 theme_override_font_sizes/font_size = 50
 horizontal_alignment = 1
 
-[node name="PV" type="TextureProgressBar" parent="InterfaceCombat/InterfaceInfoPokemon1" unique_id=711400166]
+[node name="PV" type="TextureProgressBar" parent="InterfaceCombat/InterfaceInfoGodomon1" unique_id=711400166]
 texture_filter = 1
 layout_mode = 0
 offset_left = 126.0
@@ -538,7 +538,7 @@ value = 100.0
 nine_patch_stretch = true
 texture_progress = ExtResource("15_l7pxt")
 
-[node name="LVL" type="TextureProgressBar" parent="InterfaceCombat/InterfaceInfoPokemon1" unique_id=478299421]
+[node name="LVL" type="TextureProgressBar" parent="InterfaceCombat/InterfaceInfoGodomon1" unique_id=478299421]
 texture_filter = 1
 layout_mode = 0
 offset_left = 69.0
@@ -550,7 +550,7 @@ nine_patch_stretch = true
 texture_under = ExtResource("29_0cmka")
 texture_progress = ExtResource("30_0cmka")
 
-[node name="Texte_Niveau" type="Label" parent="InterfaceCombat/InterfaceInfoPokemon1/LVL" unique_id=607468164]
+[node name="Texte_Niveau" type="Label" parent="InterfaceCombat/InterfaceInfoGodomon1/LVL" unique_id=607468164]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -568,7 +568,7 @@ theme_override_font_sizes/font_size = 10
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureRect_Fond" type="TextureRect" parent="InterfaceCombat/InterfaceInfoPokemon1/LVL" unique_id=2117994005]
+[node name="TextureRect_Fond" type="TextureRect" parent="InterfaceCombat/InterfaceInfoGodomon1/LVL" unique_id=2117994005]
 texture_filter = 1
 layout_mode = 0
 offset_left = -46.0
@@ -577,7 +577,7 @@ offset_right = 310.0
 offset_bottom = 23.0
 texture = ExtResource("17_yscag")
 
-[node name="InterfaceInfoPokemon2" type="Panel" parent="InterfaceCombat" unique_id=165173068]
+[node name="InterfaceInfoGodomon2" type="Panel" parent="InterfaceCombat" unique_id=165173068]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -593,7 +593,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_2gylr")
 
-[node name="Texte_Nom" type="Label" parent="InterfaceCombat/InterfaceInfoPokemon2" unique_id=2096975077]
+[node name="Texte_Nom" type="Label" parent="InterfaceCombat/InterfaceInfoGodomon2" unique_id=2096975077]
 layout_mode = 0
 offset_left = 25.0
 offset_right = 163.0
@@ -604,7 +604,7 @@ theme_override_fonts/font = ExtResource("5_qqaya")
 theme_override_font_sizes/font_size = 30
 vertical_alignment = 1
 
-[node name="Texte_Level" type="Label" parent="InterfaceCombat/InterfaceInfoPokemon2" unique_id=1298850162]
+[node name="Texte_Level" type="Label" parent="InterfaceCombat/InterfaceInfoGodomon2" unique_id=1298850162]
 layout_mode = 0
 offset_left = 196.0
 offset_top = 9.0
@@ -617,7 +617,7 @@ theme_override_font_sizes/font_size = 36
 text = "1"
 horizontal_alignment = 1
 
-[node name="PV" type="TextureProgressBar" parent="InterfaceCombat/InterfaceInfoPokemon2" unique_id=677890120]
+[node name="PV" type="TextureProgressBar" parent="InterfaceCombat/InterfaceInfoGodomon2" unique_id=677890120]
 texture_filter = 1
 layout_mode = 0
 offset_left = 47.0
@@ -699,7 +699,7 @@ offset_right = -138.0
 offset_bottom = 234.0
 grow_horizontal = 0
 
-[node name="InterfacePokemon" type="Control" parent="." unique_id=298834309]
+[node name="InterfaceGodomon" type="Control" parent="." unique_id=298834309]
 visible = false
 layout_mode = 3
 anchors_preset = 15
@@ -708,7 +708,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Fond" type="Panel" parent="InterfacePokemon" unique_id=648500953]
+[node name="Fond" type="Panel" parent="InterfaceGodomon" unique_id=648500953]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
@@ -718,7 +718,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_2vcll")
 
-[node name="TextureButton_Pokemon1" type="TextureButton" parent="InterfacePokemon" unique_id=291909570]
+[node name="TextureButton_Godomon1" type="TextureButton" parent="InterfaceGodomon" unique_id=291909570]
 texture_filter = 1
 layout_mode = 0
 offset_left = 55.0
@@ -730,7 +730,7 @@ texture_hover = ExtResource("36_0vcqs")
 stretch_mode = 0
 script = ExtResource("38_addy8")
 
-[node name="Label" type="Label" parent="InterfacePokemon/TextureButton_Pokemon1" unique_id=785470671]
+[node name="Label" type="Label" parent="InterfaceGodomon/TextureButton_Godomon1" unique_id=785470671]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -748,7 +748,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("8_giger")
 theme_override_font_sizes/font_size = 25
 
-[node name="TextureRect_Pokemon" type="TextureRect" parent="InterfacePokemon/TextureButton_Pokemon1" unique_id=173177346]
+[node name="TextureRect_Godomon" type="TextureRect" parent="InterfaceGodomon/TextureButton_Godomon1" unique_id=173177346]
 texture_filter = 1
 layout_mode = 0
 offset_left = -1.0
@@ -756,7 +756,7 @@ offset_top = -9.0
 offset_right = 76.0
 offset_bottom = 54.0
 
-[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfacePokemon/TextureButton_Pokemon1" unique_id=1901575292]
+[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfaceGodomon/TextureButton_Godomon1" unique_id=1901575292]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 3
@@ -775,7 +775,7 @@ nine_patch_stretch = true
 texture_under = ExtResource("38_7ldkh")
 texture_progress = ExtResource("39_fvri4")
 
-[node name="TextureRect-Contour" type="TextureRect" parent="InterfacePokemon/TextureButton_Pokemon1/TextureProgressBar_PV" unique_id=1311494177]
+[node name="TextureRect-Contour" type="TextureRect" parent="InterfaceGodomon/TextureButton_Godomon1/TextureProgressBar_PV" unique_id=1311494177]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -791,7 +791,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("40_hxtqm")
 
-[node name="Label_PV" type="Label" parent="InterfacePokemon/TextureButton_Pokemon1" unique_id=1756970717]
+[node name="Label_PV" type="Label" parent="InterfaceGodomon/TextureButton_Godomon1" unique_id=1756970717]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -811,7 +811,7 @@ theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureButton_Pokemon3" type="TextureButton" parent="InterfacePokemon" unique_id=395907962]
+[node name="TextureButton_Godomon3" type="TextureButton" parent="InterfaceGodomon" unique_id=395907962]
 texture_filter = 1
 layout_mode = 0
 offset_left = 55.0
@@ -823,7 +823,7 @@ texture_hover = ExtResource("36_0vcqs")
 stretch_mode = 0
 script = ExtResource("38_addy8")
 
-[node name="Label" type="Label" parent="InterfacePokemon/TextureButton_Pokemon3" unique_id=776773418]
+[node name="Label" type="Label" parent="InterfaceGodomon/TextureButton_Godomon3" unique_id=776773418]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -841,7 +841,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("8_giger")
 theme_override_font_sizes/font_size = 25
 
-[node name="TextureRect_Pokemon" type="TextureRect" parent="InterfacePokemon/TextureButton_Pokemon3" unique_id=1842149596]
+[node name="TextureRect_Godomon" type="TextureRect" parent="InterfaceGodomon/TextureButton_Godomon3" unique_id=1842149596]
 texture_filter = 1
 layout_mode = 0
 offset_left = -1.0
@@ -849,7 +849,7 @@ offset_top = -9.0
 offset_right = 76.0
 offset_bottom = 54.0
 
-[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfacePokemon/TextureButton_Pokemon3" unique_id=497952958]
+[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfaceGodomon/TextureButton_Godomon3" unique_id=497952958]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 3
@@ -868,7 +868,7 @@ nine_patch_stretch = true
 texture_under = ExtResource("38_7ldkh")
 texture_progress = ExtResource("39_fvri4")
 
-[node name="TextureRect-Contour" type="TextureRect" parent="InterfacePokemon/TextureButton_Pokemon3/TextureProgressBar_PV" unique_id=1608753601]
+[node name="TextureRect-Contour" type="TextureRect" parent="InterfaceGodomon/TextureButton_Godomon3/TextureProgressBar_PV" unique_id=1608753601]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -884,7 +884,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("40_hxtqm")
 
-[node name="Label_PV" type="Label" parent="InterfacePokemon/TextureButton_Pokemon3" unique_id=1476063643]
+[node name="Label_PV" type="Label" parent="InterfaceGodomon/TextureButton_Godomon3" unique_id=1476063643]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -904,7 +904,7 @@ theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureButton_Pokemon5" type="TextureButton" parent="InterfacePokemon" unique_id=633116569]
+[node name="TextureButton_Godomon5" type="TextureButton" parent="InterfaceGodomon" unique_id=633116569]
 texture_filter = 1
 layout_mode = 0
 offset_left = 55.0
@@ -916,7 +916,7 @@ texture_hover = ExtResource("36_0vcqs")
 stretch_mode = 0
 script = ExtResource("38_addy8")
 
-[node name="Label" type="Label" parent="InterfacePokemon/TextureButton_Pokemon5" unique_id=1530977853]
+[node name="Label" type="Label" parent="InterfaceGodomon/TextureButton_Godomon5" unique_id=1530977853]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -934,7 +934,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("8_giger")
 theme_override_font_sizes/font_size = 25
 
-[node name="TextureRect_Pokemon" type="TextureRect" parent="InterfacePokemon/TextureButton_Pokemon5" unique_id=1806737867]
+[node name="TextureRect_Godomon" type="TextureRect" parent="InterfaceGodomon/TextureButton_Godomon5" unique_id=1806737867]
 texture_filter = 1
 layout_mode = 0
 offset_left = -1.0
@@ -942,7 +942,7 @@ offset_top = -9.0
 offset_right = 76.0
 offset_bottom = 54.0
 
-[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfacePokemon/TextureButton_Pokemon5" unique_id=335494410]
+[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfaceGodomon/TextureButton_Godomon5" unique_id=335494410]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 3
@@ -961,7 +961,7 @@ nine_patch_stretch = true
 texture_under = ExtResource("38_7ldkh")
 texture_progress = ExtResource("39_fvri4")
 
-[node name="TextureRect-Contour" type="TextureRect" parent="InterfacePokemon/TextureButton_Pokemon5/TextureProgressBar_PV" unique_id=1053822048]
+[node name="TextureRect-Contour" type="TextureRect" parent="InterfaceGodomon/TextureButton_Godomon5/TextureProgressBar_PV" unique_id=1053822048]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -977,7 +977,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("40_hxtqm")
 
-[node name="Label_PV" type="Label" parent="InterfacePokemon/TextureButton_Pokemon5" unique_id=1161062185]
+[node name="Label_PV" type="Label" parent="InterfaceGodomon/TextureButton_Godomon5" unique_id=1161062185]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -997,7 +997,7 @@ theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureButton_Pokemon2" type="TextureButton" parent="InterfacePokemon" unique_id=1305096003]
+[node name="TextureButton_Godomon2" type="TextureButton" parent="InterfaceGodomon" unique_id=1305096003]
 texture_filter = 1
 layout_mode = 0
 offset_left = 451.0
@@ -1009,7 +1009,7 @@ texture_hover = ExtResource("36_0vcqs")
 stretch_mode = 0
 script = ExtResource("38_addy8")
 
-[node name="Label" type="Label" parent="InterfacePokemon/TextureButton_Pokemon2" unique_id=944907797]
+[node name="Label" type="Label" parent="InterfaceGodomon/TextureButton_Godomon2" unique_id=944907797]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1027,7 +1027,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("8_giger")
 theme_override_font_sizes/font_size = 25
 
-[node name="TextureRect_Pokemon" type="TextureRect" parent="InterfacePokemon/TextureButton_Pokemon2" unique_id=47960709]
+[node name="TextureRect_Godomon" type="TextureRect" parent="InterfaceGodomon/TextureButton_Godomon2" unique_id=47960709]
 texture_filter = 1
 layout_mode = 0
 offset_left = -1.0
@@ -1035,7 +1035,7 @@ offset_top = -9.0
 offset_right = 76.0
 offset_bottom = 54.0
 
-[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfacePokemon/TextureButton_Pokemon2" unique_id=324877828]
+[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfaceGodomon/TextureButton_Godomon2" unique_id=324877828]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 3
@@ -1054,7 +1054,7 @@ nine_patch_stretch = true
 texture_under = ExtResource("38_7ldkh")
 texture_progress = ExtResource("39_fvri4")
 
-[node name="TextureRect-Contour" type="TextureRect" parent="InterfacePokemon/TextureButton_Pokemon2/TextureProgressBar_PV" unique_id=497295539]
+[node name="TextureRect-Contour" type="TextureRect" parent="InterfaceGodomon/TextureButton_Godomon2/TextureProgressBar_PV" unique_id=497295539]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1070,7 +1070,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("40_hxtqm")
 
-[node name="Label_PV" type="Label" parent="InterfacePokemon/TextureButton_Pokemon2" unique_id=1759070733]
+[node name="Label_PV" type="Label" parent="InterfaceGodomon/TextureButton_Godomon2" unique_id=1759070733]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1090,7 +1090,7 @@ theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureButton_Pokemon4" type="TextureButton" parent="InterfacePokemon" unique_id=601348539]
+[node name="TextureButton_Godomon4" type="TextureButton" parent="InterfaceGodomon" unique_id=601348539]
 texture_filter = 1
 layout_mode = 0
 offset_left = 451.0
@@ -1102,7 +1102,7 @@ texture_hover = ExtResource("36_0vcqs")
 stretch_mode = 0
 script = ExtResource("38_addy8")
 
-[node name="Label" type="Label" parent="InterfacePokemon/TextureButton_Pokemon4" unique_id=1712036062]
+[node name="Label" type="Label" parent="InterfaceGodomon/TextureButton_Godomon4" unique_id=1712036062]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1120,7 +1120,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("8_giger")
 theme_override_font_sizes/font_size = 25
 
-[node name="TextureRect_Pokemon" type="TextureRect" parent="InterfacePokemon/TextureButton_Pokemon4" unique_id=1952563398]
+[node name="TextureRect_Godomon" type="TextureRect" parent="InterfaceGodomon/TextureButton_Godomon4" unique_id=1952563398]
 texture_filter = 1
 layout_mode = 0
 offset_left = -1.0
@@ -1128,7 +1128,7 @@ offset_top = -9.0
 offset_right = 76.0
 offset_bottom = 54.0
 
-[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfacePokemon/TextureButton_Pokemon4" unique_id=1147717520]
+[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfaceGodomon/TextureButton_Godomon4" unique_id=1147717520]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 3
@@ -1147,7 +1147,7 @@ nine_patch_stretch = true
 texture_under = ExtResource("38_7ldkh")
 texture_progress = ExtResource("39_fvri4")
 
-[node name="TextureRect-Contour" type="TextureRect" parent="InterfacePokemon/TextureButton_Pokemon4/TextureProgressBar_PV" unique_id=1852101270]
+[node name="TextureRect-Contour" type="TextureRect" parent="InterfaceGodomon/TextureButton_Godomon4/TextureProgressBar_PV" unique_id=1852101270]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1163,7 +1163,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("40_hxtqm")
 
-[node name="Label_PV" type="Label" parent="InterfacePokemon/TextureButton_Pokemon4" unique_id=541870072]
+[node name="Label_PV" type="Label" parent="InterfaceGodomon/TextureButton_Godomon4" unique_id=541870072]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1183,7 +1183,7 @@ theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureButton_Pokemon6" type="TextureButton" parent="InterfacePokemon" unique_id=1012715955]
+[node name="TextureButton_Godomon6" type="TextureButton" parent="InterfaceGodomon" unique_id=1012715955]
 texture_filter = 1
 layout_mode = 0
 offset_left = 451.0
@@ -1195,7 +1195,7 @@ texture_hover = ExtResource("36_0vcqs")
 stretch_mode = 0
 script = ExtResource("38_addy8")
 
-[node name="Label" type="Label" parent="InterfacePokemon/TextureButton_Pokemon6" unique_id=1117806485]
+[node name="Label" type="Label" parent="InterfaceGodomon/TextureButton_Godomon6" unique_id=1117806485]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1213,7 +1213,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("8_giger")
 theme_override_font_sizes/font_size = 25
 
-[node name="TextureRect_Pokemon" type="TextureRect" parent="InterfacePokemon/TextureButton_Pokemon6" unique_id=255287474]
+[node name="TextureRect_Godomon" type="TextureRect" parent="InterfaceGodomon/TextureButton_Godomon6" unique_id=255287474]
 texture_filter = 1
 layout_mode = 0
 offset_left = -1.0
@@ -1221,7 +1221,7 @@ offset_top = -9.0
 offset_right = 76.0
 offset_bottom = 54.0
 
-[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfacePokemon/TextureButton_Pokemon6" unique_id=732532954]
+[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfaceGodomon/TextureButton_Godomon6" unique_id=732532954]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 3
@@ -1240,7 +1240,7 @@ nine_patch_stretch = true
 texture_under = ExtResource("38_7ldkh")
 texture_progress = ExtResource("39_fvri4")
 
-[node name="TextureRect-Contour" type="TextureRect" parent="InterfacePokemon/TextureButton_Pokemon6/TextureProgressBar_PV" unique_id=1924011173]
+[node name="TextureRect-Contour" type="TextureRect" parent="InterfaceGodomon/TextureButton_Godomon6/TextureProgressBar_PV" unique_id=1924011173]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1256,7 +1256,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("40_hxtqm")
 
-[node name="Label_PV" type="Label" parent="InterfacePokemon/TextureButton_Pokemon6" unique_id=2070649500]
+[node name="Label_PV" type="Label" parent="InterfaceGodomon/TextureButton_Godomon6" unique_id=2070649500]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1276,7 +1276,7 @@ theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureButton_Equipe" type="TextureButton" parent="InterfacePokemon" unique_id=2116154581]
+[node name="TextureButton_Equipe" type="TextureButton" parent="InterfaceGodomon" unique_id=2116154581]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 3
@@ -1297,11 +1297,11 @@ texture_hover = ExtResource("23_k3rol")
 stretch_mode = 0
 script = ExtResource("7_giger")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="InterfacePokemon/TextureButton_Equipe" unique_id=572186588]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="InterfaceGodomon/TextureButton_Equipe" unique_id=572186588]
 position = Vector2(-642, -552)
 stream = ExtResource("22_td06p")
 
-[node name="PopUp-Confirmation" type="Panel" parent="InterfacePokemon" unique_id=276996181]
+[node name="PopUp-Confirmation" type="Panel" parent="InterfaceGodomon" unique_id=276996181]
 visible = false
 texture_filter = 1
 layout_mode = 1
@@ -1315,7 +1315,7 @@ offset_bottom = 172.0
 grow_horizontal = 0
 theme_override_styles/panel = SubResource("StyleBoxTexture_ewy7h")
 
-[node name="Label" type="Label" parent="InterfacePokemon/PopUp-Confirmation" unique_id=1379868412]
+[node name="Label" type="Label" parent="InterfaceGodomon/PopUp-Confirmation" unique_id=1379868412]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -1325,7 +1325,7 @@ text = "Voulez-vous choisir ce Godomon ?"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureButton_Confirmation" type="TextureButton" parent="InterfacePokemon/PopUp-Confirmation" unique_id=1002529748]
+[node name="TextureButton_Confirmation" type="TextureButton" parent="InterfaceGodomon/PopUp-Confirmation" unique_id=1002529748]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 2
@@ -1341,7 +1341,7 @@ texture_pressed = ExtResource("35_e6obo")
 texture_hover = ExtResource("36_qgjf0")
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="InterfacePokemon/PopUp-Confirmation/TextureButton_Confirmation" unique_id=1954255208]
+[node name="Label" type="Label" parent="InterfaceGodomon/PopUp-Confirmation/TextureButton_Confirmation" unique_id=1954255208]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1360,7 +1360,7 @@ theme_override_fonts/font = ExtResource("8_giger")
 theme_override_font_sizes/font_size = 25
 text = "Oui"
 
-[node name="TextureButton_Annulation" type="TextureButton" parent="InterfacePokemon/PopUp-Confirmation" unique_id=539076232]
+[node name="TextureButton_Annulation" type="TextureButton" parent="InterfaceGodomon/PopUp-Confirmation" unique_id=539076232]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1379,7 +1379,7 @@ texture_pressed = ExtResource("35_e6obo")
 texture_hover = ExtResource("36_qgjf0")
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="InterfacePokemon/PopUp-Confirmation/TextureButton_Annulation" unique_id=1549011866]
+[node name="Label" type="Label" parent="InterfaceGodomon/PopUp-Confirmation/TextureButton_Annulation" unique_id=1549011866]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1409,12 +1409,12 @@ camera_attributes = SubResource("CameraAttributesPractical_5eq4d")
 [connection signal="pressed" from="InterfaceCombat/Bouton_MenuSacADos" to="InterfaceCombat/Bouton_MenuSacADos" method="_on_menu_objet_pressed"]
 [connection signal="pressed" from="InterfaceCombat/Bouton_MenuPokemon" to="InterfaceCombat/Bouton_MenuPokemon" method="_on_menu_pokemon_pressed"]
 [connection signal="pressed" from="InterfaceSac/Bouton_MenuSacADos" to="InterfaceSac/Bouton_MenuSacADos" method="_on_menu_objet_pressed"]
-[connection signal="pressed" from="InterfacePokemon/TextureButton_Pokemon1" to="InterfacePokemon/TextureButton_Pokemon1" method="_on_pressed"]
-[connection signal="pressed" from="InterfacePokemon/TextureButton_Pokemon3" to="InterfacePokemon/TextureButton_Pokemon3" method="_on_pressed"]
-[connection signal="pressed" from="InterfacePokemon/TextureButton_Pokemon5" to="InterfacePokemon/TextureButton_Pokemon5" method="_on_pressed"]
-[connection signal="pressed" from="InterfacePokemon/TextureButton_Pokemon2" to="InterfacePokemon/TextureButton_Pokemon2" method="_on_pressed"]
-[connection signal="pressed" from="InterfacePokemon/TextureButton_Pokemon4" to="InterfacePokemon/TextureButton_Pokemon4" method="_on_pressed"]
-[connection signal="pressed" from="InterfacePokemon/TextureButton_Pokemon6" to="InterfacePokemon/TextureButton_Pokemon6" method="_on_pressed"]
-[connection signal="pressed" from="InterfacePokemon/TextureButton_Equipe" to="InterfacePokemon/TextureButton_Equipe" method="_on_menu_pokemon_pressed"]
-[connection signal="pressed" from="InterfacePokemon/PopUp-Confirmation/TextureButton_Confirmation" to="InterfacePokemon/TextureButton_Pokemon6" method="_confirmer"]
-[connection signal="pressed" from="InterfacePokemon/PopUp-Confirmation/TextureButton_Annulation" to="InterfacePokemon/TextureButton_Pokemon6" method="_annuler"]
+[connection signal="pressed" from="InterfaceGodomon/TextureButton_Godomon1" to="InterfaceGodomon/TextureButton_Godomon1" method="_on_pressed"]
+[connection signal="pressed" from="InterfaceGodomon/TextureButton_Godomon3" to="InterfaceGodomon/TextureButton_Godomon3" method="_on_pressed"]
+[connection signal="pressed" from="InterfaceGodomon/TextureButton_Godomon5" to="InterfaceGodomon/TextureButton_Godomon5" method="_on_pressed"]
+[connection signal="pressed" from="InterfaceGodomon/TextureButton_Godomon2" to="InterfaceGodomon/TextureButton_Godomon2" method="_on_pressed"]
+[connection signal="pressed" from="InterfaceGodomon/TextureButton_Godomon4" to="InterfaceGodomon/TextureButton_Godomon4" method="_on_pressed"]
+[connection signal="pressed" from="InterfaceGodomon/TextureButton_Godomon6" to="InterfaceGodomon/TextureButton_Godomon6" method="_on_pressed"]
+[connection signal="pressed" from="InterfaceGodomon/TextureButton_Equipe" to="InterfaceGodomon/TextureButton_Equipe" method="_on_menu_pokemon_pressed"]
+[connection signal="pressed" from="InterfaceGodomon/PopUp-Confirmation/TextureButton_Confirmation" to="InterfaceGodomon/TextureButton_Godomon6" method="_confirmer"]
+[connection signal="pressed" from="InterfaceGodomon/PopUp-Confirmation/TextureButton_Annulation" to="InterfaceGodomon/TextureButton_Godomon6" method="_annuler"]

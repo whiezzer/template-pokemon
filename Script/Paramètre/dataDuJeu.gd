@@ -60,9 +60,9 @@ func _creer_liste_nature_base() -> Array[NatureStat]:
 # Liste de base de 3 objets avec leurs valeurs par défaut
 func _creer_liste_objets_base() -> Array[ObjetInventaire]:
 	return [
-		ObjetInventaire.new(Objet.new("Pokéball", load("res://Assets/Objets/Pokeballs/Pokeball attraper57.png") , "Cette Objet sert à capturer des Pokémons", true, false, false, "0%"), 10),
-		ObjetInventaire.new(Objet.new("Potion de soin", null ,"Cette Objet sert à soigner des pokémons", false, false, true, "75%"), 5),
-		ObjetInventaire.new(Objet.new("Rappel", null, "Cette Objet sert à réanimer des Pokemons", false, true, false, "25%"), 1)
+		ObjetInventaire.new(Objet.new("Godoball", load("res://Assets/Objets/Pokeballs/Pokeball attraper57.png") , "Cette Objet sert à capturer des Godomons", true, false, false, "0%"), 10),
+		ObjetInventaire.new(Objet.new("Potion de soin", null ,"Cette Objet sert à soigner des Godomons", false, false, true, "75%"), 5),
+		ObjetInventaire.new(Objet.new("Rappel", null, "Cette Objet sert à réanimer des Godomons", false, true, false, "25%"), 1)
 	]
 
 # Liste de base de 3 types avec leurs valeurs par défaut
@@ -74,13 +74,13 @@ func _creer_liste_types_base() -> Array[Type]:
 		Type.new("Plante", "Feu", "Eau", Color(0.247, 0.516, 0.162, 1.0))
 	]
 
-# Liste de base de 3 pokemons avec leurs valeurs par défaut
-func _creer_liste_pokemon_base() -> Array[PokemonData]:
+# Liste de base de 3 Godomons avec leurs valeurs par défaut
+func _creer_liste_pokemon_base() -> Array[GodomonData]:
 	return [
-		PokemonData.new(0, 10, 5, 5, 3, "Tic"),
-		PokemonData.new(1, 10, 5, 5, 3, "Bonjeton", load("res://Assets/Son/Crie de pokemon/Bomjeton_CRIE.wav"), load("res://Assets/Pokemon/Bomjeton/BomjetonFace.png"), load("res://Assets/Pokemon/Bomjeton/BomjetonDos.png")),
-		PokemonData.new(2, 10, 5, 5, 3, "Sinjypleur", load("res://Assets/Son/Crie de pokemon/Sinjypleur_CRIE.wav"), load("res://Assets/Pokemon/Sinjypleur/SinjypleurFace.png"), load("res://Assets/Pokemon/Sinjypleur/SinjypleurDos.png")),
-		PokemonData.new(3, 10, 5, 5, 3, "Cabufo", load("res://Assets/Son/Crie de pokemon/Frog_CRIE.wav"), load("res://Assets/Pokemon/Cabufo/CabufoFace.png"), load("res://Assets/Pokemon/Cabufo/CabufoDos.png"))
+		GodomonData.new(0, 10, 5, 5, 3, "Tic"),
+		GodomonData.new(1, 10, 5, 5, 3, "Bonjeton", load("res://Assets/Son/Crie de pokemon/Bomjeton_CRIE.wav"), load("res://Assets/Godomon/Bomjeton/BomjetonFace.png"), load("res://Assets/Godomon/Bomjeton/BomjetonDos.png")),
+		GodomonData.new(2, 10, 5, 5, 3, "Sinjypleur", load("res://Assets/Son/Crie de pokemon/Sinjypleur_CRIE.wav"), load("res://Assets/Godomon/Sinjypleur/SinjypleurFace.png"), load("res://Assets/Godomon/Sinjypleur/SinjypleurDos.png")),
+		GodomonData.new(3, 10, 5, 5, 3, "Cabufo", load("res://Assets/Son/Crie de pokemon/Frog_CRIE.wav"), load("res://Assets/Godomon/Cabufo/CabufoFace.png"), load("res://Assets/Godomon/Cabufo/CabufoDos.png"))
 	]
 
 func _creer_liste_attaques_base() -> Array[Attaque]:
@@ -130,28 +130,28 @@ func _verifierObjets() -> void:
 				listeDesObjets[i] = ObjetInventaire.new()
 
 @export_category("Paramètres des Godomons")
-# Liste des Pokémons visibles et modifiables dans l’inspecteur
-@export var listePokemons: Array[PokemonData] = []:
+# Liste des Godomons visibles et modifiables dans l’inspecteur
+@export var listeGodomons: Array[GodomonData] = []:
 	set(value):
-			listePokemons = value
+			listeGodomons = value
 			
-			_verifierPokemons()
-			_injecterTypesDansPokemons()
-			_verifierPokemonJoueur()
+			_verifierGodomons()
+			_injecterTypesDansGodomons()
+			_verifierGodomonJoueur()
 			notify_property_list_changed()
 
-# Vérifie les pokémons et s'assure qu'il existe au moins 1 pokémon
-func _verifierPokemons() -> void:
-	if 1 > listePokemons.size():
-		listePokemons = _creer_liste_pokemon_base()
+# Vérifie les Godomons et s'assure qu'il existe au moins 1 pokémon
+func _verifierGodomons() -> void:
+	if 1 > listeGodomons.size():
+		listeGodomons = _creer_liste_pokemon_base()
 	else:
-		for i in range(listePokemons.size()):
-			if listePokemons[i] == null:
-				listePokemons[i] = PokemonData.new()
-	for i in range(listePokemons.size()):
-		if not listePokemons[i]._listeDesTypes.is_empty():
-			if listePokemons[i]._type_index >= listePokemons[i]._listeDesTypes.size():
-				listePokemons[i]._type_index = 0
+		for i in range(listeGodomons.size()):
+			if listeGodomons[i] == null:
+				listeGodomons[i] = GodomonData.new()
+	for i in range(listeGodomons.size()):
+		if not listeGodomons[i]._listeDesTypes.is_empty():
+			if listeGodomons[i]._type_index >= listeGodomons[i]._listeDesTypes.size():
+				listeGodomons[i]._type_index = 0
 
 @export_category("Paramètres des types")
 # Liste des différents types visibles et modifiables dans l’inspecteur
@@ -169,10 +169,10 @@ func _verifierPokemons() -> void:
 				if type != null and not type.changed.is_connected(_verifierTypeChange):
 					type.changed.connect(_verifierTypeChange)
 			
-			_injecterTypesDansPokemons()
+			_injecterTypesDansGodomons()
 			_injecterTypesDansAttaques()
 			_verifierAttaques()
-			_verifierPokemons()
+			_verifierGodomons()
 			notify_property_list_changed()
 
 # Vérifie la liste et s'assure qu'elle contient toujours 6 natures
@@ -230,46 +230,46 @@ func _verifierAttaques() -> void:
 		if listeDesAttaques[i]._type_index >= listeDesTypes.size():
 			listeDesAttaques[i]._type_index = 0
 
-var _type_index_pokemons_joueurs : int = 0
+var _type_index_Godomons_joueurs : int = 0
 
-# Pokémon de départ du joueur visible et modifiable dans l’inspecteur
-var pokemonJoueurStats: PokemonData:
+# Godomon de départ du joueur visible et modifiable dans l’inspecteur
+var pokemonJoueurStats: GodomonData:
 	get:
-		if listePokemonsJoueur.is_empty() or indexPokemonJoueurActif < 0 or indexPokemonJoueurActif >= listePokemonsJoueur.size():
+		if listeGodomonsJoueur.is_empty() or indexGodomonJoueurActif < 0 or indexGodomonJoueurActif >= listeGodomonsJoueur.size():
 			return 
-		return listePokemonsJoueur[indexPokemonJoueurActif]
+		return listeGodomonsJoueur[indexGodomonJoueurActif]
 	set(value):
 		pokemonJoueurStats = value
-		_verifierPokemonJoueur()
+		_verifierGodomonJoueur()
 
-func _verifierPokemonJoueur() -> void:
-	if pokemonJoueurStats == null or listePokemons.is_empty():
-		_type_index_pokemons_joueurs = 0
+func _verifierGodomonJoueur() -> void:
+	if pokemonJoueurStats == null or listeGodomons.is_empty():
+		_type_index_Godomons_joueurs = 0
 		return
-	for i in range(listePokemons.size()):
-		if listePokemons[i] == pokemonJoueurStats:
-			_type_index_pokemons_joueurs = i
+	for i in range(listeGodomons.size()):
+		if listeGodomons[i] == pokemonJoueurStats:
+			_type_index_Godomons_joueurs = i
 			return
-	_type_index_pokemons_joueurs = 0
+	_type_index_Godomons_joueurs = 0
 
 func _get_property_list():
-	var noms := listePokemons.map(func(t): return t.nom)
+	var noms := listeGodomons.map(func(t): return t.nom)
 	
 	return [{
-		"name": "_type_index_pokemons_joueurs",
+		"name": "_type_index_Godomons_joueurs",
 		"type": TYPE_INT,
-		"hint": PROPERTY_HINT_ENUM if not listePokemons.is_empty() else PROPERTY_HINT_NONE,
+		"hint": PROPERTY_HINT_ENUM if not listeGodomons.is_empty() else PROPERTY_HINT_NONE,
 		"hint_string": ",".join(noms),
 		"usage": PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_STORAGE 
 	}]
 
-var indexPokemonJoueurActif: int = 0
+var indexGodomonJoueurActif: int = 0
 
-var listePokemonsJoueur: Array[PokemonData] = []
+var listeGodomonsJoueur: Array[GodomonData] = []
 
-var pokemonEnnemiStats: PokemonData
+var pokemonEnnemiStats: GodomonData
 
-var listePokemonsEnnemie: Array[PokemonData] = []
+var listeGodomonsEnnemie: Array[GodomonData] = []
 
 @export_category("Paramétres Audios")
 @export var musiqueMenu : AudioStream:
@@ -305,9 +305,9 @@ var listePokemonsEnnemie: Array[PokemonData] = []
 
 @export_category("Godomon de départ")
 
-# Injecte listeDesTypes dans chaque Pokémon pour que l'enum soit visible
-func _injecterTypesDansPokemons() -> void:
-	for pokemon in listePokemons:
+# Injecte listeDesTypes dans chaque Godomon pour que l'enum soit visible
+func _injecterTypesDansGodomons() -> void:
+	for pokemon in listeGodomons:
 		if pokemon != null:
 			pokemon._listeDesTypes = listeDesTypes
 			pokemon.notify_property_list_changed()
@@ -327,11 +327,11 @@ func _verifierTypeChange() -> void:
 	_timerAttente = get_tree().create_timer(5.0) 
 	await _timerAttente.timeout
 	
-	_injecterTypesDansPokemons()
+	_injecterTypesDansGodomons()
 	_injecterTypesDansAttaques()
 	_verifierAttaques()
-	_verifierPokemons()
-	_verifierPokemonJoueur()
+	_verifierGodomons()
+	_verifierGodomonJoueur()
 	notify_property_list_changed()   
 
 # Appel automatique au démarrage pour s'assurer que tout est correct
@@ -341,13 +341,13 @@ func _enter_tree() -> void:
 	dataDuJeu.listeDesObjets = ref.listeDesObjets
 	dataDuJeu.listeDesTypes = ref.listeDesTypes
 	_injecterTypesDansAttaques()
-	_injecterTypesDansPokemons()
+	_injecterTypesDansGodomons()
 	for i in range(ref.listeDesAttaques.size()):
 		ref.listeDesAttaques[i].PP =ref.listeDesAttaques[i].PP_max
-	dataDuJeu.listePokemons = ref.listePokemons
+	dataDuJeu.listeGodomons = ref.listeGodomons
 	dataDuJeu.listeDesAttaques = ref.listeDesAttaques
-	dataDuJeu._type_index_pokemons_joueurs = ref._type_index_pokemons_joueurs
-	listePokemonsJoueur.append(listePokemons[_type_index_pokemons_joueurs])
+	dataDuJeu._type_index_Godomons_joueurs = ref._type_index_Godomons_joueurs
+	listeGodomonsJoueur.append(listeGodomons[_type_index_Godomons_joueurs])
 	_créerBoutonsMenuObjet()
 	
 	if dataDuJeu.menuPrincipalActif:

@@ -2,14 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://n4arh46goj77" path="res://Assets/Character/joueur.tscn" id="1_wg3re"]
 [ext_resource type="AudioStream" uid="uid://dg4nssnn73x2r" path="res://Assets/Son/environnement/musique_Environnement.mp3" id="1_x7wka"]
-[ext_resource type="PackedScene" uid="uid://cg7bha5t87b70" path="res://Assets/Pokemon/pokemon.tscn" id="2_qm7m7"]
+[ext_resource type="PackedScene" uid="uid://cg7bha5t87b70" path="res://Assets/Godomon/Godomon.tscn" id="2_qm7m7"]
 [ext_resource type="Material" uid="uid://dmgcme55m5nt3" path="res://Assets/sol/Sol_material.tres" id="3_aipmw"]
-[ext_resource type="Script" uid="uid://bim1c486t2mg7" path="res://Script/character/PNJ_EquipePokemon.gd" id="4_7l60e"]
+[ext_resource type="Script" uid="uid://bim1c486t2mg7" path="res://Script/character/PNJ_EquipeGodomon.gd" id="4_7l60e"]
 [ext_resource type="Script" uid="uid://brojl8fd7vanx" path="res://Script/Paramètre/dataDuJeu.gd" id="4_dgiq7"]
 [ext_resource type="Texture2D" uid="uid://buq4jk764ko6f" path="res://Assets/Character/Nedy/Nedy.png" id="4_owyk3"]
 [ext_resource type="PackedScene" uid="uid://dktcxdge2mcr2" path="res://Assets/Arbre/arbre3d.tscn" id="5_jwxpu"]
 [ext_resource type="Script" uid="uid://bcfcghafi6pxq" path="res://Script/character/PNJ.gd" id="5_owyk3"]
-[ext_resource type="Script" uid="uid://d6vieo400icv" path="res://Script/Pokémon/natureStat.gd" id="5_vfha3"]
+[ext_resource type="Script" uid="uid://d6vieo400icv" path="res://Script/Godomon/natureStat.gd" id="5_vfha3"]
 [ext_resource type="PackedScene" uid="uid://b87i6gj04tgd0" path="res://Assets/Herbe/herbe3D.tscn" id="6_byug1"]
 [ext_resource type="Texture2D" uid="uid://j4id13h0sn60" path="res://Assets/Interface/Combat/boite de dialogue.png" id="8_loqtx"]
 [ext_resource type="Script" uid="uid://bq6de4c2mdxwp" path="res://Script/Interface/boutonMenu.gd" id="9_8l02w"]
@@ -23,38 +23,29 @@
 [ext_resource type="Texture2D" uid="uid://yump20xf8un3" path="res://Assets/Interface/Combat/Bouton Pokemon2.png" id="10_qot0l"]
 [ext_resource type="Texture2D" uid="uid://5avc3a2sw8q2" path="res://Assets/Interface/Combat/Bouton Sac1.png" id="11_jwxpu"]
 [ext_resource type="Texture2D" uid="uid://to5y0m6ebeva" path="res://Assets/Interface/Combat/Bouton Pokemon3.png" id="11_o1h8p"]
-[ext_resource type="Script" uid="uid://drg55xxdqqtc4" path="res://Script/Pokémon/PokemonData.gd" id="11_voxsg"]
-[ext_resource type="Script" uid="uid://d0veabi5o4mmv" path="res://Script/Pokémon/type.gd" id="12_tjr8v"]
+[ext_resource type="Script" uid="uid://drg55xxdqqtc4" path="res://Script/Godomon/GodomonData.gd" id="11_voxsg"]
+[ext_resource type="Script" uid="uid://d0veabi5o4mmv" path="res://Script/Godomon/type.gd" id="12_tjr8v"]
 [ext_resource type="FontFile" uid="uid://dc50vx3jow8oc" path="res://Assets/Text/pixel_operator/PixelOperatorMono.ttf" id="13_byug1"]
 [ext_resource type="Texture2D" uid="uid://wio1k2unaquj" path="res://Assets/Interface/Combat/Bouton Sac2.png" id="13_g565v"]
-[ext_resource type="Script" uid="uid://d1hg32m277mqs" path="res://Script/Pokémon/attaque.gd" id="13_voxsg"]
+[ext_resource type="Script" uid="uid://d1hg32m277mqs" path="res://Script/Godomon/attaque.gd" id="13_voxsg"]
 [ext_resource type="Texture2D" uid="uid://dqooe18ebh55o" path="res://Assets/Interface/triangle/triangle1.png" id="14_je3ga"]
 [ext_resource type="Texture2D" uid="uid://v3vth8p1m1ai" path="res://Assets/Interface/Combat/Bouton Sac3.png" id="14_loqtx"]
 [ext_resource type="Texture2D" uid="uid://bq3fju46c2ryt" path="res://Assets/Interface/triangle/triangle2.png" id="15_86a52"]
-[ext_resource type="AudioStream" uid="uid://di8icu8bcojx7" path="res://Assets/Son/Crie de pokemon/Bomjeton_CRIE.wav" id="21_byug1"]
 [ext_resource type="Texture2D" uid="uid://42cyq4mo2eil" path="res://Assets/Objets/Pokeballs/Pokeball attraper56.png" id="22_8l02w"]
-[ext_resource type="Texture2D" uid="uid://bfkyd0jctjccn" path="res://Assets/Interface/MenuPokemon/Pokemon/Fond.png" id="23_eisab"]
-[ext_resource type="AudioStream" uid="uid://dpqk46ugjtnb1" path="res://Assets/Son/Crie de pokemon/Sinjypleur_CRIE.wav" id="23_r2s0p"]
-[ext_resource type="Texture2D" uid="uid://clcutuupv82ud" path="res://Assets/Interface/MenuPokemon/Pokemon/BoutonPoke.png" id="24_d4gcl"]
+[ext_resource type="Texture2D" uid="uid://bfkyd0jctjccn" path="res://Assets/Interface/MenuGodomon/Godomon/Fond.png" id="23_eisab"]
+[ext_resource type="Texture2D" uid="uid://clcutuupv82ud" path="res://Assets/Interface/MenuGodomon/Godomon/BoutonPoke.png" id="24_d4gcl"]
 [ext_resource type="Texture2D" uid="uid://w1q1engl8nkq" path="res://Assets/Interface/Combat/Bouton attaque normal souris dessus.png" id="24_qvqry"]
-[ext_resource type="Texture2D" uid="uid://d1jvjm5jgvour" path="res://Assets/Interface/MenuPokemon/Pokemon/BoutonPokeSourisDessus.png" id="25_1brqj"]
-[ext_resource type="AudioStream" uid="uid://crnv2nwnq8k81" path="res://Assets/Son/Crie de pokemon/Frog_CRIE.wav" id="25_x7wka"]
-[ext_resource type="Script" uid="uid://cyuksgb1kw34x" path="res://Script/Interface/boutonPokemon.gd" id="26_qvqry"]
+[ext_resource type="Texture2D" uid="uid://d1jvjm5jgvour" path="res://Assets/Interface/MenuGodomon/Godomon/BoutonPokeSourisDessus.png" id="25_1brqj"]
+[ext_resource type="Script" uid="uid://cyuksgb1kw34x" path="res://Script/Interface/boutonGodomon.gd" id="26_qvqry"]
 [ext_resource type="Script" uid="uid://cc8ysqjjskgps" path="res://Script/Interface/menuPrincipal.gd" id="27_7w3f3"]
-[ext_resource type="Texture2D" uid="uid://br356dx4rdc15" path="res://Assets/Interface/MenuPokemon/Resume/IntefacePokemonRESUME.png" id="27_ifajr"]
+[ext_resource type="Texture2D" uid="uid://br356dx4rdc15" path="res://Assets/Interface/MenuGodomon/Resume/IntefacePokemonRESUME.png" id="27_ifajr"]
 [ext_resource type="FontFile" uid="uid://fy6tlq7q5c2k" path="res://Assets/Text/pixel_operator/PixelOperatorHB8.ttf" id="27_yqeg5"]
-[ext_resource type="Texture2D" uid="uid://ceebavwbbh5c6" path="res://Assets/Interface/MenuPokemon/Resume/BarreRougeResume.png" id="28_0cgjh"]
-[ext_resource type="Texture2D" uid="uid://b7i1r44u22mfp" path="res://Assets/Interface/MenuPokemon/Resume/BarreVertResume.png" id="29_e6qsf"]
-[ext_resource type="Texture2D" uid="uid://balfv5pu1pwhs" path="res://Assets/Pokemon/Bomjeton/BomjetonFace.png" id="30_20jwu"]
-[ext_resource type="Texture2D" uid="uid://yrblw4f5r4fv" path="res://Assets/Interface/MenuPokemon/Resume/BarreContourResume.png" id="30_ediv8"]
-[ext_resource type="Texture2D" uid="uid://cqfupb62i7ifd" path="res://Assets/Pokemon/Bomjeton/BomjetonDos.png" id="31_lpfrn"]
-[ext_resource type="Texture2D" uid="uid://cotk3mdbgce8o" path="res://Assets/Interface/MenuPokemon/Resume/BoutonRetour.png" id="32_e6qsf"]
-[ext_resource type="Texture2D" uid="uid://fv6hnfh7rmbw" path="res://Assets/Pokemon/Sinjypleur/SinjypleurFace.png" id="33_dekyc"]
-[ext_resource type="Texture2D" uid="uid://clpttm2gjoffo" path="res://Assets/Interface/MenuPokemon/Resume/BoutonRetourSourisDessus.png" id="33_ediv8"]
-[ext_resource type="Texture2D" uid="uid://buvnklao20pck" path="res://Assets/Pokemon/Sinjypleur/SinjypleurDos.png" id="34_tag3l"]
-[ext_resource type="Texture2D" uid="uid://do1y6ytq4u43d" path="res://Assets/Pokemon/Cabufo/CabufoFace.png" id="36_ibrmr"]
+[ext_resource type="Texture2D" uid="uid://ceebavwbbh5c6" path="res://Assets/Interface/MenuGodomon/Resume/BarreRougeResume.png" id="28_0cgjh"]
+[ext_resource type="Texture2D" uid="uid://b7i1r44u22mfp" path="res://Assets/Interface/MenuGodomon/Resume/BarreVertResume.png" id="29_e6qsf"]
+[ext_resource type="Texture2D" uid="uid://yrblw4f5r4fv" path="res://Assets/Interface/MenuGodomon/Resume/BarreContourResume.png" id="30_ediv8"]
+[ext_resource type="Texture2D" uid="uid://cotk3mdbgce8o" path="res://Assets/Interface/MenuGodomon/Resume/BoutonRetour.png" id="32_e6qsf"]
+[ext_resource type="Texture2D" uid="uid://clpttm2gjoffo" path="res://Assets/Interface/MenuGodomon/Resume/BoutonRetourSourisDessus.png" id="33_ediv8"]
 [ext_resource type="Texture2D" uid="uid://c0b17wk4eqh7w" path="res://Assets/Interface/MainMenu/Main_menu1.png" id="36_q66mb"]
-[ext_resource type="Texture2D" uid="uid://bbexnkrb64qk0" path="res://Assets/Pokemon/Cabufo/CabufoDos.png" id="37_5u2mo"]
 [ext_resource type="Texture2D" uid="uid://cc5p5mcufmmt0" path="res://Assets/Interface/MainMenu/Main_menu2.png" id="37_dmy24"]
 [ext_resource type="Texture2D" uid="uid://bcy1iftibbdrd" path="res://Assets/Interface/MainMenu/Main_menu3.png" id="38_je3ga"]
 [ext_resource type="Texture2D" uid="uid://bamvhdk6eqtqv" path="res://Assets/Interface/MainMenu/Main_menu4.png" id="39_86a52"]
@@ -84,7 +75,13 @@
 [ext_resource type="Texture2D" uid="uid://c2xbdkarnhvw0" path="res://Assets/Interface/MainMenu/Main_menu29.png" id="64_3kyet"]
 [ext_resource type="Texture2D" uid="uid://cfabjo7mf7n85" path="res://Assets/Interface/MainMenu/Main_menu30.png" id="65_i748f"]
 [ext_resource type="Texture2D" uid="uid://cuytjkecknpe1" path="res://Assets/Interface/MainMenu/Main_menu31.png" id="66_f6kb6"]
-[ext_resource type="AudioStream" uid="uid://c85gut6g8rjw1" path="res://Assets/Son/Crie de pokemon/Crie1.wav" id="72_q66mb"]
+[ext_resource type="AudioStream" uid="uid://c85gut6g8rjw1" path="res://Assets/Son/Crie de Godomon/Crie1.wav" id="72_q66mb"]
+[ext_resource type="Texture2D" uid="uid://balfv5pu1pwhs" path="res://Assets/Godomon/Bomjeton/BomjetonFace.png" id="74_86a52"]
+[ext_resource type="Texture2D" uid="uid://cqfupb62i7ifd" path="res://Assets/Godomon/Bomjeton/BomjetonDos.png" id="75_71rpj"]
+[ext_resource type="Texture2D" uid="uid://fv6hnfh7rmbw" path="res://Assets/Godomon/Sinjypleur/SinjypleurFace.png" id="76_40irl"]
+[ext_resource type="Texture2D" uid="uid://buvnklao20pck" path="res://Assets/Godomon/Sinjypleur/SinjypleurDos.png" id="77_1y0xa"]
+[ext_resource type="Texture2D" uid="uid://do1y6ytq4u43d" path="res://Assets/Godomon/Cabufo/CabufoFace.png" id="78_dq13u"]
+[ext_resource type="Texture2D" uid="uid://bbexnkrb64qk0" path="res://Assets/Godomon/Cabufo/CabufoDos.png" id="79_8i56a"]
 [ext_resource type="AudioStream" uid="uid://rkg02i1mk08c" path="res://Assets/Son/menu/musiqueMenu.mp3" id="86_86a52"]
 [ext_resource type="AudioStream" uid="uid://bmrm5hed5cvcm" path="res://Assets/Son/Combat/musique_Fight.mp3" id="87_71rpj"]
 [ext_resource type="AudioStream" uid="uid://2irc74i8b32a" path="res://Assets/Son/Combat/son_TransitionCombat.wav" id="88_1y0xa"]
@@ -239,87 +236,86 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Resource" id="Resource_voxsg"]
+[sub_resource type="Resource" id="Resource_x8d5j"]
 script = ExtResource("5_vfha3")
 stat1 = "attaque"
 modificateur1 = "+10%"
 stat2 = "defense"
 modificateur2 = "-10%"
 
-[sub_resource type="Resource" id="Resource_l88oo"]
+[sub_resource type="Resource" id="Resource_15qxy"]
 script = ExtResource("5_vfha3")
 stat1 = "defense"
 modificateur1 = "+10%"
 stat2 = "attaque"
 modificateur2 = "-10%"
 
-[sub_resource type="Resource" id="Resource_8i4vk"]
+[sub_resource type="Resource" id="Resource_llcau"]
 script = ExtResource("5_vfha3")
 stat1 = "pv"
 modificateur1 = "+10%"
 stat2 = "attaque"
 modificateur2 = "-10%"
 
-[sub_resource type="Resource" id="Resource_4wxh0"]
+[sub_resource type="Resource" id="Resource_5krid"]
 script = ExtResource("5_vfha3")
 stat1 = "attaque"
 modificateur1 = "+10%"
 stat2 = "pv"
 modificateur2 = "-10%"
 
-[sub_resource type="Resource" id="Resource_vpkbl"]
+[sub_resource type="Resource" id="Resource_tl1mc"]
 script = ExtResource("5_vfha3")
 stat1 = "vitesse"
 modificateur1 = "+10%"
 stat2 = "pv"
 modificateur2 = "-10%"
 
-[sub_resource type="Resource" id="Resource_vaoup"]
+[sub_resource type="Resource" id="Resource_wagys"]
 script = ExtResource("5_vfha3")
 stat1 = "pv"
 modificateur1 = "+10%"
 stat2 = "vitesse"
 modificateur2 = "-10%"
 
-[sub_resource type="Resource" id="Resource_7y8wi"]
+[sub_resource type="Resource" id="Resource_lfee6"]
 script = ExtResource("9_8wwat")
-nom = "Pokéball"
+nom = "Godoball"
 texture = ExtResource("22_8l02w")
-description = "Cette Objet sert à capturer des Pokémons"
+description = "Cette Objet sert à capturer des Godomons"
 capture = true
 nbPvSoigne = "0%"
 
-[sub_resource type="Resource" id="Resource_q66mb"]
+[sub_resource type="Resource" id="Resource_3mu66"]
 script = ExtResource("9_x6yq0")
-objet = SubResource("Resource_7y8wi")
+objet = SubResource("Resource_lfee6")
 quantite = 10
 
-[sub_resource type="Resource" id="Resource_dmy24"]
+[sub_resource type="Resource" id="Resource_b0uwa"]
 script = ExtResource("9_8wwat")
 nom = "Potion de soin"
-description = "Cette Objet sert à soigner des pokémons"
+description = "Cette Objet sert à soigner des Godomons"
 soigne = true
 nbPvSoigne = "75%"
 
-[sub_resource type="Resource" id="Resource_je3ga"]
+[sub_resource type="Resource" id="Resource_ns0bq"]
 script = ExtResource("9_x6yq0")
-objet = SubResource("Resource_dmy24")
+objet = SubResource("Resource_b0uwa")
 quantite = 5
 
-[sub_resource type="Resource" id="Resource_86a52"]
+[sub_resource type="Resource" id="Resource_ixwgq"]
 script = ExtResource("9_8wwat")
 nom = "Rappel"
-texture = ExtResource("22_8l02w")
-description = "Cette Objet sert à réanimer des Pokemons"
+description = "Cette Objet sert à réanimer des Godomons"
 reanime = true
 nbPvSoigne = "25%"
 
-[sub_resource type="Resource" id="Resource_71rpj"]
+[sub_resource type="Resource" id="Resource_kdr5y"]
 script = ExtResource("9_x6yq0")
-objet = SubResource("Resource_86a52")
+objet = SubResource("Resource_ixwgq")
 quantite = 1
 
-[sub_resource type="Resource" id="Resource_40irl"]
+[sub_resource type="Resource" id="Resource_168bq"]
 script = ExtResource("11_voxsg")
 nom = "Tic"
 pv = 10
@@ -329,88 +325,71 @@ vitesse = 3
 crie = ExtResource("72_q66mb")
 _type_index = 0
 
-[sub_resource type="Resource" id="Resource_1y0xa"]
+[sub_resource type="Resource" id="Resource_mpy6k"]
 script = ExtResource("11_voxsg")
 nom = "Bonjeton"
 pv = 10
 attaque = 5
 defense = 5
 vitesse = 3
-crie = ExtResource("21_byug1")
-sprite = ExtResource("30_20jwu")
-sprite_Dos = ExtResource("31_lpfrn")
+crie = ExtResource("72_q66mb")
+sprite = ExtResource("74_86a52")
+sprite_Dos = ExtResource("75_71rpj")
 _type_index = 1
 
-[sub_resource type="Resource" id="Resource_dq13u"]
+[sub_resource type="Resource" id="Resource_0sscw"]
 script = ExtResource("11_voxsg")
 nom = "Sinjypleur"
 pv = 10
 attaque = 5
 defense = 5
 vitesse = 3
-crie = ExtResource("23_r2s0p")
-sprite = ExtResource("33_dekyc")
-sprite_Dos = ExtResource("34_tag3l")
+crie = ExtResource("72_q66mb")
+sprite = ExtResource("76_40irl")
+sprite_Dos = ExtResource("77_1y0xa")
 _type_index = 2
 
-[sub_resource type="Resource" id="Resource_8i56a"]
+[sub_resource type="Resource" id="Resource_76hys"]
 script = ExtResource("11_voxsg")
 nom = "Cabufo"
 pv = 10
 attaque = 5
 defense = 5
 vitesse = 3
-crie = ExtResource("25_x7wka")
-sprite = ExtResource("36_ibrmr")
-sprite_Dos = ExtResource("37_5u2mo")
+crie = ExtResource("72_q66mb")
+sprite = ExtResource("78_dq13u")
+sprite_Dos = ExtResource("79_8i56a")
 _type_index = 3
 
-[sub_resource type="Resource" id="Resource_tl1mc"]
-script = ExtResource("11_voxsg")
-nom = "Ectoplat"
-pv = 10
-attaque = 5
-defense = 5
-vitesse = 3
-crie = ExtResource("72_q66mb")
-_type_index = 4
-
-[sub_resource type="Resource" id="Resource_x8d5j"]
+[sub_resource type="Resource" id="Resource_050fk"]
 script = ExtResource("12_tjr8v")
 nom = "Normal"
 faiblesse = "Aucune"
 resistance = "Aucune"
 color = Color(0.5, 0.5, 0.5, 1)
 
-[sub_resource type="Resource" id="Resource_15qxy"]
+[sub_resource type="Resource" id="Resource_cmwer"]
 script = ExtResource("12_tjr8v")
 nom = "Feu"
 faiblesse = "Eau"
 resistance = "Plante"
 color = Color(0.947, 0.264, 0.236, 1)
 
-[sub_resource type="Resource" id="Resource_llcau"]
+[sub_resource type="Resource" id="Resource_vs275"]
 script = ExtResource("12_tjr8v")
 nom = "Eau"
 faiblesse = "Plante"
 resistance = "Feu"
 color = Color(0, 0.636, 0.952, 1)
 
-[sub_resource type="Resource" id="Resource_5krid"]
+[sub_resource type="Resource" id="Resource_3kyet"]
 script = ExtResource("12_tjr8v")
 nom = "Plante"
 faiblesse = "Feu"
 resistance = "Eau"
 color = Color(0.247, 0.516, 0.162, 1)
 
-[sub_resource type="Resource" id="Resource_wagys"]
-script = ExtResource("12_tjr8v")
-nom = "Tenebre"
-faiblesse = "Feu"
-resistance = "Plante"
-color = Color(0.5574402, 0.043843195, 0.600112, 1)
-
-[sub_resource type="Resource" id="Resource_lfee6"]
+[sub_resource type="Resource" id="Resource_i748f"]
 script = ExtResource("13_voxsg")
 nom = "Flick"
 puissance = 3
@@ -418,7 +397,7 @@ PP_max = 20
 precision = 1.0
 _type_index = 0
 
-[sub_resource type="Resource" id="Resource_3mu66"]
+[sub_resource type="Resource" id="Resource_f6kb6"]
 script = ExtResource("13_voxsg")
 nom = "Ignis"
 puissance = 3
@@ -426,7 +405,7 @@ PP_max = 20
 precision = 1.0
 _type_index = 1
 
-[sub_resource type="Resource" id="Resource_b0uwa"]
+[sub_resource type="Resource" id="Resource_aek4d"]
 script = ExtResource("13_voxsg")
 nom = "Cirkeau"
 puissance = 3
@@ -434,21 +413,13 @@ PP_max = 20
 precision = 1.0
 _type_index = 2
 
-[sub_resource type="Resource" id="Resource_ns0bq"]
+[sub_resource type="Resource" id="Resource_e4x62"]
 script = ExtResource("13_voxsg")
 nom = "Folium-Crucis"
 puissance = 3
 PP_max = 20
 precision = 1.0
 _type_index = 3
-
-[sub_resource type="Resource" id="Resource_ixwgq"]
-script = ExtResource("13_voxsg")
-nom = "Tenebre"
-puissance = 3
-PP_max = 20
-precision = 1.0
-_type_index = 4
 
 [sub_resource type="Environment" id="Environment_r2s0p"]
 background_mode = 2
@@ -494,13 +465,13 @@ autoplay = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.9028616)
 up_direction = Vector3(0, 0.7071068, 0.7071068)
 
-[node name="PokemonJoueur" parent="." unique_id=965007536 instance=ExtResource("2_qm7m7")]
+[node name="GodomonJoueur" parent="." unique_id=965007536 instance=ExtResource("2_qm7m7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 12.753826)
 
 [node name="Nedy" type="CharacterBody3D" parent="." unique_id=2018576566]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.313, -5.7438865)
 script = ExtResource("4_7l60e")
-equipePokemon = Array[int]([0, 4, 2])
+equipeGodomon = Array[int]([0, 1, 2, 3])
 
 [node name="Sprite3D" type="Sprite3D" parent="Nedy" unique_id=863894577]
 transform = Transform3D(2.3000002, 0, 0, 0, 2.3000002, 0, 0, 0, 0.99999994, 0, -0.08885056, 0)
@@ -1281,7 +1252,7 @@ script = ExtResource("9_8l02w")
 position = Vector2(-642, -552)
 stream = ExtResource("9_r2s0p")
 
-[node name="MenuPokemon" type="Panel" parent="InterfaceMenu" unique_id=2024740771]
+[node name="MenuGodomon" type="Panel" parent="InterfaceMenu" unique_id=2024740771]
 visible = false
 texture_filter = 1
 layout_mode = 1
@@ -1292,7 +1263,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_qr8td")
 
-[node name="TextureButton_Pokemon1" type="TextureButton" parent="InterfaceMenu/MenuPokemon" unique_id=595732357]
+[node name="TextureButton_Godomon1" type="TextureButton" parent="InterfaceMenu/MenuGodomon" unique_id=595732357]
 texture_filter = 1
 layout_mode = 0
 offset_left = 55.0
@@ -1304,7 +1275,7 @@ texture_hover = ExtResource("25_1brqj")
 stretch_mode = 0
 script = ExtResource("26_qvqry")
 
-[node name="Label_Nom" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon1" unique_id=80427721]
+[node name="Label_Nom" type="Label" parent="InterfaceMenu/MenuGodomon/TextureButton_Godomon1" unique_id=80427721]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1322,7 +1293,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("13_byug1")
 theme_override_font_sizes/font_size = 25
 
-[node name="TextureRect_Pokemon" type="TextureRect" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon1" unique_id=1218085713]
+[node name="TextureRect_Godomon" type="TextureRect" parent="InterfaceMenu/MenuGodomon/TextureButton_Godomon1" unique_id=1218085713]
 texture_filter = 1
 layout_mode = 1
 offset_left = -1.0
@@ -1330,7 +1301,7 @@ offset_top = -9.0
 offset_right = 76.0
 offset_bottom = 54.0
 
-[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon1" unique_id=1112403733]
+[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfaceMenu/MenuGodomon/TextureButton_Godomon1" unique_id=1112403733]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 3
@@ -1349,7 +1320,7 @@ nine_patch_stretch = true
 texture_under = ExtResource("28_0cgjh")
 texture_progress = ExtResource("29_e6qsf")
 
-[node name="TextureRect-Contour" type="TextureRect" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon1/TextureProgressBar_PV" unique_id=53798613]
+[node name="TextureRect-Contour" type="TextureRect" parent="InterfaceMenu/MenuGodomon/TextureButton_Godomon1/TextureProgressBar_PV" unique_id=53798613]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1365,7 +1336,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("30_ediv8")
 
-[node name="Label_PV" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon1" unique_id=1852818692]
+[node name="Label_PV" type="Label" parent="InterfaceMenu/MenuGodomon/TextureButton_Godomon1" unique_id=1852818692]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1385,7 +1356,7 @@ theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureButton_Pokemon3" type="TextureButton" parent="InterfaceMenu/MenuPokemon" unique_id=879123604]
+[node name="TextureButton_Godomon3" type="TextureButton" parent="InterfaceMenu/MenuGodomon" unique_id=879123604]
 texture_filter = 1
 layout_mode = 0
 offset_left = 55.0
@@ -1398,7 +1369,7 @@ texture_hover = ExtResource("25_1brqj")
 stretch_mode = 0
 script = ExtResource("26_qvqry")
 
-[node name="Label_Nom" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon3" unique_id=2109453510]
+[node name="Label_Nom" type="Label" parent="InterfaceMenu/MenuGodomon/TextureButton_Godomon3" unique_id=2109453510]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1416,7 +1387,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("13_byug1")
 theme_override_font_sizes/font_size = 25
 
-[node name="TextureRect_Pokemon" type="TextureRect" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon3" unique_id=1442187444]
+[node name="TextureRect_Godomon" type="TextureRect" parent="InterfaceMenu/MenuGodomon/TextureButton_Godomon3" unique_id=1442187444]
 texture_filter = 1
 layout_mode = 0
 offset_left = -1.0
@@ -1424,7 +1395,7 @@ offset_top = -9.0
 offset_right = 76.0
 offset_bottom = 54.0
 
-[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon3" unique_id=905354887]
+[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfaceMenu/MenuGodomon/TextureButton_Godomon3" unique_id=905354887]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 3
@@ -1443,7 +1414,7 @@ nine_patch_stretch = true
 texture_under = ExtResource("28_0cgjh")
 texture_progress = ExtResource("29_e6qsf")
 
-[node name="TextureRect-Contour" type="TextureRect" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon3/TextureProgressBar_PV" unique_id=71177169]
+[node name="TextureRect-Contour" type="TextureRect" parent="InterfaceMenu/MenuGodomon/TextureButton_Godomon3/TextureProgressBar_PV" unique_id=71177169]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1459,7 +1430,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("30_ediv8")
 
-[node name="Label_PV" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon3" unique_id=90215288]
+[node name="Label_PV" type="Label" parent="InterfaceMenu/MenuGodomon/TextureButton_Godomon3" unique_id=90215288]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1479,7 +1450,7 @@ theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureButton_Pokemon5" type="TextureButton" parent="InterfaceMenu/MenuPokemon" unique_id=72902082]
+[node name="TextureButton_Godomon5" type="TextureButton" parent="InterfaceMenu/MenuGodomon" unique_id=72902082]
 texture_filter = 1
 layout_mode = 0
 offset_left = 55.0
@@ -1492,7 +1463,7 @@ texture_hover = ExtResource("25_1brqj")
 stretch_mode = 0
 script = ExtResource("26_qvqry")
 
-[node name="Label_Nom" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon5" unique_id=1086001909]
+[node name="Label_Nom" type="Label" parent="InterfaceMenu/MenuGodomon/TextureButton_Godomon5" unique_id=1086001909]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1510,7 +1481,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("13_byug1")
 theme_override_font_sizes/font_size = 25
 
-[node name="TextureRect_Pokemon" type="TextureRect" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon5" unique_id=1287990131]
+[node name="TextureRect_Godomon" type="TextureRect" parent="InterfaceMenu/MenuGodomon/TextureButton_Godomon5" unique_id=1287990131]
 texture_filter = 1
 layout_mode = 0
 offset_left = -1.0
@@ -1518,7 +1489,7 @@ offset_top = -9.0
 offset_right = 76.0
 offset_bottom = 54.0
 
-[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon5" unique_id=1147910751]
+[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfaceMenu/MenuGodomon/TextureButton_Godomon5" unique_id=1147910751]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 3
@@ -1537,7 +1508,7 @@ nine_patch_stretch = true
 texture_under = ExtResource("28_0cgjh")
 texture_progress = ExtResource("29_e6qsf")
 
-[node name="TextureRect-Contour" type="TextureRect" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon5/TextureProgressBar_PV" unique_id=1190515247]
+[node name="TextureRect-Contour" type="TextureRect" parent="InterfaceMenu/MenuGodomon/TextureButton_Godomon5/TextureProgressBar_PV" unique_id=1190515247]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1553,7 +1524,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("30_ediv8")
 
-[node name="Label_PV" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon5" unique_id=1830235309]
+[node name="Label_PV" type="Label" parent="InterfaceMenu/MenuGodomon/TextureButton_Godomon5" unique_id=1830235309]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1573,7 +1544,7 @@ theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureButton_Pokemon2" type="TextureButton" parent="InterfaceMenu/MenuPokemon" unique_id=593780920]
+[node name="TextureButton_Godomon2" type="TextureButton" parent="InterfaceMenu/MenuGodomon" unique_id=593780920]
 texture_filter = 1
 layout_mode = 0
 offset_left = 451.0
@@ -1586,7 +1557,7 @@ texture_hover = ExtResource("25_1brqj")
 stretch_mode = 0
 script = ExtResource("26_qvqry")
 
-[node name="Label_Nom" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon2" unique_id=105025371]
+[node name="Label_Nom" type="Label" parent="InterfaceMenu/MenuGodomon/TextureButton_Godomon2" unique_id=105025371]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1604,7 +1575,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("13_byug1")
 theme_override_font_sizes/font_size = 25
 
-[node name="TextureRect_Pokemon" type="TextureRect" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon2" unique_id=1327836312]
+[node name="TextureRect_Godomon" type="TextureRect" parent="InterfaceMenu/MenuGodomon/TextureButton_Godomon2" unique_id=1327836312]
 texture_filter = 1
 layout_mode = 0
 offset_left = -1.0
@@ -1612,7 +1583,7 @@ offset_top = -9.0
 offset_right = 76.0
 offset_bottom = 54.0
 
-[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon2" unique_id=272252970]
+[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfaceMenu/MenuGodomon/TextureButton_Godomon2" unique_id=272252970]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 3
@@ -1631,7 +1602,7 @@ nine_patch_stretch = true
 texture_under = ExtResource("28_0cgjh")
 texture_progress = ExtResource("29_e6qsf")
 
-[node name="TextureRect-Contour" type="TextureRect" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon2/TextureProgressBar_PV" unique_id=1852627044]
+[node name="TextureRect-Contour" type="TextureRect" parent="InterfaceMenu/MenuGodomon/TextureButton_Godomon2/TextureProgressBar_PV" unique_id=1852627044]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1647,7 +1618,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("30_ediv8")
 
-[node name="Label_PV" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon2" unique_id=1019540511]
+[node name="Label_PV" type="Label" parent="InterfaceMenu/MenuGodomon/TextureButton_Godomon2" unique_id=1019540511]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1667,7 +1638,7 @@ theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureButton_Pokemon4" type="TextureButton" parent="InterfaceMenu/MenuPokemon" unique_id=832757309]
+[node name="TextureButton_Godomon4" type="TextureButton" parent="InterfaceMenu/MenuGodomon" unique_id=832757309]
 texture_filter = 1
 layout_mode = 0
 offset_left = 451.0
@@ -1680,7 +1651,7 @@ texture_hover = ExtResource("25_1brqj")
 stretch_mode = 0
 script = ExtResource("26_qvqry")
 
-[node name="Label_Nom" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon4" unique_id=317304158]
+[node name="Label_Nom" type="Label" parent="InterfaceMenu/MenuGodomon/TextureButton_Godomon4" unique_id=317304158]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1698,7 +1669,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("13_byug1")
 theme_override_font_sizes/font_size = 25
 
-[node name="TextureRect_Pokemon" type="TextureRect" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon4" unique_id=1903178180]
+[node name="TextureRect_Godomon" type="TextureRect" parent="InterfaceMenu/MenuGodomon/TextureButton_Godomon4" unique_id=1903178180]
 texture_filter = 1
 layout_mode = 0
 offset_left = -1.0
@@ -1706,7 +1677,7 @@ offset_top = -9.0
 offset_right = 76.0
 offset_bottom = 54.0
 
-[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon4" unique_id=946871822]
+[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfaceMenu/MenuGodomon/TextureButton_Godomon4" unique_id=946871822]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 3
@@ -1725,7 +1696,7 @@ nine_patch_stretch = true
 texture_under = ExtResource("28_0cgjh")
 texture_progress = ExtResource("29_e6qsf")
 
-[node name="TextureRect-Contour" type="TextureRect" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon4/TextureProgressBar_PV" unique_id=935128379]
+[node name="TextureRect-Contour" type="TextureRect" parent="InterfaceMenu/MenuGodomon/TextureButton_Godomon4/TextureProgressBar_PV" unique_id=935128379]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1741,7 +1712,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("30_ediv8")
 
-[node name="Label_PV" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon4" unique_id=1228973143]
+[node name="Label_PV" type="Label" parent="InterfaceMenu/MenuGodomon/TextureButton_Godomon4" unique_id=1228973143]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1761,7 +1732,7 @@ theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureButton_Pokemon6" type="TextureButton" parent="InterfaceMenu/MenuPokemon" unique_id=495691938]
+[node name="TextureButton_Godomon6" type="TextureButton" parent="InterfaceMenu/MenuGodomon" unique_id=495691938]
 texture_filter = 1
 layout_mode = 0
 offset_left = 451.0
@@ -1774,7 +1745,7 @@ texture_hover = ExtResource("25_1brqj")
 stretch_mode = 0
 script = ExtResource("26_qvqry")
 
-[node name="Label_Nom" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" unique_id=1055644387]
+[node name="Label_Nom" type="Label" parent="InterfaceMenu/MenuGodomon/TextureButton_Godomon6" unique_id=1055644387]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1792,7 +1763,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("13_byug1")
 theme_override_font_sizes/font_size = 25
 
-[node name="TextureRect_Pokemon" type="TextureRect" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" unique_id=265904913]
+[node name="TextureRect_Godomon" type="TextureRect" parent="InterfaceMenu/MenuGodomon/TextureButton_Godomon6" unique_id=265904913]
 texture_filter = 1
 layout_mode = 0
 offset_left = -1.0
@@ -1800,7 +1771,7 @@ offset_top = -9.0
 offset_right = 76.0
 offset_bottom = 54.0
 
-[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" unique_id=1104720774]
+[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfaceMenu/MenuGodomon/TextureButton_Godomon6" unique_id=1104720774]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 3
@@ -1819,7 +1790,7 @@ nine_patch_stretch = true
 texture_under = ExtResource("28_0cgjh")
 texture_progress = ExtResource("29_e6qsf")
 
-[node name="TextureRect-Contour" type="TextureRect" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6/TextureProgressBar_PV" unique_id=741375829]
+[node name="TextureRect-Contour" type="TextureRect" parent="InterfaceMenu/MenuGodomon/TextureButton_Godomon6/TextureProgressBar_PV" unique_id=741375829]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1835,7 +1806,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("30_ediv8")
 
-[node name="Label_PV" type="Label" parent="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" unique_id=2014938988]
+[node name="Label_PV" type="Label" parent="InterfaceMenu/MenuGodomon/TextureButton_Godomon6" unique_id=2014938988]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1855,7 +1826,7 @@ theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureButton_Equipe" type="TextureButton" parent="InterfaceMenu/MenuPokemon" unique_id=1870916449]
+[node name="TextureButton_Equipe" type="TextureButton" parent="InterfaceMenu/MenuGodomon" unique_id=1870916449]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 3
@@ -1876,11 +1847,11 @@ texture_hover = ExtResource("11_o1h8p")
 stretch_mode = 0
 script = ExtResource("9_8l02w")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="InterfaceMenu/MenuPokemon/TextureButton_Equipe" unique_id=644420993]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="InterfaceMenu/MenuGodomon/TextureButton_Equipe" unique_id=644420993]
 position = Vector2(-642, -552)
 stream = ExtResource("9_r2s0p")
 
-[node name="Resume" type="Panel" parent="InterfaceMenu/MenuPokemon" unique_id=621402747]
+[node name="Resume" type="Panel" parent="InterfaceMenu/MenuGodomon" unique_id=621402747]
 visible = false
 texture_filter = 1
 layout_mode = 1
@@ -1891,7 +1862,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ou8r4")
 
-[node name="Label_PV" type="Label" parent="InterfaceMenu/MenuPokemon/Resume" unique_id=1345921272]
+[node name="Label_PV" type="Label" parent="InterfaceMenu/MenuGodomon/Resume" unique_id=1345921272]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 1
@@ -1908,7 +1879,7 @@ theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfaceMenu/MenuPokemon/Resume" unique_id=1431172290]
+[node name="TextureProgressBar_PV" type="TextureProgressBar" parent="InterfaceMenu/MenuGodomon/Resume" unique_id=1431172290]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 1
@@ -1924,7 +1895,7 @@ nine_patch_stretch = true
 texture_under = ExtResource("28_0cgjh")
 texture_progress = ExtResource("29_e6qsf")
 
-[node name="TextureRect-Contour" type="TextureRect" parent="InterfaceMenu/MenuPokemon/Resume/TextureProgressBar_PV" unique_id=1450754019]
+[node name="TextureRect-Contour" type="TextureRect" parent="InterfaceMenu/MenuGodomon/Resume/TextureProgressBar_PV" unique_id=1450754019]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1940,7 +1911,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("30_ediv8")
 
-[node name="TextureRect_Pokemon" type="TextureRect" parent="InterfaceMenu/MenuPokemon/Resume" unique_id=1382396662]
+[node name="TextureRect_Godomon" type="TextureRect" parent="InterfaceMenu/MenuGodomon/Resume" unique_id=1382396662]
 texture_filter = 1
 layout_mode = 1
 offset_left = 188.0
@@ -1948,7 +1919,7 @@ offset_top = 74.0
 offset_right = 491.0
 offset_bottom = 373.0
 
-[node name="Label_Stats1" type="Label" parent="InterfaceMenu/MenuPokemon/Resume" unique_id=1885768960]
+[node name="Label_Stats1" type="Label" parent="InterfaceMenu/MenuGodomon/Resume" unique_id=1885768960]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 3
@@ -1969,7 +1940,7 @@ theme_override_font_sizes/font_size = 35
 text = "
 "
 
-[node name="Label_Stats2" type="Label" parent="InterfaceMenu/MenuPokemon/Resume" unique_id=1486184827]
+[node name="Label_Stats2" type="Label" parent="InterfaceMenu/MenuGodomon/Resume" unique_id=1486184827]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 3
@@ -1988,7 +1959,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("13_byug1")
 theme_override_font_sizes/font_size = 53
 
-[node name="Label_Description" type="Label" parent="InterfaceMenu/MenuPokemon/Resume" unique_id=771513634]
+[node name="Label_Description" type="Label" parent="InterfaceMenu/MenuGodomon/Resume" unique_id=771513634]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 3
@@ -2008,7 +1979,7 @@ theme_override_fonts/font = ExtResource("13_byug1")
 theme_override_font_sizes/font_size = 25
 autowrap_mode = 3
 
-[node name="Label_Nature" type="Label" parent="InterfaceMenu/MenuPokemon/Resume" unique_id=1204331225]
+[node name="Label_Nature" type="Label" parent="InterfaceMenu/MenuGodomon/Resume" unique_id=1204331225]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 3
@@ -2028,7 +1999,7 @@ theme_override_fonts/font = ExtResource("13_byug1")
 theme_override_font_sizes/font_size = 40
 vertical_alignment = 2
 
-[node name="TextureButton_PokemonRetour" type="TextureButton" parent="InterfaceMenu/MenuPokemon/Resume" unique_id=2097387771]
+[node name="TextureButton_PokemonRetour" type="TextureButton" parent="InterfaceMenu/MenuGodomon/Resume" unique_id=2097387771]
 texture_filter = 1
 layout_mode = 1
 offset_right = 105.0
@@ -2058,17 +2029,17 @@ autoplay = "MainMenuIntro"
 [node name="Paramètre" type="Node3D" parent="." unique_id=256808770]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.128716, 0.85703945, 3.5622892)
 script = ExtResource("4_dgiq7")
-listeDesNatures = Array[ExtResource("5_vfha3")]([SubResource("Resource_voxsg"), SubResource("Resource_l88oo"), SubResource("Resource_8i4vk"), SubResource("Resource_4wxh0"), SubResource("Resource_vpkbl"), SubResource("Resource_vaoup")])
-listeDesObjets = Array[ExtResource("9_x6yq0")]([SubResource("Resource_q66mb"), SubResource("Resource_je3ga"), SubResource("Resource_71rpj")])
-listePokemons = Array[ExtResource("11_voxsg")]([SubResource("Resource_40irl"), SubResource("Resource_1y0xa"), SubResource("Resource_dq13u"), SubResource("Resource_8i56a"), SubResource("Resource_tl1mc")])
-listeDesTypes = Array[ExtResource("12_tjr8v")]([SubResource("Resource_x8d5j"), SubResource("Resource_15qxy"), SubResource("Resource_llcau"), SubResource("Resource_5krid"), SubResource("Resource_wagys")])
-listeDesAttaques = Array[ExtResource("13_voxsg")]([SubResource("Resource_lfee6"), SubResource("Resource_3mu66"), SubResource("Resource_b0uwa"), SubResource("Resource_ns0bq"), SubResource("Resource_ixwgq")])
+listeDesNatures = Array[ExtResource("5_vfha3")]([SubResource("Resource_x8d5j"), SubResource("Resource_15qxy"), SubResource("Resource_llcau"), SubResource("Resource_5krid"), SubResource("Resource_tl1mc"), SubResource("Resource_wagys")])
+listeDesObjets = Array[ExtResource("9_x6yq0")]([SubResource("Resource_3mu66"), SubResource("Resource_ns0bq"), SubResource("Resource_kdr5y")])
+listeGodomons = Array[ExtResource("11_voxsg")]([SubResource("Resource_168bq"), SubResource("Resource_mpy6k"), SubResource("Resource_0sscw"), SubResource("Resource_76hys")])
+listeDesTypes = Array[ExtResource("12_tjr8v")]([SubResource("Resource_050fk"), SubResource("Resource_cmwer"), SubResource("Resource_vs275"), SubResource("Resource_3kyet")])
+listeDesAttaques = Array[ExtResource("13_voxsg")]([SubResource("Resource_i748f"), SubResource("Resource_f6kb6"), SubResource("Resource_aek4d"), SubResource("Resource_e4x62")])
 musiqueMenu = ExtResource("86_86a52")
 musiquePrincipal = ExtResource("1_x7wka")
 musiqueCombat = ExtResource("87_71rpj")
 musiqueTransitionCombat = ExtResource("88_1y0xa")
 musiqueVictoire = ExtResource("89_dq13u")
-_type_index_pokemons_joueurs = 4
+_type_index_Godomons_joueurs = 1
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2071441840]
 environment = SubResource("Environment_r2s0p")
@@ -2079,11 +2050,11 @@ camera_attributes = SubResource("CameraAttributesPhysical_r2s0p")
 [connection signal="pressed" from="InterfaceMenu/TextureButton_Equipe" to="InterfaceMenu/TextureButton_Equipe" method="_on_menu_pokemon_pressed"]
 [connection signal="pressed" from="InterfaceMenu/TextureButton_Objets" to="InterfaceMenu/TextureButton_Objets" method="_on_menu_objet_pressed"]
 [connection signal="pressed" from="InterfaceMenu/MenuObjet/Bouton_MenuSacADos" to="InterfaceMenu/MenuObjet/Bouton_MenuSacADos" method="_on_menu_objet_pressed"]
-[connection signal="pressed" from="InterfaceMenu/MenuPokemon/TextureButton_Pokemon1" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon1" method="_on_pressed"]
-[connection signal="pressed" from="InterfaceMenu/MenuPokemon/TextureButton_Pokemon3" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon3" method="_on_pressed"]
-[connection signal="pressed" from="InterfaceMenu/MenuPokemon/TextureButton_Pokemon5" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon5" method="_on_pressed"]
-[connection signal="pressed" from="InterfaceMenu/MenuPokemon/TextureButton_Pokemon2" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon2" method="_on_pressed"]
-[connection signal="pressed" from="InterfaceMenu/MenuPokemon/TextureButton_Pokemon4" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon4" method="_on_pressed"]
-[connection signal="pressed" from="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" method="_on_pressed"]
-[connection signal="pressed" from="InterfaceMenu/MenuPokemon/TextureButton_Equipe" to="InterfaceMenu/MenuPokemon/TextureButton_Equipe" method="_on_menu_pokemon_pressed"]
-[connection signal="pressed" from="InterfaceMenu/MenuPokemon/Resume/TextureButton_PokemonRetour" to="InterfaceMenu/MenuPokemon/TextureButton_Pokemon6" method="_on_pressed"]
+[connection signal="pressed" from="InterfaceMenu/MenuGodomon/TextureButton_Godomon1" to="InterfaceMenu/MenuGodomon/TextureButton_Godomon1" method="_on_pressed"]
+[connection signal="pressed" from="InterfaceMenu/MenuGodomon/TextureButton_Godomon3" to="InterfaceMenu/MenuGodomon/TextureButton_Godomon3" method="_on_pressed"]
+[connection signal="pressed" from="InterfaceMenu/MenuGodomon/TextureButton_Godomon5" to="InterfaceMenu/MenuGodomon/TextureButton_Godomon5" method="_on_pressed"]
+[connection signal="pressed" from="InterfaceMenu/MenuGodomon/TextureButton_Godomon2" to="InterfaceMenu/MenuGodomon/TextureButton_Godomon2" method="_on_pressed"]
+[connection signal="pressed" from="InterfaceMenu/MenuGodomon/TextureButton_Godomon4" to="InterfaceMenu/MenuGodomon/TextureButton_Godomon4" method="_on_pressed"]
+[connection signal="pressed" from="InterfaceMenu/MenuGodomon/TextureButton_Godomon6" to="InterfaceMenu/MenuGodomon/TextureButton_Godomon6" method="_on_pressed"]
+[connection signal="pressed" from="InterfaceMenu/MenuGodomon/TextureButton_Equipe" to="InterfaceMenu/MenuGodomon/TextureButton_Equipe" method="_on_menu_pokemon_pressed"]
+[connection signal="pressed" from="InterfaceMenu/MenuGodomon/Resume/TextureButton_PokemonRetour" to="InterfaceMenu/MenuGodomon/TextureButton_Godomon6" method="_on_pressed"]

@@ -17,5 +17,5 @@ func _on_menu_pokemon_pressed() -> void:
 	
 	if combat.tourDuJoueur == true && combat.enCoursDeTour == false:
 		
-		ecran_de_transition._fondu("InterfacePokemon")
+		ecran_de_transition._fondu("InterfaceGodomon")
 		dataDuJeu.objetUtilisé = null

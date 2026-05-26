@@ -1,8 +1,8 @@
 extends Node
 
-var pokemonJoueur : PokemonData
+var pokemonJoueur : GodomonData
 
-var pokemonEnnemi : PokemonData
+var pokemonEnnemi : GodomonData
 
 var pvJoueurInterface : float
 
@@ -25,10 +25,10 @@ func _enter_tree() -> void:
 	
 	pokemonJoueur = dataDuJeu.pokemonJoueurStats
 	
-	if dataDuJeu.listePokemonsEnnemie == []:
-		pokemonEnnemi = dataDuJeu.listePokemons[randi() % dataDuJeu.listePokemons.size()].duplicate(true)
+	if dataDuJeu.listeGodomonsEnnemie == []:
+		pokemonEnnemi = dataDuJeu.listeGodomons[randi() % dataDuJeu.listeGodomons.size()].duplicate(true)
 	else:
-		pokemonEnnemi = dataDuJeu.listePokemonsEnnemie[0]
+		pokemonEnnemi = dataDuJeu.listeGodomonsEnnemie[0]
 		dataDuJeu.pokemonEnnemiStats = pokemonEnnemi 
 	
 	dataDuJeu.pokemonEnnemiStats = pokemonEnnemi 
@@ -44,21 +44,21 @@ func  _ready() -> void:
 	
 	_créerBoutonsMenuObjet()
 	
-	$PokemonJoueur/Sprite3D.visible = false
+	$GodomonJoueur/Sprite3D.visible = false
 	
 	await get_tree().create_timer(2.0).timeout
 	
-	$PokemonEnnemi._play(pokemonEnnemi.crie)
+	$GodomonEnnemi._play(pokemonEnnemi.crie)
 	
-	$PokemonJoueur/AnimatedSpriteAttaque.play("Intro_Lenotre")
+	$GodomonJoueur/AnimatedSpriteAttaque.play("Intro_Lenotre")
 	
-	await $PokemonJoueur/AnimatedSpriteAttaque.animation_finished
+	await $GodomonJoueur/AnimatedSpriteAttaque.animation_finished
 	
-	$PokemonJoueur/Sprite3D.visible = true
+	$GodomonJoueur/Sprite3D.visible = true
 	
 	ecrire_texte(message, "Début du combat")
 	
-	$PokemonEnnemi._play(pokemonJoueur.crie)
+	$GodomonEnnemi._play(pokemonJoueur.crie)
 	
 	await get_tree().create_timer(1.0).timeout
 	
@@ -132,22 +132,22 @@ func _tourAdverse() -> void:
 	
 	attaqueUtilse.PP -= 1
 	
-	ecrire_texte(message, "Le " + pokemonEnnemi.nom + " adverse utilise : " + attaqueUtilse.nom)
+	ecrire_texte(message, "Le/La " + pokemonEnnemi.nom + " adverse utilise : " + attaqueUtilse.nom)
 	
 	await get_tree().create_timer(1.0).timeout
 	
-	$PokemonEnnemi._play(attaqueUtilse.bruit)
+	$GodomonEnnemi._play(attaqueUtilse.bruit)
 	
-	if $PokemonJoueur/AnimatedSpriteAttaque.sprite_frames.has_animation(attaqueUtilse.nom):
-		$PokemonJoueur/AnimatedSpriteAttaque.modulate = Color(1, 1, 1, 1)
-		$PokemonJoueur/AnimatedSpriteAttaque.play(attaqueUtilse.nom)
+	if $GodomonJoueur/AnimatedSpriteAttaque.sprite_frames.has_animation(attaqueUtilse.nom):
+		$GodomonJoueur/AnimatedSpriteAttaque.modulate = Color(1, 1, 1, 1)
+		$GodomonJoueur/AnimatedSpriteAttaque.play(attaqueUtilse.nom)
 	else:
 		for type in dataDuJeu.listeDesTypes:
 			if type.nom == attaqueUtilse.type:
-				$PokemonJoueur/AnimatedSpriteAttaque.modulate = type.color
-		$PokemonJoueur/AnimatedSpriteAttaque.play("Neutre")
+				$GodomonJoueur/AnimatedSpriteAttaque.modulate = type.color
+		$GodomonJoueur/AnimatedSpriteAttaque.play("Neutre")
 	
-	await $PokemonJoueur/AnimatedSpriteAttaque.animation_finished
+	await $GodomonJoueur/AnimatedSpriteAttaque.animation_finished
 	
 	if randf() <= attaqueUtilse.precision:
 		pokemonJoueur.pv_Actuels -= degatsInflige
@@ -205,18 +205,18 @@ func _tourJoueur(attaque : Attaque) -> void:
 	
 	await get_tree().create_timer(1.0).timeout
 	
-	$PokemonEnnemi._play(attaque.bruit)
+	$GodomonEnnemi._play(attaque.bruit)
 	
-	if $PokemonEnnemi/AnimatedSpriteAttaque.sprite_frames.has_animation(attaque.nom):
-		$PokemonEnnemi/AnimatedSpriteAttaque.modulate = Color(1, 1, 1, 1)
-		$PokemonEnnemi/AnimatedSpriteAttaque.play(attaque.nom)
+	if $GodomonEnnemi/AnimatedSpriteAttaque.sprite_frames.has_animation(attaque.nom):
+		$GodomonEnnemi/AnimatedSpriteAttaque.modulate = Color(1, 1, 1, 1)
+		$GodomonEnnemi/AnimatedSpriteAttaque.play(attaque.nom)
 	else:
 		for type in dataDuJeu.listeDesTypes:
 			if type.nom == attaque.type:
-				$PokemonEnnemi/AnimatedSpriteAttaque.modulate = type.color
-		$PokemonEnnemi/AnimatedSpriteAttaque.play(&"Neutre")
+				$GodomonEnnemi/AnimatedSpriteAttaque.modulate = type.color
+		$GodomonEnnemi/AnimatedSpriteAttaque.play(&"Neutre")
 	
-	await $PokemonEnnemi/AnimatedSpriteAttaque.animation_finished
+	await $GodomonEnnemi/AnimatedSpriteAttaque.animation_finished
 	
 	if randf() <= attaque.precision:
 		pokemonEnnemi.pv_Actuels -= degatsInflige
@@ -242,7 +242,7 @@ func _tourJoueur(attaque : Attaque) -> void:
 func _finDeTour() -> void :
 	
 	if pokemonEnnemi.pv_Actuels <= 0:
-		for pokemon in dataDuJeu.listePokemonsEnnemie:
+		for pokemon in dataDuJeu.listeGodomonsEnnemie:
 			if pokemon.pv_Actuels > 0:
 				
 				pokemonJoueur.xp += 250 * pokemonEnnemi.lvl
@@ -252,22 +252,22 @@ func _finDeTour() -> void :
 				await get_tree().create_timer(1.0).timeout
 				
 				dataDuJeu.pokemonEnnemiStats = pokemon
-				$PokemonEnnemi.initialise()
+				$GodomonEnnemi.initialise()
 				pokemonEnnemi = dataDuJeu.pokemonEnnemiStats
 				break
 	elif pokemonJoueur.pv_Actuels <= 0:
-		for i in range(dataDuJeu.listePokemonsJoueur.size()):
-			if dataDuJeu.listePokemonsJoueur[i].pv_Actuels > 0:
+		for i in range(dataDuJeu.listeGodomonsJoueur.size()):
+			if dataDuJeu.listeGodomonsJoueur[i].pv_Actuels > 0:
 				
-				ecrire_texte(message, "Vous lancez un " + dataDuJeu.listePokemonsJoueur[i].nom)
+				ecrire_texte(message, "Vous lancez un/une " + dataDuJeu.listeGodomonsJoueur[i].nom)
 				
-				$PokemonJoueur/Sprite3D.visible = false
-				$PokemonJoueur/AnimatedSpriteAttaque.play("Intro_Lenotre")
-				await $PokemonJoueur/AnimatedSpriteAttaque.animation_finished
-				$PokemonJoueur/Sprite3D.visible = true
+				$GodomonJoueur/Sprite3D.visible = false
+				$GodomonJoueur/AnimatedSpriteAttaque.play("Intro_Lenotre")
+				await $GodomonJoueur/AnimatedSpriteAttaque.animation_finished
+				$GodomonJoueur/Sprite3D.visible = true
 				
-				dataDuJeu.indexPokemonJoueurActif = i
-				$PokemonJoueur.initialise()
+				dataDuJeu.indexGodomonJoueurActif = i
+				$GodomonJoueur.initialise()
 				pokemonJoueur = dataDuJeu.pokemonJoueurStats
 				break
 	
@@ -298,7 +298,7 @@ func _finDeTour() -> void :
 		
 		$InterfaceCombat/AnimatedSprite2D.visible = false
 		
-		dataDuJeu.listePokemonsEnnemie.clear()
+		dataDuJeu.listeGodomonsEnnemie.clear()
 		dataDuJeu.listeDesDresseurs[dataDuJeu.adversaire] = true
 		dataDuJeu. adversaire = ""
 		
@@ -317,35 +317,35 @@ func _finDeTour() -> void :
 		
 		$InterfaceCombat/AnimatedSprite2D.visible = false
 		
-		for pokemon in dataDuJeu.listePokemonsJoueur:
+		for pokemon in dataDuJeu.listeGodomonsJoueur:
 			pokemon.pv_Actuels = pokemon.pv
 			for attaque in pokemon.listeAttaque:
 				attaque.PP = attaque.PP_max
 		
-		dataDuJeu.listePokemonsEnnemie.clear()
+		dataDuJeu.listeGodomonsEnnemie.clear()
 		dataDuJeu.listeDesDresseurs[dataDuJeu.adversaire] = false
 		dataDuJeu. adversaire = ""
-		dataDuJeu.indexPokemonJoueurActif = 0
+		dataDuJeu.indexGodomonJoueurActif = 0
 		
 		get_tree().change_scene_to_file("res://Scene/ScenePrincipale.tscn")
 
 # Fonction qui met à jour l'interface
 func _misAJourInterface():
-	$InterfaceCombat/InterfaceInfoPokemon2/PV.value = pvEnnemiInterface
-	$InterfaceCombat/InterfaceInfoPokemon2/PV.max_value = pokemonEnnemi.pv
+	$InterfaceCombat/InterfaceInfoGodomon2/PV.value = pvEnnemiInterface
+	$InterfaceCombat/InterfaceInfoGodomon2/PV.max_value = pokemonEnnemi.pv
 	
-	$InterfaceCombat/InterfaceInfoPokemon1/PV.value = pvJoueurInterface
-	$InterfaceCombat/InterfaceInfoPokemon1/PV.max_value = pokemonJoueur.pv
+	$InterfaceCombat/InterfaceInfoGodomon1/PV.value = pvJoueurInterface
+	$InterfaceCombat/InterfaceInfoGodomon1/PV.max_value = pokemonJoueur.pv
 	
-	$InterfaceCombat/InterfaceInfoPokemon1/LVL.value = pokemonJoueur.xp
-	$InterfaceCombat/InterfaceInfoPokemon1/LVL.max_value = pokemonJoueur.xpObjectif
-	$InterfaceCombat/InterfaceInfoPokemon1/LVL/Texte_Niveau.text = str(pokemonJoueur.xp) + "/" + str(pokemonJoueur.xpObjectif)
+	$InterfaceCombat/InterfaceInfoGodomon1/LVL.value = pokemonJoueur.xp
+	$InterfaceCombat/InterfaceInfoGodomon1/LVL.max_value = pokemonJoueur.xpObjectif
+	$InterfaceCombat/InterfaceInfoGodomon1/LVL/Texte_Niveau.text = str(pokemonJoueur.xp) + "/" + str(pokemonJoueur.xpObjectif)
 	
-	$InterfaceCombat/InterfaceInfoPokemon2/Texte_Nom.text = pokemonEnnemi.nom
-	$InterfaceCombat/InterfaceInfoPokemon1/Texte_Nom.text = pokemonJoueur.nom
+	$InterfaceCombat/InterfaceInfoGodomon2/Texte_Nom.text = pokemonEnnemi.nom
+	$InterfaceCombat/InterfaceInfoGodomon1/Texte_Nom.text = pokemonJoueur.nom
 	
-	$InterfaceCombat/InterfaceInfoPokemon2/Texte_Level.text = str(pokemonEnnemi.lvl)
-	$InterfaceCombat/InterfaceInfoPokemon1/Texte_Level.text = str(pokemonJoueur.lvl)
+	$InterfaceCombat/InterfaceInfoGodomon2/Texte_Level.text = str(pokemonEnnemi.lvl)
+	$InterfaceCombat/InterfaceInfoGodomon1/Texte_Level.text = str(pokemonJoueur.lvl)
 	
 	$"InterfaceCombat/MenuAttaque/Label_Attaque1".text = pokemonJoueur.listeAttaque[0].nom + "\n" + "\n            PP : " + str(pokemonJoueur.listeAttaque[0].PP) + "/" + str(pokemonJoueur.listeAttaque[0].PP_max)
 	$"InterfaceCombat/MenuAttaque/Label_Attaque2".text = pokemonJoueur.listeAttaque[1].nom + "\n" + "\n            PP : " + str(pokemonJoueur.listeAttaque[1].PP) + "/" + str(pokemonJoueur.listeAttaque[1].PP_max)

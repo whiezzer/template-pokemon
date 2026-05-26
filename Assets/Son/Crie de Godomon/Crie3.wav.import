@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d255sx2xvrrbf"
+path="res://.godot/imported/Crie3.wav-87b4f5d1cbca9799f1c814cce7bccaf7.sample"
+
+[deps]
+
+source_file="res://Assets/Son/Crie de Godomon/Crie3.wav"
+dest_files=["res://.godot/imported/Crie3.wav-87b4f5d1cbca9799f1c814cce7bccaf7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

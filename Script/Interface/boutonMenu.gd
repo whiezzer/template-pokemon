@@ -8,4 +8,4 @@ func _on_menu_objet_pressed() -> void:
 func _on_menu_pokemon_pressed() -> void:
 	$AudioStreamPlayer2D.playing = true
 	
-	ecran_de_transition._fondu("InterfaceMenu/MenuPokemon")
+	ecran_de_transition._fondu("InterfaceMenu/MenuGodomon")

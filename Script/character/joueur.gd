@@ -101,9 +101,9 @@ func _input(event):
 			get_tree().current_scene.get_node("AudioMusique3D").play()
 			ecran_de_transition._fonduEnOuvertureAudio(get_tree().current_scene.get_node("AudioMusique3D"), 1.0)
 			menu.get_node("MenuObjet").visible = false
-			menu.get_node("MenuPokemon").visible = false
-			menu.get_node("MenuPokemon/Resume").visible = false
-			menu.get_node("MenuPokemon/TextureButton_Pokemon6").boutonActif = null
+			menu.get_node("MenuGodomon").visible = false
+			menu.get_node("MenuGodomon/Resume").visible = false
+			menu.get_node("MenuGodomon/TextureButton_Godomon6").boutonActif = null
 			pause = false
 
 func _bruitDePas() -> void:
