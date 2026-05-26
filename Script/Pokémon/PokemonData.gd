@@ -90,7 +90,7 @@ var xpObjectif : int = 1000
 var nature : NatureStat
 
 # Constructeur pour initialiser les valeurs directement
-func _init(index = 0, _pv = 10, _attaque = 5, _def = 5, _vitesse = 3):
+func _init(index = 0, _pv = 10, _attaque = 5, _def = 5, _vitesse = 3, _nom = "Pas de nom", _crie = null, _sprite = null, _spriteDos = null):
 	nom = "Pas de nom"
 	_type_index = index
 	pv = _pv
@@ -98,3 +98,7 @@ func _init(index = 0, _pv = 10, _attaque = 5, _def = 5, _vitesse = 3):
 	attaque = _attaque
 	defense = _def
 	vitesse = _vitesse
+	nom = _nom
+	crie = _crie
+	sprite = _sprite
+	sprite_Dos = _spriteDos

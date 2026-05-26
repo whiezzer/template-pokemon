@@ -44,23 +44,22 @@ func _on_pressed() -> void:
 				return
 			
 			get_parent().get_node("PopUp-Confirmation").visible = true
-	
-	if pokemon != null && dataDuJeu.objetUtilisé.objet.reanime && pokemon.pv_Actuels <= 0:
+	elif pokemon != null && dataDuJeu.objetUtilisé.objet.reanime && pokemon.pv_Actuels <= 0:
 		boutonActif = self
 		get_parent().get_node("PopUp-Confirmation").visible = true
 	
-	if pokemon != null && dataDuJeu.objetUtilisé.objet.soigne && pokemon.pv_Actuels > 0:
+	elif pokemon != null && dataDuJeu.objetUtilisé.objet.soigne && pokemon.pv_Actuels > 0:
 		boutonActif = self
 		get_parent().get_node("PopUp-Confirmation").visible = true
 
 func _confirmer() -> void:
 	
-	if dataDuJeu.objetUtilisé.objet.reanime:
+	if dataDuJeu.objetUtilisé == null:
+		_changer()
+	elif dataDuJeu.objetUtilisé.objet.reanime:
 		_reanime()
 	elif dataDuJeu.objetUtilisé.objet.soigne:
 		_soigne()
-	else:
-		_changer()
 
 func _changer() -> void:
 	

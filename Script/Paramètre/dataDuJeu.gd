@@ -74,6 +74,15 @@ func _creer_liste_types_base() -> Array[Type]:
 		Type.new("Plante", "Feu", "Eau", Color(0.247, 0.516, 0.162, 1.0))
 	]
 
+# Liste de base de 3 pokemons avec leurs valeurs par défaut
+func _creer_liste_pokemon_base() -> Array[PokemonData]:
+	return [
+		PokemonData.new(0, 10, 5, 5, 3, "Tic"),
+		PokemonData.new(1, 10, 5, 5, 3, "Bonjeton", load("res://Assets/Son/Crie de pokemon/Bomjeton_CRIE.wav"), load("res://Assets/Pokemon/Bomjeton/BomjetonFace.png"), load("res://Assets/Pokemon/Bomjeton/BomjetonDos.png")),
+		PokemonData.new(2, 10, 5, 5, 3, "Sinjypleur", load("res://Assets/Son/Crie de pokemon/Sinjypleur_CRIE.wav"), load("res://Assets/Pokemon/Sinjypleur/SinjypleurFace.png"), load("res://Assets/Pokemon/Sinjypleur/SinjypleurDos.png")),
+		PokemonData.new(3, 10, 5, 5, 3, "Cabufo", load("res://Assets/Son/Crie de pokemon/Frog_CRIE.wav"), load("res://Assets/Pokemon/Cabufo/CabufoFace.png"), load("res://Assets/Pokemon/Cabufo/CabufoDos.png"))
+	]
+
 func _creer_liste_attaques_base() -> Array[Attaque]:
 	var listeDeBase = []
 	for type in listeDesTypes:
@@ -134,8 +143,7 @@ func _verifierObjets() -> void:
 # Vérifie les pokémons et s'assure qu'il existe au moins 1 pokémon
 func _verifierPokemons() -> void:
 	if 1 > listePokemons.size():
-		listePokemons = [PokemonData.new()]
-		listePokemons[0].nom = "Bomjeton"
+		listePokemons = _creer_liste_pokemon_base()
 	else:
 		for i in range(listePokemons.size()):
 			if listePokemons[i] == null:
@@ -169,14 +177,23 @@ func _verifierPokemons() -> void:
 
 # Vérifie la liste et s'assure qu'elle contient toujours 6 natures
 func _verifierTypes() -> void:
-	if 2 == listeDesTypes.size():
-		listeDesTypes.append(Type.new())
-	elif  2 > listeDesTypes.size():
+	if  2 > listeDesTypes.size():
 		listeDesTypes = _creer_liste_types_base()
 	else:
 		for i in range(listeDesTypes.size()):
 			if listeDesTypes[i] == null:
 				listeDesTypes[i] = Type.new()
+	
+	var typeDeBaseNom = ["Normal" ,"Feu", "Eau", "Plante"]
+	
+	for typeNomIndex in range(typeDeBaseNom.size()):
+		for type in listeDesTypes:
+			if typeDeBaseNom[typeNomIndex] == type.nom:
+				typeDeBaseNom[typeNomIndex] = "OK"
+	
+	for i in range (typeDeBaseNom.size()):
+		if typeDeBaseNom[i] != "OK":
+			listeDesTypes.insert(i, _creer_liste_types_base()[i])
 
 @export_category("Paramètres des attaques")
 # Liste des différents attaques visibles et modifiables dans l’inspecteur
@@ -196,12 +213,17 @@ func _verifierAttaques() -> void:
 	for attaque in listeDesAttaques:
 		if attaque.type != "" and attaque.type not in typesDejaCouvert:
 			typesDejaCouvert.append(attaque.type)
-	for type in listeDesTypes:
-		if type.nom not in typesDejaCouvert:
+	for i in range(listeDesTypes.size()):
+		if listeDesTypes[i].nom not in typesDejaCouvert:
+			var nomAttaques = ["Flick", "Ignis", "Cirkeau", "Folium-Crucis"]
 			var nouvelleAttaque = Attaque.new("Attaque")
 			nouvelleAttaque._listeDesTypes = listeDesTypes
-			nouvelleAttaque.type = type.nom  
-			listeDesAttaques.append(nouvelleAttaque)
+			nouvelleAttaque.type = listeDesTypes[i].nom
+			if i < nomAttaques.size():
+				nouvelleAttaque.nom = nomAttaques[i]
+			else:
+				nouvelleAttaque.nom = listeDesTypes[i].nom 
+			listeDesAttaques.insert(i, nouvelleAttaque)
 	if listeDesAttaques == []:
 		listeDesAttaques = _creer_liste_attaques_base()
 	for i in range(listeDesAttaques.size()):
