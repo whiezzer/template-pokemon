@@ -1,0 +1,70 @@
+{
+	"combat": {
+		"lines": [
+			"Ok, si tu veux."
+		],
+		"speaker": "Mot"
+	},
+	"defaite": {
+		"lines": [
+			"Tu m'as battues maintenant laisse moi dormir."
+		],
+		"speaker": "Mot"
+	},
+	"dejaParle": {
+		"choices": [
+			{
+				"next": "combat",
+				"text": "En garde !!"
+			},
+			{
+				"next": "fin",
+				"text": "Toujours pas."
+			}
+		],
+		"lines": [
+			"Me dis pas que tu veux te battre ?"
+		],
+		"speaker": "Mot"
+	},
+	"fin": {
+		"lines": [
+			"Laisses moi dormir alors."
+		],
+		"speaker": "Mot"
+	},
+	"intro": {
+		"choices": [
+			{
+				"next": "combat",
+				"text": "En garde !!"
+			},
+			{
+				"next": "fin",
+				"text": "Non merci."
+			}
+		],
+		"lines": [
+			"Bonjour, je m'appelle Mot et je ...",
+			"ZZZ",
+			"Hein ! Quoi !? Tu veux te battre ?"
+		],
+		"speaker": "Mot"
+	},
+	"victoire": {
+		"choices": [
+			{
+				"next": "combat",
+				"text": "En garde !!"
+			},
+			{
+				"next": "fin",
+				"text": "Non."
+			}
+		],
+		"lines": [
+			"Encore ? Ca t'as pas suffit ?"
+		],
+		"speaker": "Mot"
+	}
+}

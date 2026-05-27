@@ -5,7 +5,7 @@ var menuPrincipalActif : bool = true
 
 var objetUtilisé : ObjetInventaire
 
-var listePNJ : Array[String] = ["Nedy"]
+var listePNJ : Array[String] = ["Nedy", "Mot"]
 
 # Fonction qui crée des boutons d'objets dans le menu objets par rapport au nombre d'objets dans la ListeDesObjets
 func _créerBoutonsMenuObjet() -> void:

@@ -32,32 +32,38 @@ theme_override_fonts/font = ExtResource("1_oxpp0")
 theme_override_font_sizes/font_size = 50
 text = "Nedy"
 
-[node name="Test" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=879184426]
+[node name="Mot" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=879184426]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("1_oxpp0")
 theme_override_font_sizes/font_size = 50
-text = "Test"
+text = "Mot"
 
-[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer" unique_id=554130724]
+[node name="Control" type="Control" parent="VBoxContainer" unique_id=1865223140]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 5.15
+size_flags_stretch_ratio = 4.5
 script = ExtResource("2_fc1qp")
 
-[node name="Nedy" type="HBoxContainer" parent="VBoxContainer/ScrollContainer" unique_id=945349928]
-layout_mode = 2
+[node name="Nedy" type="HBoxContainer" parent="VBoxContainer/Control" unique_id=945349928]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Boutons" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/Nedy" unique_id=858861600]
+[node name="Boutons" type="VBoxContainer" parent="VBoxContainer/Control/Nedy" unique_id=858861600]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.2
 
-[node name="intro" type="Button" parent="VBoxContainer/ScrollContainer/Nedy/Boutons" unique_id=12004362]
+[node name="intro" type="Button" parent="VBoxContainer/Control/Nedy/Boutons" unique_id=12004362]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -67,7 +73,7 @@ theme_override_font_sizes/font_size = 15
 text = "Dialogue d'introduction"
 autowrap_mode = 3
 
-[node name="combat" type="Button" parent="VBoxContainer/ScrollContainer/Nedy/Boutons" unique_id=1343393968]
+[node name="combat" type="Button" parent="VBoxContainer/Control/Nedy/Boutons" unique_id=1343393968]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -77,7 +83,7 @@ theme_override_font_sizes/font_size = 15
 text = "Dialogue d'avant combat"
 autowrap_mode = 3
 
-[node name="fin" type="Button" parent="VBoxContainer/ScrollContainer/Nedy/Boutons" unique_id=1148397069]
+[node name="fin" type="Button" parent="VBoxContainer/Control/Nedy/Boutons" unique_id=1148397069]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -87,7 +93,7 @@ theme_override_font_sizes/font_size = 15
 text = "Dialogue de prise de congé"
 autowrap_mode = 3
 
-[node name="dejaParle" type="Button" parent="VBoxContainer/ScrollContainer/Nedy/Boutons" unique_id=486414287]
+[node name="dejaParle" type="Button" parent="VBoxContainer/Control/Nedy/Boutons" unique_id=486414287]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -97,7 +103,7 @@ theme_override_font_sizes/font_size = 15
 text = "Dialogue de seconde discussion"
 autowrap_mode = 3
 
-[node name="victoire" type="Button" parent="VBoxContainer/ScrollContainer/Nedy/Boutons" unique_id=577925484]
+[node name="victoire" type="Button" parent="VBoxContainer/Control/Nedy/Boutons" unique_id=577925484]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -107,7 +113,7 @@ theme_override_font_sizes/font_size = 15
 text = "Dialogue de quand le PNJ gagne le combat"
 autowrap_mode = 3
 
-[node name="defaite" type="Button" parent="VBoxContainer/ScrollContainer/Nedy/Boutons" unique_id=777345782]
+[node name="defaite" type="Button" parent="VBoxContainer/Control/Nedy/Boutons" unique_id=777345782]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -117,11 +123,11 @@ theme_override_font_sizes/font_size = 15
 text = "Dialogue de quand le PNJ perd le combat"
 autowrap_mode = 3
 
-[node name="Dialogues" type="Control" parent="VBoxContainer/ScrollContainer/Nedy" unique_id=542928794]
+[node name="Dialogues" type="Control" parent="VBoxContainer/Control/Nedy" unique_id=542928794]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="intro" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/Nedy/Dialogues" unique_id=1814407087]
+[node name="intro" type="VBoxContainer" parent="VBoxContainer/Control/Nedy/Dialogues" unique_id=1814407087]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -130,12 +136,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Boutons" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/Nedy/Dialogues/intro" unique_id=710181212]
+[node name="Boutons" type="HBoxContainer" parent="VBoxContainer/Control/Nedy/Dialogues/intro" unique_id=710181212]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.01
 
-[node name="Button_ajoutDialogue" type="Button" parent="VBoxContainer/ScrollContainer/Nedy/Dialogues/intro/Boutons" unique_id=1910016116]
+[node name="Button_ajoutDialogue" type="Button" parent="VBoxContainer/Control/Nedy/Dialogues/intro/Boutons" unique_id=1910016116]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -146,7 +152,7 @@ theme_override_font_sizes/font_size = 15
 text = "Ajouter"
 autowrap_mode = 3
 
-[node name="Button_supprimerDialogue" type="Button" parent="VBoxContainer/ScrollContainer/Nedy/Dialogues/intro/Boutons" unique_id=2050253209]
+[node name="Button_supprimerDialogue" type="Button" parent="VBoxContainer/Control/Nedy/Dialogues/intro/Boutons" unique_id=2050253209]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -157,7 +163,7 @@ theme_override_font_sizes/font_size = 15
 text = "Supprimer"
 autowrap_mode = 3
 
-[node name="combat" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/Nedy/Dialogues" unique_id=1010257039]
+[node name="combat" type="VBoxContainer" parent="VBoxContainer/Control/Nedy/Dialogues" unique_id=1010257039]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -166,12 +172,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Boutons" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/Nedy/Dialogues/combat" unique_id=1891389556]
+[node name="Boutons" type="HBoxContainer" parent="VBoxContainer/Control/Nedy/Dialogues/combat" unique_id=1891389556]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.01
 
-[node name="Button_ajoutDialogue" type="Button" parent="VBoxContainer/ScrollContainer/Nedy/Dialogues/combat/Boutons" unique_id=375641658]
+[node name="Button_ajoutDialogue" type="Button" parent="VBoxContainer/Control/Nedy/Dialogues/combat/Boutons" unique_id=375641658]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -182,7 +188,7 @@ theme_override_font_sizes/font_size = 15
 text = "Ajouter"
 autowrap_mode = 3
 
-[node name="Button_supprimerDialogue" type="Button" parent="VBoxContainer/ScrollContainer/Nedy/Dialogues/combat/Boutons" unique_id=1910497916]
+[node name="Button_supprimerDialogue" type="Button" parent="VBoxContainer/Control/Nedy/Dialogues/combat/Boutons" unique_id=1910497916]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -193,7 +199,7 @@ theme_override_font_sizes/font_size = 15
 text = "Supprimer"
 autowrap_mode = 3
 
-[node name="fin" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/Nedy/Dialogues" unique_id=666262883]
+[node name="fin" type="VBoxContainer" parent="VBoxContainer/Control/Nedy/Dialogues" unique_id=666262883]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -202,12 +208,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Boutons" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/Nedy/Dialogues/fin" unique_id=981139321]
+[node name="Boutons" type="HBoxContainer" parent="VBoxContainer/Control/Nedy/Dialogues/fin" unique_id=981139321]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.01
 
-[node name="Button_ajoutDialogue" type="Button" parent="VBoxContainer/ScrollContainer/Nedy/Dialogues/fin/Boutons" unique_id=593169445]
+[node name="Button_ajoutDialogue" type="Button" parent="VBoxContainer/Control/Nedy/Dialogues/fin/Boutons" unique_id=593169445]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -218,7 +224,7 @@ theme_override_font_sizes/font_size = 15
 text = "Ajouter"
 autowrap_mode = 3
 
-[node name="Button_supprimerDialogue" type="Button" parent="VBoxContainer/ScrollContainer/Nedy/Dialogues/fin/Boutons" unique_id=272810481]
+[node name="Button_supprimerDialogue" type="Button" parent="VBoxContainer/Control/Nedy/Dialogues/fin/Boutons" unique_id=272810481]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -229,7 +235,7 @@ theme_override_font_sizes/font_size = 15
 text = "Supprimer"
 autowrap_mode = 3
 
-[node name="dejaParle" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/Nedy/Dialogues" unique_id=563738461]
+[node name="dejaParle" type="VBoxContainer" parent="VBoxContainer/Control/Nedy/Dialogues" unique_id=563738461]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -238,12 +244,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Boutons" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/Nedy/Dialogues/dejaParle" unique_id=1068041805]
+[node name="Boutons" type="HBoxContainer" parent="VBoxContainer/Control/Nedy/Dialogues/dejaParle" unique_id=1068041805]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.01
 
-[node name="Button_ajoutDialogue" type="Button" parent="VBoxContainer/ScrollContainer/Nedy/Dialogues/dejaParle/Boutons" unique_id=1299242313]
+[node name="Button_ajoutDialogue" type="Button" parent="VBoxContainer/Control/Nedy/Dialogues/dejaParle/Boutons" unique_id=1299242313]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -254,7 +260,7 @@ theme_override_font_sizes/font_size = 15
 text = "Ajouter"
 autowrap_mode = 3
 
-[node name="Button_supprimerDialogue" type="Button" parent="VBoxContainer/ScrollContainer/Nedy/Dialogues/dejaParle/Boutons" unique_id=1601529907]
+[node name="Button_supprimerDialogue" type="Button" parent="VBoxContainer/Control/Nedy/Dialogues/dejaParle/Boutons" unique_id=1601529907]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -265,7 +271,7 @@ theme_override_font_sizes/font_size = 15
 text = "Supprimer"
 autowrap_mode = 3
 
-[node name="victoire" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/Nedy/Dialogues" unique_id=1571891192]
+[node name="victoire" type="VBoxContainer" parent="VBoxContainer/Control/Nedy/Dialogues" unique_id=1571891192]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -274,12 +280,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Boutons" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/Nedy/Dialogues/victoire" unique_id=971596398]
+[node name="Boutons" type="HBoxContainer" parent="VBoxContainer/Control/Nedy/Dialogues/victoire" unique_id=971596398]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.01
 
-[node name="Button_ajoutDialogue" type="Button" parent="VBoxContainer/ScrollContainer/Nedy/Dialogues/victoire/Boutons" unique_id=417498498]
+[node name="Button_ajoutDialogue" type="Button" parent="VBoxContainer/Control/Nedy/Dialogues/victoire/Boutons" unique_id=417498498]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -290,7 +296,7 @@ theme_override_font_sizes/font_size = 15
 text = "Ajouter"
 autowrap_mode = 3
 
-[node name="Button_supprimerDialogue" type="Button" parent="VBoxContainer/ScrollContainer/Nedy/Dialogues/victoire/Boutons" unique_id=1947572559]
+[node name="Button_supprimerDialogue" type="Button" parent="VBoxContainer/Control/Nedy/Dialogues/victoire/Boutons" unique_id=1947572559]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -301,7 +307,7 @@ theme_override_font_sizes/font_size = 15
 text = "Supprimer"
 autowrap_mode = 3
 
-[node name="defaite" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/Nedy/Dialogues" unique_id=590503623]
+[node name="defaite" type="VBoxContainer" parent="VBoxContainer/Control/Nedy/Dialogues" unique_id=590503623]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -310,12 +316,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Boutons" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/Nedy/Dialogues/defaite" unique_id=960909685]
+[node name="Boutons" type="HBoxContainer" parent="VBoxContainer/Control/Nedy/Dialogues/defaite" unique_id=960909685]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.01
 
-[node name="Button_ajoutDialogue" type="Button" parent="VBoxContainer/ScrollContainer/Nedy/Dialogues/defaite/Boutons" unique_id=1449468366]
+[node name="Button_ajoutDialogue" type="Button" parent="VBoxContainer/Control/Nedy/Dialogues/defaite/Boutons" unique_id=1449468366]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -326,7 +332,304 @@ theme_override_font_sizes/font_size = 15
 text = "Ajouter"
 autowrap_mode = 3
 
-[node name="Button_supprimerDialogue" type="Button" parent="VBoxContainer/ScrollContainer/Nedy/Dialogues/defaite/Boutons" unique_id=1139862978]
+[node name="Button_supprimerDialogue" type="Button" parent="VBoxContainer/Control/Nedy/Dialogues/defaite/Boutons" unique_id=1139862978]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.01
+theme_override_fonts/font = ExtResource("1_oxpp0")
+theme_override_font_sizes/font_size = 15
+text = "Supprimer"
+autowrap_mode = 3
+
+[node name="Mot" type="HBoxContainer" parent="VBoxContainer/Control" unique_id=1616520028]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Boutons" type="VBoxContainer" parent="VBoxContainer/Control/Mot" unique_id=287389730]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+
+[node name="intro" type="Button" parent="VBoxContainer/Control/Mot/Boutons" unique_id=1658450224]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.33
+theme_override_fonts/font = ExtResource("1_oxpp0")
+theme_override_font_sizes/font_size = 15
+text = "Dialogue d'introduction"
+autowrap_mode = 3
+
+[node name="combat" type="Button" parent="VBoxContainer/Control/Mot/Boutons" unique_id=1293293623]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.33
+theme_override_fonts/font = ExtResource("1_oxpp0")
+theme_override_font_sizes/font_size = 15
+text = "Dialogue d'avant combat"
+autowrap_mode = 3
+
+[node name="fin" type="Button" parent="VBoxContainer/Control/Mot/Boutons" unique_id=2120744715]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.33
+theme_override_fonts/font = ExtResource("1_oxpp0")
+theme_override_font_sizes/font_size = 15
+text = "Dialogue de prise de congé"
+autowrap_mode = 3
+
+[node name="dejaParle" type="Button" parent="VBoxContainer/Control/Mot/Boutons" unique_id=717018043]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.33
+theme_override_fonts/font = ExtResource("1_oxpp0")
+theme_override_font_sizes/font_size = 15
+text = "Dialogue de seconde discussion"
+autowrap_mode = 3
+
+[node name="victoire" type="Button" parent="VBoxContainer/Control/Mot/Boutons" unique_id=400369640]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.33
+theme_override_fonts/font = ExtResource("1_oxpp0")
+theme_override_font_sizes/font_size = 15
+text = "Dialogue de quand le PNJ gagne le combat"
+autowrap_mode = 3
+
+[node name="defaite" type="Button" parent="VBoxContainer/Control/Mot/Boutons" unique_id=6462158]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.33
+theme_override_fonts/font = ExtResource("1_oxpp0")
+theme_override_font_sizes/font_size = 15
+text = "Dialogue de quand le PNJ perd le combat"
+autowrap_mode = 3
+
+[node name="Dialogues" type="Control" parent="VBoxContainer/Control/Mot" unique_id=1353392576]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="intro" type="VBoxContainer" parent="VBoxContainer/Control/Mot/Dialogues" unique_id=425697260]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Boutons" type="HBoxContainer" parent="VBoxContainer/Control/Mot/Dialogues/intro" unique_id=71741019]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.01
+
+[node name="Button_ajoutDialogue" type="Button" parent="VBoxContainer/Control/Mot/Dialogues/intro/Boutons" unique_id=1150265832]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.01
+theme_override_fonts/font = ExtResource("1_oxpp0")
+theme_override_font_sizes/font_size = 15
+text = "Ajouter"
+autowrap_mode = 3
+
+[node name="Button_supprimerDialogue" type="Button" parent="VBoxContainer/Control/Mot/Dialogues/intro/Boutons" unique_id=1831534456]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.01
+theme_override_fonts/font = ExtResource("1_oxpp0")
+theme_override_font_sizes/font_size = 15
+text = "Supprimer"
+autowrap_mode = 3
+
+[node name="combat" type="VBoxContainer" parent="VBoxContainer/Control/Mot/Dialogues" unique_id=94795973]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Boutons" type="HBoxContainer" parent="VBoxContainer/Control/Mot/Dialogues/combat" unique_id=846235585]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.01
+
+[node name="Button_ajoutDialogue" type="Button" parent="VBoxContainer/Control/Mot/Dialogues/combat/Boutons" unique_id=1230552435]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.01
+theme_override_fonts/font = ExtResource("1_oxpp0")
+theme_override_font_sizes/font_size = 15
+text = "Ajouter"
+autowrap_mode = 3
+
+[node name="Button_supprimerDialogue" type="Button" parent="VBoxContainer/Control/Mot/Dialogues/combat/Boutons" unique_id=1712670333]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.01
+theme_override_fonts/font = ExtResource("1_oxpp0")
+theme_override_font_sizes/font_size = 15
+text = "Supprimer"
+autowrap_mode = 3
+
+[node name="fin" type="VBoxContainer" parent="VBoxContainer/Control/Mot/Dialogues" unique_id=1309791337]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Boutons" type="HBoxContainer" parent="VBoxContainer/Control/Mot/Dialogues/fin" unique_id=1359316762]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.01
+
+[node name="Button_ajoutDialogue" type="Button" parent="VBoxContainer/Control/Mot/Dialogues/fin/Boutons" unique_id=1744012551]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.01
+theme_override_fonts/font = ExtResource("1_oxpp0")
+theme_override_font_sizes/font_size = 15
+text = "Ajouter"
+autowrap_mode = 3
+
+[node name="Button_supprimerDialogue" type="Button" parent="VBoxContainer/Control/Mot/Dialogues/fin/Boutons" unique_id=477304619]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.01
+theme_override_fonts/font = ExtResource("1_oxpp0")
+theme_override_font_sizes/font_size = 15
+text = "Supprimer"
+autowrap_mode = 3
+
+[node name="dejaParle" type="VBoxContainer" parent="VBoxContainer/Control/Mot/Dialogues" unique_id=244766921]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Boutons" type="HBoxContainer" parent="VBoxContainer/Control/Mot/Dialogues/dejaParle" unique_id=1257100363]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.01
+
+[node name="Button_ajoutDialogue" type="Button" parent="VBoxContainer/Control/Mot/Dialogues/dejaParle/Boutons" unique_id=244941148]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.01
+theme_override_fonts/font = ExtResource("1_oxpp0")
+theme_override_font_sizes/font_size = 15
+text = "Ajouter"
+autowrap_mode = 3
+
+[node name="Button_supprimerDialogue" type="Button" parent="VBoxContainer/Control/Mot/Dialogues/dejaParle/Boutons" unique_id=689483994]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.01
+theme_override_fonts/font = ExtResource("1_oxpp0")
+theme_override_font_sizes/font_size = 15
+text = "Supprimer"
+autowrap_mode = 3
+
+[node name="victoire" type="VBoxContainer" parent="VBoxContainer/Control/Mot/Dialogues" unique_id=1029059322]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Boutons" type="HBoxContainer" parent="VBoxContainer/Control/Mot/Dialogues/victoire" unique_id=51477246]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.01
+
+[node name="Button_ajoutDialogue" type="Button" parent="VBoxContainer/Control/Mot/Dialogues/victoire/Boutons" unique_id=341911427]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.01
+theme_override_fonts/font = ExtResource("1_oxpp0")
+theme_override_font_sizes/font_size = 15
+text = "Ajouter"
+autowrap_mode = 3
+
+[node name="Button_supprimerDialogue" type="Button" parent="VBoxContainer/Control/Mot/Dialogues/victoire/Boutons" unique_id=1143650197]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.01
+theme_override_fonts/font = ExtResource("1_oxpp0")
+theme_override_font_sizes/font_size = 15
+text = "Supprimer"
+autowrap_mode = 3
+
+[node name="defaite" type="VBoxContainer" parent="VBoxContainer/Control/Mot/Dialogues" unique_id=692564019]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Boutons" type="HBoxContainer" parent="VBoxContainer/Control/Mot/Dialogues/defaite" unique_id=141782326]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.01
+
+[node name="Button_ajoutDialogue" type="Button" parent="VBoxContainer/Control/Mot/Dialogues/defaite/Boutons" unique_id=361818218]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.01
+theme_override_fonts/font = ExtResource("1_oxpp0")
+theme_override_font_sizes/font_size = 15
+text = "Ajouter"
+autowrap_mode = 3
+
+[node name="Button_supprimerDialogue" type="Button" parent="VBoxContainer/Control/Mot/Dialogues/defaite/Boutons" unique_id=2011830951]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3

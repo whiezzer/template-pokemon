@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dktcxdge2mcr2" path="res://Assets/Arbre/arbre3d.tscn" id="5_jwxpu"]
 [ext_resource type="Script" uid="uid://bcfcghafi6pxq" path="res://Script/character/PNJ.gd" id="5_owyk3"]
 [ext_resource type="Script" uid="uid://d6vieo400icv" path="res://Script/Godomon/natureStat.gd" id="5_vfha3"]
+[ext_resource type="Texture2D" uid="uid://bw42t5sfj8o1u" path="res://Assets/Character/Mot/Mot.png" id="6_71rpj"]
 [ext_resource type="PackedScene" uid="uid://b87i6gj04tgd0" path="res://Assets/Herbe/herbe3D.tscn" id="6_byug1"]
 [ext_resource type="Texture2D" uid="uid://j4id13h0sn60" path="res://Assets/Interface/Combat/boite de dialogue.png" id="8_loqtx"]
 [ext_resource type="Script" uid="uid://bq6de4c2mdxwp" path="res://Script/Interface/boutonMenu.gd" id="9_8l02w"]
@@ -493,6 +494,34 @@ collision_mask = 2
 script = ExtResource("5_owyk3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Nedy/Area3D" unique_id=1088521306]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00012207031, 0, 0.14550781)
+shape = SubResource("BoxShape3D_qot0l")
+
+[node name="Mot" type="CharacterBody3D" parent="." unique_id=325969977]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7308588, 0.313, 0.4801128)
+script = ExtResource("4_7l60e")
+equipeGodomon = Array[int]([0, 1, 2, 3])
+
+[node name="Sprite3D" type="Sprite3D" parent="Mot" unique_id=681622003]
+transform = Transform3D(2.3000002, 0, 0, 0, 2.3000002, 0, 0, 0, 0.99999994, 0, -0.08885056, 0)
+cast_shadow = 2
+billboard = 2
+shaded = true
+double_sided = false
+alpha_cut = 3
+texture_filter = 0
+texture = ExtResource("6_71rpj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mot" unique_id=1247087163]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 0, -0.07718971, 0)
+shape = SubResource("CapsuleShape3D_qot0l")
+
+[node name="Area3D" type="Area3D" parent="Mot" unique_id=911335749]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("5_owyk3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mot/Area3D" unique_id=1749597999]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00012207031, 0, 0.14550781)
 shape = SubResource("BoxShape3D_qot0l")
 
@@ -2047,6 +2076,8 @@ camera_attributes = SubResource("CameraAttributesPhysical_r2s0p")
 
 [connection signal="body_entered" from="Nedy/Area3D" to="Nedy/Area3D" method="_onCollision"]
 [connection signal="body_exited" from="Nedy/Area3D" to="Nedy/Area3D" method="_onCollision"]
+[connection signal="body_entered" from="Mot/Area3D" to="Mot/Area3D" method="_onCollision"]
+[connection signal="body_exited" from="Mot/Area3D" to="Mot/Area3D" method="_onCollision"]
 [connection signal="pressed" from="InterfaceMenu/TextureButton_Equipe" to="InterfaceMenu/TextureButton_Equipe" method="_on_menu_pokemon_pressed"]
 [connection signal="pressed" from="InterfaceMenu/TextureButton_Objets" to="InterfaceMenu/TextureButton_Objets" method="_on_menu_objet_pressed"]
 [connection signal="pressed" from="InterfaceMenu/MenuObjet/Bouton_MenuSacADos" to="InterfaceMenu/MenuObjet/Bouton_MenuSacADos" method="_on_menu_objet_pressed"]

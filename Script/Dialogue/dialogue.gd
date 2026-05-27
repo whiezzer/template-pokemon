@@ -1,5 +1,5 @@
 @tool
-extends ScrollContainer
+extends Control
 
 var listeDesTextes : Dictionary[String, Dictionary]
 
