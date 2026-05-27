@@ -32,17 +32,24 @@
 [ext_resource type="Texture2D" uid="uid://dqooe18ebh55o" path="res://Assets/Interface/triangle/triangle1.png" id="14_je3ga"]
 [ext_resource type="Texture2D" uid="uid://v3vth8p1m1ai" path="res://Assets/Interface/Combat/Bouton Sac3.png" id="14_loqtx"]
 [ext_resource type="Texture2D" uid="uid://bq3fju46c2ryt" path="res://Assets/Interface/triangle/triangle2.png" id="15_86a52"]
+[ext_resource type="Texture2D" uid="uid://walsrnbv1ns7" path="res://Assets/Interface/MenuPause/FondPause.png" id="16_llcau"]
 [ext_resource type="Texture2D" uid="uid://42cyq4mo2eil" path="res://Assets/Objets/Pokeballs/Pokeball attraper56.png" id="22_8l02w"]
 [ext_resource type="Texture2D" uid="uid://bfkyd0jctjccn" path="res://Assets/Interface/MenuGodomon/Godomon/Fond.png" id="23_eisab"]
 [ext_resource type="Texture2D" uid="uid://clcutuupv82ud" path="res://Assets/Interface/MenuGodomon/Godomon/BoutonPoke.png" id="24_d4gcl"]
 [ext_resource type="Texture2D" uid="uid://w1q1engl8nkq" path="res://Assets/Interface/Combat/Bouton attaque normal souris dessus.png" id="24_qvqry"]
 [ext_resource type="Texture2D" uid="uid://d1jvjm5jgvour" path="res://Assets/Interface/MenuGodomon/Godomon/BoutonPokeSourisDessus.png" id="25_1brqj"]
+[ext_resource type="Texture2D" uid="uid://mgq2mqfsujop" path="res://Assets/Interface/MenuPause/QuitterBouton.png" id="25_5krid"]
 [ext_resource type="Script" uid="uid://cyuksgb1kw34x" path="res://Script/Interface/boutonGodomon.gd" id="26_qvqry"]
+[ext_resource type="Texture2D" uid="uid://dnemysq6ox62u" path="res://Assets/Interface/MenuPause/QuitterAppuyer.png" id="26_tl1mc"]
 [ext_resource type="Script" uid="uid://cc8ysqjjskgps" path="res://Script/Interface/menuPrincipal.gd" id="27_7w3f3"]
 [ext_resource type="Texture2D" uid="uid://br356dx4rdc15" path="res://Assets/Interface/MenuGodomon/Resume/IntefacePokemonRESUME.png" id="27_ifajr"]
+[ext_resource type="Texture2D" uid="uid://cq27i62qo3wwq" path="res://Assets/Interface/MenuPause/QuitterSouris.png" id="27_wagys"]
 [ext_resource type="FontFile" uid="uid://fy6tlq7q5c2k" path="res://Assets/Text/pixel_operator/PixelOperatorHB8.ttf" id="27_yqeg5"]
 [ext_resource type="Texture2D" uid="uid://ceebavwbbh5c6" path="res://Assets/Interface/MenuGodomon/Resume/BarreRougeResume.png" id="28_0cgjh"]
+[ext_resource type="Texture2D" uid="uid://mjuc701txrw" path="res://Assets/Interface/MenuPause/CreditBouton.png" id="28_lfee6"]
+[ext_resource type="Texture2D" uid="uid://cbc6lg6eyjxqg" path="res://Assets/Interface/MenuPause/CreditAppuyer.png" id="29_3mu66"]
 [ext_resource type="Texture2D" uid="uid://b7i1r44u22mfp" path="res://Assets/Interface/MenuGodomon/Resume/BarreVertResume.png" id="29_e6qsf"]
+[ext_resource type="Texture2D" uid="uid://c6jtjash5exv8" path="res://Assets/Interface/MenuPause/CreditSouris.png" id="30_b0uwa"]
 [ext_resource type="Texture2D" uid="uid://yrblw4f5r4fv" path="res://Assets/Interface/MenuGodomon/Resume/BarreContourResume.png" id="30_ediv8"]
 [ext_resource type="Texture2D" uid="uid://cotk3mdbgce8o" path="res://Assets/Interface/MenuGodomon/Resume/BoutonRetour.png" id="32_e6qsf"]
 [ext_resource type="Texture2D" uid="uid://clpttm2gjoffo" path="res://Assets/Interface/MenuGodomon/Resume/BoutonRetourSourisDessus.png" id="33_ediv8"]
@@ -117,8 +124,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_byug1"]
-bg_color = Color(0.99154645, 0.8486456, 0.850721, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ns0bq"]
+texture = ExtResource("16_llcau")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r2s0p"]
 texture = ExtResource("9_bijkn")
@@ -128,6 +135,9 @@ texture = ExtResource("23_eisab")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ou8r4"]
 texture = ExtResource("27_ifajr")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_llcau"]
+bg_color = Color(1, 1, 1, 1)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_aek4d"]
 animations = [{
@@ -1151,7 +1161,6 @@ animation = &"Triangle"
 autoplay = "Triangle"
 
 [node name="InterfaceMenu" type="Control" parent="." unique_id=1477991696]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -1167,7 +1176,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_byug1")
+theme_override_styles/panel = SubResource("StyleBoxTexture_ns0bq")
 
 [node name="TextureButton_Equipe" type="TextureButton" parent="InterfaceMenu" unique_id=776177433]
 texture_filter = 1
@@ -1178,9 +1187,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -451.0
-offset_top = -150.0
+offset_top = -194.0
 offset_right = -50.998474
-offset_bottom = 150.0
+offset_bottom = 106.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(200, 150)
@@ -1203,9 +1212,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 50.999023
-offset_top = -150.0
+offset_top = -194.0
 offset_right = 451.0005
-offset_bottom = 150.0
+offset_bottom = 106.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(200, 150)
@@ -1216,6 +1225,52 @@ stretch_mode = 0
 script = ExtResource("9_8l02w")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="InterfaceMenu/TextureButton_Objets" unique_id=1574916420]
+position = Vector2(-642, -552)
+stream = ExtResource("9_r2s0p")
+
+[node name="TextureButton_Quitter" type="TextureButton" parent="InterfaceMenu" unique_id=345211281]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -417.0
+offset_top = 109.0
+offset_right = -191.0
+offset_bottom = 206.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(200, 150)
+texture_normal = ExtResource("25_5krid")
+texture_pressed = ExtResource("26_tl1mc")
+texture_hover = ExtResource("27_wagys")
+stretch_mode = 0
+script = ExtResource("9_8l02w")
+
+[node name="TextureButton_Credit" type="TextureButton" parent="InterfaceMenu" unique_id=128826348]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 189.0
+offset_top = 109.0
+offset_right = 415.0
+offset_bottom = 206.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(200, 150)
+texture_normal = ExtResource("28_lfee6")
+texture_pressed = ExtResource("29_3mu66")
+texture_hover = ExtResource("30_b0uwa")
+stretch_mode = 0
+script = ExtResource("9_8l02w")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="InterfaceMenu/TextureButton_Credit" unique_id=1882226049]
 position = Vector2(-642, -552)
 stream = ExtResource("9_r2s0p")
 
@@ -2037,6 +2092,64 @@ texture_normal = ExtResource("32_e6qsf")
 texture_hover = ExtResource("33_ediv8")
 stretch_mode = 0
 
+[node name="Credit" type="Panel" parent="InterfaceMenu" unique_id=399458264]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_llcau")
+
+[node name="Label" type="Label" parent="InterfaceMenu/Credit" unique_id=1919025358]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -172.5
+offset_top = -80.25
+offset_right = 172.5
+offset_bottom = 80.25
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("27_yqeg5")
+theme_override_font_sizes/font_size = 25
+text = "Endy TURRIN
+
+Tom BERCIER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="InterfaceMenu/Credit" unique_id=812634336]
+layout_mode = 0
+offset_left = -15.0
+offset_top = -16.0
+offset_right = 1183.0
+offset_bottom = 71.0
+color = Color(0.5866749, 0.5866749, 0.5866749, 1)
+
+[node name="TextureButton_Credit" type="TextureButton" parent="InterfaceMenu/Credit" unique_id=454841955]
+texture_filter = 1
+layout_mode = 1
+offset_left = -3.0
+offset_top = -1.0
+offset_right = 107.0
+offset_bottom = 64.0
+pivot_offset = Vector2(200, 150)
+texture_normal = ExtResource("32_e6qsf")
+texture_pressed = ExtResource("33_ediv8")
+texture_hover = ExtResource("33_ediv8")
+stretch_mode = 0
+script = ExtResource("9_8l02w")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="InterfaceMenu/Credit/TextureButton_Credit" unique_id=56980290]
+position = Vector2(-642, -552)
+stream = ExtResource("9_r2s0p")
+
 [node name="InterfaceMenuPrincipal" type="Control" parent="." unique_id=873146367]
 visible = false
 layout_mode = 3
@@ -2080,6 +2193,8 @@ camera_attributes = SubResource("CameraAttributesPhysical_r2s0p")
 [connection signal="body_exited" from="Mot/Area3D" to="Mot/Area3D" method="_onCollision"]
 [connection signal="pressed" from="InterfaceMenu/TextureButton_Equipe" to="InterfaceMenu/TextureButton_Equipe" method="_on_menu_pokemon_pressed"]
 [connection signal="pressed" from="InterfaceMenu/TextureButton_Objets" to="InterfaceMenu/TextureButton_Objets" method="_on_menu_objet_pressed"]
+[connection signal="pressed" from="InterfaceMenu/TextureButton_Quitter" to="InterfaceMenu/TextureButton_Quitter" method="_quitter"]
+[connection signal="pressed" from="InterfaceMenu/TextureButton_Credit" to="InterfaceMenu/TextureButton_Credit" method="_on_credit_pressed"]
 [connection signal="pressed" from="InterfaceMenu/MenuObjet/Bouton_MenuSacADos" to="InterfaceMenu/MenuObjet/Bouton_MenuSacADos" method="_on_menu_objet_pressed"]
 [connection signal="pressed" from="InterfaceMenu/MenuGodomon/TextureButton_Godomon1" to="InterfaceMenu/MenuGodomon/TextureButton_Godomon1" method="_on_pressed"]
 [connection signal="pressed" from="InterfaceMenu/MenuGodomon/TextureButton_Godomon3" to="InterfaceMenu/MenuGodomon/TextureButton_Godomon3" method="_on_pressed"]
@@ -2089,3 +2204,4 @@ camera_attributes = SubResource("CameraAttributesPhysical_r2s0p")
 [connection signal="pressed" from="InterfaceMenu/MenuGodomon/TextureButton_Godomon6" to="InterfaceMenu/MenuGodomon/TextureButton_Godomon6" method="_on_pressed"]
 [connection signal="pressed" from="InterfaceMenu/MenuGodomon/TextureButton_Equipe" to="InterfaceMenu/MenuGodomon/TextureButton_Equipe" method="_on_menu_pokemon_pressed"]
 [connection signal="pressed" from="InterfaceMenu/MenuGodomon/Resume/TextureButton_PokemonRetour" to="InterfaceMenu/MenuGodomon/TextureButton_Godomon6" method="_on_pressed"]
+[connection signal="pressed" from="InterfaceMenu/Credit/TextureButton_Credit" to="InterfaceMenu/Credit/TextureButton_Credit" method="_on_credit_pressed"]
