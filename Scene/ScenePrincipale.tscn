@@ -94,6 +94,8 @@
 [ext_resource type="AudioStream" uid="uid://bmrm5hed5cvcm" path="res://Assets/Son/Combat/musique_Fight.mp3" id="87_71rpj"]
 [ext_resource type="AudioStream" uid="uid://2irc74i8b32a" path="res://Assets/Son/Combat/son_TransitionCombat.wav" id="88_1y0xa"]
 [ext_resource type="AudioStream" uid="uid://cwfsuk5ypq6jg" path="res://Assets/Son/Combat/VictoireMusic.mp3" id="94_llcau"]
+[ext_resource type="Shader" uid="uid://hhsplxbldo6" path="res://new_shader.tres" id="95_tl1mc"]
+[ext_resource type="Texture2D" uid="uid://bgv6ru2mqqkme" path="res://Skybox.png" id="96_wagys"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qot0l"]
 radius = 0.19238281
@@ -432,9 +434,17 @@ PP_max = 20
 precision = 1.0
 _type_index = 3
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lfee6"]
+shader = ExtResource("95_tl1mc")
+shader_parameter/tex = ExtResource("96_wagys")
+
+[sub_resource type="Sky" id="Sky_3mu66"]
+sky_material = SubResource("ShaderMaterial_lfee6")
+
 [sub_resource type="Environment" id="Environment_r2s0p"]
 background_mode = 2
 background_color = Color(0.5928132, 0.7261616, 0.99888045, 1)
+sky = SubResource("Sky_3mu66")
 ambient_light_source = 2
 ambient_light_color = Color(0.81220996, 0.38017634, 0.5961037, 1)
 ambient_light_energy = 0.8
