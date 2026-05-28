@@ -61,6 +61,7 @@
 [ext_resource type="Texture2D" uid="uid://dpwbddrk02api" path="res://Assets/Interface/MainMenu/Main_menu6.png" id="41_40irl"]
 [ext_resource type="Texture2D" uid="uid://dp5owaneuc58k" path="res://Assets/Interface/MainMenu/Main_menu7.png" id="42_1y0xa"]
 [ext_resource type="Texture2D" uid="uid://bve6fmhrrad4h" path="res://Assets/Interface/MainMenu/Main_menu8.png" id="43_dq13u"]
+[ext_resource type="Texture2D" uid="uid://cv2hxkq5yklch" path="res://Assets/Interface/Credits/FondCredit.png" id="44_5krid"]
 [ext_resource type="Texture2D" uid="uid://bpcq0bqamtijv" path="res://Assets/Interface/MainMenu/Main_menu9.png" id="44_8i56a"]
 [ext_resource type="Texture2D" uid="uid://covn1qhw8yojs" path="res://Assets/Interface/MainMenu/Main_menu10.png" id="45_x8d5j"]
 [ext_resource type="Texture2D" uid="uid://dklj0jhjep7ec" path="res://Assets/Interface/MainMenu/Main_menu11.png" id="46_15qxy"]
@@ -136,8 +137,8 @@ texture = ExtResource("23_eisab")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ou8r4"]
 texture = ExtResource("27_ifajr")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_llcau"]
-bg_color = Color(1, 1, 1, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tl1mc"]
+texture = ExtResource("44_5krid")
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_aek4d"]
 animations = [{
@@ -2095,52 +2096,22 @@ stretch_mode = 0
 
 [node name="Credit" type="Panel" parent="InterfaceMenu" unique_id=399458264]
 visible = false
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_llcau")
-
-[node name="Label" type="Label" parent="InterfaceMenu/Credit" unique_id=1919025358]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -172.5
-offset_top = -80.25
-offset_right = 172.5
-offset_bottom = 80.25
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("27_yqeg5")
-theme_override_font_sizes/font_size = 25
-text = "Endy TURRIN
-
-Tom BERCIER"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ColorRect" type="ColorRect" parent="InterfaceMenu/Credit" unique_id=812634336]
-layout_mode = 0
-offset_left = -15.0
-offset_top = -16.0
-offset_right = 1183.0
-offset_bottom = 71.0
-color = Color(0.5866749, 0.5866749, 0.5866749, 1)
+theme_override_styles/panel = SubResource("StyleBoxTexture_tl1mc")
 
 [node name="TextureButton_Credit" type="TextureButton" parent="InterfaceMenu/Credit" unique_id=454841955]
 texture_filter = 1
 layout_mode = 1
-offset_left = -3.0
-offset_top = -1.0
-offset_right = 107.0
-offset_bottom = 64.0
+offset_left = -5.0
+offset_top = 434.0
+offset_right = 86.0
+offset_bottom = 492.0
 pivot_offset = Vector2(200, 150)
 texture_normal = ExtResource("32_e6qsf")
 texture_pressed = ExtResource("33_ediv8")

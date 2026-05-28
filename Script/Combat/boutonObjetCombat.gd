@@ -76,7 +76,7 @@ func _capture() -> void:
 		await get_tree().current_scene.get_node_or_null("GodomonEnnemi/AnimatedSpriteAttaque").animation_finished
 		
 		combat.ecrire_texte(combat.message, "Bravo ! Vous avez attrapé un/une " + dataDuJeu.pokemonEnnemiStats.nom + " sauvage")
-		get_tree().current_scene.get_node("AudioMusique3D").stream = load("res://Assets/Son/Combat/Victoire.mp3")
+		get_tree().current_scene.get_node("AudioMusique3D").stream = dataDuJeu.musiqueVictoire
 		get_tree().current_scene.get_node("AudioMusique3D").play()
 		
 		combat.get_node("InterfaceCombat/AnimatedSprite2D").visible = true

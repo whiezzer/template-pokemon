@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://csn2bgmqgxjeb"]
 
+[ext_resource type="Texture2D" uid="uid://b60ei0ge5fhwa" path="res://Assets/Interface/FondEndy.png" id="1_nn717"]
 [ext_resource type="FontFile" uid="uid://fy6tlq7q5c2k" path="res://Assets/Text/pixel_operator/PixelOperatorHB8.ttf" id="1_oxpp0"]
 [ext_resource type="Texture2D" uid="uid://64b12bs0dons" path="res://Assets/Interface/BoutonDialogue/DialogueBouton.png" id="2_b7nid"]
 [ext_resource type="Script" uid="uid://nstpwb1x4i7s" path="res://Script/Dialogue/dialogue.gd" id="2_fc1qp"]
@@ -10,8 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://w1q1engl8nkq" path="res://Assets/Interface/Combat/Bouton attaque normal souris dessus.png" id="8_gvwb5"]
 [ext_resource type="Texture2D" uid="uid://ddceydpclxhui" path="res://Assets/Interface/Type/Normal.png" id="9_qpk5e"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b7nid"]
-bg_color = Color(0.7812722, 0.5142683, 0.5560086, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_esupm"]
+texture = ExtResource("1_nn717")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_webcn"]
 texture = ExtResource("2_b7nid")
@@ -43,7 +44,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_b7nid")
+theme_override_styles/panel = SubResource("StyleBoxTexture_esupm")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=408466081]
 layout_mode = 1
