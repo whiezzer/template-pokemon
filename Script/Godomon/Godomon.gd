@@ -29,7 +29,7 @@ func _selectionSprite() -> void:
 	else:
 		if data.sprite != null:
 			$Sprite3D.texture = data.sprite
-			Color(1, 1, 1)
+			$Sprite3D.modulate = Color(1, 1, 1)
 		else:
 			var sprite = load("res://Assets/Godomon/Neutre/NeutreFace.png") 
 			$Sprite3D.texture = sprite
