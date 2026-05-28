@@ -53,8 +53,9 @@ func _on_button_pressed() -> void:
 		
 		await combat._tourAdverse()
 		
-		combat.tourDuJoueur = true
-		combat.ecrire_texte(combat.message, "Choisissez une action")
+		if !combat.finCombat:
+			combat.tourDuJoueur = true
+			combat.ecrire_texte(combat.message, "Choisissez une action")
 
 func _on_mouse_entered() -> void:
 	objetDescription.text = objet.objet.description
@@ -65,7 +66,7 @@ func _capture() -> void:
 	objet.quantite -= 1
 	combat.enCoursDeTour = true
 	
-	var resultat = randf() * (100.0 * (dataDuJeu.pokemonEnnemiStats.pv_Actuels / dataDuJeu.pokemonEnnemiStats.pv * 1))
+	var resultat = randf() * (100.0 * (float(dataDuJeu.pokemonEnnemiStats.pv_Actuels) / float(dataDuJeu.pokemonEnnemiStats.pv)))
 	
 	get_tree().current_scene.get_node_or_null("GodomonEnnemi/AnimatedSpriteAttaque").play("Pokeball")
 	get_tree().current_scene.get_node_or_null("GodomonEnnemi/Sprite3D").visible = false

@@ -3,48 +3,242 @@
 [ext_resource type="PackedScene" uid="uid://o31auolc4myx" path="res://Assets/sol/sol.tscn" id="1_rqkxw"]
 [ext_resource type="PackedScene" uid="uid://cg7bha5t87b70" path="res://Assets/Godomon/Godomon.tscn" id="2_1jl81"]
 [ext_resource type="Script" uid="uid://bit2nj7vgv60n" path="res://Script/Combat/combat.gd" id="3_1jl81"]
+[ext_resource type="Texture2D" uid="uid://cbfkl0tb8sfyy" path="res://Assets/Character/Mot/CombatMot/Mot1.png" id="3_ywtmc"]
 [ext_resource type="Script" uid="uid://o62n2swlrafo" path="res://Script/Combat/boutonAttaque.gd" id="4_4oj6k"]
+[ext_resource type="Texture2D" uid="uid://cfl5q3jgsf71d" path="res://Assets/Character/Mot/CombatMot/Mot2.png" id="4_atn6w"]
 [ext_resource type="Texture2D" uid="uid://c3swl7fcs2cr5" path="res://Assets/Interface/Combat/Emplacement attaque pokemon.png" id="5_1fio0"]
+[ext_resource type="Texture2D" uid="uid://wojjlohbecrs" path="res://Assets/Character/Mot/CombatMot/Mot3.png" id="5_3kjj0"]
 [ext_resource type="FontFile" uid="uid://cex3sks87jmk6" path="res://Assets/Text/pixel_operator/PixelOperator.ttf" id="5_qqaya"]
 [ext_resource type="Texture2D" uid="uid://do5rdk2ol6871" path="res://Assets/Interface/Combat/Bouton Neutre.png" id="6_a7dcr"]
+[ext_resource type="Texture2D" uid="uid://cwv7jps1d5kvb" path="res://Assets/Character/Mot/CombatMot/Mot4.png" id="6_d7w1n"]
+[ext_resource type="Texture2D" uid="uid://bl7ot1lornbeg" path="res://Assets/Character/Mot/CombatMot/Mot5.png" id="7_7xeyp"]
 [ext_resource type="FontFile" uid="uid://datl1ctwq7utc" path="res://Assets/Text/pixel_operator/PixelOperator-Bold.ttf" id="7_8xilq"]
 [ext_resource type="Texture2D" uid="uid://5khxss48n77" path="res://Assets/Interface/Combat/Bouton attaque NEUTRE souris dessus.png" id="7_a7dcr"]
 [ext_resource type="Script" uid="uid://6xmc8leg1cp0" path="res://Script/Combat/boutonMenuCombat.gd" id="7_giger"]
 [ext_resource type="Texture2D" uid="uid://dk8lqecltee8e" path="res://Assets/Interface/Combat/Bouton Neutre souris dessus.png" id="8_3mx84"]
 [ext_resource type="FontFile" uid="uid://dc50vx3jow8oc" path="res://Assets/Text/pixel_operator/PixelOperatorMono.ttf" id="8_giger"]
 [ext_resource type="Texture2D" uid="uid://5avc3a2sw8q2" path="res://Assets/Interface/Combat/Bouton Sac1.png" id="8_mwjsy"]
+[ext_resource type="Texture2D" uid="uid://di16irxc6ov0j" path="res://Assets/Character/Mot/CombatMot/Mot6.png" id="8_y3ld1"]
+[ext_resource type="Texture2D" uid="uid://rbv2201ed5mj" path="res://Assets/Character/Mot/CombatMot/Mot7.png" id="9_twcni"]
+[ext_resource type="Texture2D" uid="uid://h6remps3frat" path="res://Assets/Character/Mot/CombatMot/Mot8.png" id="10_fmubl"]
 [ext_resource type="Texture2D" uid="uid://7uvnih8rb6bs" path="res://Assets/Interface/Combat/Bouton Pokemon1.png" id="10_yscag"]
+[ext_resource type="Texture2D" uid="uid://bpjlwkxbf7hcp" path="res://Assets/Character/Mot/CombatMot/Mot9.png" id="11_u65m1"]
+[ext_resource type="Texture2D" uid="uid://bxi36k3clm4kv" path="res://Assets/Character/Mot/CombatMot/Mot10.png" id="12_4b6ts"]
 [ext_resource type="Texture2D" uid="uid://docioujmb3850" path="res://Assets/Interface/Sac/Remu Sac.png" id="12_5i64c"]
+[ext_resource type="Texture2D" uid="uid://w365u563f1b6" path="res://Assets/Character/Mot/CombatMot/Mot11.png" id="13_753i7"]
 [ext_resource type="Texture2D" uid="uid://j4id13h0sn60" path="res://Assets/Interface/Combat/boite de dialogue.png" id="13_l7pxt"]
 [ext_resource type="Texture2D" uid="uid://3l80a5fhati6" path="res://Assets/Interface/Combat/Interface Pokemon.png" id="14_gfmo1"]
+[ext_resource type="Texture2D" uid="uid://cyi764wmf2323" path="res://Assets/Character/Mot/CombatMot/Mot12.png" id="14_ilxep"]
 [ext_resource type="AudioStream" uid="uid://x6mchwmb3ecp" path="res://Assets/Son/menu/son_AttackButton.mp3" id="15_5eq4d"]
+[ext_resource type="Texture2D" uid="uid://d08k1tb7vrgym" path="res://Assets/Character/Mot/CombatMot/Mot13.png" id="15_afm5s"]
 [ext_resource type="Texture2D" uid="uid://c4v5w8xv6pc5r" path="res://Assets/Interface/Combat/Barre de vie VERT ENNEMIE.png" id="15_l7pxt"]
+[ext_resource type="Texture2D" uid="uid://bbrljcaiwcdyu" path="res://Assets/Character/Mot/CombatMot/Mot14.png" id="16_v5m8l"]
+[ext_resource type="Texture2D" uid="uid://cltv63vm4hd6" path="res://Assets/Character/Mot/CombatMot/Mot15.png" id="17_5o4tw"]
 [ext_resource type="Texture2D" uid="uid://1mwb6idkhw5k" path="res://Assets/Interface/Combat/BARRE DE VIE DESSUS CONTOUR.png" id="17_yscag"]
 [ext_resource type="PackedScene" uid="uid://n4ylffjxxqsr" path="res://Assets/Model 3D/Dessou_Pokemon.glb" id="18_a7dcr"]
+[ext_resource type="Texture2D" uid="uid://dxdaamhmcvi0k" path="res://Assets/Character/Mot/CombatMot/Mot16.png" id="18_bp1iv"]
 [ext_resource type="Texture2D" uid="uid://wio1k2unaquj" path="res://Assets/Interface/Combat/Bouton Sac2.png" id="18_x7ml0"]
 [ext_resource type="Texture2D" uid="uid://dqooe18ebh55o" path="res://Assets/Interface/triangle/triangle1.png" id="19_0vcqs"]
 [ext_resource type="Texture2D" uid="uid://v3vth8p1m1ai" path="res://Assets/Interface/Combat/Bouton Sac3.png" id="19_4p0ui"]
 [ext_resource type="PackedScene" uid="uid://vmf5a4fm2h14" path="res://Assets/Model 3D/Foret.glb" id="19_5i64c"]
+[ext_resource type="Texture2D" uid="uid://bgfi8mmnw6bur" path="res://Assets/Character/Mot/CombatMot/Mot17.png" id="19_tafcp"]
 [ext_resource type="PackedScene" uid="uid://dsqrlgbhculpi" path="res://Assets/Model 3D/Foret_Fond_Montagne.glb" id="20_3mx84"]
 [ext_resource type="Texture2D" uid="uid://bq3fju46c2ryt" path="res://Assets/Interface/triangle/triangle2.png" id="20_7ldkh"]
+[ext_resource type="Texture2D" uid="uid://cxdcbv7nsy43k" path="res://Assets/Character/Mot/CombatMot/Mot18.png" id="20_gyn5t"]
 [ext_resource type="PackedScene" uid="uid://dwnc68cgc8td2" path="res://Assets/Model 3D/Montagne.glb" id="21_2gylr"]
+[ext_resource type="Texture2D" uid="uid://1kp747hg3cv8" path="res://Assets/Character/Mot/CombatMot/Mot19.png" id="21_rvumu"]
+[ext_resource type="Texture2D" uid="uid://dy7dpprdw5uw3" path="res://Assets/Character/Mot/CombatMot/Mot20.png" id="22_jkcp3"]
 [ext_resource type="AudioStream" uid="uid://c2krnnpewo88u" path="res://Assets/Son/menu/son_MenuButton.mp3" id="22_td06p"]
 [ext_resource type="Texture2D" uid="uid://yump20xf8un3" path="res://Assets/Interface/Combat/Bouton Pokemon2.png" id="22_xq0oq"]
 [ext_resource type="Texture2D" uid="uid://to5y0m6ebeva" path="res://Assets/Interface/Combat/Bouton Pokemon3.png" id="23_k3rol"]
+[ext_resource type="Texture2D" uid="uid://dqn7fnrctdr2h" path="res://Assets/Character/Nedy/CombatNedy/nedy1.png" id="23_nh0vw"]
+[ext_resource type="Texture2D" uid="uid://c1h1hv641fa7f" path="res://Assets/Character/Nedy/CombatNedy/nedy2.png" id="24_1wooy"]
 [ext_resource type="Texture2D" uid="uid://byaco4grkvtvk" path="res://Assets/Interface/Combat/Interface Pokemon ENNEMIE.png" id="25_m71ca"]
+[ext_resource type="Texture2D" uid="uid://cshd1f54vn4nl" path="res://Assets/Character/Nedy/CombatNedy/nedy3.png" id="25_y50gi"]
+[ext_resource type="Texture2D" uid="uid://bgf2lrjxk0uvc" path="res://Assets/Character/Nedy/CombatNedy/nedy4.png" id="26_5sqk0"]
+[ext_resource type="Texture2D" uid="uid://cyd76bxh531dl" path="res://Assets/Character/Nedy/CombatNedy/nedy5.png" id="27_erce1"]
+[ext_resource type="Texture2D" uid="uid://2r7yn8xmtsta" path="res://Assets/Character/Nedy/CombatNedy/nedy6.png" id="28_vdiaj"]
 [ext_resource type="Texture2D" uid="uid://day4ph4i22h3e" path="res://Assets/Interface/Combat/BARRE_DE_VIE_DESSOUS_FOND.png" id="29_0cmka"]
+[ext_resource type="Texture2D" uid="uid://dy6lpglym2mau" path="res://Assets/Character/Nedy/CombatNedy/nedy7.png" id="29_vdwnq"]
 [ext_resource type="Texture2D" uid="uid://ddu55e5uupghn" path="res://Assets/Interface/Combat/BARRE_DE_VIE_DESSOUS_REMPLIS.png" id="30_0cmka"]
+[ext_resource type="Texture2D" uid="uid://cqfb8vxdmmc2" path="res://Assets/Character/Nedy/CombatNedy/nedy8.png" id="30_fcwtn"]
+[ext_resource type="Texture2D" uid="uid://daawjqcq4dwed" path="res://Assets/Character/Nedy/CombatNedy/nedy9.png" id="31_wfyl8"]
+[ext_resource type="Texture2D" uid="uid://bhlkhuuvo02f2" path="res://Assets/Character/Nedy/CombatNedy/nedy10.png" id="32_q01ow"]
+[ext_resource type="Texture2D" uid="uid://c6w2va7hl3h8" path="res://Assets/Character/Nedy/CombatNedy/nedy11.png" id="33_47fek"]
 [ext_resource type="Texture2D" uid="uid://bfkyd0jctjccn" path="res://Assets/Interface/MenuGodomon/Godomon/Fond.png" id="34_0cmka"]
 [ext_resource type="Texture2D" uid="uid://clq2sg8e8kcak" path="res://Assets/Interface/Combat/Bouton attaque normal.png" id="34_addy8"]
+[ext_resource type="Texture2D" uid="uid://cpmhhsk5tpjg5" path="res://Assets/Character/Nedy/CombatNedy/nedy12.png" id="34_wpss5"]
 [ext_resource type="Texture2D" uid="uid://clcutuupv82ud" path="res://Assets/Interface/MenuGodomon/Godomon/BoutonPoke.png" id="35_2wrsc"]
 [ext_resource type="Texture2D" uid="uid://w1q1engl8nkq" path="res://Assets/Interface/Combat/Bouton attaque normal souris dessus.png" id="35_e6obo"]
+[ext_resource type="Texture2D" uid="uid://bma11by1ib524" path="res://Assets/Character/Nedy/CombatNedy/nedy13.png" id="35_sxgk6"]
 [ext_resource type="Texture2D" uid="uid://d1jvjm5jgvour" path="res://Assets/Interface/MenuGodomon/Godomon/BoutonPokeSourisDessus.png" id="36_0vcqs"]
+[ext_resource type="Texture2D" uid="uid://c2uob6oyntuug" path="res://Assets/Character/Nedy/CombatNedy/nedy14.png" id="36_64dyf"]
 [ext_resource type="Texture2D" uid="uid://crk6rq45nmwd1" path="res://Assets/Interface/Combat/Bouton attaque normal appuyer.png" id="36_qgjf0"]
+[ext_resource type="Texture2D" uid="uid://dk128xl0otm45" path="res://Assets/Character/Nedy/CombatNedy/nedy15.png" id="37_srcru"]
 [ext_resource type="Texture2D" uid="uid://ceebavwbbh5c6" path="res://Assets/Interface/MenuGodomon/Resume/BarreRougeResume.png" id="38_7ldkh"]
 [ext_resource type="Script" uid="uid://dhl2cordkter2" path="res://Script/Combat/boutonGodomonCombat.gd" id="38_addy8"]
+[ext_resource type="Texture2D" uid="uid://bbaaw8begw0f2" path="res://Assets/Character/Nedy/CombatNedy/nedy16.png" id="38_bffsr"]
 [ext_resource type="Texture2D" uid="uid://b7i1r44u22mfp" path="res://Assets/Interface/MenuGodomon/Resume/BarreVertResume.png" id="39_fvri4"]
+[ext_resource type="Texture2D" uid="uid://mkdt4yw1jqv0" path="res://Assets/Character/Nedy/CombatNedy/nedy17.png" id="39_p0itv"]
+[ext_resource type="Texture2D" uid="uid://dfadm51a6fbov" path="res://Assets/Character/Nedy/CombatNedy/nedy18.png" id="40_1sqy4"]
 [ext_resource type="Texture2D" uid="uid://yrblw4f5r4fv" path="res://Assets/Interface/MenuGodomon/Resume/BarreContourResume.png" id="40_hxtqm"]
 [ext_resource type="Texture2D" uid="uid://bj3hohj5qfi81" path="res://Assets/Interface/MenuGodomon/Godomon/MeneApparait.png" id="41_cnus0"]
+[ext_resource type="Texture2D" uid="uid://d27e28kbjoddn" path="res://Assets/Character/Nedy/CombatNedy/nedy19.png" id="41_rso3r"]
+[ext_resource type="Texture2D" uid="uid://bqkc72lq30viv" path="res://Assets/Character/Nedy/CombatNedy/nedy20.png" id="42_ds84c"]
+[ext_resource type="Texture2D" uid="uid://4ryr3socyyy5" path="res://Assets/Character/Nedy/CombatNedy/nedy21.png" id="43_gj17n"]
+[ext_resource type="Texture2D" uid="uid://coesm8ldt7c7b" path="res://Assets/Character/Nedy/CombatNedy/nedy22.png" id="44_8xxsh"]
+[ext_resource type="Texture2D" uid="uid://ddflafcotte4" path="res://Assets/Character/Nedy/CombatNedy/nedy23.png" id="45_c5ire"]
+[ext_resource type="Texture2D" uid="uid://cyhdm6mag82ta" path="res://Assets/Character/Nedy/CombatNedy/nedy24.png" id="46_bfrfc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y1g7x"]
+animations = [{
+"frames": [],
+"loop": false,
+"name": &"Default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ywtmc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_atn6w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3kjj0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_d7w1n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7xeyp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_y3ld1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_twcni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_fmubl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_u65m1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_4b6ts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_753i7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ilxep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_afm5s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_v5m8l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_5o4tw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_bp1iv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_tafcp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_gyn5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_rvumu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_jkcp3")
+}],
+"loop": false,
+"name": &"Mot",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_nh0vw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_1wooy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_y50gi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_5sqk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_erce1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_vdiaj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_vdwnq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_fcwtn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_wfyl8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_q01ow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_47fek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_wpss5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_sxgk6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_64dyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_srcru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_bffsr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_p0itv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_1sqy4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_rso3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_ds84c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_gj17n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_8xxsh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_c5ire")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_bfrfc")
+}],
+"loop": false,
+"name": &"Nedy",
+"speed": 10.0
+}]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3mx84"]
 texture = ExtResource("5_1fio0")
@@ -96,7 +290,7 @@ fog_light_color = Color(0.82918394, 0.43932098, 0.37885845, 1)
 volumetric_fog_enabled = true
 volumetric_fog_albedo = Color(0.8418652, 0.35429892, 0.7428293, 1)
 volumetric_fog_emission = Color(0.4509804, 0, 0, 1)
-volumetric_fog_emission_energy = 1.4
+volumetric_fog_length = 67.52
 adjustment_enabled = true
 adjustment_brightness = 1.05
 adjustment_contrast = 1.1
@@ -104,7 +298,7 @@ adjustment_saturation = 1.1
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_5eq4d"]
 dof_blur_far_enabled = true
-dof_blur_far_distance = 0.01
+dof_blur_far_distance = 6.06
 dof_blur_far_transition = 50.0
 
 [node name="SceneDeCombat" type="Node3D" unique_id=384346761]
@@ -128,7 +322,17 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.30091596, 0.26275617, -0.6623769)
 
 [node name="GodomonEnnemi" parent="." unique_id=2002172973 instance=ExtResource("2_1jl81")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.050530195, 0.25934717, -2.4580204)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1799811, 0.20050249, -2.4381971)
+
+[node name="AnimatedSpriteDresseurEnnemie" type="AnimatedSprite3D" parent="GodomonEnnemi" unique_id=1432421389]
+transform = Transform3D(1.5605905, 0, 0, 0, 1.5605905, 0, 0, 0, 1, 0.8053143, 0.25496164, -0.05216217)
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_y1g7x")
+animation = &"Mot"
+autoplay = "Default"
+frame = 19
+frame_progress = 1.0
 
 [node name="décore" type="Node3D" parent="." unique_id=591067996]
 
@@ -151,7 +355,7 @@ transform = Transform3D(0.107829824, 0, -0.021742307, 0, 0.11, 0, 0.021742307, 0
 transform = Transform3D(0.08332305, 0, -0.016800873, 0, 0.085, 0, 0.016800873, 0, 0.08332305, -0.43592963, 0, -0.79697794)
 
 [node name="Dessou_Godomon3" parent="décore" unique_id=1919168772 instance=ExtResource("18_a7dcr")]
-transform = Transform3D(0.08332305, 0, -0.016800873, 0, 0.085, 0, 0.016800873, 0, 0.08332305, 0.06700292, 0, -2.5973115)
+transform = Transform3D(0.08332305, 0, -0.016800873, 0, 0.085, 0, 0.016800873, 0, 0.08332305, -0.21447483, 0, -2.5973115)
 
 [node name="InterfaceCombat" type="Control" parent="." unique_id=1670358411]
 layout_mode = 3

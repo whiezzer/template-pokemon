@@ -27,9 +27,12 @@ func _enter_tree() -> void:
 	
 	if dataDuJeu.listeGodomonsEnnemie == []:
 		pokemonEnnemi = dataDuJeu.listeGodomons[randi() % dataDuJeu.listeGodomons.size()].duplicate(true)
+		$GodomonEnnemi/AnimatedSpriteDresseurEnnemie.animation = "Default"
 	else:
 		pokemonEnnemi = dataDuJeu.listeGodomonsEnnemie[0]
 		dataDuJeu.pokemonEnnemiStats = pokemonEnnemi 
+		$GodomonEnnemi/AnimatedSpriteDresseurEnnemie.animation = dataDuJeu.adversaire
+		$GodomonEnnemi/Sprite3D.visible = false
 	
 	dataDuJeu.pokemonEnnemiStats = pokemonEnnemi 
 	message = $InterfaceCombat/ZoneDeTexte
@@ -47,6 +50,11 @@ func  _ready() -> void:
 	$GodomonJoueur/Sprite3D.visible = false
 	
 	await get_tree().create_timer(2.0).timeout
+	
+	if dataDuJeu.listeGodomonsEnnemie != []:
+		$GodomonEnnemi/AnimatedSpriteDresseurEnnemie.play(dataDuJeu.adversaire)
+		await $GodomonEnnemi/AnimatedSpriteDresseurEnnemie.animation_finished
+		$GodomonEnnemi/Sprite3D.visible = true
 	
 	$GodomonEnnemi._play(pokemonEnnemi.crie)
 	
@@ -87,11 +95,13 @@ func _tour(attaque: Attaque) -> void:
 	if pokemonJoueur.vitesse >= pokemonEnnemi.vitesse:
 		tourDuJoueur = false
 		await _tourJoueur(attaque)
-		await _tourAdverse()
+		if tourDuJoueur == false:
+			await _tourAdverse()
 	else :
 		tourDuJoueur = false
 		await _tourAdverse()
-		await _tourJoueur(attaque)
+		if tourDuJoueur == false:
+			await _tourJoueur(attaque)
 	
 	if finCombat == false:
 		tourDuJoueur = true
@@ -251,9 +261,20 @@ func _finDeTour() -> void :
 				
 				await get_tree().create_timer(1.0).timeout
 				
+				await ecrire_texte(message, dataDuJeu.adversaire + " lance un/une " + pokemon.nom)
+				
+				$GodomonEnnemi/Sprite3D.visible = false
+				$GodomonEnnemi/AnimatedSpriteDresseurEnnemie.play(dataDuJeu.adversaire)
+				await $GodomonEnnemi/AnimatedSpriteDresseurEnnemie.animation_finished
+				$GodomonEnnemi/Sprite3D.visible = true
+				$GodomonEnnemi._play(pokemonEnnemi.crie)
+				
 				dataDuJeu.pokemonEnnemiStats = pokemon
 				$GodomonEnnemi.initialise()
 				pokemonEnnemi = dataDuJeu.pokemonEnnemiStats
+				
+				tourDuJoueur = true
+				ecrire_texte(message, "Choisissez une action")
 				break
 	elif pokemonJoueur.pv_Actuels <= 0:
 		for i in range(dataDuJeu.listeGodomonsJoueur.size()):
@@ -265,10 +286,14 @@ func _finDeTour() -> void :
 				$GodomonJoueur/AnimatedSpriteAttaque.play("Intro_Lenotre")
 				await $GodomonJoueur/AnimatedSpriteAttaque.animation_finished
 				$GodomonJoueur/Sprite3D.visible = true
+				$GodomonJoueur._play(pokemonEnnemi.crie)
 				
 				dataDuJeu.indexGodomonJoueurActif = i
 				$GodomonJoueur.initialise()
 				pokemonJoueur = dataDuJeu.pokemonJoueurStats
+				
+				tourDuJoueur = true
+				ecrire_texte(message, "Choisissez une action")
 				break
 	
 	if pokemonEnnemi.pv_Actuels <= 0:
