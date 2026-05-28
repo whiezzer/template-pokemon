@@ -25,10 +25,6 @@ ecran_de_transition="*uid://brv6oqeev5775"
 
 window/stretch/mode="canvas_items"
 
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/editeurdetexte/plugin.cfg")
-
 [importer_defaults]
 
 texture={

@@ -300,7 +300,7 @@ func _finDeTour() -> void :
 		
 		finCombat = true
 		ecrire_texte(message, "[color=blue]Victoire ![/color]")
-		get_tree().current_scene.get_node("AudioMusique3D").stream = load("res://Assets/Son/Combat/Victoire.mp3")
+		get_tree().current_scene.get_node("AudioMusique3D").stream = dataDuJeu.musiqueVictoire
 		get_tree().current_scene.get_node("AudioMusique3D").play()
 		
 		$InterfaceCombat/AnimatedSprite2D.visible = true
