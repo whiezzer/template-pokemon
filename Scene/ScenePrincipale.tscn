@@ -485,7 +485,7 @@ script = ExtResource("4_7l60e")
 equipeGodomon = Array[int]([0, 1, 2, 3])
 
 [node name="Sprite3D" type="Sprite3D" parent="Nedy" unique_id=863894577]
-transform = Transform3D(2.3000002, 0, 0, 0, 2.3000002, 0, 0, 0, 0.99999994, 0, -0.08885056, 0)
+transform = Transform3D(2.3000002, 0, 0, 0, 2.3000002, 0, 0, 0, 0.99999994, 0, -0.081181735, 0)
 cast_shadow = 2
 billboard = 2
 shaded = true
@@ -513,7 +513,7 @@ script = ExtResource("4_7l60e")
 equipeGodomon = Array[int]([0, 1, 2, 3])
 
 [node name="Sprite3D" type="Sprite3D" parent="Mot" unique_id=681622003]
-transform = Transform3D(2.3000002, 0, 0, 0, 2.3000002, 0, 0, 0, 0.99999994, 0, -0.08885056, 0)
+transform = Transform3D(2.3000002, 0, 0, 0, 2.3000002, 0, 0, 0, 0.99999994, 0, -0.06970444, 0)
 cast_shadow = 2
 billboard = 2
 shaded = true
