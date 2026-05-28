@@ -90,10 +90,10 @@
 [ext_resource type="Texture2D" uid="uid://buvnklao20pck" path="res://Assets/Godomon/Sinjypleur/SinjypleurDos.png" id="77_1y0xa"]
 [ext_resource type="Texture2D" uid="uid://do1y6ytq4u43d" path="res://Assets/Godomon/Cabufo/CabufoFace.png" id="78_dq13u"]
 [ext_resource type="Texture2D" uid="uid://bbexnkrb64qk0" path="res://Assets/Godomon/Cabufo/CabufoDos.png" id="79_8i56a"]
-[ext_resource type="AudioStream" uid="uid://rkg02i1mk08c" path="res://Assets/Son/menu/musiqueMenu.mp3" id="86_86a52"]
+[ext_resource type="AudioStream" uid="uid://b7lxl2fwr0bq6" path="res://Assets/Son/menu/musiqueMenu.mp3" id="86_86a52"]
 [ext_resource type="AudioStream" uid="uid://bmrm5hed5cvcm" path="res://Assets/Son/Combat/musique_Fight.mp3" id="87_71rpj"]
 [ext_resource type="AudioStream" uid="uid://2irc74i8b32a" path="res://Assets/Son/Combat/son_TransitionCombat.wav" id="88_1y0xa"]
-[ext_resource type="AudioStream" uid="uid://b48h0vkjkn7a5" path="res://Assets/Son/Combat/Victoire.mp3" id="89_dq13u"]
+[ext_resource type="AudioStream" uid="uid://cwfsuk5ypq6jg" path="res://Assets/Son/Combat/VictoireMusic.mp3" id="94_llcau"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qot0l"]
 radius = 0.19238281
@@ -2180,7 +2180,7 @@ musiqueMenu = ExtResource("86_86a52")
 musiquePrincipal = ExtResource("1_x7wka")
 musiqueCombat = ExtResource("87_71rpj")
 musiqueTransitionCombat = ExtResource("88_1y0xa")
-musiqueVictoire = ExtResource("89_dq13u")
+musiqueVictoire = ExtResource("94_llcau")
 _type_index_Godomons_joueurs = 1
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2071441840]
