@@ -32,6 +32,12 @@ func _initialise_dialogue(PNJ: String, texte: String, contenu: String, index: in
 	ligne.size_flags_stretch_ratio = 0.1
 	ligne.size_flags_vertical = Control.SIZE_EXPAND
 	ligne.max_length = 50
+	var style = StyleBoxTexture.new()
+	style.texture = preload("res://Assets/Interface/Combat/boite_de_dialogueFULL.png")
+	ligne.add_theme_stylebox_override("normal", style)
+	ligne.alignment = HORIZONTAL_ALIGNMENT_CENTER
+	ligne.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	ligne.add_theme_color_override("font_color", Color.BLACK)
 	ligne.text_changed.connect(func(new_text): _modifierTexte(ligne.text, ligne))
 
 func _modifierTexte(new_text: String, texte: LineEdit) -> void:
@@ -83,6 +89,12 @@ func _ajouterLigne(bouton: Button) -> void:
 	ligne.size_flags_stretch_ratio = 0.1
 	ligne.size_flags_vertical = Control.SIZE_EXPAND
 	ligne.max_length = 50
+	var style = StyleBoxTexture.new()
+	style.texture = preload("res://Assets/Interface/Combat/boite_de_dialogueFULL.png")
+	ligne.add_theme_stylebox_override("normal", style)
+	ligne.alignment = HORIZONTAL_ALIGNMENT_CENTER
+	ligne.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	ligne.add_theme_color_override("font_color", Color.BLACK)
 	ligne.text_changed.connect(func(new_text): _modifierTexte(ligne.text, ligne))
 	listeDesTextes[dialogue.get_parent().get_parent().name][dialogue.name]["lines"].append(ligne.text)
 	_sauvegarder(dialogue.get_parent().get_parent().name)
