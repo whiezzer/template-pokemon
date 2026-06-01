@@ -1,22 +1,23 @@
+@tool
 extends Resource
 class_name Objet
 
-@export var nom : String:
+@export var nom : String = "Pas de nom":
 	set(value):
-		nom = value if value != "" else "Pas de nom"
-		nom = value if value.length() < 15 else value.substr(0, 15)
+		var valide = value if value != "" else "Pas de nom"
+		nom = valide if valide.length() < 15 else valide.substr(0, 15)
 
 @export var texture : Texture2D:
 	set(value):
 			texture = value
 			_verifierSprite()
 
-@export var description : String:
+@export var description : String = "Pas de description":
 	set(value):
-		description = value if value != "" else "Pas de description"
-		description = value if value.length() < 500 else value.substr(0, 500)
+		var valide = value if value != "" else "Pas de description"
+		description = valide if valide.length() < 500 else valide.substr(0, 500)
 
-@export var capture : bool:
+@export var capture : bool = true:
 	set(value):
 		if value == true:
 			reanime = false
@@ -24,7 +25,7 @@ class_name Objet
 		capture = value
 		_verifierSprite()
 
-@export var reanime : bool:
+@export var reanime : bool = true:
 	set(value):
 		if value == true:
 			capture = false
@@ -32,7 +33,7 @@ class_name Objet
 		reanime = value
 		_verifierSprite()
 
-@export var soigne : bool:
+@export var soigne : bool = true:
 	set(value):
 		if value == true:
 			reanime = false
@@ -41,7 +42,7 @@ class_name Objet
 		_verifierSprite()
 
 @export_enum("0%", "25%", "50%", "75%", "100%")
-var nbPvSoigne : String:
+var nbPvSoigne : String = "0%":
 	set(value):
 		nbPvSoigne = value if value != "" else "0%"
 

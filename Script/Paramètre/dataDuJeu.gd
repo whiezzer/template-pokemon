@@ -121,7 +121,7 @@ func _verifierNatures() -> void:
 # Vérifie la liste et s'assure qu'elle contient toujours 3 objets
 func _verifierObjets() -> void:
 	if 2 == listeDesObjets.size():
-		listeDesObjets.append(ObjetInventaire.new())
+		listeDesObjets.append(ObjetInventaire.new(Objet.new(), 0))
 	elif 2 > listeDesObjets.size():
 		listeDesObjets = _creer_liste_objets_base()
 	else:
@@ -301,7 +301,7 @@ var listeGodomonsEnnemie: Array[GodomonData] = []
 @export var musiqueVictoire : AudioStream:
 	set(value):
 		if value == null:
-			musiqueVictoire = load("res://Assets/Son/Combat/Victoire.mp3")
+			musiqueVictoire = load("res://Assets/Son/Combat/VictoireMusic.mp3")
 		else:
 			musiqueVictoire = value
 
