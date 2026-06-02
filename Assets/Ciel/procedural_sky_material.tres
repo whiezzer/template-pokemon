@@ -1,0 +1,6 @@
+[gd_resource type="ProceduralSkyMaterial" format=3 uid="uid://bgiqdx87805wk"]
+
+[ext_resource type="Texture2D" uid="uid://bgv6ru2mqqkme" path="res://Assets/Ciel/Skybox.png" id="1_4wqyr"]
+
+[resource]
+sky_cover = ExtResource("1_4wqyr")

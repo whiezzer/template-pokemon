@@ -58,5 +58,5 @@ func _init(_nom = "Pas de nom", _texture = null, _description = "Pas de descript
 
 func _verifierSprite() -> void:
 	if capture && Engine.is_editor_hint():
-		texture = load("res://Assets/Objets/Pokeballs/Pokeball attraper56.png")
+		texture = load("res://Assets/Objets/IconObject/IconRapel.png")
 		notify_property_list_changed()

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6ql6r48w0i56"
-path="res://.godot/imported/IconPotion.png-d75da91d78fd9cbf113375d8bda1aae1.ctex"
+uid="uid://cukmrgkint2s2"
+path="res://.godot/imported/IconRapel.png-e9d3ed0ee3e3ca800a686f5ca31439b3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Interface/IconObject/IconPotion.png"
-dest_files=["res://.godot/imported/IconPotion.png-d75da91d78fd9cbf113375d8bda1aae1.ctex"]
+source_file="res://Assets/Objets/IconObject/IconRapel.png"
+dest_files=["res://.godot/imported/IconRapel.png-e9d3ed0ee3e3ca800a686f5ca31439b3.ctex"]
 
 [params]
 
