@@ -67,6 +67,7 @@
 [ext_resource type="Texture2D" uid="uid://bys526vad4ql8" path="res://Assets/Interface/MainMenu/Main_menu12.png" id="47_llcau"]
 [ext_resource type="Texture2D" uid="uid://r7dorg66qa60" path="res://Assets/Interface/MainMenu/Main_menu13.png" id="48_5krid"]
 [ext_resource type="Texture2D" uid="uid://c6df0impt0xnr" path="res://Assets/Interface/MainMenu/Main_menu14.png" id="49_tl1mc"]
+[ext_resource type="Texture2D" uid="uid://kge242jh4ye2" path="res://Assets/Interface/Credits/Croix.png" id="50_kdr5y"]
 [ext_resource type="Texture2D" uid="uid://c382fmaj3owbh" path="res://Assets/Interface/MainMenu/Main_menu15.png" id="50_wagys"]
 [ext_resource type="Texture2D" uid="uid://c55npxmiqpor0" path="res://Assets/Interface/MainMenu/Main_menu16.png" id="51_lfee6"]
 [ext_resource type="Texture2D" uid="uid://d2kev37dv4x0s" path="res://Assets/Interface/MainMenu/Main_menu17.png" id="52_3mu66"]
@@ -146,6 +147,19 @@ texture = ExtResource("27_ifajr")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tl1mc"]
 texture = ExtResource("44_5krid")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_76hys"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0sscw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kdr5y"]
+bg_color = Color(0.8776157, 0.8776158, 0.87761563, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_168bq"]
+bg_color = Color(0.96862745, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mpy6k"]
+bg_color = Color(1, 0, 0.105882354, 1)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_aek4d"]
 animations = [{
@@ -1263,9 +1277,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 50.999023
-offset_top = -194.0
+offset_top = -198.0
 offset_right = 451.0005
-offset_bottom = 106.0
+offset_bottom = 102.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(200, 150)
@@ -1300,6 +1314,10 @@ texture_hover = ExtResource("27_wagys")
 stretch_mode = 0
 script = ExtResource("9_8l02w")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="InterfaceMenu/TextureButton_Quitter" unique_id=797628636]
+position = Vector2(-642, -552)
+stream = ExtResource("9_r2s0p")
+
 [node name="TextureButton_Credit" type="TextureButton" parent="InterfaceMenu" unique_id=128826348]
 texture_filter = 1
 layout_mode = 1
@@ -1322,6 +1340,31 @@ stretch_mode = 0
 script = ExtResource("9_8l02w")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="InterfaceMenu/TextureButton_Credit" unique_id=1882226049]
+position = Vector2(-642, -552)
+stream = ExtResource("9_r2s0p")
+
+[node name="TextureButton_Tuto" type="TextureButton" parent="InterfaceMenu" unique_id=1081689023]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -173.5
+offset_top = 100.0
+offset_right = 173.5
+offset_bottom = 164.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(200, 150)
+texture_normal = ExtResource("25_5krid")
+texture_pressed = ExtResource("26_tl1mc")
+texture_hover = ExtResource("27_wagys")
+stretch_mode = 0
+script = ExtResource("9_8l02w")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="InterfaceMenu/TextureButton_Tuto" unique_id=1361465059]
 position = Vector2(-642, -552)
 stream = ExtResource("9_r2s0p")
 
@@ -2172,25 +2215,8 @@ script = ExtResource("9_8l02w")
 position = Vector2(-642, -552)
 stream = ExtResource("9_r2s0p")
 
-[node name="InterfaceMenuPrincipal" type="Control" parent="." unique_id=873146367]
-visible = false
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("27_7w3f3")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="InterfaceMenuPrincipal" unique_id=1190697393]
-texture_filter = 1
-position = Vector2(576.50006, 324.5)
-scale = Vector2(2.41875, 2.4555552)
-sprite_frames = SubResource("SpriteFrames_aek4d")
-animation = &"MainMenuIntro"
-autoplay = "MainMenuIntro"
-
 [node name="InterfaceTutoriel" type="Control" parent="." unique_id=312311944]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -2204,11 +2230,29 @@ anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 443.0
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_76hys")
+
+[node name="TextureButton_Tuto" type="TextureButton" parent="InterfaceTutoriel" unique_id=1433971262]
+texture_filter = 1
+layout_mode = 1
+offset_right = 108.0
+offset_bottom = 52.0
+pivot_offset = Vector2(200, 150)
+texture_normal = ExtResource("32_e6qsf")
+texture_pressed = ExtResource("33_ediv8")
+texture_hover = ExtResource("33_ediv8")
+stretch_mode = 0
+script = ExtResource("9_8l02w")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="InterfaceTutoriel/TextureButton_Tuto" unique_id=885690083]
+position = Vector2(-642, -552)
+stream = ExtResource("9_r2s0p")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="InterfaceTutoriel" unique_id=401066598]
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
+offset_top = 64.0
 offset_right = 441.0
 grow_vertical = 2
 
@@ -2432,15 +2476,103 @@ layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 4.5
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="InterfaceTutoriel" unique_id=200884260]
-texture_filter = 1
+[node name="PanelVideo" type="Panel" parent="InterfaceTutoriel" unique_id=642527793]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0sscw")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="InterfaceTutoriel/PanelVideo" unique_id=103744338]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="InterfaceTutoriel/PanelVideo/VBoxContainer2" unique_id=200884260]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+expand = true
+loop = true
 script = ExtResource("80_ixwgq")
+
+[node name="Panel" type="Panel" parent="InterfaceTutoriel/PanelVideo/VBoxContainer2" unique_id=1693941940]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+theme_override_styles/panel = SubResource("StyleBoxFlat_kdr5y")
+
+[node name="TextureButton" type="TextureButton" parent="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel" unique_id=881466396]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -21.5
+offset_top = -36.0
+offset_right = 21.5
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("50_kdr5y")
+stretch_mode = 0
+
+[node name="TextureButton2" type="TextureButton" parent="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel" unique_id=515484805]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -37.0
+offset_right = 43.0
+offset_bottom = -5.0
+grow_vertical = 0
+texture_normal = ExtResource("32_e6qsf")
+texture_pressed = ExtResource("33_ediv8")
+texture_hover = ExtResource("33_ediv8")
+stretch_mode = 0
+
+[node name="HSlider" type="HSlider" parent="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel" unique_id=278940435]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 9.0
+offset_top = -22.5
+offset_right = -9.0
+offset_bottom = -6.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_168bq")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_mpy6k")
+step = 0.0
+
+[node name="InterfaceMenuPrincipal" type="Control" parent="." unique_id=873146367]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("27_7w3f3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="InterfaceMenuPrincipal" unique_id=1190697393]
+texture_filter = 1
+position = Vector2(576.50006, 324.5)
+scale = Vector2(2.41875, 2.4555552)
+sprite_frames = SubResource("SpriteFrames_aek4d")
+animation = &"MainMenuIntro"
+autoplay = "MainMenuIntro"
 
 [node name="Paramètre" type="Node3D" parent="." unique_id=256808770]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.128716, 0.85703945, 3.5622892)
@@ -2469,6 +2601,7 @@ camera_attributes = SubResource("CameraAttributesPhysical_r2s0p")
 [connection signal="pressed" from="InterfaceMenu/TextureButton_Objets" to="InterfaceMenu/TextureButton_Objets" method="_on_menu_objet_pressed"]
 [connection signal="pressed" from="InterfaceMenu/TextureButton_Quitter" to="InterfaceMenu/TextureButton_Quitter" method="_quitter"]
 [connection signal="pressed" from="InterfaceMenu/TextureButton_Credit" to="InterfaceMenu/TextureButton_Credit" method="_on_credit_pressed"]
+[connection signal="pressed" from="InterfaceMenu/TextureButton_Tuto" to="InterfaceMenu/TextureButton_Tuto" method="_on_tuto_pressed"]
 [connection signal="pressed" from="InterfaceMenu/MenuObjet/Bouton_MenuSacADos" to="InterfaceMenu/MenuObjet/Bouton_MenuSacADos" method="_on_menu_objet_pressed"]
 [connection signal="pressed" from="InterfaceMenu/MenuGodomon/TextureButton_Godomon1" to="InterfaceMenu/MenuGodomon/TextureButton_Godomon1" method="_on_pressed"]
 [connection signal="pressed" from="InterfaceMenu/MenuGodomon/TextureButton_Godomon3" to="InterfaceMenu/MenuGodomon/TextureButton_Godomon3" method="_on_pressed"]
@@ -2479,3 +2612,9 @@ camera_attributes = SubResource("CameraAttributesPhysical_r2s0p")
 [connection signal="pressed" from="InterfaceMenu/MenuGodomon/TextureButton_Equipe" to="InterfaceMenu/MenuGodomon/TextureButton_Equipe" method="_on_menu_pokemon_pressed"]
 [connection signal="pressed" from="InterfaceMenu/MenuGodomon/Resume/TextureButton_PokemonRetour" to="InterfaceMenu/MenuGodomon/TextureButton_Godomon6" method="_on_pressed"]
 [connection signal="pressed" from="InterfaceMenu/Credit/TextureButton_Credit" to="InterfaceMenu/Credit/TextureButton_Credit" method="_on_credit_pressed"]
+[connection signal="pressed" from="InterfaceTutoriel/TextureButton_Tuto" to="InterfaceTutoriel/TextureButton_Tuto" method="_on_tuto_pressed"]
+[connection signal="pressed" from="InterfaceTutoriel/VBoxContainer/TextureButton1" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_jouerVideo" binds= ["res://Assets/VIDEO/Comment-dessiner-un-sprite.ogv"]]
+[connection signal="pressed" from="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel/TextureButton" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_pause"]
+[connection signal="pressed" from="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel/TextureButton2" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_on_video_return"]
+[connection signal="drag_ended" from="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel/HSlider" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_drag_ended"]
+[connection signal="drag_started" from="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel/HSlider" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_drag_started"]
