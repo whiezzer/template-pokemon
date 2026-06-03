@@ -63,8 +63,8 @@ func _creer_liste_nature_base() -> Array[NatureStat]:
 func _creer_liste_objets_base() -> Array[ObjetInventaire]:
 	return [
 		ObjetInventaire.new(Objet.new("Godoball", load("res://Assets/Objets/Pokeballs/Pokeball attraper57.png") , "Cette Objet sert à capturer des Godomons", true, false, false, "0%"), 10),
-		ObjetInventaire.new(Objet.new("Potion de soin", null ,"Cette Objet sert à soigner des Godomons", false, false, true, "75%"), 5),
-		ObjetInventaire.new(Objet.new("Rappel", null, "Cette Objet sert à réanimer des Godomons", false, true, false, "25%"), 1)
+		ObjetInventaire.new(Objet.new("Potion de soin", load("res://Assets/Objets/IconObject/IconPotion.png") ,"Cette Objet sert à soigner des Godomons", false, false, true, "75%"), 5),
+		ObjetInventaire.new(Objet.new("Rappel", load("res://Assets/Objets/IconObject/IconRapel.png"), "Cette Objet sert à réanimer des Godomons", false, true, false, "25%"), 1)
 	]
 
 # Liste de base de 3 types avec leurs valeurs par défaut
@@ -121,7 +121,7 @@ func _verifierNatures() -> void:
 # Vérifie la liste et s'assure qu'elle contient toujours 3 objets
 func _verifierObjets() -> void:
 	if 2 == listeDesObjets.size():
-		listeDesObjets.append(ObjetInventaire.new())
+		listeDesObjets.append(ObjetInventaire.new(Objet.new(), 0))
 	elif 2 > listeDesObjets.size():
 		listeDesObjets = _creer_liste_objets_base()
 	else:
@@ -301,7 +301,7 @@ var listeGodomonsEnnemie: Array[GodomonData] = []
 @export var musiqueVictoire : AudioStream:
 	set(value):
 		if value == null:
-			musiqueVictoire = load("res://Assets/Son/Combat/Victoire.mp3")
+			musiqueVictoire = load("res://Assets/Son/Combat/VictoireMusic.mp3")
 		else:
 			musiqueVictoire = value
 

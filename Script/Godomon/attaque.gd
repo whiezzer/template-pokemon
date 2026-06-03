@@ -2,7 +2,7 @@
 extends Resource
 class_name Attaque
 
-@export var nom : String:
+@export var nom : String = "Pas de nom":
 	set(value):
 		nom = value if value != "" else "Pas de nom"
 		if nom.length() > 20:
@@ -45,21 +45,21 @@ func _get_property_list():
 		"usage": PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_STORAGE
 	}]
 
-@export var puissance : int:
+@export var puissance : int = 1:
 	set(value):
 		puissance = max(value, 1)
 
 var PP : int
 
-@export var PP_max : int:
+@export var PP_max : int = 1:
 	set(value):
 		PP_max = max(value, 1)
 
-@export var precision : float:
+@export var precision : float = 1.0:
 	set(value):
 		precision = clamp(value, 0.0, 1.0)
 
-@export var bruit : AudioStream:
+@export var bruit : AudioStream = load("res://Assets/Son/Combat/son_Attaque1.wav"):
 	set(value):
 		if value == null:
 			bruit = preload("res://Assets/Son/Combat/son_Attaque1.wav")

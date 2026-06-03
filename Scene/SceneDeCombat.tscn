@@ -89,6 +89,7 @@
 [ext_resource type="Texture2D" uid="uid://coesm8ldt7c7b" path="res://Assets/Character/Nedy/CombatNedy/nedy22.png" id="44_8xxsh"]
 [ext_resource type="Texture2D" uid="uid://ddflafcotte4" path="res://Assets/Character/Nedy/CombatNedy/nedy23.png" id="45_c5ire"]
 [ext_resource type="Texture2D" uid="uid://cyhdm6mag82ta" path="res://Assets/Character/Nedy/CombatNedy/nedy24.png" id="46_bfrfc"]
+[ext_resource type="Material" uid="uid://bgiqdx87805wk" path="res://Assets/Ciel/procedural_sky_material.tres" id="90_atn6w"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_y1g7x"]
 animations = [{
@@ -277,19 +278,22 @@ texture = ExtResource("34_0cmka")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ewy7h"]
 texture = ExtResource("41_cnus0")
 
+[sub_resource type="Sky" id="Sky_atn6w"]
+sky_material = ExtResource("90_atn6w")
+
 [sub_resource type="Environment" id="Environment_poke7"]
 background_mode = 2
+sky = SubResource("Sky_atn6w")
 ambient_light_source = 2
 ambient_light_color = Color(0.85430974, 0.40685266, 0.7667377, 1)
 reflected_light_source = 2
 sdfgi_cascades = 2
 sdfgi_min_cell_size = 0.46875
 glow_bloom = 0.23
-fog_enabled = true
 fog_light_color = Color(0.82918394, 0.43932098, 0.37885845, 1)
-volumetric_fog_enabled = true
-volumetric_fog_albedo = Color(0.8418652, 0.35429892, 0.7428293, 1)
-volumetric_fog_emission = Color(0.4509804, 0, 0, 1)
+volumetric_fog_density = 0.015
+volumetric_fog_albedo = Color(0.81454617, 0.41405374, 0.63819784, 1)
+volumetric_fog_emission = Color(0.82318383, 0.43669784, 0.14082727, 1)
 volumetric_fog_length = 67.52
 adjustment_enabled = true
 adjustment_brightness = 1.05

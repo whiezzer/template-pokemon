@@ -2,7 +2,7 @@
 class_name GodomonData
 extends Resource
 
-@export var nom : String:
+@export var nom : String = "Pas de nom":
 	set(value):
 		if value.length() > 10 :
 			nom = value.substr(0, 10)
@@ -11,7 +11,7 @@ extends Resource
 		else :
 			nom = value
 
-@export var description : String:
+@export var description : String = "Pas de description":
 	set(value):
 		if value.length() > 100 :
 			description = value.substr(0, 100)

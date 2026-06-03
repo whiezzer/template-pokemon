@@ -33,7 +33,6 @@
 [ext_resource type="Texture2D" uid="uid://v3vth8p1m1ai" path="res://Assets/Interface/Combat/Bouton Sac3.png" id="14_loqtx"]
 [ext_resource type="Texture2D" uid="uid://bq3fju46c2ryt" path="res://Assets/Interface/triangle/triangle2.png" id="15_86a52"]
 [ext_resource type="Texture2D" uid="uid://walsrnbv1ns7" path="res://Assets/Interface/MenuPause/FondPause.png" id="16_llcau"]
-[ext_resource type="Texture2D" uid="uid://42cyq4mo2eil" path="res://Assets/Objets/Pokeballs/Pokeball attraper56.png" id="22_8l02w"]
 [ext_resource type="Texture2D" uid="uid://bfkyd0jctjccn" path="res://Assets/Interface/MenuGodomon/Godomon/Fond.png" id="23_eisab"]
 [ext_resource type="Texture2D" uid="uid://clcutuupv82ud" path="res://Assets/Interface/MenuGodomon/Godomon/BoutonPoke.png" id="24_d4gcl"]
 [ext_resource type="Texture2D" uid="uid://w1q1engl8nkq" path="res://Assets/Interface/Combat/Bouton attaque normal souris dessus.png" id="24_qvqry"]
@@ -68,6 +67,7 @@
 [ext_resource type="Texture2D" uid="uid://bys526vad4ql8" path="res://Assets/Interface/MainMenu/Main_menu12.png" id="47_llcau"]
 [ext_resource type="Texture2D" uid="uid://r7dorg66qa60" path="res://Assets/Interface/MainMenu/Main_menu13.png" id="48_5krid"]
 [ext_resource type="Texture2D" uid="uid://c6df0impt0xnr" path="res://Assets/Interface/MainMenu/Main_menu14.png" id="49_tl1mc"]
+[ext_resource type="Texture2D" uid="uid://kge242jh4ye2" path="res://Assets/Interface/Credits/Croix.png" id="50_kdr5y"]
 [ext_resource type="Texture2D" uid="uid://c382fmaj3owbh" path="res://Assets/Interface/MainMenu/Main_menu15.png" id="50_wagys"]
 [ext_resource type="Texture2D" uid="uid://c55npxmiqpor0" path="res://Assets/Interface/MainMenu/Main_menu16.png" id="51_lfee6"]
 [ext_resource type="Texture2D" uid="uid://d2kev37dv4x0s" path="res://Assets/Interface/MainMenu/Main_menu17.png" id="52_3mu66"]
@@ -88,15 +88,21 @@
 [ext_resource type="Texture2D" uid="uid://balfv5pu1pwhs" path="res://Assets/Godomon/Bomjeton/BomjetonFace.png" id="74_86a52"]
 [ext_resource type="Texture2D" uid="uid://cqfupb62i7ifd" path="res://Assets/Godomon/Bomjeton/BomjetonDos.png" id="75_71rpj"]
 [ext_resource type="Texture2D" uid="uid://fv6hnfh7rmbw" path="res://Assets/Godomon/Sinjypleur/SinjypleurFace.png" id="76_40irl"]
+[ext_resource type="Texture2D" uid="uid://64b12bs0dons" path="res://Assets/Interface/BoutonDialogue/DialogueBouton.png" id="76_ns0bq"]
 [ext_resource type="Texture2D" uid="uid://buvnklao20pck" path="res://Assets/Godomon/Sinjypleur/SinjypleurDos.png" id="77_1y0xa"]
+[ext_resource type="Texture2D" uid="uid://66py4h7yd00y" path="res://Assets/Interface/BoutonDialogue/DialogueBoutonAppuyer.png" id="77_ixwgq"]
 [ext_resource type="Texture2D" uid="uid://do1y6ytq4u43d" path="res://Assets/Godomon/Cabufo/CabufoFace.png" id="78_dq13u"]
+[ext_resource type="Texture2D" uid="uid://tdttvhpl0n2f" path="res://Assets/Interface/BoutonDialogue/DialogueBoutonSouris.png" id="78_kdr5y"]
 [ext_resource type="Texture2D" uid="uid://bbexnkrb64qk0" path="res://Assets/Godomon/Cabufo/CabufoDos.png" id="79_8i56a"]
+[ext_resource type="FontFile" uid="uid://cjs6wm44fxjdf" path="res://Assets/Text/pixel_operator/PixelOperatorMono8-Bold.ttf" id="79_168bq"]
+[ext_resource type="Script" uid="uid://dqsltudyiskea" path="res://Script/Interface/video.gd" id="80_ixwgq"]
+[ext_resource type="Texture2D" uid="uid://cukmrgkint2s2" path="res://Assets/Objets/IconObject/IconRapel.png" id="80_wagys"]
 [ext_resource type="AudioStream" uid="uid://b7lxl2fwr0bq6" path="res://Assets/Son/menu/musiqueMenu.mp3" id="86_86a52"]
 [ext_resource type="AudioStream" uid="uid://bmrm5hed5cvcm" path="res://Assets/Son/Combat/musique_Fight.mp3" id="87_71rpj"]
 [ext_resource type="AudioStream" uid="uid://2irc74i8b32a" path="res://Assets/Son/Combat/son_TransitionCombat.wav" id="88_1y0xa"]
+[ext_resource type="AudioStream" uid="uid://br0p0ei5h4cs7" path="res://Assets/Son/Combat/son_Attaque1.wav" id="91_tl1mc"]
 [ext_resource type="AudioStream" uid="uid://cwfsuk5ypq6jg" path="res://Assets/Son/Combat/VictoireMusic.mp3" id="94_llcau"]
-[ext_resource type="Shader" uid="uid://hhsplxbldo6" path="res://new_shader.tres" id="95_tl1mc"]
-[ext_resource type="Texture2D" uid="uid://bgv6ru2mqqkme" path="res://Skybox.png" id="96_wagys"]
+[ext_resource type="Texture2D" uid="uid://bgv6ru2mqqkme" path="res://Assets/Ciel/Skybox.png" id="98_3mu66"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qot0l"]
 radius = 0.19238281
@@ -141,6 +147,19 @@ texture = ExtResource("27_ifajr")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tl1mc"]
 texture = ExtResource("44_5krid")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_76hys"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0sscw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kdr5y"]
+bg_color = Color(0.8776157, 0.8776158, 0.87761563, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_168bq"]
+bg_color = Color(0.96862745, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mpy6k"]
+bg_color = Color(1, 0, 0.105882354, 1)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_aek4d"]
 animations = [{
@@ -250,86 +269,89 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Resource" id="Resource_x8d5j"]
+[sub_resource type="Resource" id="Resource_tl1mc"]
 script = ExtResource("5_vfha3")
 stat1 = "attaque"
 modificateur1 = "+10%"
 stat2 = "defense"
 modificateur2 = "-10%"
 
-[sub_resource type="Resource" id="Resource_15qxy"]
+[sub_resource type="Resource" id="Resource_wagys"]
 script = ExtResource("5_vfha3")
 stat1 = "defense"
 modificateur1 = "+10%"
-stat2 = "attaque"
 modificateur2 = "-10%"
 
-[sub_resource type="Resource" id="Resource_llcau"]
+[sub_resource type="Resource" id="Resource_lfee6"]
 script = ExtResource("5_vfha3")
-stat1 = "pv"
 modificateur1 = "+10%"
-stat2 = "attaque"
 modificateur2 = "-10%"
 
-[sub_resource type="Resource" id="Resource_5krid"]
+[sub_resource type="Resource" id="Resource_3mu66"]
 script = ExtResource("5_vfha3")
 stat1 = "attaque"
 modificateur1 = "+10%"
 stat2 = "pv"
 modificateur2 = "-10%"
 
-[sub_resource type="Resource" id="Resource_tl1mc"]
+[sub_resource type="Resource" id="Resource_b0uwa"]
 script = ExtResource("5_vfha3")
 stat1 = "vitesse"
 modificateur1 = "+10%"
 stat2 = "pv"
 modificateur2 = "-10%"
 
-[sub_resource type="Resource" id="Resource_wagys"]
+[sub_resource type="Resource" id="Resource_ns0bq"]
 script = ExtResource("5_vfha3")
-stat1 = "pv"
 modificateur1 = "+10%"
 stat2 = "vitesse"
 modificateur2 = "-10%"
 
-[sub_resource type="Resource" id="Resource_lfee6"]
-script = ExtResource("9_8wwat")
-nom = "Godoball"
-texture = ExtResource("22_8l02w")
-description = "Cette Objet sert à capturer des Godomons"
-capture = true
-nbPvSoigne = "0%"
-
-[sub_resource type="Resource" id="Resource_3mu66"]
-script = ExtResource("9_x6yq0")
-objet = SubResource("Resource_lfee6")
-quantite = 10
-
-[sub_resource type="Resource" id="Resource_b0uwa"]
-script = ExtResource("9_8wwat")
-nom = "Potion de soin"
-description = "Cette Objet sert à soigner des Godomons"
-soigne = true
-nbPvSoigne = "75%"
-
-[sub_resource type="Resource" id="Resource_ns0bq"]
-script = ExtResource("9_x6yq0")
-objet = SubResource("Resource_b0uwa")
-quantite = 5
-
 [sub_resource type="Resource" id="Resource_ixwgq"]
 script = ExtResource("9_8wwat")
-nom = "Rappel"
-description = "Cette Objet sert à réanimer des Godomons"
-reanime = true
-nbPvSoigne = "25%"
+nom = "Godoball"
+texture = ExtResource("80_wagys")
+description = "Cette Objet sert à capturer des Godomons"
+capture = false
+reanime = false
+soigne = false
 
 [sub_resource type="Resource" id="Resource_kdr5y"]
 script = ExtResource("9_x6yq0")
 objet = SubResource("Resource_ixwgq")
-quantite = 1
+quantite = 10
 
 [sub_resource type="Resource" id="Resource_168bq"]
+script = ExtResource("9_8wwat")
+nom = "Potion de soin"
+texture = ExtResource("80_wagys")
+description = "Cette Objet sert à soigner des Godomons"
+capture = false
+reanime = false
+soigne = false
+nbPvSoigne = "75%"
+
+[sub_resource type="Resource" id="Resource_mpy6k"]
+script = ExtResource("9_x6yq0")
+objet = SubResource("Resource_168bq")
+quantite = 5
+
+[sub_resource type="Resource" id="Resource_0sscw"]
+script = ExtResource("9_8wwat")
+nom = "Rappel"
+texture = ExtResource("80_wagys")
+description = "Cette Objet sert à réanimer des Godomons"
+capture = false
+reanime = false
+soigne = false
+nbPvSoigne = "25%"
+
+[sub_resource type="Resource" id="Resource_76hys"]
+script = ExtResource("9_x6yq0")
+objet = SubResource("Resource_0sscw")
+quantite = 1
+
+[sub_resource type="Resource" id="Resource_050fk"]
 script = ExtResource("11_voxsg")
 nom = "Tic"
 pv = 10
@@ -339,7 +361,7 @@ vitesse = 3
 crie = ExtResource("72_q66mb")
 _type_index = 0
 
-[sub_resource type="Resource" id="Resource_mpy6k"]
+[sub_resource type="Resource" id="Resource_cmwer"]
 script = ExtResource("11_voxsg")
 nom = "Bonjeton"
 pv = 10
@@ -351,7 +373,7 @@ sprite = ExtResource("74_86a52")
 sprite_Dos = ExtResource("75_71rpj")
 _type_index = 1
 
-[sub_resource type="Resource" id="Resource_0sscw"]
+[sub_resource type="Resource" id="Resource_vs275"]
 script = ExtResource("11_voxsg")
 nom = "Sinjypleur"
 pv = 10
@@ -363,7 +385,7 @@ sprite = ExtResource("76_40irl")
 sprite_Dos = ExtResource("77_1y0xa")
 _type_index = 2
 
-[sub_resource type="Resource" id="Resource_76hys"]
+[sub_resource type="Resource" id="Resource_3kyet"]
 script = ExtResource("11_voxsg")
 nom = "Cabufo"
 pv = 10
@@ -375,69 +397,100 @@ sprite = ExtResource("78_dq13u")
 sprite_Dos = ExtResource("79_8i56a")
 _type_index = 3
 
-[sub_resource type="Resource" id="Resource_050fk"]
+[sub_resource type="Resource" id="Resource_i748f"]
+script = ExtResource("11_voxsg")
+pv = 10
+attaque = 5
+defense = 5
+vitesse = 3
+crie = ExtResource("72_q66mb")
+_type_index = 0
+
+[sub_resource type="Resource" id="Resource_f6kb6"]
 script = ExtResource("12_tjr8v")
 nom = "Normal"
-faiblesse = "Aucune"
-resistance = "Aucune"
 color = Color(0.5, 0.5, 0.5, 1)
 
-[sub_resource type="Resource" id="Resource_cmwer"]
+[sub_resource type="Resource" id="Resource_aek4d"]
 script = ExtResource("12_tjr8v")
 nom = "Feu"
 faiblesse = "Eau"
 resistance = "Plante"
 color = Color(0.947, 0.264, 0.236, 1)
 
-[sub_resource type="Resource" id="Resource_vs275"]
+[sub_resource type="Resource" id="Resource_e4x62"]
 script = ExtResource("12_tjr8v")
 nom = "Eau"
 faiblesse = "Plante"
 resistance = "Feu"
 color = Color(0, 0.636, 0.952, 1)
 
-[sub_resource type="Resource" id="Resource_3kyet"]
+[sub_resource type="Resource" id="Resource_60bd6"]
 script = ExtResource("12_tjr8v")
 nom = "Plante"
 faiblesse = "Feu"
 resistance = "Eau"
 color = Color(0.247, 0.516, 0.162, 1)
 
-[sub_resource type="Resource" id="Resource_i748f"]
+[sub_resource type="Resource" id="Resource_nces8"]
 script = ExtResource("13_voxsg")
 nom = "Flick"
 puissance = 3
 PP_max = 20
-precision = 1.0
+bruit = ExtResource("91_tl1mc")
 _type_index = 0
 
-[sub_resource type="Resource" id="Resource_f6kb6"]
+[sub_resource type="Resource" id="Resource_ebapb"]
 script = ExtResource("13_voxsg")
 nom = "Ignis"
 puissance = 3
 PP_max = 20
-precision = 1.0
+bruit = ExtResource("91_tl1mc")
 _type_index = 1
 
-[sub_resource type="Resource" id="Resource_aek4d"]
+[sub_resource type="Resource" id="Resource_88jh6"]
 script = ExtResource("13_voxsg")
 nom = "Cirkeau"
 puissance = 3
 PP_max = 20
-precision = 1.0
+bruit = ExtResource("91_tl1mc")
 _type_index = 2
 
-[sub_resource type="Resource" id="Resource_e4x62"]
+[sub_resource type="Resource" id="Resource_fecux"]
 script = ExtResource("13_voxsg")
 nom = "Folium-Crucis"
 puissance = 3
 PP_max = 20
-precision = 1.0
+bruit = ExtResource("91_tl1mc")
 _type_index = 3
 
+[sub_resource type="VisualShaderNodeTexture2DParameter" id="VisualShaderNodeTexture2DParameter_lsw1g"]
+parameter_name = "tex"
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_mmp38"]
+input_name = "sky_coords"
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_yiyd8"]
+source = 5
+
+[sub_resource type="VisualShader" id="VisualShader_wagys"]
+mode = 3
+flags/use_half_res_pass = false
+flags/use_quarter_res_pass = false
+flags/disable_fog = false
+flags/use_debanding = false
+nodes/sky/0/position = Vector2(440, 260)
+nodes/sky/2/node = SubResource("VisualShaderNodeTexture2DParameter_lsw1g")
+nodes/sky/2/position = Vector2(-280, 240)
+nodes/sky/3/node = SubResource("VisualShaderNodeInput_mmp38")
+nodes/sky/3/position = Vector2(-200, 80)
+nodes/sky/4/node = SubResource("VisualShaderNodeTexture_yiyd8")
+nodes/sky/4/position = Vector2(180, 220)
+nodes/sky/connections = PackedInt32Array(3, 0, 4, 0, 2, 0, 4, 2, 4, 0, 0, 0)
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lfee6"]
-shader = ExtResource("95_tl1mc")
-shader_parameter/tex = ExtResource("96_wagys")
+shader = SubResource("VisualShader_wagys")
+shader_parameter/tex = ExtResource("98_3mu66")
 
 [sub_resource type="Sky" id="Sky_3mu66"]
 sky_material = SubResource("ShaderMaterial_lfee6")
@@ -1224,9 +1277,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 50.999023
-offset_top = -194.0
+offset_top = -198.0
 offset_right = 451.0005
-offset_bottom = 106.0
+offset_bottom = 102.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(200, 150)
@@ -1261,6 +1314,10 @@ texture_hover = ExtResource("27_wagys")
 stretch_mode = 0
 script = ExtResource("9_8l02w")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="InterfaceMenu/TextureButton_Quitter" unique_id=797628636]
+position = Vector2(-642, -552)
+stream = ExtResource("9_r2s0p")
+
 [node name="TextureButton_Credit" type="TextureButton" parent="InterfaceMenu" unique_id=128826348]
 texture_filter = 1
 layout_mode = 1
@@ -1283,6 +1340,31 @@ stretch_mode = 0
 script = ExtResource("9_8l02w")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="InterfaceMenu/TextureButton_Credit" unique_id=1882226049]
+position = Vector2(-642, -552)
+stream = ExtResource("9_r2s0p")
+
+[node name="TextureButton_Tuto" type="TextureButton" parent="InterfaceMenu" unique_id=1081689023]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -173.5
+offset_top = 100.0
+offset_right = 173.5
+offset_bottom = 164.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(200, 150)
+texture_normal = ExtResource("25_5krid")
+texture_pressed = ExtResource("26_tl1mc")
+texture_hover = ExtResource("27_wagys")
+stretch_mode = 0
+script = ExtResource("9_8l02w")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="InterfaceMenu/TextureButton_Tuto" unique_id=1361465059]
 position = Vector2(-642, -552)
 stream = ExtResource("9_r2s0p")
 
@@ -2133,6 +2215,347 @@ script = ExtResource("9_8l02w")
 position = Vector2(-642, -552)
 stream = ExtResource("9_r2s0p")
 
+[node name="InterfaceTutoriel" type="Control" parent="." unique_id=312311944]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="InterfaceTutoriel" unique_id=1253097997]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 443.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_76hys")
+
+[node name="TextureButton_Tuto" type="TextureButton" parent="InterfaceTutoriel" unique_id=1433971262]
+texture_filter = 1
+layout_mode = 1
+offset_right = 108.0
+offset_bottom = 52.0
+pivot_offset = Vector2(200, 150)
+texture_normal = ExtResource("32_e6qsf")
+texture_pressed = ExtResource("33_ediv8")
+texture_hover = ExtResource("33_ediv8")
+stretch_mode = 0
+script = ExtResource("9_8l02w")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="InterfaceTutoriel/TextureButton_Tuto" unique_id=885690083]
+position = Vector2(-642, -552)
+stream = ExtResource("9_r2s0p")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InterfaceTutoriel" unique_id=401066598]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_top = 64.0
+offset_right = 441.0
+grow_vertical = 2
+
+[node name="TextureButton1" type="TextureButton" parent="InterfaceTutoriel/VBoxContainer" unique_id=525387519]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("76_ns0bq")
+texture_pressed = ExtResource("77_ixwgq")
+texture_hover = ExtResource("78_kdr5y")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="InterfaceTutoriel/VBoxContainer/TextureButton1" unique_id=562175960]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("79_168bq")
+theme_override_font_sizes/font_size = 15
+text = "Changer le sprite des Godomons"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TextureButton2" type="TextureButton" parent="InterfaceTutoriel/VBoxContainer" unique_id=705342847]
+visible = false
+texture_filter = 1
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("76_ns0bq")
+texture_pressed = ExtResource("77_ixwgq")
+texture_hover = ExtResource("78_kdr5y")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="InterfaceTutoriel/VBoxContainer/TextureButton2" unique_id=56905710]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("79_168bq")
+theme_override_font_sizes/font_size = 15
+text = "Modifier les Godomons"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TextureButton3" type="TextureButton" parent="InterfaceTutoriel/VBoxContainer" unique_id=931598956]
+visible = false
+texture_filter = 1
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("76_ns0bq")
+texture_pressed = ExtResource("77_ixwgq")
+texture_hover = ExtResource("78_kdr5y")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="InterfaceTutoriel/VBoxContainer/TextureButton3" unique_id=1179724014]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("79_168bq")
+theme_override_font_sizes/font_size = 15
+text = "Modifier les attaques"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TextureButton4" type="TextureButton" parent="InterfaceTutoriel/VBoxContainer" unique_id=536400023]
+visible = false
+texture_filter = 1
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("76_ns0bq")
+texture_pressed = ExtResource("77_ixwgq")
+texture_hover = ExtResource("78_kdr5y")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="InterfaceTutoriel/VBoxContainer/TextureButton4" unique_id=883752312]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("79_168bq")
+theme_override_font_sizes/font_size = 15
+text = "Modifier les natures"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TextureButton5" type="TextureButton" parent="InterfaceTutoriel/VBoxContainer" unique_id=1423829324]
+visible = false
+texture_filter = 1
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("76_ns0bq")
+texture_pressed = ExtResource("77_ixwgq")
+texture_hover = ExtResource("78_kdr5y")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="InterfaceTutoriel/VBoxContainer/TextureButton5" unique_id=371581785]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("79_168bq")
+theme_override_font_sizes/font_size = 15
+text = "Modifier les objets"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TextureButton6" type="TextureButton" parent="InterfaceTutoriel/VBoxContainer" unique_id=1344567657]
+visible = false
+texture_filter = 1
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("76_ns0bq")
+texture_pressed = ExtResource("77_ixwgq")
+texture_hover = ExtResource("78_kdr5y")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="InterfaceTutoriel/VBoxContainer/TextureButton6" unique_id=1583223365]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("79_168bq")
+theme_override_font_sizes/font_size = 15
+text = "Changer les musiques"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TextureButton7" type="TextureButton" parent="InterfaceTutoriel/VBoxContainer" unique_id=138401543]
+visible = false
+texture_filter = 1
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("76_ns0bq")
+texture_pressed = ExtResource("77_ixwgq")
+texture_hover = ExtResource("78_kdr5y")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="InterfaceTutoriel/VBoxContainer/TextureButton7" unique_id=308528818]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("79_168bq")
+theme_override_font_sizes/font_size = 15
+text = "Changer le Godomon de     base"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TextureButton8" type="TextureButton" parent="InterfaceTutoriel/VBoxContainer" unique_id=1978150558]
+visible = false
+texture_filter = 1
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("76_ns0bq")
+texture_pressed = ExtResource("77_ixwgq")
+texture_hover = ExtResource("78_kdr5y")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="InterfaceTutoriel/VBoxContainer/TextureButton8" unique_id=1528021261]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("79_168bq")
+theme_override_font_sizes/font_size = 15
+text = "Modifier les textes des    PNJ"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Control" type="Control" parent="InterfaceTutoriel/VBoxContainer" unique_id=1188582276]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.5
+
+[node name="PanelVideo" type="Panel" parent="InterfaceTutoriel" unique_id=642527793]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0sscw")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="InterfaceTutoriel/PanelVideo" unique_id=103744338]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="InterfaceTutoriel/PanelVideo/VBoxContainer2" unique_id=200884260]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+expand = true
+loop = true
+script = ExtResource("80_ixwgq")
+
+[node name="Panel" type="Panel" parent="InterfaceTutoriel/PanelVideo/VBoxContainer2" unique_id=1693941940]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+theme_override_styles/panel = SubResource("StyleBoxFlat_kdr5y")
+
+[node name="TextureButton" type="TextureButton" parent="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel" unique_id=881466396]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -21.5
+offset_top = -36.0
+offset_right = 21.5
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("50_kdr5y")
+stretch_mode = 0
+
+[node name="TextureButton2" type="TextureButton" parent="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel" unique_id=515484805]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -37.0
+offset_right = 43.0
+offset_bottom = -5.0
+grow_vertical = 0
+texture_normal = ExtResource("32_e6qsf")
+texture_pressed = ExtResource("33_ediv8")
+texture_hover = ExtResource("33_ediv8")
+stretch_mode = 0
+
+[node name="HSlider" type="HSlider" parent="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel" unique_id=278940435]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 9.0
+offset_top = -22.5
+offset_right = -9.0
+offset_bottom = -6.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_168bq")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_mpy6k")
+step = 0.0
+
 [node name="InterfaceMenuPrincipal" type="Control" parent="." unique_id=873146367]
 visible = false
 layout_mode = 3
@@ -2154,17 +2577,17 @@ autoplay = "MainMenuIntro"
 [node name="Paramètre" type="Node3D" parent="." unique_id=256808770]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.128716, 0.85703945, 3.5622892)
 script = ExtResource("4_dgiq7")
-listeDesNatures = Array[ExtResource("5_vfha3")]([SubResource("Resource_x8d5j"), SubResource("Resource_15qxy"), SubResource("Resource_llcau"), SubResource("Resource_5krid"), SubResource("Resource_tl1mc"), SubResource("Resource_wagys")])
-listeDesObjets = Array[ExtResource("9_x6yq0")]([SubResource("Resource_3mu66"), SubResource("Resource_ns0bq"), SubResource("Resource_kdr5y")])
-listeGodomons = Array[ExtResource("11_voxsg")]([SubResource("Resource_168bq"), SubResource("Resource_mpy6k"), SubResource("Resource_0sscw"), SubResource("Resource_76hys")])
-listeDesTypes = Array[ExtResource("12_tjr8v")]([SubResource("Resource_050fk"), SubResource("Resource_cmwer"), SubResource("Resource_vs275"), SubResource("Resource_3kyet")])
-listeDesAttaques = Array[ExtResource("13_voxsg")]([SubResource("Resource_i748f"), SubResource("Resource_f6kb6"), SubResource("Resource_aek4d"), SubResource("Resource_e4x62")])
+listeDesNatures = Array[ExtResource("5_vfha3")]([SubResource("Resource_tl1mc"), SubResource("Resource_wagys"), SubResource("Resource_lfee6"), SubResource("Resource_3mu66"), SubResource("Resource_b0uwa"), SubResource("Resource_ns0bq")])
+listeDesObjets = Array[ExtResource("9_x6yq0")]([SubResource("Resource_kdr5y"), SubResource("Resource_mpy6k"), SubResource("Resource_76hys")])
+listeGodomons = Array[ExtResource("11_voxsg")]([SubResource("Resource_050fk"), SubResource("Resource_cmwer"), SubResource("Resource_vs275"), SubResource("Resource_3kyet"), SubResource("Resource_i748f")])
+listeDesTypes = Array[ExtResource("12_tjr8v")]([SubResource("Resource_f6kb6"), SubResource("Resource_aek4d"), SubResource("Resource_e4x62"), SubResource("Resource_60bd6")])
+listeDesAttaques = Array[ExtResource("13_voxsg")]([SubResource("Resource_nces8"), SubResource("Resource_ebapb"), SubResource("Resource_88jh6"), SubResource("Resource_fecux")])
 musiqueMenu = ExtResource("86_86a52")
 musiquePrincipal = ExtResource("1_x7wka")
 musiqueCombat = ExtResource("87_71rpj")
 musiqueTransitionCombat = ExtResource("88_1y0xa")
 musiqueVictoire = ExtResource("94_llcau")
-_type_index_Godomons_joueurs = 1
+_type_index_Godomons_joueurs = 4
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2071441840]
 environment = SubResource("Environment_r2s0p")
@@ -2178,6 +2601,7 @@ camera_attributes = SubResource("CameraAttributesPhysical_r2s0p")
 [connection signal="pressed" from="InterfaceMenu/TextureButton_Objets" to="InterfaceMenu/TextureButton_Objets" method="_on_menu_objet_pressed"]
 [connection signal="pressed" from="InterfaceMenu/TextureButton_Quitter" to="InterfaceMenu/TextureButton_Quitter" method="_quitter"]
 [connection signal="pressed" from="InterfaceMenu/TextureButton_Credit" to="InterfaceMenu/TextureButton_Credit" method="_on_credit_pressed"]
+[connection signal="pressed" from="InterfaceMenu/TextureButton_Tuto" to="InterfaceMenu/TextureButton_Tuto" method="_on_tuto_pressed"]
 [connection signal="pressed" from="InterfaceMenu/MenuObjet/Bouton_MenuSacADos" to="InterfaceMenu/MenuObjet/Bouton_MenuSacADos" method="_on_menu_objet_pressed"]
 [connection signal="pressed" from="InterfaceMenu/MenuGodomon/TextureButton_Godomon1" to="InterfaceMenu/MenuGodomon/TextureButton_Godomon1" method="_on_pressed"]
 [connection signal="pressed" from="InterfaceMenu/MenuGodomon/TextureButton_Godomon3" to="InterfaceMenu/MenuGodomon/TextureButton_Godomon3" method="_on_pressed"]
@@ -2188,3 +2612,9 @@ camera_attributes = SubResource("CameraAttributesPhysical_r2s0p")
 [connection signal="pressed" from="InterfaceMenu/MenuGodomon/TextureButton_Equipe" to="InterfaceMenu/MenuGodomon/TextureButton_Equipe" method="_on_menu_pokemon_pressed"]
 [connection signal="pressed" from="InterfaceMenu/MenuGodomon/Resume/TextureButton_PokemonRetour" to="InterfaceMenu/MenuGodomon/TextureButton_Godomon6" method="_on_pressed"]
 [connection signal="pressed" from="InterfaceMenu/Credit/TextureButton_Credit" to="InterfaceMenu/Credit/TextureButton_Credit" method="_on_credit_pressed"]
+[connection signal="pressed" from="InterfaceTutoriel/TextureButton_Tuto" to="InterfaceTutoriel/TextureButton_Tuto" method="_on_tuto_pressed"]
+[connection signal="pressed" from="InterfaceTutoriel/VBoxContainer/TextureButton1" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_jouerVideo" binds= ["res://Assets/VIDEO/Comment-dessiner-un-sprite.ogv"]]
+[connection signal="pressed" from="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel/TextureButton" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_pause"]
+[connection signal="pressed" from="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel/TextureButton2" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_on_video_return"]
+[connection signal="drag_ended" from="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel/HSlider" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_drag_ended"]
+[connection signal="drag_started" from="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel/HSlider" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_drag_started"]

@@ -18,3 +18,11 @@ func _on_credit_pressed() -> void:
 	$AudioStreamPlayer2D.playing = true
 	
 	ecran_de_transition._fondu("InterfaceMenu/Credit")
+
+func _on_tuto_pressed() -> void:
+	$AudioStreamPlayer2D.playing = true
+	
+	if get_tree().current_scene.get_node("InterfaceTutoriel").visible:
+		get_tree().current_scene.get_node("InterfaceTutoriel").visible = false
+	else:
+		get_tree().current_scene.get_node("InterfaceTutoriel").visible = true

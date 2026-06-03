@@ -1,7 +1,7 @@
 extends Resource
 class_name Type
 
-@export var nom : String:
+@export var nom : String = "Pas de nom":
 	set(value):
 		if value == "" or value == "Aucune":
 			nom = "Pas de nom"
@@ -11,12 +11,12 @@ class_name Type
 			nom = value
 		emit_changed()
 
-@export var faiblesse : String:
+@export var faiblesse : String = "Aucune":
 	set(value):
 		faiblesse = value if value != "" else "Aucune"
 		faiblesse = value if value.length() < 10 else value.substr(0, 10)
 
-@export var resistance : String:
+@export var resistance : String = "Aucune":
 	set(value):
 		resistance = value if value != "" else "Aucune"
 		resistance = value if value.length() < 10 else value.substr(0, 10)

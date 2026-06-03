@@ -1,9 +1,10 @@
+@tool
 class_name ObjetInventaire
 extends Resource
 
 @export var objet : Objet:
 	set(value):
-		objet = value if value != null else Objet.new()
+		objet = value if value != null else Objet.new("Pas de nom", null, "Pas de description", false, false, true)
 
 @export var quantite : int = 0:
 	set(value):
