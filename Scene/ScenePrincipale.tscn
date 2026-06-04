@@ -62,13 +62,18 @@
 [ext_resource type="Texture2D" uid="uid://bve6fmhrrad4h" path="res://Assets/Interface/MainMenu/Main_menu8.png" id="43_dq13u"]
 [ext_resource type="Texture2D" uid="uid://cv2hxkq5yklch" path="res://Assets/Interface/Credits/FondCredit.png" id="44_5krid"]
 [ext_resource type="Texture2D" uid="uid://bpcq0bqamtijv" path="res://Assets/Interface/MainMenu/Main_menu9.png" id="44_8i56a"]
+[ext_resource type="Texture2D" uid="uid://c1a76b1q63hd2" path="res://Assets/Interface/PourVideo/BoiteVideo.png" id="45_168bq"]
 [ext_resource type="Texture2D" uid="uid://covn1qhw8yojs" path="res://Assets/Interface/MainMenu/Main_menu10.png" id="45_x8d5j"]
 [ext_resource type="Texture2D" uid="uid://dklj0jhjep7ec" path="res://Assets/Interface/MainMenu/Main_menu11.png" id="46_15qxy"]
+[ext_resource type="Texture2D" uid="uid://8ggioqmfm7dq" path="res://Assets/Interface/PourVideo/BoutonVideo.png" id="46_mpy6k"]
+[ext_resource type="Texture2D" uid="uid://bmto88bs7bopu" path="res://Assets/Interface/PourVideo/BoutonAppuyer.png" id="47_0sscw"]
 [ext_resource type="Texture2D" uid="uid://bys526vad4ql8" path="res://Assets/Interface/MainMenu/Main_menu12.png" id="47_llcau"]
 [ext_resource type="Texture2D" uid="uid://r7dorg66qa60" path="res://Assets/Interface/MainMenu/Main_menu13.png" id="48_5krid"]
+[ext_resource type="Texture2D" uid="uid://dn3581orci51r" path="res://Assets/Interface/PourVideo/BoutonVideoSourie.png" id="48_76hys"]
 [ext_resource type="Texture2D" uid="uid://c6df0impt0xnr" path="res://Assets/Interface/MainMenu/Main_menu14.png" id="49_tl1mc"]
-[ext_resource type="Texture2D" uid="uid://kge242jh4ye2" path="res://Assets/Interface/Credits/Croix.png" id="50_kdr5y"]
+[ext_resource type="Texture2D" uid="uid://ci657abh1nxx5" path="res://Assets/Interface/PourVideo/BoiteVideo1.png" id="50_mpy6k"]
 [ext_resource type="Texture2D" uid="uid://c382fmaj3owbh" path="res://Assets/Interface/MainMenu/Main_menu15.png" id="50_wagys"]
+[ext_resource type="Texture2D" uid="uid://be1cn5jbis2dt" path="res://Assets/Interface/PourVideo/Pause2.png" id="51_168bq"]
 [ext_resource type="Texture2D" uid="uid://c55npxmiqpor0" path="res://Assets/Interface/MainMenu/Main_menu16.png" id="51_lfee6"]
 [ext_resource type="Texture2D" uid="uid://d2kev37dv4x0s" path="res://Assets/Interface/MainMenu/Main_menu17.png" id="52_3mu66"]
 [ext_resource type="Texture2D" uid="uid://dakruw4rd7hwx" path="res://Assets/Interface/MainMenu/Main_menu19.png" id="54_ns0bq"]
@@ -88,11 +93,8 @@
 [ext_resource type="Texture2D" uid="uid://balfv5pu1pwhs" path="res://Assets/Godomon/Bomjeton/BomjetonFace.png" id="74_86a52"]
 [ext_resource type="Texture2D" uid="uid://cqfupb62i7ifd" path="res://Assets/Godomon/Bomjeton/BomjetonDos.png" id="75_71rpj"]
 [ext_resource type="Texture2D" uid="uid://fv6hnfh7rmbw" path="res://Assets/Godomon/Sinjypleur/SinjypleurFace.png" id="76_40irl"]
-[ext_resource type="Texture2D" uid="uid://64b12bs0dons" path="res://Assets/Interface/BoutonDialogue/DialogueBouton.png" id="76_ns0bq"]
 [ext_resource type="Texture2D" uid="uid://buvnklao20pck" path="res://Assets/Godomon/Sinjypleur/SinjypleurDos.png" id="77_1y0xa"]
-[ext_resource type="Texture2D" uid="uid://66py4h7yd00y" path="res://Assets/Interface/BoutonDialogue/DialogueBoutonAppuyer.png" id="77_ixwgq"]
 [ext_resource type="Texture2D" uid="uid://do1y6ytq4u43d" path="res://Assets/Godomon/Cabufo/CabufoFace.png" id="78_dq13u"]
-[ext_resource type="Texture2D" uid="uid://tdttvhpl0n2f" path="res://Assets/Interface/BoutonDialogue/DialogueBoutonSouris.png" id="78_kdr5y"]
 [ext_resource type="Texture2D" uid="uid://bbexnkrb64qk0" path="res://Assets/Godomon/Cabufo/CabufoDos.png" id="79_8i56a"]
 [ext_resource type="FontFile" uid="uid://cjs6wm44fxjdf" path="res://Assets/Text/pixel_operator/PixelOperatorMono8-Bold.ttf" id="79_168bq"]
 [ext_resource type="Script" uid="uid://dqsltudyiskea" path="res://Script/Interface/video.gd" id="80_ixwgq"]
@@ -148,7 +150,13 @@ texture = ExtResource("27_ifajr")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tl1mc"]
 texture = ExtResource("44_5krid")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_76hys"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_050fk"]
+texture = ExtResource("45_168bq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0sscw"]
+texture = ExtResource("50_mpy6k")
+texture_margin_top = 15.0
+texture_margin_bottom = 15.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0sscw"]
 
@@ -1148,6 +1156,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.75, 3)
 [node name="Arbre_Model_3D90" parent="décore/Arbres" unique_id=445609605 instance=ExtResource("5_jwxpu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.75, 4)
 
+[node name="BouttonTutoriel" type="Control" parent="." unique_id=1368422048]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureButton_Tuto" type="TextureButton" parent="BouttonTutoriel" unique_id=160171712]
+texture_filter = 1
+layout_mode = 1
+offset_right = 347.0
+offset_bottom = 64.0
+pivot_offset = Vector2(200, 150)
+texture_normal = ExtResource("25_5krid")
+texture_pressed = ExtResource("26_tl1mc")
+texture_hover = ExtResource("27_wagys")
+stretch_mode = 0
+script = ExtResource("9_8l02w")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="BouttonTutoriel/TextureButton_Tuto" unique_id=1522285800]
+position = Vector2(-642, -552)
+stream = ExtResource("9_r2s0p")
+
 [node name="InterfaceDialogue" type="Control" parent="." unique_id=1144372824]
 visible = false
 layout_mode = 3
@@ -1340,31 +1372,6 @@ stretch_mode = 0
 script = ExtResource("9_8l02w")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="InterfaceMenu/TextureButton_Credit" unique_id=1882226049]
-position = Vector2(-642, -552)
-stream = ExtResource("9_r2s0p")
-
-[node name="TextureButton_Tuto" type="TextureButton" parent="InterfaceMenu" unique_id=1081689023]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -173.5
-offset_top = 100.0
-offset_right = 173.5
-offset_bottom = 164.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(200, 150)
-texture_normal = ExtResource("25_5krid")
-texture_pressed = ExtResource("26_tl1mc")
-texture_hover = ExtResource("27_wagys")
-stretch_mode = 0
-script = ExtResource("9_8l02w")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="InterfaceMenu/TextureButton_Tuto" unique_id=1361465059]
 position = Vector2(-642, -552)
 stream = ExtResource("9_r2s0p")
 
@@ -2216,7 +2223,6 @@ position = Vector2(-642, -552)
 stream = ExtResource("9_r2s0p")
 
 [node name="InterfaceTutoriel" type="Control" parent="." unique_id=312311944]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -2225,18 +2231,21 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="InterfaceTutoriel" unique_id=1253097997]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 443.0
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_76hys")
+theme_override_styles/panel = SubResource("StyleBoxTexture_050fk")
 
 [node name="TextureButton_Tuto" type="TextureButton" parent="InterfaceTutoriel" unique_id=1433971262]
 texture_filter = 1
 layout_mode = 1
-offset_right = 108.0
-offset_bottom = 52.0
+offset_left = 31.0
+offset_top = 12.0
+offset_right = 139.0
+offset_bottom = 64.0
 pivot_offset = Vector2(200, 150)
 texture_normal = ExtResource("32_e6qsf")
 texture_pressed = ExtResource("33_ediv8")
@@ -2248,25 +2257,31 @@ script = ExtResource("9_8l02w")
 position = Vector2(-642, -552)
 stream = ExtResource("9_r2s0p")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="InterfaceTutoriel" unique_id=401066598]
-layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_top = 64.0
-offset_right = 441.0
-grow_vertical = 2
+[node name="ScrollContainer" type="ScrollContainer" parent="InterfaceTutoriel" unique_id=1687776960]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 76.0
+offset_right = 406.0
+offset_bottom = 621.0
+size_flags_vertical = 3
 
-[node name="TextureButton1" type="TextureButton" parent="InterfaceTutoriel/VBoxContainer" unique_id=525387519]
+[node name="VBoxContainer" type="VBoxContainer" parent="InterfaceTutoriel/ScrollContainer" unique_id=401066598]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureButtonGodomon" type="TextureButton" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer" unique_id=1855135832]
 texture_filter = 1
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_vertical = 3
-texture_normal = ExtResource("76_ns0bq")
-texture_pressed = ExtResource("77_ixwgq")
-texture_hover = ExtResource("78_kdr5y")
+texture_normal = ExtResource("46_mpy6k")
+texture_pressed = ExtResource("47_0sscw")
+texture_hover = ExtResource("48_76hys")
 stretch_mode = 0
+script = ExtResource("9_8l02w")
 
-[node name="Label" type="Label" parent="InterfaceTutoriel/VBoxContainer/TextureButton1" unique_id=562175960]
+[node name="Label" type="Label" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonGodomon" unique_id=1627890011]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
@@ -2277,23 +2292,255 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("79_168bq")
 theme_override_font_sizes/font_size = 15
+text = "Godomons"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Godomons" type="PanelContainer" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer" unique_id=1152556277]
+visible = false
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_0sscw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/Godomons" unique_id=1666796042]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureButton1" type="TextureButton" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/Godomons/VBoxContainer" unique_id=525387519]
+texture_filter = 1
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+texture_normal = ExtResource("46_mpy6k")
+texture_pressed = ExtResource("47_0sscw")
+texture_hover = ExtResource("48_76hys")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/Godomons/VBoxContainer/TextureButton1" unique_id=562175960]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 21.0
+offset_right = -23.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("79_168bq")
+theme_override_font_sizes/font_size = 15
 text = "Changer le sprite des Godomons"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="TextureButton2" type="TextureButton" parent="InterfaceTutoriel/VBoxContainer" unique_id=705342847]
-visible = false
+[node name="TextureButton2" type="TextureButton" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/Godomons/VBoxContainer" unique_id=705342847]
+texture_filter = 1
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+texture_normal = ExtResource("46_mpy6k")
+texture_pressed = ExtResource("47_0sscw")
+texture_hover = ExtResource("48_76hys")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/Godomons/VBoxContainer/TextureButton2" unique_id=56905710]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 27.0
+offset_right = -27.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("79_168bq")
+theme_override_font_sizes/font_size = 15
+text = "Modifier les stats des Godomons"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TextureButton3" type="TextureButton" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/Godomons/VBoxContainer" unique_id=598576127]
+texture_filter = 1
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+texture_normal = ExtResource("46_mpy6k")
+texture_pressed = ExtResource("47_0sscw")
+texture_hover = ExtResource("48_76hys")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/Godomons/VBoxContainer/TextureButton3" unique_id=1431500600]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_right = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("79_168bq")
+theme_override_font_sizes/font_size = 15
+text = "Choisir son Godomon de départ"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TextureButtonObjets" type="TextureButton" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer" unique_id=1293886265]
 texture_filter = 1
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_vertical = 3
-texture_normal = ExtResource("76_ns0bq")
-texture_pressed = ExtResource("77_ixwgq")
-texture_hover = ExtResource("78_kdr5y")
+texture_normal = ExtResource("46_mpy6k")
+texture_pressed = ExtResource("47_0sscw")
+texture_hover = ExtResource("48_76hys")
+stretch_mode = 0
+script = ExtResource("9_8l02w")
+
+[node name="Label" type="Label" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonObjets" unique_id=418147502]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("79_168bq")
+theme_override_font_sizes/font_size = 15
+text = "Objets"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Objets" type="PanelContainer" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer" unique_id=841508203]
+visible = false
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_0sscw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/Objets" unique_id=1362040214]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureButton1" type="TextureButton" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/Objets/VBoxContainer" unique_id=1047018754]
+texture_filter = 1
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+texture_normal = ExtResource("46_mpy6k")
+texture_pressed = ExtResource("47_0sscw")
+texture_hover = ExtResource("48_76hys")
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="InterfaceTutoriel/VBoxContainer/TextureButton2" unique_id=56905710]
+[node name="Label" type="Label" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/Objets/VBoxContainer/TextureButton1" unique_id=1926715789]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 27.0
+offset_right = -27.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("79_168bq")
+theme_override_font_sizes/font_size = 15
+text = "Modifier les Stats des Objets"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TextureButton2" type="TextureButton" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/Objets/VBoxContainer" unique_id=1182801638]
+texture_filter = 1
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+texture_normal = ExtResource("46_mpy6k")
+texture_pressed = ExtResource("47_0sscw")
+texture_hover = ExtResource("48_76hys")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/Objets/VBoxContainer/TextureButton2" unique_id=317841384]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 27.0
+offset_right = -27.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("79_168bq")
+theme_override_font_sizes/font_size = 15
+text = "Modifier les Sprites des objets"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TextureButtonStats" type="TextureButton" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer" unique_id=1511451143]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("46_mpy6k")
+texture_pressed = ExtResource("47_0sscw")
+texture_hover = ExtResource("48_76hys")
+stretch_mode = 0
+script = ExtResource("9_8l02w")
+
+[node name="Label" type="Label" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonStats" unique_id=1477071264]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("79_168bq")
+theme_override_font_sizes/font_size = 15
+text = "Stats"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Stats" type="PanelContainer" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer" unique_id=968858412]
+visible = false
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_0sscw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/Stats" unique_id=1385863326]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureButton1" type="TextureButton" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/Stats/VBoxContainer" unique_id=450327090]
+texture_filter = 1
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+texture_normal = ExtResource("46_mpy6k")
+texture_pressed = ExtResource("47_0sscw")
+texture_hover = ExtResource("48_76hys")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/Stats/VBoxContainer/TextureButton1" unique_id=62982950]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
@@ -2309,18 +2556,18 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="TextureButton3" type="TextureButton" parent="InterfaceTutoriel/VBoxContainer" unique_id=931598956]
-visible = false
+[node name="TextureButton2" type="TextureButton" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/Stats/VBoxContainer" unique_id=1571598588]
 texture_filter = 1
-custom_minimum_size = Vector2(0, 100)
+custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 3
-texture_normal = ExtResource("76_ns0bq")
-texture_pressed = ExtResource("77_ixwgq")
-texture_hover = ExtResource("78_kdr5y")
+texture_normal = ExtResource("46_mpy6k")
+texture_pressed = ExtResource("47_0sscw")
+texture_hover = ExtResource("48_76hys")
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="InterfaceTutoriel/VBoxContainer/TextureButton3" unique_id=1179724014]
+[node name="Label" type="Label" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/Stats/VBoxContainer/TextureButton2" unique_id=216309110]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
@@ -2331,23 +2578,23 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("79_168bq")
 theme_override_font_sizes/font_size = 15
-text = "Modifier les attaques"
+text = "Modifier les Godomons"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="TextureButton4" type="TextureButton" parent="InterfaceTutoriel/VBoxContainer" unique_id=536400023]
-visible = false
+[node name="TextureButton3" type="TextureButton" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/Stats/VBoxContainer" unique_id=526095545]
 texture_filter = 1
-custom_minimum_size = Vector2(0, 100)
+custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 3
-texture_normal = ExtResource("76_ns0bq")
-texture_pressed = ExtResource("77_ixwgq")
-texture_hover = ExtResource("78_kdr5y")
+texture_normal = ExtResource("46_mpy6k")
+texture_pressed = ExtResource("47_0sscw")
+texture_hover = ExtResource("48_76hys")
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="InterfaceTutoriel/VBoxContainer/TextureButton4" unique_id=883752312]
+[node name="Label" type="Label" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/Stats/VBoxContainer/TextureButton3" unique_id=1273661572]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
@@ -2358,23 +2605,23 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("79_168bq")
 theme_override_font_sizes/font_size = 15
-text = "Modifier les natures"
+text = "Modifier les Godomons"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="TextureButton5" type="TextureButton" parent="InterfaceTutoriel/VBoxContainer" unique_id=1423829324]
-visible = false
+[node name="TextureButtonPNJ" type="TextureButton" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer" unique_id=887245731]
 texture_filter = 1
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_vertical = 3
-texture_normal = ExtResource("76_ns0bq")
-texture_pressed = ExtResource("77_ixwgq")
-texture_hover = ExtResource("78_kdr5y")
+texture_normal = ExtResource("46_mpy6k")
+texture_pressed = ExtResource("47_0sscw")
+texture_hover = ExtResource("48_76hys")
 stretch_mode = 0
+script = ExtResource("9_8l02w")
 
-[node name="Label" type="Label" parent="InterfaceTutoriel/VBoxContainer/TextureButton5" unique_id=371581785]
+[node name="Label" type="Label" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonPNJ" unique_id=810610723]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
@@ -2385,23 +2632,34 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("79_168bq")
 theme_override_font_sizes/font_size = 15
-text = "Modifier les objets"
+text = "PNJ"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="TextureButton6" type="TextureButton" parent="InterfaceTutoriel/VBoxContainer" unique_id=1344567657]
+[node name="PNJ" type="PanelContainer" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer" unique_id=1170283396]
 visible = false
 texture_filter = 1
-custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_vertical = 3
-texture_normal = ExtResource("76_ns0bq")
-texture_pressed = ExtResource("77_ixwgq")
-texture_hover = ExtResource("78_kdr5y")
+theme_override_styles/panel = SubResource("StyleBoxTexture_0sscw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/PNJ" unique_id=1725337107]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureButton1" type="TextureButton" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/PNJ/VBoxContainer" unique_id=1272049015]
+texture_filter = 1
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+texture_normal = ExtResource("46_mpy6k")
+texture_pressed = ExtResource("47_0sscw")
+texture_hover = ExtResource("48_76hys")
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="InterfaceTutoriel/VBoxContainer/TextureButton6" unique_id=1583223365]
+[node name="Label" type="Label" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/PNJ/VBoxContainer/TextureButton1" unique_id=1629970781]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
@@ -2412,23 +2670,23 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("79_168bq")
 theme_override_font_sizes/font_size = 15
-text = "Changer les musiques"
+text = "Modifier les Godomons"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="TextureButton7" type="TextureButton" parent="InterfaceTutoriel/VBoxContainer" unique_id=138401543]
-visible = false
+[node name="TextureButton2" type="TextureButton" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/PNJ/VBoxContainer" unique_id=519546214]
 texture_filter = 1
-custom_minimum_size = Vector2(0, 100)
+custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 3
-texture_normal = ExtResource("76_ns0bq")
-texture_pressed = ExtResource("77_ixwgq")
-texture_hover = ExtResource("78_kdr5y")
+texture_normal = ExtResource("46_mpy6k")
+texture_pressed = ExtResource("47_0sscw")
+texture_hover = ExtResource("48_76hys")
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="InterfaceTutoriel/VBoxContainer/TextureButton7" unique_id=308528818]
+[node name="Label" type="Label" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/PNJ/VBoxContainer/TextureButton2" unique_id=1331486449]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
@@ -2439,23 +2697,23 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("79_168bq")
 theme_override_font_sizes/font_size = 15
-text = "Changer le Godomon de     base"
+text = "Modifier les Godomons"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="TextureButton8" type="TextureButton" parent="InterfaceTutoriel/VBoxContainer" unique_id=1978150558]
-visible = false
+[node name="TextureButtonSons" type="TextureButton" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer" unique_id=1515253951]
 texture_filter = 1
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_vertical = 3
-texture_normal = ExtResource("76_ns0bq")
-texture_pressed = ExtResource("77_ixwgq")
-texture_hover = ExtResource("78_kdr5y")
+texture_normal = ExtResource("46_mpy6k")
+texture_pressed = ExtResource("47_0sscw")
+texture_hover = ExtResource("48_76hys")
 stretch_mode = 0
+script = ExtResource("9_8l02w")
 
-[node name="Label" type="Label" parent="InterfaceTutoriel/VBoxContainer/TextureButton8" unique_id=1528021261]
+[node name="Label" type="Label" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonSons" unique_id=128930501]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
@@ -2466,18 +2724,77 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("79_168bq")
 theme_override_font_sizes/font_size = 15
-text = "Modifier les textes des    PNJ"
+text = "Sons"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Control" type="Control" parent="InterfaceTutoriel/VBoxContainer" unique_id=1188582276]
+[node name="Sons" type="PanelContainer" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer" unique_id=1007661763]
+visible = false
+texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 4.5
+theme_override_styles/panel = SubResource("StyleBoxTexture_0sscw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/Sons" unique_id=945172993]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureButton1" type="TextureButton" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/Sons/VBoxContainer" unique_id=1623776044]
+texture_filter = 1
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+texture_normal = ExtResource("46_mpy6k")
+texture_pressed = ExtResource("47_0sscw")
+texture_hover = ExtResource("48_76hys")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/Sons/VBoxContainer/TextureButton1" unique_id=1032441665]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("79_168bq")
+theme_override_font_sizes/font_size = 15
+text = "Modifier les Godomons"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TextureButton2" type="TextureButton" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/Sons/VBoxContainer" unique_id=1372645379]
+texture_filter = 1
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+texture_normal = ExtResource("46_mpy6k")
+texture_pressed = ExtResource("47_0sscw")
+texture_hover = ExtResource("48_76hys")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/Sons/VBoxContainer/TextureButton2" unique_id=441006248]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("79_168bq")
+theme_override_font_sizes/font_size = 15
+text = "Modifier les Godomons"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="PanelVideo" type="Panel" parent="InterfaceTutoriel" unique_id=642527793]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -2522,7 +2839,7 @@ offset_right = 21.5
 offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 0
-texture_normal = ExtResource("50_kdr5y")
+texture_normal = ExtResource("51_168bq")
 stretch_mode = 0
 
 [node name="TextureButton2" type="TextureButton" parent="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel" unique_id=515484805]
@@ -2597,11 +2914,11 @@ camera_attributes = SubResource("CameraAttributesPhysical_r2s0p")
 [connection signal="body_exited" from="Nedy/Area3D" to="Nedy/Area3D" method="_onCollision"]
 [connection signal="body_entered" from="Mot/Area3D" to="Mot/Area3D" method="_onCollision"]
 [connection signal="body_exited" from="Mot/Area3D" to="Mot/Area3D" method="_onCollision"]
+[connection signal="pressed" from="BouttonTutoriel/TextureButton_Tuto" to="BouttonTutoriel/TextureButton_Tuto" method="_on_tuto_pressed"]
 [connection signal="pressed" from="InterfaceMenu/TextureButton_Equipe" to="InterfaceMenu/TextureButton_Equipe" method="_on_menu_pokemon_pressed"]
 [connection signal="pressed" from="InterfaceMenu/TextureButton_Objets" to="InterfaceMenu/TextureButton_Objets" method="_on_menu_objet_pressed"]
 [connection signal="pressed" from="InterfaceMenu/TextureButton_Quitter" to="InterfaceMenu/TextureButton_Quitter" method="_quitter"]
 [connection signal="pressed" from="InterfaceMenu/TextureButton_Credit" to="InterfaceMenu/TextureButton_Credit" method="_on_credit_pressed"]
-[connection signal="pressed" from="InterfaceMenu/TextureButton_Tuto" to="InterfaceMenu/TextureButton_Tuto" method="_on_tuto_pressed"]
 [connection signal="pressed" from="InterfaceMenu/MenuObjet/Bouton_MenuSacADos" to="InterfaceMenu/MenuObjet/Bouton_MenuSacADos" method="_on_menu_objet_pressed"]
 [connection signal="pressed" from="InterfaceMenu/MenuGodomon/TextureButton_Godomon1" to="InterfaceMenu/MenuGodomon/TextureButton_Godomon1" method="_on_pressed"]
 [connection signal="pressed" from="InterfaceMenu/MenuGodomon/TextureButton_Godomon3" to="InterfaceMenu/MenuGodomon/TextureButton_Godomon3" method="_on_pressed"]
@@ -2613,7 +2930,12 @@ camera_attributes = SubResource("CameraAttributesPhysical_r2s0p")
 [connection signal="pressed" from="InterfaceMenu/MenuGodomon/Resume/TextureButton_PokemonRetour" to="InterfaceMenu/MenuGodomon/TextureButton_Godomon6" method="_on_pressed"]
 [connection signal="pressed" from="InterfaceMenu/Credit/TextureButton_Credit" to="InterfaceMenu/Credit/TextureButton_Credit" method="_on_credit_pressed"]
 [connection signal="pressed" from="InterfaceTutoriel/TextureButton_Tuto" to="InterfaceTutoriel/TextureButton_Tuto" method="_on_tuto_pressed"]
-[connection signal="pressed" from="InterfaceTutoriel/VBoxContainer/TextureButton1" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_jouerVideo" binds= ["res://Assets/VIDEO/Comment-dessiner-un-sprite.ogv"]]
+[connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonGodomon" to="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonGodomon" method="_on_bouton_tuto_pressed" binds= ["InterfaceTutoriel/ScrollContainer/VBoxContainer/Godomons"]]
+[connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/Godomons/VBoxContainer/TextureButton1" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_jouerVideo" binds= ["res://Assets/VIDEO/Comment-dessiner-un-sprite.ogv"]]
+[connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonObjets" to="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonObjets" method="_on_bouton_tuto_pressed" binds= ["InterfaceTutoriel/ScrollContainer/VBoxContainer/Objets"]]
+[connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonStats" to="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonStats" method="_on_bouton_tuto_pressed" binds= ["InterfaceTutoriel/ScrollContainer/VBoxContainer/Stats"]]
+[connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonPNJ" to="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonPNJ" method="_on_bouton_tuto_pressed" binds= ["InterfaceTutoriel/ScrollContainer/VBoxContainer/PNJ"]]
+[connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonSons" to="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonSons" method="_on_bouton_tuto_pressed" binds= ["InterfaceTutoriel/ScrollContainer/VBoxContainer/Sons"]]
 [connection signal="pressed" from="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel/TextureButton" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_pause"]
 [connection signal="pressed" from="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel/TextureButton2" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_on_video_return"]
 [connection signal="drag_ended" from="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel/HSlider" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_drag_ended"]

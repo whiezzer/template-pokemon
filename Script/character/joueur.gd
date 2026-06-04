@@ -16,6 +16,7 @@ var estEnMouvement: bool = false
 var animArbre 
 var animEtat
 var pause: bool = false
+var dialogue: bool = false
 var bruitActif: bool = false
 
 # Fonction appellé au lancement du jeu
@@ -85,7 +86,7 @@ func _movement(delta: float) -> void:
 
 #Fonction qui vérifie si le joueur appuie sur Échape ou pas afin d'ouvrir le menu du jeu
 func _input(event):
-	if event.is_action_pressed("ui_cancel") && !dataDuJeu.menuPrincipalActif :
+	if event.is_action_pressed("ui_cancel") && !dataDuJeu.menuPrincipalActif && !dialogue:
 		var menu = get_parent().get_node("InterfaceMenu")
 		
 		if menu.visible == false:

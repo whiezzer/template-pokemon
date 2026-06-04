@@ -26,3 +26,9 @@ func _on_tuto_pressed() -> void:
 		get_tree().current_scene.get_node("InterfaceTutoriel").visible = false
 	else:
 		get_tree().current_scene.get_node("InterfaceTutoriel").visible = true
+
+func _on_bouton_tuto_pressed(chemin: String) -> void:
+	if get_tree().current_scene.get_node(chemin).visible:
+		get_tree().current_scene.get_node(chemin).visible = false
+	else:
+		get_tree().current_scene.get_node(chemin).visible = true

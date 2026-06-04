@@ -6,7 +6,6 @@ var joueur: CharacterBody3D
 var conteneur: VBoxContainer
 
 var proche: bool = false
-var enDialogue: bool = false
 var gagner: bool
 
 var textes: Dictionary 
@@ -22,9 +21,9 @@ func _ready() -> void:
 	_choisitID("intro")
 
 func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("ui_accept") && proche && !enDialogue:
+	if Input.is_action_just_pressed("ui_accept") && proche && !joueur.dialogue:
 		menuDialogue.visible = true
-		enDialogue = true
+		joueur.dialogue = true
 		joueur.pause = true
 		_lireTexte()
 
@@ -62,7 +61,7 @@ func _lireChoix() -> void:
 		menuDialogue.visible = false
 		joueur.pause = false
 		await get_tree().create_timer(1.0).timeout
-		enDialogue = false
+		joueur.dialogue = false
 		_choisitID("dejaParle")
 		line_index = 0
 
