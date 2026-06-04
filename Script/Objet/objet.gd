@@ -17,7 +17,7 @@ class_name Objet
 		var valide = value if value != "" else "Pas de description"
 		description = valide if valide.length() < 500 else valide.substr(0, 500)
 
-@export var capture : bool = true:
+@export var capture : bool:
 	set(value):
 		if value == true:
 			reanime = false
@@ -25,7 +25,7 @@ class_name Objet
 		capture = value
 		_verifierSprite()
 
-@export var reanime : bool = true:
+@export var reanime : bool:
 	set(value):
 		if value == true:
 			capture = false
@@ -33,7 +33,7 @@ class_name Objet
 		reanime = value
 		_verifierSprite()
 
-@export var soigne : bool = true:
+@export var soigne : bool:
 	set(value):
 		if value == true:
 			reanime = false
@@ -58,5 +58,5 @@ func _init(_nom = "Pas de nom", _texture = null, _description = "Pas de descript
 
 func _verifierSprite() -> void:
 	if capture && Engine.is_editor_hint():
-		texture = load("res://Assets/Objets/IconObject/IconRapel.png")
+		texture = load("res://Assets/Objets/Godoballs/Pokeball attraper57.png")
 		notify_property_list_changed()

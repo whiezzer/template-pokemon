@@ -895,7 +895,6 @@ theme_override_font_sizes/font_size = 30
 autowrap_mode = 3
 
 [node name="TextureRect_Objet" type="TextureRect" parent="InterfaceSac" unique_id=1553525447]
-visible = false
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 1

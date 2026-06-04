@@ -104,7 +104,9 @@
 [ext_resource type="AudioStream" uid="uid://b7lxl2fwr0bq6" path="res://Assets/Son/menu/musiqueMenu.mp3" id="86_86a52"]
 [ext_resource type="AudioStream" uid="uid://bmrm5hed5cvcm" path="res://Assets/Son/Combat/musique_Fight.mp3" id="87_71rpj"]
 [ext_resource type="AudioStream" uid="uid://2irc74i8b32a" path="res://Assets/Son/Combat/son_TransitionCombat.wav" id="88_1y0xa"]
+[ext_resource type="Texture2D" uid="uid://ighayqdri1x4" path="res://Assets/Objets/Godoballs/Pokeball attraper57.png" id="90_cmwer"]
 [ext_resource type="AudioStream" uid="uid://br0p0ei5h4cs7" path="res://Assets/Son/Combat/son_Attaque1.wav" id="91_tl1mc"]
+[ext_resource type="Texture2D" uid="uid://6ql6r48w0i56" path="res://Assets/Objets/IconObject/IconPotion.png" id="91_vs275"]
 [ext_resource type="AudioStream" uid="uid://cwfsuk5ypq6jg" path="res://Assets/Son/Combat/VictoireMusic.mp3" id="94_llcau"]
 [ext_resource type="Texture2D" uid="uid://bgv6ru2mqqkme" path="res://Assets/Ciel/Skybox.png" id="98_3mu66"]
 
@@ -288,89 +290,83 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Resource" id="Resource_tl1mc"]
+[sub_resource type="Resource" id="Resource_cmwer"]
 script = ExtResource("5_vfha3")
 stat1 = "attaque"
 modificateur1 = "+10%"
 stat2 = "defense"
 modificateur2 = "-10%"
 
-[sub_resource type="Resource" id="Resource_wagys"]
+[sub_resource type="Resource" id="Resource_vs275"]
 script = ExtResource("5_vfha3")
 stat1 = "defense"
 modificateur1 = "+10%"
 modificateur2 = "-10%"
 
-[sub_resource type="Resource" id="Resource_lfee6"]
+[sub_resource type="Resource" id="Resource_3kyet"]
 script = ExtResource("5_vfha3")
 modificateur1 = "+10%"
 modificateur2 = "-10%"
 
-[sub_resource type="Resource" id="Resource_3mu66"]
+[sub_resource type="Resource" id="Resource_i748f"]
 script = ExtResource("5_vfha3")
 stat1 = "attaque"
 modificateur1 = "+10%"
 stat2 = "pv"
 modificateur2 = "-10%"
 
-[sub_resource type="Resource" id="Resource_b0uwa"]
+[sub_resource type="Resource" id="Resource_f6kb6"]
 script = ExtResource("5_vfha3")
 stat1 = "vitesse"
 modificateur1 = "+10%"
 stat2 = "pv"
 modificateur2 = "-10%"
 
-[sub_resource type="Resource" id="Resource_ns0bq"]
+[sub_resource type="Resource" id="Resource_aek4d"]
 script = ExtResource("5_vfha3")
 modificateur1 = "+10%"
 stat2 = "vitesse"
 modificateur2 = "-10%"
 
-[sub_resource type="Resource" id="Resource_ixwgq"]
+[sub_resource type="Resource" id="Resource_e4x62"]
 script = ExtResource("9_8wwat")
 nom = "Godoball"
-texture = ExtResource("80_wagys")
+texture = ExtResource("90_cmwer")
 description = "Cette Objet sert à capturer des Godomons"
-capture = false
-reanime = false
-soigne = false
+capture = true
 
-[sub_resource type="Resource" id="Resource_kdr5y"]
+[sub_resource type="Resource" id="Resource_60bd6"]
 script = ExtResource("9_x6yq0")
-objet = SubResource("Resource_ixwgq")
+objet = SubResource("Resource_e4x62")
 quantite = 10
 
-[sub_resource type="Resource" id="Resource_168bq"]
+[sub_resource type="Resource" id="Resource_nces8"]
 script = ExtResource("9_8wwat")
 nom = "Potion de soin"
-texture = ExtResource("80_wagys")
+texture = ExtResource("91_vs275")
 description = "Cette Objet sert à soigner des Godomons"
-capture = false
-reanime = false
-soigne = false
+soigne = true
 nbPvSoigne = "75%"
 
-[sub_resource type="Resource" id="Resource_mpy6k"]
+[sub_resource type="Resource" id="Resource_ebapb"]
 script = ExtResource("9_x6yq0")
-objet = SubResource("Resource_168bq")
+objet = SubResource("Resource_nces8")
 quantite = 5
 
-[sub_resource type="Resource" id="Resource_0sscw"]
+[sub_resource type="Resource" id="Resource_88jh6"]
 script = ExtResource("9_8wwat")
 nom = "Rappel"
 texture = ExtResource("80_wagys")
 description = "Cette Objet sert à réanimer des Godomons"
-capture = false
-reanime = false
-soigne = false
+reanime = true
 nbPvSoigne = "25%"
 
-[sub_resource type="Resource" id="Resource_76hys"]
+[sub_resource type="Resource" id="Resource_fecux"]
 script = ExtResource("9_x6yq0")
-objet = SubResource("Resource_0sscw")
+objet = SubResource("Resource_88jh6")
 quantite = 1
 
-[sub_resource type="Resource" id="Resource_050fk"]
+[sub_resource type="Resource" id="Resource_if4yt"]
 script = ExtResource("11_voxsg")
 nom = "Tic"
 pv = 10
@@ -380,7 +376,7 @@ vitesse = 3
 crie = ExtResource("72_q66mb")
 _type_index = 0
 
-[sub_resource type="Resource" id="Resource_cmwer"]
+[sub_resource type="Resource" id="Resource_gk7hc"]
 script = ExtResource("11_voxsg")
 nom = "Bonjeton"
 pv = 10
@@ -392,7 +388,7 @@ sprite = ExtResource("74_86a52")
 sprite_Dos = ExtResource("75_71rpj")
 _type_index = 1
 
-[sub_resource type="Resource" id="Resource_vs275"]
+[sub_resource type="Resource" id="Resource_qv0ie"]
 script = ExtResource("11_voxsg")
 nom = "Sinjypleur"
 pv = 10
@@ -404,7 +400,7 @@ sprite = ExtResource("76_40irl")
 sprite_Dos = ExtResource("77_1y0xa")
 _type_index = 2
 
-[sub_resource type="Resource" id="Resource_3kyet"]
+[sub_resource type="Resource" id="Resource_t18gb"]
 script = ExtResource("11_voxsg")
 nom = "Cabufo"
 pv = 10
@@ -416,42 +412,33 @@ sprite = ExtResource("78_dq13u")
 sprite_Dos = ExtResource("79_8i56a")
 _type_index = 3
 
-[sub_resource type="Resource" id="Resource_i748f"]
-script = ExtResource("11_voxsg")
-pv = 10
-attaque = 5
-defense = 5
-vitesse = 3
-crie = ExtResource("72_q66mb")
-_type_index = 0
-
-[sub_resource type="Resource" id="Resource_f6kb6"]
+[sub_resource type="Resource" id="Resource_5ke5n"]
 script = ExtResource("12_tjr8v")
 nom = "Normal"
 color = Color(0.5, 0.5, 0.5, 1)
 
-[sub_resource type="Resource" id="Resource_aek4d"]
+[sub_resource type="Resource" id="Resource_2b017"]
 script = ExtResource("12_tjr8v")
 nom = "Feu"
 faiblesse = "Eau"
 resistance = "Plante"
 color = Color(0.947, 0.264, 0.236, 1)
 
-[sub_resource type="Resource" id="Resource_e4x62"]
+[sub_resource type="Resource" id="Resource_e6ldk"]
 script = ExtResource("12_tjr8v")
 nom = "Eau"
 faiblesse = "Plante"
 resistance = "Feu"
 color = Color(0, 0.636, 0.952, 1)
 
-[sub_resource type="Resource" id="Resource_60bd6"]
+[sub_resource type="Resource" id="Resource_sa4h7"]
 script = ExtResource("12_tjr8v")
 nom = "Plante"
 faiblesse = "Feu"
 resistance = "Eau"
 color = Color(0.247, 0.516, 0.162, 1)
 
-[sub_resource type="Resource" id="Resource_nces8"]
+[sub_resource type="Resource" id="Resource_m5xh0"]
 script = ExtResource("13_voxsg")
 nom = "Flick"
 puissance = 3
@@ -459,7 +446,7 @@ PP_max = 20
 bruit = ExtResource("91_tl1mc")
 _type_index = 0
 
-[sub_resource type="Resource" id="Resource_ebapb"]
+[sub_resource type="Resource" id="Resource_2h2fr"]
 script = ExtResource("13_voxsg")
 nom = "Ignis"
 puissance = 3
@@ -467,7 +454,7 @@ PP_max = 20
 bruit = ExtResource("91_tl1mc")
 _type_index = 1
 
-[sub_resource type="Resource" id="Resource_88jh6"]
+[sub_resource type="Resource" id="Resource_crhgy"]
 script = ExtResource("13_voxsg")
 nom = "Cirkeau"
 puissance = 3
@@ -475,7 +462,7 @@ PP_max = 20
 bruit = ExtResource("91_tl1mc")
 _type_index = 2
 
-[sub_resource type="Resource" id="Resource_fecux"]
+[sub_resource type="Resource" id="Resource_hkbe2"]
 script = ExtResource("13_voxsg")
 nom = "Folium-Crucis"
 puissance = 3
@@ -2919,17 +2906,17 @@ autoplay = "MainMenuIntro"
 [node name="Paramètre" type="Node3D" parent="." unique_id=256808770]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.128716, 0.85703945, 3.5622892)
 script = ExtResource("4_dgiq7")
-listeDesNatures = Array[ExtResource("5_vfha3")]([SubResource("Resource_tl1mc"), SubResource("Resource_wagys"), SubResource("Resource_lfee6"), SubResource("Resource_3mu66"), SubResource("Resource_b0uwa"), SubResource("Resource_ns0bq")])
-listeDesObjets = Array[ExtResource("9_x6yq0")]([SubResource("Resource_kdr5y"), SubResource("Resource_mpy6k"), SubResource("Resource_76hys")])
-listeGodomons = Array[ExtResource("11_voxsg")]([SubResource("Resource_050fk"), SubResource("Resource_cmwer"), SubResource("Resource_vs275"), SubResource("Resource_3kyet"), SubResource("Resource_i748f")])
-listeDesTypes = Array[ExtResource("12_tjr8v")]([SubResource("Resource_f6kb6"), SubResource("Resource_aek4d"), SubResource("Resource_e4x62"), SubResource("Resource_60bd6")])
-listeDesAttaques = Array[ExtResource("13_voxsg")]([SubResource("Resource_nces8"), SubResource("Resource_ebapb"), SubResource("Resource_88jh6"), SubResource("Resource_fecux")])
+listeDesNatures = Array[ExtResource("5_vfha3")]([SubResource("Resource_cmwer"), SubResource("Resource_vs275"), SubResource("Resource_3kyet"), SubResource("Resource_i748f"), SubResource("Resource_f6kb6"), SubResource("Resource_aek4d")])
+listeDesObjets = Array[ExtResource("9_x6yq0")]([SubResource("Resource_60bd6"), SubResource("Resource_ebapb"), SubResource("Resource_fecux")])
+listeGodomons = Array[ExtResource("11_voxsg")]([SubResource("Resource_if4yt"), SubResource("Resource_gk7hc"), SubResource("Resource_qv0ie"), SubResource("Resource_t18gb")])
+listeDesTypes = Array[ExtResource("12_tjr8v")]([SubResource("Resource_5ke5n"), SubResource("Resource_2b017"), SubResource("Resource_e6ldk"), SubResource("Resource_sa4h7")])
+listeDesAttaques = Array[ExtResource("13_voxsg")]([SubResource("Resource_m5xh0"), SubResource("Resource_2h2fr"), SubResource("Resource_crhgy"), SubResource("Resource_hkbe2")])
 musiqueMenu = ExtResource("86_86a52")
 musiquePrincipal = ExtResource("1_x7wka")
 musiqueCombat = ExtResource("87_71rpj")
 musiqueTransitionCombat = ExtResource("88_1y0xa")
 musiqueVictoire = ExtResource("94_llcau")
-_type_index_Godomons_joueurs = 4
+_type_index_Godomons_joueurs = 1
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2071441840]
 environment = SubResource("Environment_r2s0p")
