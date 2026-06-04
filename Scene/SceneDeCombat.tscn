@@ -35,7 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://bbrljcaiwcdyu" path="res://Assets/Character/Mot/CombatMot/Mot14.png" id="16_v5m8l"]
 [ext_resource type="Texture2D" uid="uid://cltv63vm4hd6" path="res://Assets/Character/Mot/CombatMot/Mot15.png" id="17_5o4tw"]
 [ext_resource type="Texture2D" uid="uid://1mwb6idkhw5k" path="res://Assets/Interface/Combat/BARRE DE VIE DESSUS CONTOUR.png" id="17_yscag"]
-[ext_resource type="PackedScene" uid="uid://n4ylffjxxqsr" path="res://Assets/Model 3D/Dessou_Pokemon.glb" id="18_a7dcr"]
+[ext_resource type="PackedScene" uid="uid://n4ylffjxxqsr" path="res://Assets/Model 3D/Dessou_Godomon.glb" id="18_a7dcr"]
 [ext_resource type="Texture2D" uid="uid://dxdaamhmcvi0k" path="res://Assets/Character/Mot/CombatMot/Mot16.png" id="18_bp1iv"]
 [ext_resource type="Texture2D" uid="uid://wio1k2unaquj" path="res://Assets/Interface/Combat/Bouton Sac2.png" id="18_x7ml0"]
 [ext_resource type="Texture2D" uid="uid://dqooe18ebh55o" path="res://Assets/Interface/triangle/triangle1.png" id="19_0vcqs"]
