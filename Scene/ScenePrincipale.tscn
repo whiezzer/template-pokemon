@@ -2346,7 +2346,36 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("79_168bq")
 theme_override_font_sizes/font_size = 15
-text = "Changer le sprite des Godomons"
+text = "Créer le sprite des Godomons"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TextureButton4" type="TextureButton" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/Godomons/VBoxContainer" unique_id=1845210390]
+texture_filter = 1
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+texture_normal = ExtResource("46_mpy6k")
+texture_pressed = ExtResource("47_0sscw")
+texture_hover = ExtResource("48_76hys")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/Godomons/VBoxContainer/TextureButton4" unique_id=892620959]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 27.0
+offset_right = -27.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("79_168bq")
+theme_override_font_sizes/font_size = 15
+text = "Intégrer le sprite d'un Godomon"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -2471,36 +2500,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("79_168bq")
 theme_override_font_sizes/font_size = 15
-text = "Modifier les Stats des Objets"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="TextureButton2" type="TextureButton" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/Objets/VBoxContainer" unique_id=1182801638]
-texture_filter = 1
-custom_minimum_size = Vector2(300, 100)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 3
-texture_normal = ExtResource("46_mpy6k")
-texture_pressed = ExtResource("47_0sscw")
-texture_hover = ExtResource("48_76hys")
-stretch_mode = 0
-
-[node name="Label" type="Label" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/Objets/VBoxContainer/TextureButton2" unique_id=317841384]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 27.0
-offset_right = -27.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("79_168bq")
-theme_override_font_sizes/font_size = 15
-text = "Modifier les Sprites des objets"
+text = "Modifier les Objets"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -2565,7 +2565,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("79_168bq")
 theme_override_font_sizes/font_size = 15
-text = "Modifier les Godomons"
+text = "Modifier les attaques"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -2592,7 +2592,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("79_168bq")
 theme_override_font_sizes/font_size = 15
-text = "Modifier les Godomons"
+text = "Modifier les  natures"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -2619,7 +2619,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("79_168bq")
 theme_override_font_sizes/font_size = 15
-text = "Modifier les Godomons"
+text = "Modifier les    types"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -2709,12 +2709,15 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 28.0
+offset_right = -28.0
+offset_bottom = -9.333328
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("79_168bq")
 theme_override_font_sizes/font_size = 15
-text = "Modifier les Godomons"
+text = "Modifier l'équipe de godomons des PNJ"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -2779,34 +2782,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("79_168bq")
 theme_override_font_sizes/font_size = 15
-text = "Modifier les Godomons"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="TextureButton2" type="TextureButton" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/Sons/VBoxContainer" unique_id=1372645379]
-texture_filter = 1
-custom_minimum_size = Vector2(300, 100)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 3
-texture_normal = ExtResource("46_mpy6k")
-texture_pressed = ExtResource("47_0sscw")
-texture_hover = ExtResource("48_76hys")
-stretch_mode = 0
-
-[node name="Label" type="Label" parent="InterfaceTutoriel/ScrollContainer/VBoxContainer/Sons/VBoxContainer/TextureButton2" unique_id=441006248]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("79_168bq")
-theme_override_font_sizes/font_size = 15
-text = "Modifier les Godomons"
+text = "Modifier les musiques"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -2981,12 +2957,20 @@ camera_attributes = SubResource("CameraAttributesPhysical_r2s0p")
 [connection signal="pressed" from="InterfaceTutoriel/TextureButton_Tuto" to="InterfaceTutoriel/TextureButton_Tuto" method="_on_tuto_pressed"]
 [connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonGodomon" to="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonGodomon" method="_on_bouton_tuto_pressed" binds= ["InterfaceTutoriel/ScrollContainer/VBoxContainer/Godomons"]]
 [connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/Godomons/VBoxContainer/TextureButton1" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_jouerVideo" binds= ["res://Assets/VIDEO/Comment-dessiner-un-sprite.ogv"]]
+[connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/Godomons/VBoxContainer/TextureButton4" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_jouerVideo" binds= ["res://Assets/VIDEO/IntégréUnSpriteGodomon.ogv"]]
+[connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/Godomons/VBoxContainer/TextureButton2" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_jouerVideo" binds= ["res://Assets/VIDEO/ModificationGodomon.ogv"]]
 [connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/Godomons/VBoxContainer/TextureButton3" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_jouerVideo" binds= ["res://Assets/VIDEO/ChangerdeGodomondeDepart.ogv"]]
 [connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonObjets" to="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonObjets" method="_on_bouton_tuto_pressed" binds= ["InterfaceTutoriel/ScrollContainer/VBoxContainer/Objets"]]
+[connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/Objets/VBoxContainer/TextureButton1" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_jouerVideo" binds= ["res://Assets/VIDEO/Objet.ogv"]]
 [connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonStats" to="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonStats" method="_on_bouton_tuto_pressed" binds= ["InterfaceTutoriel/ScrollContainer/VBoxContainer/Stats"]]
+[connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/Stats/VBoxContainer/TextureButton1" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_jouerVideo" binds= ["res://Assets/VIDEO/Attaque.ogv"]]
+[connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/Stats/VBoxContainer/TextureButton2" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_jouerVideo" binds= ["res://Assets/VIDEO/Nature.ogv"]]
+[connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/Stats/VBoxContainer/TextureButton3" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_jouerVideo" binds= ["res://Assets/VIDEO/Type.ogv"]]
 [connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonPNJ" to="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonPNJ" method="_on_bouton_tuto_pressed" binds= ["InterfaceTutoriel/ScrollContainer/VBoxContainer/PNJ"]]
 [connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/PNJ/VBoxContainer/TextureButton1" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_jouerVideo" binds= ["res://Assets/VIDEO/TexteModif.ogv"]]
+[connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/PNJ/VBoxContainer/TextureButton2" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_jouerVideo" binds= ["res://Assets/VIDEO/EquipePNJ.ogv"]]
 [connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonSons" to="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonSons" method="_on_bouton_tuto_pressed" binds= ["InterfaceTutoriel/ScrollContainer/VBoxContainer/Sons"]]
+[connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/Sons/VBoxContainer/TextureButton1" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_jouerVideo" binds= ["res://Assets/VIDEO/Musique.ogv"]]
 [connection signal="pressed" from="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel/TextureButton" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_pause"]
 [connection signal="pressed" from="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel/TextureButton2" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_on_video_return"]
 [connection signal="pressed" from="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel/TextureButton3" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_volume"]
