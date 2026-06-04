@@ -21,7 +21,9 @@
 [ext_resource type="Script" uid="uid://de8lxlc0xl4cr" path="res://Script/Objet/objetInventaire.gd" id="9_x6yq0"]
 [ext_resource type="Texture2D" uid="uid://7uvnih8rb6bs" path="res://Assets/Interface/Combat/Bouton Pokemon1.png" id="9_x7wka"]
 [ext_resource type="FontFile" uid="uid://datl1ctwq7utc" path="res://Assets/Text/pixel_operator/PixelOperator-Bold.ttf" id="10_7l60e"]
+[ext_resource type="Texture2D" uid="uid://bqvxw7he2se65" path="res://Assets/Interface/MenuPause/TUTOBouton1.png" id="10_76hys"]
 [ext_resource type="Texture2D" uid="uid://yump20xf8un3" path="res://Assets/Interface/Combat/Bouton Pokemon2.png" id="10_qot0l"]
+[ext_resource type="Texture2D" uid="uid://v8vrf1wm5tml" path="res://Assets/Interface/MenuPause/TUTOSouris.png" id="11_050fk"]
 [ext_resource type="Texture2D" uid="uid://5avc3a2sw8q2" path="res://Assets/Interface/Combat/Bouton Sac1.png" id="11_jwxpu"]
 [ext_resource type="Texture2D" uid="uid://to5y0m6ebeva" path="res://Assets/Interface/Combat/Bouton Pokemon3.png" id="11_o1h8p"]
 [ext_resource type="Script" uid="uid://drg55xxdqqtc4" path="res://Script/Godomon/GodomonData.gd" id="11_voxsg"]
@@ -1176,12 +1178,14 @@ grow_vertical = 2
 [node name="TextureButton_Tuto" type="TextureButton" parent="BouttonTutoriel" unique_id=160171712]
 texture_filter = 1
 layout_mode = 1
-offset_right = 347.0
-offset_bottom = 64.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 168.0
+offset_bottom = 74.0
 pivot_offset = Vector2(200, 150)
-texture_normal = ExtResource("25_5krid")
-texture_pressed = ExtResource("26_tl1mc")
-texture_hover = ExtResource("27_wagys")
+texture_normal = ExtResource("10_76hys")
+texture_pressed = ExtResource("11_050fk")
+texture_hover = ExtResource("11_050fk")
 stretch_mode = 0
 script = ExtResource("9_8l02w")
 
@@ -2675,12 +2679,15 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 28.0
+offset_right = -28.0
+offset_bottom = -10.294121
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("79_168bq")
 theme_override_font_sizes/font_size = 15
-text = "Modifier les Godomons"
+text = "Modifier les dialogues des PNJ"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -2974,9 +2981,11 @@ camera_attributes = SubResource("CameraAttributesPhysical_r2s0p")
 [connection signal="pressed" from="InterfaceTutoriel/TextureButton_Tuto" to="InterfaceTutoriel/TextureButton_Tuto" method="_on_tuto_pressed"]
 [connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonGodomon" to="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonGodomon" method="_on_bouton_tuto_pressed" binds= ["InterfaceTutoriel/ScrollContainer/VBoxContainer/Godomons"]]
 [connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/Godomons/VBoxContainer/TextureButton1" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_jouerVideo" binds= ["res://Assets/VIDEO/Comment-dessiner-un-sprite.ogv"]]
+[connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/Godomons/VBoxContainer/TextureButton3" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_jouerVideo" binds= ["res://Assets/VIDEO/ChangerdeGodomondeDepart.ogv"]]
 [connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonObjets" to="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonObjets" method="_on_bouton_tuto_pressed" binds= ["InterfaceTutoriel/ScrollContainer/VBoxContainer/Objets"]]
 [connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonStats" to="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonStats" method="_on_bouton_tuto_pressed" binds= ["InterfaceTutoriel/ScrollContainer/VBoxContainer/Stats"]]
 [connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonPNJ" to="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonPNJ" method="_on_bouton_tuto_pressed" binds= ["InterfaceTutoriel/ScrollContainer/VBoxContainer/PNJ"]]
+[connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/PNJ/VBoxContainer/TextureButton1" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_jouerVideo" binds= ["res://Assets/VIDEO/TexteModif.ogv"]]
 [connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonSons" to="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonSons" method="_on_bouton_tuto_pressed" binds= ["InterfaceTutoriel/ScrollContainer/VBoxContainer/Sons"]]
 [connection signal="pressed" from="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel/TextureButton" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_pause"]
 [connection signal="pressed" from="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel/TextureButton2" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_on_video_return"]

@@ -60,4 +60,5 @@ func _on_video_return() -> void:
 	get_tree().current_scene.get_node("AudioMusique3D").stream_paused = false
 	self.stream = null
 	self.paused = false
+	sliderAudio.visible = false
 	pause.texture_normal = load("res://Assets/Interface/PourVideo/Pause2.png")
