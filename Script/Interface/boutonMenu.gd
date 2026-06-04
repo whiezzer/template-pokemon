@@ -24,8 +24,12 @@ func _on_tuto_pressed() -> void:
 	
 	if get_tree().current_scene.get_node("InterfaceTutoriel").visible:
 		get_tree().current_scene.get_node("InterfaceTutoriel").visible = false
+		get_tree().current_scene.get_node("Joueur").dialogue = false
+		get_tree().current_scene.get_node("Joueur").pause = false
 	else:
 		get_tree().current_scene.get_node("InterfaceTutoriel").visible = true
+		get_tree().current_scene.get_node("Joueur").dialogue = true
+		get_tree().current_scene.get_node("Joueur").pause = true
 
 func _on_bouton_tuto_pressed(chemin: String) -> void:
 	if get_tree().current_scene.get_node(chemin).visible:

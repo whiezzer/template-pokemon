@@ -76,6 +76,7 @@
 [ext_resource type="Texture2D" uid="uid://be1cn5jbis2dt" path="res://Assets/Interface/PourVideo/Pause2.png" id="51_168bq"]
 [ext_resource type="Texture2D" uid="uid://c55npxmiqpor0" path="res://Assets/Interface/MainMenu/Main_menu16.png" id="51_lfee6"]
 [ext_resource type="Texture2D" uid="uid://d2kev37dv4x0s" path="res://Assets/Interface/MainMenu/Main_menu17.png" id="52_3mu66"]
+[ext_resource type="Texture2D" uid="uid://bc3rkh82m4kqw" path="res://Assets/Interface/PourVideo/Son.png" id="53_0sscw"]
 [ext_resource type="Texture2D" uid="uid://dakruw4rd7hwx" path="res://Assets/Interface/MainMenu/Main_menu19.png" id="54_ns0bq"]
 [ext_resource type="Texture2D" uid="uid://d2n1q504homot" path="res://Assets/Interface/MainMenu/Main_menu20.png" id="55_ixwgq"]
 [ext_resource type="Texture2D" uid="uid://bgd2kxf45n6hi" path="res://Assets/Interface/MainMenu/Main_menu21.png" id="56_kdr5y"]
@@ -162,6 +163,12 @@ texture_margin_bottom = 15.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kdr5y"]
 bg_color = Color(0.8776157, 0.8776158, 0.87761563, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_76hys"]
+bg_color = Color(0.9088109, 0.9088109, 0.9088109, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_050fk"]
+bg_color = Color(1, 1, 1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_168bq"]
 bg_color = Color(0.96862745, 0, 0, 1)
@@ -2223,6 +2230,7 @@ position = Vector2(-642, -552)
 stream = ExtResource("9_r2s0p")
 
 [node name="InterfaceTutoriel" type="Control" parent="." unique_id=312311944]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -2795,6 +2803,7 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="PanelVideo" type="Panel" parent="InterfaceTutoriel" unique_id=642527793]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -2856,6 +2865,37 @@ texture_normal = ExtResource("32_e6qsf")
 texture_pressed = ExtResource("33_ediv8")
 texture_hover = ExtResource("33_ediv8")
 stretch_mode = 0
+
+[node name="TextureButton3" type="TextureButton" parent="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel" unique_id=716277769]
+modulate = Color(0.10524041, 0.10524041, 0.1052404, 1)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -51.0
+offset_top = -37.0
+offset_right = -8.0
+offset_bottom = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("53_0sscw")
+stretch_mode = 0
+
+[node name="VSlider" type="VSlider" parent="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel/TextureButton3" unique_id=549800982]
+visible = false
+layout_mode = 0
+offset_left = 11.0
+offset_top = -143.0
+offset_right = 27.0
+offset_bottom = -32.0
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_76hys")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_050fk")
+max_value = 5.0
+step = 0.0
+value = 1.0
 
 [node name="HSlider" type="HSlider" parent="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel" unique_id=278940435]
 layout_mode = 1
@@ -2938,5 +2978,8 @@ camera_attributes = SubResource("CameraAttributesPhysical_r2s0p")
 [connection signal="pressed" from="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonSons" to="InterfaceTutoriel/ScrollContainer/VBoxContainer/TextureButtonSons" method="_on_bouton_tuto_pressed" binds= ["InterfaceTutoriel/ScrollContainer/VBoxContainer/Sons"]]
 [connection signal="pressed" from="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel/TextureButton" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_pause"]
 [connection signal="pressed" from="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel/TextureButton2" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_on_video_return"]
+[connection signal="pressed" from="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel/TextureButton3" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_volume"]
+[connection signal="drag_ended" from="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel/TextureButton3/VSlider" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_drag_ended_audio"]
+[connection signal="drag_started" from="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel/TextureButton3/VSlider" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_drag_started_audio"]
 [connection signal="drag_ended" from="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel/HSlider" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_drag_ended"]
 [connection signal="drag_started" from="InterfaceTutoriel/PanelVideo/VBoxContainer2/Panel/HSlider" to="InterfaceTutoriel/PanelVideo/VBoxContainer2/VideoStreamPlayer" method="_drag_started"]
