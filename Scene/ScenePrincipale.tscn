@@ -60,7 +60,6 @@
 [ext_resource type="Texture2D" uid="uid://dpwbddrk02api" path="res://Assets/Interface/MainMenu/Main_menu6.png" id="41_40irl"]
 [ext_resource type="Texture2D" uid="uid://dp5owaneuc58k" path="res://Assets/Interface/MainMenu/Main_menu7.png" id="42_1y0xa"]
 [ext_resource type="Texture2D" uid="uid://bve6fmhrrad4h" path="res://Assets/Interface/MainMenu/Main_menu8.png" id="43_dq13u"]
-[ext_resource type="Texture2D" uid="uid://cv2hxkq5yklch" path="res://Assets/Interface/Credits/FondCredit.png" id="44_5krid"]
 [ext_resource type="Texture2D" uid="uid://bpcq0bqamtijv" path="res://Assets/Interface/MainMenu/Main_menu9.png" id="44_8i56a"]
 [ext_resource type="Texture2D" uid="uid://c1a76b1q63hd2" path="res://Assets/Interface/PourVideo/BoiteVideo.png" id="45_168bq"]
 [ext_resource type="Texture2D" uid="uid://covn1qhw8yojs" path="res://Assets/Interface/MainMenu/Main_menu10.png" id="45_x8d5j"]
@@ -148,8 +147,11 @@ texture = ExtResource("23_eisab")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ou8r4"]
 texture = ExtResource("27_ifajr")
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ixwgq"]
+load_path = "res://.godot/imported/FondCredit.png-5b42ee06bbf261a6d6050de69f0fb1eb.ctex"
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tl1mc"]
-texture = ExtResource("44_5krid")
+texture = SubResource("CompressedTexture2D_ixwgq")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_050fk"]
 texture = ExtResource("45_168bq")
